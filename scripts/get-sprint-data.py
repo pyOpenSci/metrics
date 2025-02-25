@@ -81,8 +81,8 @@ def get_project_id(project_number, access_token):
     try:
         project_id = data["data"]["organization"]["projectV2"]["id"]
         return project_id
-    except KeyError:
-        print("Project board not found.")
+    except (KeyError, TypeError):
+        print(f"Project board not found for {project_number}. Response: {data}")
         return None
 
 
@@ -331,6 +331,9 @@ if __name__ == "__main__":
     # pyOS project board - https://github.com/orgs/pyOpenSci/projects/12
     project_pk = 12
     project_id = get_project_id(project_pk, ACCESS_TOKEN)
+    if project_id is None:
+        raise ValueError(f"Project board not found for {project_pk}. Likely a permissions issue.")
+
     project_items = get_project_items(project_id, ACCESS_TOKEN)
 
     df = pd.DataFrame([parse_item(item).json for item in tqdm(project_items)])
