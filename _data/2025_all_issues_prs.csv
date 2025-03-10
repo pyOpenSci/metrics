@@ -407,6 +407,7 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
+enh: use graphql to consolidate api calls,2025-03-05 23:59:36,open,,lwasser,United States,staff,pyosMeta,issues
 Update contributor and review data,2025-03-01 00:24:22,open,,github-actions[bot],,contributor,pyosMeta,issues
 Fix: update deprecated sigstore action,2025-02-19 23:49:26,closed,,lwasser,United States,staff,pyosMeta,issues
 Sigstore signature not working because of deprecated articaft,2025-02-19 23:45:32,closed,,lwasser,United States,staff,pyosMeta,issues
@@ -433,6 +434,7 @@ pyosmeta missing joss doi and sometimes parsing DOI values differently; we shoul
 pyosmeta doing odd things with the gitub username / name,2024-11-19 22:25:35,closed,help wanted,lwasser,United States,staff,pyosMeta,issues
 Multiple maintainers are not being processed correctly,2024-11-19 22:22:17,closed,help wanted,lwasser,United States,staff,pyosMeta,issues
 "In CONTRIBUTING.md, add more specifics on configuring API token",2024-07-13 18:00:48,closed,"documentation, good first issue, help wanted",ehinman,"Madison, WI",contributor,pyosMeta,issues
+enh: use graphql to consolidate api calls,2025-03-05 23:59:36,open,,lwasser,United States,staff,pyosMeta,pulls
 Update contributor and review data,2025-03-01 00:24:22,open,,github-actions[bot],,contributor,pyosMeta,pulls
 Fix: update deprecated sigstore action,2025-02-19 23:49:26,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update CHANGELOG.md with 1.6 detail,2025-02-18 22:36:28,closed,,willingc,San Diego,contributor,pyosMeta,pulls
@@ -563,8 +565,14 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,austinlg96,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
-Fix: astropy landing should use labels vs partners,2025-03-03 23:59:15,open,,lwasser,United States,staff,pyopensci.github.io,issues
-Astropy page: let's use labels as a  source of truth for astropy-affiliated packages. (rather than the partners field),2025-03-03 23:49:51,open,bug,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2025-03-09 21:10:28,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2025-03-08 21:10:37,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2025-03-06 21:11:06,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update update field,2025-03-05 23:10:40,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2025-03-05 21:12:46,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2025-03-04 21:12:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Fix: astropy landing should use labels vs partners,2025-03-03 23:59:15,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+Astropy page: let's use labels as a  source of truth for astropy-affiliated packages. (rather than the partners field),2025-03-03 23:49:51,closed,bug,lwasser,United States,staff,pyopensci.github.io,issues
 Update contributor and review data,2025-03-03 23:43:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2025-03-03 21:11:16,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2025-03-02 21:10:59,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
@@ -595,12 +603,18 @@ Update contributor and review data,2025-01-01 00:34:25,closed,,github-actions[bo
 build(deps): bump lycheeverse/lychee-action from 2.1.0 to 2.2.0 in /.github/workflows in the actions group,2024-12-23 06:16:11,closed,dependencies,dependabot[bot],,contributor,pyopensci.github.io,issues
 feat: Add active status and indicate archived for packages,2024-12-15 04:57:06,closed,,banesullivan,United States,contributor,pyopensci.github.io,issues
  [jan 21 merge] feat(blog): blog post--lessons learned on publish security,2024-12-14 01:56:10,open,,lwasser,United States,staff,pyopensci.github.io,issues
-[mid jan merge] feat(blog): fall festival 2024 overview,2024-12-03 01:28:45,open,,lwasser,United States,staff,pyopensci.github.io,issues
+feat(blog): fall festival 2024 overview,2024-12-03 01:28:45,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 BUG:  review issue link is not rendering on our packages cards,2024-11-21 00:23:43,closed,"bug, high-priority",lwasser,United States,staff,pyopensci.github.io,issues
 fix: force create joss cross ref badge,2024-11-21 00:02:28,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Use actual DOI if available,2024-11-20 16:02:58,closed,,pllim,"Baltimore, MD, USA",contributor,pyopensci.github.io,issues
 Create archive process and then Archive nbless,2024-01-17 00:26:27,closed,feature:content,lwasser,United States,staff,pyopensci.github.io,issues
-Fix: astropy landing should use labels vs partners,2025-03-03 23:59:15,open,,lwasser,United States,staff,pyopensci.github.io,pulls
+Update contributor and review data,2025-03-09 21:10:28,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2025-03-08 21:10:37,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2025-03-06 21:11:06,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update update field,2025-03-05 23:10:40,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
+Update contributor and review data,2025-03-05 21:12:46,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2025-03-04 21:12:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Fix: astropy landing should use labels vs partners,2025-03-03 23:59:15,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update contributor and review data,2025-03-03 23:43:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-03-03 21:11:16,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-03-02 21:10:59,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
@@ -632,7 +646,7 @@ Update contributor and review data,2024-12-15 00:36:48,closed,,github-actions[bo
 feat: new blog post - we're hiring,2024-12-13 22:16:11,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 fix(photo): update Inessa's photo,2024-12-05 01:53:27,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: Minor edits to blog post,2024-12-05 01:36:50,closed,,InessaPawson,,contributor,pyopensci.github.io,pulls
-[mid jan merge] feat(blog): fall festival 2024 overview,2024-12-03 01:28:45,open,,lwasser,United States,staff,pyopensci.github.io,pulls
+feat(blog): fall festival 2024 overview,2024-12-03 01:28:45,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 fix: remove title and broken email,2024-11-22 21:04:53,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat(blog): new blog post from erics FF keynote,2024-11-22 21:03:30,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update contributors.yml,2024-11-22 13:46:17,closed,,pllim,"Baltimore, MD, USA",contributor,pyopensci.github.io,pulls
@@ -1111,21 +1125,22 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
-`pymultifit` submission,2025-01-21 07:30:12,open,0/seeking-editor,syedalimohsinbukhari,,contributor,software-submission,issues
+C4dynamics submission,2025-03-08 19:44:02,open,"0/pre-review-checks, New Submission!",C4dynamics,Israel,contributor,software-submission,issues
+`pymultifit` submission,2025-01-21 07:30:12,open,1/editor-assigned,syedalimohsinbukhari,,contributor,software-submission,issues
 BlockingPy submission,2025-01-09 18:13:33,open,0/seeking-editor,T-Strojny,,contributor,software-submission,issues
 PIVA Submission,2025-01-04 14:36:12,open,0/seeking-editor,pudeIko,"Zürich, Switzerland",contributor,software-submission,issues
 Add archived label to project columns,2024-12-23 19:53:35,closed,,banesullivan,United States,contributor,software-submission,issues
-astronomy time-and-the-sky software,2024-12-22 20:57:16,open,"presubmission, ⌛ pending-maintainer-response",jrthorstensen,,contributor,software-submission,issues
+astronomy time-and-the-sky software,2024-12-22 20:57:16,closed,"presubmission, ⌛ pending-maintainer-response",jrthorstensen,,contributor,software-submission,issues
 astronomy time-and-the-sky software,2024-12-22 20:49:08,closed,"duplicate, presubmission",jrthorstensen,,contributor,software-submission,issues
 GREOPy: A General Relativistic Emitter-Observer problem Python algorithm,2024-12-21 12:34:09,open,0/seeking-editor,irideselby,,contributor,software-submission,issues
 Litrepl presubmission,2024-12-18 16:46:52,open,"presubmission, currently-out-of-scope",sergei-mironov,"Yerevan, Armenia",contributor,software-submission,issues
 VARGRAM,2024-12-18 01:05:06,open,"presubmission, ⌛ pending-maintainer-response",cjpalpallatoc,Metro Manila,contributor,software-submission,issues
-c4dynamics,2024-12-16 16:46:05,open,"presubmission, ⌛ pending-maintainer-response",C4dynamics,Israel,contributor,software-submission,issues
+c4dynamics,2024-12-16 16:46:05,closed,"presubmission, ⌛ pending-maintainer-response",C4dynamics,Israel,contributor,software-submission,issues
 PIVA presubmission,2024-12-16 11:48:03,closed,presubmission,pudeIko,"Zürich, Switzerland",contributor,software-submission,issues
 tda-mapper submission,2024-12-15 09:07:37,open,1/editor-assigned,lucasimi,"Rome, Italy",contributor,software-submission,issues
 `pymultifit` presubmission,2024-12-14 09:17:43,closed,presubmission,syedalimohsinbukhari,,contributor,software-submission,issues
 GALFITools: a library for GALFIT,2024-12-07 00:28:52,open,0/pre-review-checks,canorve,"Sinaloa, Mexico",contributor,software-submission,issues
-GALAssify submission,2024-09-30 09:12:52,open,1/editor-assigned,Malclay,,contributor,software-submission,issues
+GALAssify submission,2024-09-30 09:12:52,open,2/seeking-reviewers,Malclay,,contributor,software-submission,issues
 neonutilities submission,2024-09-25 21:27:31,open,1/editor-assigned,cklunch,,contributor,software-submission,issues
 FElupe Submission,2024-09-14 22:37:44,open,1/editor-assigned,adtzlr,"Graz, Austria",contributor,software-submission,issues
 Solar Data Tools Submission,2024-08-17 06:30:02,open,2/seeking-reviewers,pluflou,"Menlo Park, CA",contributor,software-submission,issues
@@ -1134,10 +1149,10 @@ BlackMarblePy Submission ,2024-07-18 14:15:11,open,4/reviews-in-awaiting-changes
 MontePy Submission,2024-07-01 21:04:05,open,4/reviews-in-awaiting-changes,MicahGale,"Madison, Wisconsin",contributor,software-submission,issues
 Great Tables submission,2024-06-14 19:55:59,open,"6/pyOS-approved, joss-submission-pending",rich-iannone,"Toronto, Canada",contributor,software-submission,issues
 Fluidimage submission,2024-05-30 12:53:48,open,3/reviewers-assigned,paugier,,contributor,software-submission,issues
-astrodata,2024-05-13 23:48:03,open,"6/pyOS-approved, astropy",teald,"Riverside, CA",contributor,software-submission,issues
+astrodata,2024-05-13 23:48:03,open,"6/pyOS-approved, astropy",teald,,contributor,software-submission,issues
 QuadratiK Submission,2024-05-13 21:23:44,closed,6/pyOS-approved,rmj3197,"Buffalo, New York, USA",contributor,software-submission,issues
 PyPartMC,2024-05-03 18:22:59,closed,6/pyOS-approved,slayoo,"Kraków, Poland",contributor,software-submission,issues
-Dolphot-LC Software Submission,2024-05-01 02:37:44,open,"0/pre-review-checks, ⌛ pending-maintainer-response, on-hold",whit5224,,contributor,software-submission,issues
+Dolphot-LC Software Submission,2024-05-01 02:37:44,open,"0/pre-review-checks, ⌛ pending-maintainer-response, on-hold, astropy",whit5224,,contributor,software-submission,issues
 Submission for ANDES,2024-04-22 15:24:10,open,"0/pre-review-checks, on-hold",jinningwang,"Knoxville, Tennessee, USA",contributor,software-submission,issues
 CovPlan,2024-03-25 17:06:21,closed,on-hold,sanjeevrs2000,,contributor,software-submission,issues
 Martini,2024-03-06 17:08:29,closed,"6/pyOS-approved, 9/joss-approved, astropy",kyleaoman,,contributor,software-submission,issues
@@ -1199,7 +1214,10 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
-fix: don't install quarto twice in CI,2025-03-04 02:43:32,open,,lwasser,United States,staff,peer-review-metrics,issues
+Peer review metrics: create a new page for pyos packages,2025-03-06 15:54:13,open,,lwasser,United States,staff,peer-review-metrics,issues
+fix: use graphql to get last comment and date,2025-03-04 23:50:06,closed,,lwasser,United States,staff,peer-review-metrics,issues
+Update contributor and review data,2025-03-04 02:56:26,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
+fix: don't install quarto twice in CI,2025-03-04 02:43:32,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Update contributor and review data,2025-03-04 01:09:52,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 fix: new nicer plots for reporting,2025-03-04 01:05:00,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Update contributor and review data,2025-03-02 05:09:33,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
@@ -1215,7 +1233,7 @@ Fix: redirect to quarto output which is _site/,2025-02-22 01:50:47,closed,,lwass
 Add nox to requirements to fix circleci build,2025-02-22 00:47:09,closed,,willingc,San Diego,contributor,peer-review-metrics,issues
 fix: cleanup of plots,2025-02-22 00:21:39,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Debug get-sprint-data.py,2025-02-21 21:40:30,open,,willingc,San Diego,contributor,peer-review-metrics,issues
-"Bug: in our peer review data, the date of the last comment is not accurate.",2025-02-21 20:41:07,open,,lwasser,United States,staff,peer-review-metrics,issues
+"Bug: in our peer review data, the date of the last comment is not accurate.",2025-02-21 20:41:07,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Bug: ci build is fixed but we should still clean it up as suggested in this issue 👀 ,2025-02-21 19:50:17,open,,lwasser,United States,staff,peer-review-metrics,issues
 feat: update peer review current status page,2025-02-21 19:47:42,closed,,lwasser,United States,staff,peer-review-metrics,issues
 fix: add contrib link and cleanup pages,2025-02-14 02:59:37,closed,,lwasser,United States,staff,peer-review-metrics,issues
@@ -1228,7 +1246,10 @@ Update contributor and review data,2025-01-06 19:27:40,closed,,github-actions[bo
 Update contributor and review data,2024-12-23 05:08:53,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update nox instructions and install pyosmetrics in html session,2024-12-19 19:47:01,closed,,santisoler,"British Columbia, Canada",contributor,peer-review-metrics,issues
 Add: editor plot to our dashboard,2024-07-14 16:20:23,closed,help wanted,lwasser,United States,staff,peer-review-metrics,issues
-fix: don't install quarto twice in CI,2025-03-04 02:43:32,open,,lwasser,United States,staff,peer-review-metrics,pulls
+Create: script to fetch a list of all current editors,2024-07-13 23:43:45,closed,"help wanted, sprintable",kaiyamag,,contributor,peer-review-metrics,issues
+fix: use graphql to get last comment and date,2025-03-04 23:50:06,closed,,lwasser,United States,staff,peer-review-metrics,pulls
+Update contributor and review data,2025-03-04 02:56:26,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
+fix: don't install quarto twice in CI,2025-03-04 02:43:32,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Update contributor and review data,2025-03-04 01:09:52,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: new nicer plots for reporting,2025-03-04 01:05:00,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Update contributor and review data,2025-03-02 05:09:33,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
