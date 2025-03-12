@@ -2,11 +2,16 @@ name: Update issue, pr and contrib metadata file for current year
 
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     # Runs on the 1 and 15 of each month at 00:00 UTC (see https://crontab.guru)
     - cron: "0 5 2,16 * 1"
     # Runs at 11pm on December 31st every year
     - cron: "0 23 31 12 *"
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   run-meta:
     if: github.repository_owner == 'pyopensci'
@@ -26,15 +31,41 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y webp
-      - name: Install pyosmeta and run update contribs
+      - name: Install pyosmeta
+        run: pip install -r requirements.txt
+      - name: Run get-prs
+        run: python scripts/get-prs.py
+      - name: Run get-reviews
+        run: python scripts/get-reviews.py
+      - name: Run get-sprint-data
+        if: github.event_name == 'workflow_dispatch' ||
+          github.event_name == 'schedule' ||
+          ( github.event_name == 'pull_request' &&
+            github.event.pull_request.head.repo.full_name == github.repository )
         env:
           GITHUB_TOKEN: ${{ secrets.PROJECTS_READ }}
-        run: |
-          pip install -r requirements.txt
-          python scripts/get-prs.py
-          python scripts/get-reviews.py
-          python scripts/get-sprint-data.py
-          python scripts/get-review-contributors.py 
+        run: python scripts/get-sprint-data.py
+      - name: get-review-contributors
+        run: python scripts/get-review-contributors.py
+      - name: Cache metrics
+        uses: actions/upload-artifact@v4
+        with:
+          name: metrics
+          path: _data
+
+  create-pr:
+    name: Create Pull Request
+    runs-on: ubuntu-latest
+    needs: run-meta
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+      - name: Download metrics
+        uses: actions/download-artifact@v4
+        with:
+          name: metrics
+          path: _data
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
