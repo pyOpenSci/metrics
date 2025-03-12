@@ -76,12 +76,22 @@
         "code",
         "review"
       ]
+    },
+    {
+      "login": "banesullivan",
+      "name": "Bane Sullivan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22067021?v=4",
+      "profile": "http://banesullivan.com",
+      "contributions": [
+        "code",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "skipCi": true,
   "repoType": "github",
   "repoHost": "https://github.com",
-  "projectName": "peer-review-metrics",
+  "projectName": "metrics",
   "projectOwner": "pyOpenSci"
 }
