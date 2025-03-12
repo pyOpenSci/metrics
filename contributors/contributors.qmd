@@ -37,6 +37,15 @@ all_files = list(data_path.glob("20*"))
 
 dfs = [pd.read_csv(file, parse_dates=["item_opened_by"]) for file in all_files]
 df = pd.concat(dfs, ignore_index=True)
+
+```
+
+```{python}
+# Calculate 1) total unique contribs to github, 
+# calculate 2) total unique contribs by quarter?
+
+total_gh_contribs = len(pd.unique(df["created_by"]))
+
 ```
 
 
@@ -60,9 +69,13 @@ counts = {col: int((contribs_data[col] > 0).sum()) for col in columns}
 ## pyOpenSci Contributors
 To date, **`{python} total_contribs`** people have contributed to pyOpenSci
 
-* **`{python} counts["packages_reviewed"]`** People have served as a reviewer for pyOpenSci
-* **`{python} counts["packages_editor"]`** People have served as an editor for pyOpenSci
-* **`{python} counts["packages_eic"]`** People have served as eic for pyOpenSci
+* **`{python} counts["packages_reviewed"]`** People have served as a Reviewer for pyOpenSci
+* **`{python} counts["packages_editor"]`** People have served as an Editor for pyOpenSci
+* **`{python} counts["packages_eic"]`** People have served as Editor in Chief for pyOpenSci
+
+******
+
+**`{python} total_gh_contribs`** people have contributed issues and pull requests to our GitHub repository. 
 :::
 
 <!-- 
@@ -75,10 +88,58 @@ The plot below shows the total contributions to pyOpenSci. To create this plot w
 
 Non-staff contributions grow between May and August, covering Q3 and Q4 when we travel to meetings such as SciPy and PyCon and host events. Q4 is typically slower, given the holiday season.  
 
+```{python}
+# Calculate unique contributors by quarter 
+# This calculates how many unique people are contribuing to PYOS vs prs and issues calculated below. 
+df["quarter"] = df["item_opened_by"].dt.to_period("Q")
+# Group by quarter and count unique names in the created_by column by quarter
+unique_contribs_by_quarter = df.groupby("quarter")["created_by"].nunique().reset_index(name="unique_contributors")
+unique_contribs_by_quarter["quarter"] = unique_contribs_by_quarter["quarter"].astype(str)
+```
 
 ```{python}
-df["quarter"] = df["item_opened_by"].dt.to_period("Q")
+chart = (
+    alt.Chart(unique_contribs_by_quarter)
+    .mark_bar()
+    .encode(
+        alt.X('quarter:O')
+            .title('Quarter')
+            .axis(labelAngle=45, tickCount=5, titlePadding=10),
+        alt.Y('unique_contributors:Q')
+            .title('Unique Contributors')
+            .axis(titlePadding=15, tickCount=5)
+            .stack(True),
+        alt.Tooltip(["quarter", "unique_contributors"])
+    )
+    .properties(title="Unique Contributors by Quarter")
+    .configure_axisX(
+        labelAngle=0,
+        labelPadding=5,
+        labelFontSize=10,
+        labelColor='black',
+        titleFontSize=12,
+        titleColor='black',
+        tickSize=5,
+        tickColor='black',
+        tickWidth=1,
+        tickOffset=5,
+        tickCount=5,
+        grid=False
+    )
+    .configure_legend(
+        orient='top',
+        titleAnchor='middle',
+        direction='horizontal',
+        padding=15,
+    )
+    .interactive()
+)
 
+chart
+```
+
+```{python}
+# Calculate contributions by quarter 
 # Group by quarter and contrib_type (staff vs non-staff)
 df_quarters = df.groupby(["quarter", "contrib_type"]).size().reset_index(name="count")
 df_quarters["quarter"] = df_quarters["quarter"].astype(str)
@@ -99,6 +160,9 @@ df_quarters['quarter_label'] = df_quarters['quarter_label'].apply(insert_newline
 
 ```
 
+```{python}
+
+```
 
 ```{python}
 chart = (
@@ -109,7 +173,9 @@ chart = (
             .title('Quarter')
             .axis(labelAngle=45),
         alt.Y('count:Q')
-            .stack(True),
+            .title('Count')
+            .stack(True)
+            .axis(titlePadding=15, tickCount=5),
         alt.Color('contrib_type:N')
             .title("Contributor Type")
             .scale(range=["#81c0aa", "#735fab"]),
@@ -134,9 +200,9 @@ chart
  
 Note: we are updating old reviews with eic information so this number is lower than it should be
 
-
 ## Contribution growth over time
-Above we calculate issues and prs to pyOpenSci over time. Here we look at new contributors over time
+
+Here we look at new contributors over time. This plot includes all contributors both peer review contributors and contributors who have helped us with our GitHub repositories.
 
 
 ```{python}

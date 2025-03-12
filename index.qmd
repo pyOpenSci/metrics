@@ -23,6 +23,7 @@ If you are looking to contribute, checkout our [README file](https://www.github.
 **Contributor Data through Sprints and adhoc**
 
 * [Contributor Data](/contributors/contributors.html)
+* [Sprint Contributor Data](/contributors/sprints.qmd)
 :::
 
 
