@@ -14,6 +14,7 @@ website:
   title: "pyOpenSci metrics"
   site-url: "https://www.pyopensci.org"
   repo-url: "https://www.github.com/pyopensci/metrics"
+  favicon: images/favicon.ico
   navbar:
     search: true
     left:

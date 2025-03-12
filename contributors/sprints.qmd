@@ -1,5 +1,5 @@
 ---
-title: Sprint Data | pyOpenSci
+title: pyOpenSci Sprint Event Data
 jupyter: python3
 execute:
   echo: false
@@ -12,6 +12,7 @@ execute:
 import warnings
 from pathlib import Path
 
+from itables import show
 import altair as alt
 import pandas as pd
 
@@ -30,16 +31,43 @@ register_and_enable_poppins_theme()
 ```
 
 
+The tables below show unique participants at each sprint event. 
+This data is calculated from our sprint project table. 
+
+For some reason it's not calculating the total participant correctly as we manually also talied participants and have higher numbers. Examples: we had 18 at PyCON 2024 participate but the data below shows a number that is smaller. Look into why! 
+
 ```{python}
 # Get the current notebook directory
 data_path = Path.cwd().parents[0] / "_data" / "sprint_data.csv" 
 
 sprint_df = pd.read_csv(data_path)
+# Display the first few rows of the dataframe
+sprint_df.head()
+
+# Extract year from the 'created' column
+sprint_df['year'] = pd.to_datetime(sprint_df['created']).dt.year
+
+# Get counts of unique contributors by event and by year. 
+author_event_summary = sprint_df.groupby(["event", "author"]).size().reset_index(name='count')
+unique_authors_by_event = author_event_summary.groupby("event")["author"].nunique().reset_index(name='unique_author_count')
+
+# Summarize total contributions by year
+total_contributors_by_year = sprint_df.groupby("year")["author"].nunique().reset_index(name='total_contributors')
+
+show(unique_authors_by_event) 
+```
+```{python}
+show(total_contributors_by_year)
+```
+
+
+```{python}
+
 summary_df = sprint_df.groupby(["event", "type"]).size().unstack(fill_value=0)
 
 summary_df = summary_df.rename(columns={"Issue": "Issue Count", "PullRequest": "PR Count"})
 summary_df = summary_df.reset_index()
-summary_df
+
 # Calculate total contribs by year
 summary_df["year"] = summary_df["event"].str.extract(r'(\d{2,4})').astype(float).astype("Int64")
 summary_df["total"] = summary_df["Issue Count"] + summary_df["PR Count"]
@@ -48,12 +76,13 @@ summary_df["total"] = summary_df["Issue Count"] + summary_df["PR Count"]
 annual_counts = summary_df.groupby("year")[["total"]].sum().reset_index()
 ```
 
+
+
 ## Total contributions to pyOpenSci by sprint event 
 
 
 ```{python}
 summary_df = summary_df.sort_values(by="year")
-summary_df
 
 chart = (
     alt.Chart(summary_df)
