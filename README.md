@@ -55,6 +55,12 @@ It should look something like this
 You are now setup to process pyOpenSci peer review and contributor metadata
 using `pyosMeta`.
 
+## Permissions
+
+Please note that the `scripts/get-sprint-data.py` requires your GitHub token to have elevated permissions, specifically with `project` access.
+
+When running on GitHub Actions, the elevated permissions are handled by the `PROJECTS_READ` secret which is a GitHub Token with `project` access that is available across the pyopensci GitHub organization. We only need these elevated permissions for the `scripts/get-sprint-data.py` script (at this time), and the rest of the scripts use the default `GITHUB_TOKEN` so that they can execute as a part of the CI checks for any pull requests coming from forks.
+
 ## Build the website using Nox
 
 You can use `nox` to build the site locally. `Nox` will create an `venv`
