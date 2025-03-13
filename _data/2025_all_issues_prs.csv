@@ -241,6 +241,7 @@ CONTENT: documentation text and styles,2022-10-26 19:06:10,closed,,lwasser,Unite
 IGNORE: content check Authoring content update,2022-10-25 22:02:16,closed,,lwasser,United States,staff,python-package-guide,pulls
 "WHY DON""T YOU LIKE ME HTML PROOFER? 😭 ",2022-10-25 18:36:42,closed,,lwasser,United States,staff,python-package-guide,pulls
 add infra to build sphinx book,2022-10-25 15:49:58,closed,,lwasser,United States,staff,python-package-guide,pulls
+Adjust language: peer review mentorship,2025-03-12 19:42:54,open,,lwasser,United States,staff,software-peer-review,issues
 Dummy issue: show integration of peer review with editors as sub-issue,2025-02-11 23:27:41,open,,slobentanzer,,contributor,software-peer-review,issues
 Fix: ignore 429 htmlproofer (too many requests normally github related),2025-02-11 23:01:41,closed,,lwasser,United States,staff,software-peer-review,issues
 Add: link checker should ignore status code 429 which is too many attempts to reach a domain,2025-02-11 22:02:17,open,,lwasser,United States,staff,software-peer-review,issues
@@ -407,6 +408,9 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
+Consistent logging,2025-03-12 06:44:47,open,,banesullivan,United States,contributor,pyosMeta,issues
+"Remove duplicate ""Add help-wanted issues to help wanted board"" job",2025-03-12 03:25:55,open,,banesullivan,United States,contributor,pyosMeta,issues
+Test missing community partnerships section,2025-03-12 03:08:38,open,,banesullivan,United States,contributor,pyosMeta,issues
 enh: use graphql to consolidate api calls,2025-03-05 23:59:36,open,,lwasser,United States,staff,pyosMeta,issues
 Update contributor and review data,2025-03-01 00:24:22,open,,github-actions[bot],,contributor,pyosMeta,issues
 Fix: update deprecated sigstore action,2025-02-19 23:49:26,closed,,lwasser,United States,staff,pyosMeta,issues
@@ -434,6 +438,9 @@ pyosmeta missing joss doi and sometimes parsing DOI values differently; we shoul
 pyosmeta doing odd things with the gitub username / name,2024-11-19 22:25:35,closed,help wanted,lwasser,United States,staff,pyosMeta,issues
 Multiple maintainers are not being processed correctly,2024-11-19 22:22:17,closed,help wanted,lwasser,United States,staff,pyosMeta,issues
 "In CONTRIBUTING.md, add more specifics on configuring API token",2024-07-13 18:00:48,closed,"documentation, good first issue, help wanted",ehinman,"Madison, WI",contributor,pyosMeta,issues
+Consistent logging,2025-03-12 06:44:47,open,,banesullivan,United States,contributor,pyosMeta,pulls
+"Remove duplicate ""Add help-wanted issues to help wanted board"" job",2025-03-12 03:25:55,open,,banesullivan,United States,contributor,pyosMeta,pulls
+Test missing community partnerships section,2025-03-12 03:08:38,open,,banesullivan,United States,contributor,pyosMeta,pulls
 enh: use graphql to consolidate api calls,2025-03-05 23:59:36,open,,lwasser,United States,staff,pyosMeta,pulls
 Update contributor and review data,2025-03-01 00:24:22,open,,github-actions[bot],,contributor,pyosMeta,pulls
 Fix: update deprecated sigstore action,2025-02-19 23:49:26,closed,,lwasser,United States,staff,pyosMeta,pulls
@@ -565,7 +572,10 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,austinlg96,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
-Update contributor and review data,2025-03-09 21:10:28,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2025-03-12 21:11:26,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Add Slack Notification for automated jobs,2025-03-12 02:44:19,open,,banesullivan,United States,contributor,pyopensci.github.io,issues
+feat(blog): add bssw blog to site,2025-03-12 00:35:42,open,,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2025-03-09 21:10:28,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2025-03-08 21:10:37,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2025-03-06 21:11:06,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update update field,2025-03-05 23:10:40,closed,,lwasser,United States,staff,pyopensci.github.io,issues
@@ -608,7 +618,10 @@ BUG:  review issue link is not rendering on our packages cards,2024-11-21 00:23:
 fix: force create joss cross ref badge,2024-11-21 00:02:28,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Use actual DOI if available,2024-11-20 16:02:58,closed,,pllim,"Baltimore, MD, USA",contributor,pyopensci.github.io,issues
 Create archive process and then Archive nbless,2024-01-17 00:26:27,closed,feature:content,lwasser,United States,staff,pyopensci.github.io,issues
-Update contributor and review data,2025-03-09 21:10:28,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2025-03-12 21:11:26,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Add Slack Notification for automated jobs,2025-03-12 02:44:19,open,,banesullivan,United States,contributor,pyopensci.github.io,pulls
+feat(blog): add bssw blog to site,2025-03-12 00:35:42,open,,lwasser,United States,staff,pyopensci.github.io,pulls
+Update contributor and review data,2025-03-09 21:10:28,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-03-08 21:10:37,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-03-06 21:11:06,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update update field,2025-03-05 23:10:40,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
@@ -1125,9 +1138,10 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
+PyAutoGalaxy,2025-03-13 13:15:30,open,"0/pre-review-checks, New Submission!, astropy",Jammy2211,Newcastle,contributor,software-submission,issues
 C4dynamics submission,2025-03-08 19:44:02,open,"0/pre-review-checks, New Submission!",C4dynamics,Israel,contributor,software-submission,issues
 `pymultifit` submission,2025-01-21 07:30:12,open,1/editor-assigned,syedalimohsinbukhari,,contributor,software-submission,issues
-BlockingPy submission,2025-01-09 18:13:33,open,0/seeking-editor,T-Strojny,,contributor,software-submission,issues
+BlockingPy submission,2025-01-09 18:13:33,open,1/editor-assigned,T-Strojny,,contributor,software-submission,issues
 PIVA Submission,2025-01-04 14:36:12,open,0/seeking-editor,pudeIko,"Zürich, Switzerland",contributor,software-submission,issues
 Add archived label to project columns,2024-12-23 19:53:35,closed,,banesullivan,United States,contributor,software-submission,issues
 astronomy time-and-the-sky software,2024-12-22 20:57:16,closed,"presubmission, ⌛ pending-maintainer-response",jrthorstensen,,contributor,software-submission,issues
@@ -1139,11 +1153,11 @@ c4dynamics,2024-12-16 16:46:05,closed,"presubmission, ⌛ pending-maintainer-res
 PIVA presubmission,2024-12-16 11:48:03,closed,presubmission,pudeIko,"Zürich, Switzerland",contributor,software-submission,issues
 tda-mapper submission,2024-12-15 09:07:37,open,1/editor-assigned,lucasimi,"Rome, Italy",contributor,software-submission,issues
 `pymultifit` presubmission,2024-12-14 09:17:43,closed,presubmission,syedalimohsinbukhari,,contributor,software-submission,issues
-GALFITools: a library for GALFIT,2024-12-07 00:28:52,open,0/pre-review-checks,canorve,"Sinaloa, Mexico",contributor,software-submission,issues
+GALFITools: a library for GALFIT,2024-12-07 00:28:52,open,0/seeking-editor,canorve,"Sinaloa, Mexico",contributor,software-submission,issues
 GALAssify submission,2024-09-30 09:12:52,open,2/seeking-reviewers,Malclay,,contributor,software-submission,issues
 neonutilities submission,2024-09-25 21:27:31,open,1/editor-assigned,cklunch,,contributor,software-submission,issues
 FElupe Submission,2024-09-14 22:37:44,open,1/editor-assigned,adtzlr,"Graz, Austria",contributor,software-submission,issues
-Solar Data Tools Submission,2024-08-17 06:30:02,open,2/seeking-reviewers,pluflou,"Menlo Park, CA",contributor,software-submission,issues
+Solar Data Tools Submission,2024-08-17 06:30:02,open,3/reviewers-assigned,pluflou,"Menlo Park, CA",contributor,software-submission,issues
 THzTools submission,2024-08-01 11:54:53,closed,"6/pyOS-approved, 9/joss-approved",jsdodge,,contributor,software-submission,issues
 BlackMarblePy Submission ,2024-07-18 14:15:11,open,4/reviews-in-awaiting-changes,g4brielvs,,contributor,software-submission,issues
 MontePy Submission,2024-07-01 21:04:05,open,4/reviews-in-awaiting-changes,MicahGale,"Madison, Wisconsin",contributor,software-submission,issues
@@ -1214,6 +1228,12 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+Update: add lauren & isabel's domains for our editor dashboard,2025-03-12 21:35:05,closed,,lwasser,United States,staff,peer-review-metrics,issues
+fix: get counts and fix favicon,2025-03-12 20:43:02,closed,,lwasser,United States,staff,peer-review-metrics,issues
+Add documentation about elevated permissions,2025-03-12 06:10:17,closed,,banesullivan,United States,contributor,peer-review-metrics,issues
+[debug] do not merge,2025-03-12 05:56:12,closed,,banesullivan,United States,contributor,peer-review-metrics,issues
+enh: add sprint unique contributor counts to sprint page,2025-03-11 20:13:03,open,,lwasser,United States,staff,peer-review-metrics,issues
+Update contributor and review data,2025-03-10 05:09:27,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Peer review metrics: create a new page for pyos packages,2025-03-06 15:54:13,open,,lwasser,United States,staff,peer-review-metrics,issues
 fix: use graphql to get last comment and date,2025-03-04 23:50:06,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Update contributor and review data,2025-03-04 02:56:26,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
@@ -1228,7 +1248,7 @@ Test: will this allow things to update?  ,2025-02-28 19:11:17,closed,,lwasser,Un
 Small update to contrib - metrics at top and fix an inline var,2025-02-25 20:21:07,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Move metrics to review page,2025-02-25 17:50:57,closed,,lwasser,United States,staff,peer-review-metrics,issues
 add: sprint data to dashboard,2025-02-24 23:24:07,closed,,lwasser,United States,staff,peer-review-metrics,issues
-Split up CI job steps,2025-02-24 05:20:20,open,,banesullivan,United States,contributor,peer-review-metrics,issues
+Split up CI job steps,2025-02-24 05:20:20,closed,,banesullivan,United States,contributor,peer-review-metrics,issues
 Fix: redirect to quarto output which is _site/,2025-02-22 01:50:47,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Add nox to requirements to fix circleci build,2025-02-22 00:47:09,closed,,willingc,San Diego,contributor,peer-review-metrics,issues
 fix: cleanup of plots,2025-02-22 00:21:39,closed,,lwasser,United States,staff,peer-review-metrics,issues
@@ -1245,8 +1265,14 @@ Collect data from sprint board,2025-01-20 20:29:30,closed,,banesullivan,United S
 Update contributor and review data,2025-01-06 19:27:40,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2024-12-23 05:08:53,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update nox instructions and install pyosmetrics in html session,2024-12-19 19:47:01,closed,,santisoler,"British Columbia, Canada",contributor,peer-review-metrics,issues
+Add webp to build,2024-08-29 16:38:55,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Add: editor plot to our dashboard,2024-07-14 16:20:23,closed,help wanted,lwasser,United States,staff,peer-review-metrics,issues
 Create: script to fetch a list of all current editors,2024-07-13 23:43:45,closed,"help wanted, sprintable",kaiyamag,,contributor,peer-review-metrics,issues
+Update: add lauren & isabel's domains for our editor dashboard,2025-03-12 21:35:05,closed,,lwasser,United States,staff,peer-review-metrics,pulls
+fix: get counts and fix favicon,2025-03-12 20:43:02,closed,,lwasser,United States,staff,peer-review-metrics,pulls
+Add documentation about elevated permissions,2025-03-12 06:10:17,closed,,banesullivan,United States,contributor,peer-review-metrics,pulls
+[debug] do not merge,2025-03-12 05:56:12,closed,,banesullivan,United States,contributor,peer-review-metrics,pulls
+Update contributor and review data,2025-03-10 05:09:27,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: use graphql to get last comment and date,2025-03-04 23:50:06,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Update contributor and review data,2025-03-04 02:56:26,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: don't install quarto twice in CI,2025-03-04 02:43:32,closed,,lwasser,United States,staff,peer-review-metrics,pulls
@@ -1259,7 +1285,7 @@ Test: will this allow things to update?  ,2025-02-28 19:11:17,closed,,lwasser,Un
 Small update to contrib - metrics at top and fix an inline var,2025-02-25 20:21:07,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Move metrics to review page,2025-02-25 17:50:57,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 add: sprint data to dashboard,2025-02-24 23:24:07,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Split up CI job steps,2025-02-24 05:20:20,open,,banesullivan,United States,contributor,peer-review-metrics,pulls
+Split up CI job steps,2025-02-24 05:20:20,closed,,banesullivan,United States,contributor,peer-review-metrics,pulls
 Fix: redirect to quarto output which is _site/,2025-02-22 01:50:47,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Add nox to requirements to fix circleci build,2025-02-22 00:47:09,closed,,willingc,San Diego,contributor,peer-review-metrics,pulls
 fix: cleanup of plots,2025-02-22 00:21:39,closed,,lwasser,United States,staff,peer-review-metrics,pulls
