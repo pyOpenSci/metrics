@@ -16,6 +16,7 @@ node_modules/*
 # don't want them to accidentally push them to the repo.
 .env
 
+.venv/
 /.quarto/
 _site/*
 _output/*
