@@ -1,11 +1,11 @@
 ---
-title: pyOpenSci Package Metrics Over Time
+title: pyOpenSci Package Metrics
 jupyter: python3
 execute:
   echo: false
 ---
 
-This data provides metrics accross all the PyOpenSci packages. 
+This data provides metrics accross PyOpenSci packages. 
 
 ```{python}
 #| echo: false
@@ -38,35 +38,35 @@ package_data_path = Path.cwd().parents[0] / "_data" / "package_data.csv"
 
 # Read the DataFrame from the CSV file
 package_df = pd.read_csv(package_data_path)
-```
 
-### Forks count per repositories
-
-```{python}
 # Parse the "gh_meta" column back into dictionaries
 package_df['gh_meta'] = package_df['gh_meta'].apply(
   lambda x: ast.literal_eval(x) if isinstance(x, str) else x
 )
+```
 
+### Forks
+
+```{python}
 # Extract "forks_count" value from the 'gh_meta' column
 package_df['forks_count'] = package_df['gh_meta'].apply(
-  lambda x: x.get('forks_count') if isinstance(x, dict) else None
+  lambda x: x.get('forks_count'
+  ) if isinstance(x, dict) else None
 )
 ```
 
-
 ```{python}
-# Render a graph plot of the forks count
+# Render a graph plot of the fork count
 chart = (
-    alt.Chart(package_df).mark_bar()
+    alt.Chart(package_df).mark_bar(color="#81c0aa")
     .encode(
-        x=alt.X('package_name', sort='-y')
+        alt.X('package_name', sort='-y')
             .title('Package name')
             .axis(labelAngle=45),
-        y=alt.Y('forks_count:Q')
-            .title('Forks Count'),
+        alt.Y('forks_count:Q')
+            .title('Fork count'),
     )
-    .properties(title="Forks Count per Repository")
+    .properties(title="Number of forks per repository")
     .configure_legend(
         orient='top',
         titleAnchor='middle',
@@ -79,6 +79,108 @@ chart = (
 chart
 ```
 
+### Contributors
+
+```{python}
+# Extract "contrib_count" value from the 'gh_meta' column
+package_df['contrib_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('contrib_count') if isinstance(x, dict) else None
+)
+```
+
+```{python}
+# Render a graph plot of contributor count
+chart = (
+    alt.Chart(package_df).mark_bar(color="#f47a78")
+    .encode(
+        alt.X('package_name', sort='-y')
+            .title('Package name')
+            .axis(labelAngle=45),
+        alt.Y('contrib_count:Q')
+            .title('Contributor count'),
+    )
+    .properties(title="Number of contributors per repository")
+    .configure_legend(
+        orient='top',
+        titleAnchor='middle',
+        direction='horizontal',
+        labelFontSize=5,
+    )
+    .interactive()
+)
+
+chart
+```
+
+### Open issues
+
+```{python}
+# Extract "open_issues_count" value from the 'gh_meta' column
+package_df['open_issues_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('open_issues_count') if isinstance(x, dict) else None
+)
+```
+
+```{python}
+# Render a graph plot of open issue count
+chart = (
+    alt.Chart(package_df).mark_bar(color="#735fab")
+    .encode(
+        alt.X('package_name', sort='-y')
+            .title('Package name')
+            .axis(labelAngle=45),
+        alt.Y('open_issues_count:Q')
+            .title('Open issues count'),
+    )
+    .properties(title="Number of open issues per repository")
+    .configure_legend(
+        orient='top',
+        titleAnchor='middle',
+        direction='horizontal',
+        labelFontSize=5,
+    )
+    .interactive()
+)
+
+chart
+```
+
+### Stargazers
+
+```{python}
+# Extract "stargazers_count" value from the 'gh_meta' column
+package_df['stargazers_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('stargazers_count') if isinstance(x, dict) else None
+)
+```
+
+```{python}
+# Render a graph plot of stargazer count
+chart = (
+    alt.Chart(package_df).mark_bar(color="#e8cd2a")
+    .encode(
+        alt.X('package_name', sort='-y')
+            .title('Package name')
+            .axis(labelAngle=45),
+        alt.Y('stargazers_count:Q')
+            .title('Stargazer count'),
+    )
+    .properties(title="Number of stargazers per repository")
+    .configure_legend(
+        orient='top',
+        titleAnchor='middle',
+        direction='horizontal',
+        labelFontSize=5,
+    )
+    .interactive()
+)
+
+chart
+```
+
+
+### Detailed PyOpenSci metrics
+
 Find bellow the detailed count for each PyOpenSci repository.
 
 ```{python}
@@ -86,5 +188,8 @@ Find bellow the detailed count for each PyOpenSci repository.
 from itables import show
 
 # Display the results as an interactive table
-show(package_df[['package_name', 'forks_count']], max_rows=10)
+show(
+  package_df[['package_name', 'forks_count', 'contrib_count', 'open_issues_count', 'stargazers_count']],
+  max_rows=10
+)
 ```
