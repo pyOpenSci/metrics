@@ -24,6 +24,7 @@ If you are looking to contribute, checkout our [README file](https://www.github.
 
 * [Contributor Data](/contributors/contributors.html)
 * [Sprint Contributor Data](/contributors/sprints.qmd)
+* [Package Data](/contributors/package.qmd)
 :::
 
 
