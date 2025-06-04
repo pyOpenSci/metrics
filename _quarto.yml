@@ -28,6 +28,8 @@ website:
             href: peer-review/reviews-over-time.qmd
           - text: Peer review trends
             href: peer-review/review-trends.qmd
+          - text: Accepted Package Metrics
+            href: peer-review/accepted-packages.qmd
       - text: "Contributors"
         menu:
           - text: Contributor Data
