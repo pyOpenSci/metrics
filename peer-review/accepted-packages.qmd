@@ -5,7 +5,7 @@ execute:
   echo: false
 ---
 
-This data provides metrics accross PyOpenSci packages. 
+This data provides metrics across pyOpenSci packages. 
 
 ```{python}
 #| echo: false
