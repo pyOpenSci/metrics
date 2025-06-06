@@ -1,0 +1,287 @@
+--- 
+title: "pyOpenSci Accepted Package Metrics"
+format: 
+  dashboard:
+    scrolling: true 
+execute:
+  echo: false
+--- 
+
+## Row {height=0%}
+
+```{python}
+#| echo: false
+import ast
+import warnings
+from itables import show
+from pathlib import Path
+
+import altair as alt
+import pandas as pd
+import plotly.express as px
+
+# This is a local module that stores the plot theme
+from pyosmetrics.plot_theme import load_poppins_font, register_and_enable_poppins_theme
+
+pd.options.mode.chained_assignment = None
+pd.options.future.infer_string = True
+
+warnings.filterwarnings("ignore")
+
+# Load the & register Poppins theme
+load_poppins_font()
+register_and_enable_poppins_theme()
+
+package_data_path = Path.cwd().parents[0] / "_data" / "package_data.csv" 
+package_df = pd.read_csv(package_data_path)
+
+# Parse the "gh_meta" column back into dictionaries
+package_df['gh_meta'] = package_df['gh_meta'].apply(
+  lambda x: ast.literal_eval(x) if isinstance(x, str) else x
+)
+# Extract "forks_count" value from the 'gh_meta' column
+package_df['forks_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('forks_count'
+  ) if isinstance(x, dict) else None
+)
+
+package_df['contrib_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('contrib_count') if isinstance(x, dict) else None
+)
+average_contribs = int(package_df['contrib_count'].mean())
+
+average_forks = int(package_df['forks_count'].mean())
+
+```
+
+## Row {height=5%}
+
+```{python}
+#| content: valuebox
+#| title: "Total Accepted Packages"
+
+total = len(package_df)
+
+dict(
+  icon = "box2-heart",
+  color = "primary",
+  value = total
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Average Contributors Across Packages"
+# fails if the value isn't an int
+dict(
+  icon = "person-hearts",
+  color = "primary",
+  value = average_contribs
+)
+```
+
+
+```{python}
+#| content: valuebox
+#| title: "Average Forks"
+# fails if the value isn't an int
+dict(
+  icon = "copy",
+  color = "primary",
+  value = average_forks
+)
+```
+## Row {height=10%}
+
+```{python}
+#| title: Distribution of Forks Across Packages 
+
+fig = px.violin(
+    package_df,
+    y='forks_count',
+    color_discrete_sequence=['#81c0aa'],  
+    title = 'Distribution of forks across packages'
+)
+
+fig = fig.update_layout(
+    yaxis_title='Fork count',
+    title_x=0.5,
+)
+
+fig
+```
+
+
+```{python}
+#| title: Total Package Forks
+
+fig = px.bar(
+    package_df.sort_values('forks_count', ascending=False),
+    x='package_name',
+    y='forks_count',
+    title='Number of forks per repository',
+    labels={'package_name': 'Package name', 'forks_count': 'Fork count'},
+    color_discrete_sequence=['#81c0aa'] 
+)
+
+fig = fig.update_layout(
+    xaxis_tickangle=45,
+    xaxis_title='Package name',
+    yaxis_title='Fork count',
+    title_x=0.5,  # center title
+    legend_orientation='h', 
+)
+
+fig
+```
+
+## Row {height=10%}
+
+```{python}
+#| echo: false
+
+```
+
+```{python}
+fig = px.violin(
+    package_df,
+    y='contrib_count',
+    box=True,      
+    color_discrete_sequence=['#735fab'], 
+    title='Distribution of contributors across packages'
+)
+
+fig = fig.update_layout(
+    yaxis_title='Contributor count',
+    title_x=0.5,
+    height=500,
+    margin=dict(t=50, b=50, l=50, r=50)
+)
+
+fig
+
+```
+
+
+```{python}
+# Contributor count
+fig = px.bar(
+    package_df.sort_values('contrib_count', ascending=False),
+    x='package_name',
+    y='contrib_count',
+    title='Number of contributors per repository',
+    labels={'package_name': 'Package name', 'contrib_count': 'Contributor count'},
+    color_discrete_sequence=['#735fab']  # match your Altair color
+)
+
+# Format layout
+fig=fig.update_layout(
+    xaxis_tickangle=45,
+    xaxis_title='Package name',
+    yaxis_title='Contributor count',
+    title_x=0.5,
+    legend_orientation='h',
+    height=500
+)
+
+fig
+```
+
+
+## Row {height=10%}
+
+```{python}
+#| echo: false
+# Extract "open_issues_count" value from the 'gh_meta' column
+package_df['open_issues_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('open_issues_count') if isinstance(x, dict) else None
+)
+
+# Violin plot
+fig_violin = px.violin(
+    package_df,
+    y="open_issues_count",
+    box=True, 
+    title="Distribution of open issues across repositories"
+)
+
+fig_violin.show()
+
+```
+
+```{python}
+# Bar plot
+fig_bar = px.bar(
+    package_df.sort_values("open_issues_count", ascending=False),
+    x="package_name",
+    y="open_issues_count",
+    title="Number of open issues per repository",
+    labels={
+        "package_name": "Package name",
+        "open_issues_count": "Open issues count"
+    }
+)
+
+# Update x-axis for angled labels
+fig_bar=fig_bar.update_layout(
+    xaxis_tickangle=45,
+    bargap=0.2,  # optional, for spacing
+    xaxis_title="Package name",
+    yaxis_title="Open issues count",
+    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5)
+)
+
+fig_bar.show()
+```
+
+
+
+## Row {height=10%}
+
+```{python}
+#| echo: false
+#| 
+# Extract "stargazers_count" value from the 'gh_meta' column
+package_df['stargazers_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('stargazers_count') if isinstance(x, dict) else None
+)
+
+fig_violin_stars = px.violin(
+    package_df,
+    y="stargazers_count",
+    box=True,
+    title="Distribution of stargazers across repositories"
+)
+
+fig_violin_stars=fig_violin_stars.update_layout(
+    yaxis_title="Stargazer count"
+)
+
+fig_violin_stars.show()
+
+```
+
+```{python}
+# Bar chart - stargazers
+fig_bar_stars = px.bar(
+    package_df.sort_values("stargazers_count", ascending=False),
+    x="package_name",
+    y="stargazers_count",
+    title="Number of stargazers per repository",
+    labels={
+        "package_name": "Package name",
+        "stargazers_count": "Stargazer count"
+    }
+)
+
+# Adjust x-axis for angled labels
+fig_bar_stars=fig_bar_stars.update_layout(
+    xaxis_tickangle=45,
+    bargap=0.2,
+    xaxis_title="Package name",
+    yaxis_title="Stargazer count",
+    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5)
+)
+
+fig_bar_stars.show()
+```
