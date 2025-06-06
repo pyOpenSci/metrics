@@ -30,12 +30,15 @@ website:
             href: peer-review/review-trends.qmd
           - text: Accepted Package Metrics
             href: peer-review/accepted-packages.qmd
+          - text: Package Dashboard 
+            href: peer-review/pyos-package-dashboard.qmd
       - text: "Contributors"
         menu:
           - text: Contributor Data
             href: contributors/contributors.qmd
           - text: Sprint Data
             href: contributors/sprints.qmd
+
 
     right:
       - icon: github
