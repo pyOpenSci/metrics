@@ -1,23 +1,23 @@
-"""A script that parses all active pyOS repos and collects contributor and 
-activity information in the form of opened issues and pull requests. 
+"""A script that parses all active pyOS repos and collects contributor and
+activity information in the form of opened issues and pull requests.
 
 This script returns a `.csv` file that contains all issue and pr data for items:
 
-* not created by a bot 
+* not created by a bot
 * and created in the specific current year.
 
-The one issue with this workflow is that if it doesn't run on the last day of 
-the year, then it won't capture the last pr's that might happen on new years 
-eve week. 
+The one issue with this workflow is that if it doesn't run on the last day of
+the year, then it won't capture the last pr's that might happen on new years
+eve week.
 
-This will allow us to track contribution growth overtime. 
+This will allow us to track contribution growth overtime.
 
-Ideally this should be run as a cron job, a workflow dispatch and then 
-on near years eve 
+Ideally this should be run as a cron job, a workflow dispatch and then
+on near years eve
 
     # Run specifically on New Year's Eve at 11:30 PM
     - cron: '30 23 31 12 *'
-     
+
 That way we are sure to capture data for the entirety of 2024 on new years eve!!xw
 """
 
