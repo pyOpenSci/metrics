@@ -66,7 +66,7 @@ def get_repo_data(
     """
 
     github_api.endpoint_type = endpoint_type
-    items = github_api.return_response()
+    items = github_api._get_response_rest(github_api.api_endpoint)
     contrib_type = "contributor"
 
     data = []
@@ -128,8 +128,8 @@ def process_repo(github_api, repo_name, contrib_types, user_location_cache):
 
     Returns
     -------
-    dict
-        A dictionary containing the processed issues and pull requests of the repository.
+    pandas.DataFrame
+        A DataFrame containing the processed issues and pull requests of the repository.
 
     Raises
     ------
@@ -154,6 +154,7 @@ def process_repo(github_api, repo_name, contrib_types, user_location_cache):
         return all_contribs_df
     except Exception as e:
         logging.error(f"An error occurred: {e}")
+        return pd.DataFrame()
 
 
 # Set this to True if you want to update the 2018-2023 data
