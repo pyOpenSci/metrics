@@ -1,23 +1,23 @@
-"""A script that parses all active pyOS repos and collects contributor and 
-activity information in the form of opened issues and pull requests. 
+"""A script that parses all active pyOS repos and collects contributor and
+activity information in the form of opened issues and pull requests.
 
 This script returns a `.csv` file that contains all issue and pr data for items:
 
-* not created by a bot 
+* not created by a bot
 * and created in the specific current year.
 
-The one issue with this workflow is that if it doesn't run on the last day of 
-the year, then it won't capture the last pr's that might happen on new years 
-eve week. 
+The one issue with this workflow is that if it doesn't run on the last day of
+the year, then it won't capture the last pr's that might happen on new years
+eve week.
 
-This will allow us to track contribution growth overtime. 
+This will allow us to track contribution growth overtime.
 
-Ideally this should be run as a cron job, a workflow dispatch and then 
-on near years eve 
+Ideally this should be run as a cron job, a workflow dispatch and then
+on near years eve
 
     # Run specifically on New Year's Eve at 11:30 PM
     - cron: '30 23 31 12 *'
-     
+
 That way we are sure to capture data for the entirety of 2024 on new years eve!!xw
 """
 
@@ -66,7 +66,7 @@ def get_repo_data(
     """
 
     github_api.endpoint_type = endpoint_type
-    items = github_api.return_response()
+    items = github_api._get_response_rest(github_api.api_endpoint)
     contrib_type = "contributor"
 
     data = []
@@ -128,8 +128,8 @@ def process_repo(github_api, repo_name, contrib_types, user_location_cache):
 
     Returns
     -------
-    dict
-        A dictionary containing the processed issues and pull requests of the repository.
+    pandas.DataFrame
+        A DataFrame containing the processed issues and pull requests of the repository.
 
     Raises
     ------
@@ -154,6 +154,7 @@ def process_repo(github_api, repo_name, contrib_types, user_location_cache):
         return all_contribs_df
     except Exception as e:
         logging.error(f"An error occurred: {e}")
+        return pd.DataFrame()
 
 
 # Set this to True if you want to update the 2018-2023 data
