@@ -8,3 +8,4 @@ itables # interactive tables!
 tqdm
 nox
 pygithub # for github API
+plotly

@@ -122,6 +122,10 @@ package_df['open_issues_count'] = package_df['gh_meta'].apply(
 ```
 
 ```{python}
+# Extract "open_issues_count" value from the 'gh_meta' column
+package_df['open_issues_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('open_issues_count') if isinstance(x, dict) else None
+)
 # Render a graph plot of open issue count
 chart = (
     alt.Chart(package_df).mark_bar(color="#735fab")
