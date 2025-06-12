@@ -1,0 +1,157 @@
+--- 
+title: "pyOpenSci Current Review Status"
+format: 
+  dashboard:
+    scrolling: true 
+execute:
+  echo: false
+--- 
+
+
+```{python}
+#| echo: false
+#| 
+import os
+from pathlib import Path
+
+import warnings
+from datetime import datetime, timezone
+
+import altair as alt
+from itables import show
+import pandas as pd
+import pytz
+from pyosmeta import ProcessIssues
+from pyosmeta.github_api import GitHubAPI
+
+# Suppress all warnings
+warnings.filterwarnings("ignore")
+# Make tables nicer
+pd.set_option("display.max_colwidth", None)
+current_date = datetime.today().date()
+today = current_date.strftime("%d %B %Y") 
+```
+
+*Last updated: **`{python} today`** *
+
+```{python}
+# Map issue labels based on state of review package is in.
+label_map = {
+    "pre-review": [
+        "New Submission!", 
+        "0/pre-review-checks"],
+    "seeking editor": ["0/seeking-editor"],
+    "seeking reviewers": ["2/seeking-reviewers"],
+    "under-review": [
+        "1/editor-assigned",
+        "3/reviewers-assigned",
+        "4/reviews-in-awaiting-changes",
+        "5/awaiting-reviewer-response",
+    ],
+    "accepted-open": ["6/pyOS-approved", "9/joss-approved"],
+}
+
+def get_active_status(labels):
+    """A function that returns an active status value based on a list of label values"""
+    for status, label_list in label_map.items():
+        if any(label in labels for label in label_list):
+            return status
+    return "unknown"
+
+
+```
+
+```{python}
+presub_path = data_path = Path.cwd().parents[0] / "_data" /  "review_presubmissions.csv"
+presubmissions = pd.read_csv(
+    presub_path,
+    parse_dates=["date_opened", "date_closed", "last_comment_date"],
+)
+presubmissions["date_opened"] = presubmissions["date_opened"]
+presubmissions["last_comment_date"] = presubmissions["last_comment_date"]
+presubmissions = presubmissions.rename(
+    columns={
+        "package_name": "Name",
+        "date_opened": "Date Opened",
+        "date_closed": "Date Closed",
+        "issue_num": "Issue",
+        "description": "Description",
+        "categories": "Categories",
+        "last_comment_date": "Last Comment",
+        "last_comment_user": "Last User to Comment",
+    }
+)
+
+all_presubmissions = len(presubmissions)
+```
+
+
+```{python}
+# Process presubmission data
+open_presubmissions = presubmissions[presubmissions["Date Closed"].isna()]
+today = datetime.now(timezone.utc)
+open_presubmissions["days_open"] = (
+    today - open_presubmissions["Date Opened"]
+).dt.days
+open_presubmissions["Date Opened"] = open_presubmissions["Date Opened"].dt.date
+open_presubmissions["Last Comment"] = open_presubmissions["Last Comment"].dt.date
+open_presubmissions.reset_index(drop=True, inplace=True)
+
+```
+
+```{python}
+#| echo: false
+
+# Open submission review data
+data_path = Path.cwd().parents[0] / "_data" / "review_submissions.csv"
+reviews = pd.read_csv(data_path,
+    parse_dates=["date_opened", "date_closed", "last_comment_date"],
+)
+reviews["date_opened"] = reviews["date_opened"]
+reviews["last_comment_date"] = reviews["last_comment_date"]
+reviews = reviews.rename(
+    columns={
+        "package_name": "Name",
+        "date_opened": "Date Opened",
+        "date_closed": "Date Closed",
+        "issue_num": "Issue",
+        "description": "Description",
+        "categories": "Categories",
+        "last_comment_date": "Last Comment",
+        "last_comment_user": "Last User to Comment",
+    }
+)
+
+open_reviews = reviews[reviews["Date Closed"].isna()]
+open_reviews.drop(columns=["Date Closed","Unnamed: 0"], inplace=True)
+total_open = len(open_reviews)
+
+```
+
+
+```{python}
+#| echo: false
+
+# Create active status column
+open_reviews["active_status"] = open_reviews["labels"].apply(get_active_status)
+
+```
+
+```{python}
+#| echo: false
+
+# Add days open to table
+open_reviews["Days Open"] = (today - open_reviews["Date Opened"]).dt.days
+open_reviews["Date Opened"] = open_reviews["Date Opened"].dt.date
+open_reviews["Last Comment"] = open_reviews["Last Comment"].dt.date
+```
+
+```{python}
+# Determine overall review stage each item is in
+# TODO: what is getting labeled as unknown?
+review_status_ct = open_reviews["active_status"].value_counts().reset_index()
+review_status_ct.rename(columns={"labels": "status"}, inplace=True)
+
+seeking_editor = open_reviews[open_reviews["active_status"]=="seeking editor"]
+seeking_editor_count = len(seeking_editor)
+```

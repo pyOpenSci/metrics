@@ -34,7 +34,7 @@ current_date = datetime.today().date()
 today = current_date.strftime("%d %B %Y") 
 ```
 
-*Last updated: **`{python} today`***
+*Last updated: **`{python} today`** *
 
 ```{python}
 # Map issue labels based on state of review package is in.
