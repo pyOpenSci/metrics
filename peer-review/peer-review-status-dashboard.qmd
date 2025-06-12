@@ -7,6 +7,10 @@ execute:
   echo: false
 --- 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7622e94 (add: new dashboard)
 ```{python}
 #| echo: false
 #| 
@@ -20,8 +24,6 @@ import altair as alt
 from itables import show
 import pandas as pd
 import pytz
-import plotly.express as px
-from plotly.subplots import make_subplots
 from pyosmeta import ProcessIssues
 from pyosmeta.github_api import GitHubAPI
 
@@ -140,8 +142,6 @@ open_reviews.drop(columns=["Date Closed","Unnamed: 0"], inplace=True)
 total_open = len(open_reviews)
 
 ```
-
-
 
 ```{python}
 #| echo: false

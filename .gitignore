@@ -24,3 +24,6 @@ _output/*
 # pixi environments
 .pixi
 *.egg-info
+
+# Quarto
+*.quarto_ipynb
