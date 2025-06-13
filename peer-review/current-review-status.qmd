@@ -276,6 +276,7 @@ seeking_reviewers = status_df[
 seeking_reviewers.reset_index(drop=True, inplace=True)
 
 ```
+
 `{python} len(seeking_reviewers)` package(s) currently needs reviewers. 
 
 

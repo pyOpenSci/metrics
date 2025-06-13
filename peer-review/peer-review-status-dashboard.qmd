@@ -7,7 +7,6 @@ execute:
   echo: false
 --- 
 
-
 ```{python}
 #| echo: false
 #| 
@@ -35,6 +34,18 @@ today = current_date.strftime("%d %B %Y")
 *Last updated: **`{python} today`** *
 
 ```{python}
+def clean_and_order(df, DROP_COLS, order):
+    """Drop columns and reorder DataFrame columns."""
+    return df.drop(columns=DROP_COLS, errors="ignore")[ORDER]
+
+def get_status_df(df, status):
+    return df[df["active_status"] == status].reset_index(drop=True)
+
+DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"] 
+ORDER = ["Name", "Description", "Days Open", "Date Opened","Last Comment", "Last User to Comment", "Issue", "Categories", "eic"]
+
+
+
 # Map issue labels based on state of review package is in.
 label_map = {
     "pre-review": [
@@ -96,7 +107,7 @@ open_presubmissions["days_open"] = (
 open_presubmissions["Date Opened"] = open_presubmissions["Date Opened"].dt.date
 open_presubmissions["Last Comment"] = open_presubmissions["Last Comment"].dt.date
 open_presubmissions.reset_index(drop=True, inplace=True)
-
+open_presubmission_count = len(open_presubmissions)
 ```
 
 ```{python}
@@ -129,6 +140,7 @@ total_open = len(open_reviews)
 ```
 
 
+
 ```{python}
 #| echo: false
 
@@ -147,11 +159,84 @@ open_reviews["Last Comment"] = open_reviews["Last Comment"].dt.date
 ```
 
 ```{python}
+#| echo: false
+#| 
 # Determine overall review stage each item is in
-# TODO: what is getting labeled as unknown?
 review_status_ct = open_reviews["active_status"].value_counts().reset_index()
 review_status_ct.rename(columns={"labels": "status"}, inplace=True)
 
-seeking_editor = open_reviews[open_reviews["active_status"]=="seeking editor"]
+seeking_editor = clean_and_order(get_status_df(open_reviews, "seeking editor"),DROP_COLS, ORDER)
+seeking_reviewer = clean_and_order(get_status_df(open_reviews, "seeking reviewers"),DROP_COLS, ORDER)
+
 seeking_editor_count = len(seeking_editor)
 ```
+
+## Row {height=5%}
+
+```{python}
+#| content: valuebox
+#| title: "Current Open Reviews"
+
+dict(
+  icon = "box2-heart",
+  color = "primary",
+  value = total_open
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Open Presubmissions"
+# fails if the value isn't an int
+dict(
+  icon = "person-hearts",
+  color = "primary",
+  value = open_presubmission_count
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Seeking Editors"
+# fails if the value isn't an int
+dict(
+  icon = "copy",
+  color = "primary",
+  value = seeking_editor_count
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Seeking Reviewers"
+# fails if the value isn't an int
+dict(
+  icon = "copy",
+  color = "primary",
+  value = len(seeking_reviewer)
+)
+```
+
+
+## Row {height=5%}
+
+```{python}
+#| title: "Packages Seeking an Editor"
+show(seeking_editor)
+```
+## Row {height=5%}
+```{python}
+#| title: "Packages Seeking Reviewers"
+show(seeking_reviewer)
+```
+
+## Row {height=5%} stuff here
+
+```{python}
+#| title: "Open Presubmission Inquiries"
+
+show(open_presubmissions)
+```
+
+# Next up - editor load plots
+This makes a tab at the top! 

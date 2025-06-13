@@ -13,9 +13,9 @@ execute:
 #| echo: false
 import ast
 import warnings
-from itables import show
 from pathlib import Path
 
+from itables import show
 import altair as alt
 import pandas as pd
 import plotly.express as px
