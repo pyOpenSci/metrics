@@ -21,6 +21,8 @@ import altair as alt
 from itables import show
 import pandas as pd
 import pytz
+import plotly.express as px
+from plotly.subplots import make_subplots
 from pyosmeta import ProcessIssues
 from pyosmeta.github_api import GitHubAPI
 
@@ -171,8 +173,12 @@ seeking_reviewer = clean_and_order(get_status_df(open_reviews, "seeking reviewer
 seeking_editor_count = len(seeking_editor)
 ```
 
+<<<<<<< HEAD
 
 ## Row {height=5%}
+=======
+## Row 
+>>>>>>> a8e01d9 (Fix editor plot)
 
 ```{python}
 #| content: valuebox
@@ -456,5 +462,4 @@ fig = fig.update_layout(
 )
 
 fig.show()
-
 ```
