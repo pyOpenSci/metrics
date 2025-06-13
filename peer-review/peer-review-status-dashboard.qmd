@@ -7,10 +7,7 @@ execute:
   echo: false
 --- 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 7622e94 (add: new dashboard)
 ```{python}
 #| echo: false
 #| 
@@ -47,8 +44,6 @@ def get_status_df(df, status):
 
 DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"] 
 ORDER = ["Name", "Description", "Days Open", "Date Opened","Last Comment", "Last User to Comment", "Issue", "Categories", "eic"]
-
-
 
 # Map issue labels based on state of review package is in.
 label_map = {
@@ -143,6 +138,9 @@ total_open = len(open_reviews)
 
 ```
 
+
+
+
 ```{python}
 #| echo: false
 
@@ -173,7 +171,8 @@ seeking_reviewer = clean_and_order(get_status_df(open_reviews, "seeking reviewer
 seeking_editor_count = len(seeking_editor)
 ```
 
-## Row 
+
+## Row {height=5%}
 
 ```{python}
 #| content: valuebox
@@ -219,8 +218,7 @@ dict(
 )
 ```
 
-
-## Row {height=1%}
+## Row {height=5%}
 
 ```{python}
 #| title: "Packages Seeking an Editor"
