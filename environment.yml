@@ -13,6 +13,8 @@ dependencies:
   - pyarrow
   - pandas
   - altair
+  - itables
+  - plotly
   - pip:
     - pyosmeta
   #   - jupyterlab_code_formatter[isort]
