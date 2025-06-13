@@ -1,14 +1,11 @@
----
-title: Current Python Peer Review Status | pyOpenSci
-jupyter: python3
+--- 
+title: "pyOpenSci Current Review Status"
+format: 
+  dashboard:
+    scrolling: true 
 execute:
   echo: false
----
-
-## Current open reviews 
-
-This page overviews the current state of pyOpenSci open peer review submissions. 
-
+--- 
 
 ```{python}
 #| echo: false
@@ -23,6 +20,8 @@ import altair as alt
 from itables import show
 import pandas as pd
 import pytz
+import plotly.express as px
+from plotly.subplots import make_subplots
 from pyosmeta import ProcessIssues
 from pyosmeta.github_api import GitHubAPI
 
@@ -37,6 +36,18 @@ today = current_date.strftime("%d %B %Y")
 *Last updated: **`{python} today`** *
 
 ```{python}
+def clean_and_order(df, DROP_COLS, order):
+    """Drop columns and reorder DataFrame columns."""
+    return df.drop(columns=DROP_COLS, errors="ignore")[ORDER]
+
+def get_status_df(df, status):
+    return df[df["active_status"] == status].reset_index(drop=True)
+
+DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"] 
+ORDER = ["Name", "Description", "Days Open", "Date Opened","Last Comment", "Last User to Comment", "Issue", "Categories", "eic"]
+
+
+
 # Map issue labels based on state of review package is in.
 label_map = {
     "pre-review": [
@@ -98,7 +109,7 @@ open_presubmissions["days_open"] = (
 open_presubmissions["Date Opened"] = open_presubmissions["Date Opened"].dt.date
 open_presubmissions["Last Comment"] = open_presubmissions["Last Comment"].dt.date
 open_presubmissions.reset_index(drop=True, inplace=True)
-
+open_presubmission_count = len(open_presubmissions)
 ```
 
 ```{python}
@@ -131,6 +142,7 @@ total_open = len(open_reviews)
 ```
 
 
+
 ```{python}
 #| echo: false
 
@@ -149,170 +161,91 @@ open_reviews["Last Comment"] = open_reviews["Last Comment"].dt.date
 ```
 
 ```{python}
+#| echo: false
+#| 
 # Determine overall review stage each item is in
-# TODO: what is getting labeled as unknown?
 review_status_ct = open_reviews["active_status"].value_counts().reset_index()
 review_status_ct.rename(columns={"labels": "status"}, inplace=True)
 
-seeking_editor = open_reviews[open_reviews["active_status"]=="seeking editor"]
+seeking_editor = clean_and_order(get_status_df(open_reviews, "seeking editor"),DROP_COLS, ORDER)
+seeking_reviewer = clean_and_order(get_status_df(open_reviews, "seeking reviewers"),DROP_COLS, ORDER)
+
 seeking_editor_count = len(seeking_editor)
 ```
 
-
-## Current review status 
-
-Below is an overview of Python package reviews that are currently open in the 
-pyOpenSci peer review process. 
-
+## Row 
 
 ```{python}
+#| content: valuebox
+#| title: "Current Open Reviews"
 
-bar_chart = (
-    alt.Chart(review_status_ct)
-    .mark_bar(color="purple")
-    .encode(
-        x=alt.X("active_status:N", 
-        title="Active Status", sort="-y",axis=alt.Axis(labelAngle=0)),
-        y=alt.Y("count:Q", title="Count"),
-    tooltip=["active_status", "count"]
-    )
-).properties(
-    title="pyOpenSci: Active Review Status", width="container"
+dict(
+  icon = "box2-heart",
+  color = "primary",
+  value = total_open
 )
-
-
-bar_chart.show()
-
 ```
 
-### Active and open reviews
 ```{python}
-def categorize_status(status):
-    if status in ["under-review", "seeking editor", "seeking reviewers"]:
-        return "Under Review"
-    elif status == "pre-review":
-        return "Pre-Review"
-    elif status == "accepted-open":
-        return "Accepted Open"
-    return "Other"
-
-review_status_ct["grouped_status"] = review_status_ct["active_status"].apply(categorize_status)
-grouped_status_ct = review_status_ct.groupby("grouped_status", as_index=False)["count"].sum()
-```
-```{python}
-
-bar_chart = (
-    alt.Chart(grouped_status_ct)
-    .mark_bar(color="purple")
-    .encode(
-        x=alt.X("grouped_status:N", 
-        title="Open Reviews", sort="-y",axis=alt.Axis(labelAngle=0)),
-        y=alt.Y("count:Q", title="Count"),
-    tooltip=["grouped_status", "count"]
-    )
-).properties(
-    title="pyOpenSci: Active Review Status", width="container"
+#| content: valuebox
+#| title: "Open Presubmissions"
+# fails if the value isn't an int
+dict(
+  icon = "person-hearts",
+  color = "primary",
+  value = open_presubmission_count
 )
-
-
-bar_chart.show()
 ```
 
-
-
 ```{python}
-only_active = grouped_status_ct[grouped_status_ct != "Accepted Open"].dropna()
-
-bar_chart = (
-    alt.Chart(only_active)
-    .mark_bar(color="purple")
-    .encode(
-        x=alt.X("grouped_status:N", 
-        title="Open Reviews", sort="-y",axis=alt.Axis(labelAngle=0)),
-        y=alt.Y("count:Q", title="Count"),
-    tooltip=["grouped_status", "count"]
-    )
-).properties(
-    title="pyOpenSci: Active Review Status", width="container"
+#| content: valuebox
+#| title: "Seeking Editors"
+# fails if the value isn't an int
+dict(
+  icon = "copy",
+  color = "primary",
+  value = seeking_editor_count
 )
-
-
-bar_chart.show()
 ```
-### All open reviews 
-
-pyOpenSci currently has **`{python} total_open`** open
-reviews and **`{python} len(open_presubmissions)`** open pre-submission inquiries.
 
 ```{python}
-#| echo: false
-# status_df = open_reviews.drop(columns=["status","labels", "Categories"])
-label_order = ["Name","active_status", "Date Opened", "Days Open", "Last Comment", "Last User to Comment", "editor", "eic", "Issue"]
-status_df = open_reviews[label_order]
-status_df.reset_index(drop=True, inplace=True)
-# Create active status column
-show(status_df)
+#| content: valuebox
+#| title: "Seeking Reviewers"
+# fails if the value isn't an int
+dict(
+  icon = "copy",
+  color = "primary",
+  value = len(seeking_reviewer)
+)
 ```
 
 
-## Editors needed
-
-**`{python} seeking_editor_count`** packages, listed below, need editors.
+## Row {height=1%}
 
 ```{python}
-seeking_editor = status_df[status_df["active_status"]=="seeking editor"]
-seeking_editor.reset_index(drop=True, inplace=True)
+#| title: "Packages Seeking an Editor"
 show(seeking_editor)
 ```
 
-
-## Reviewers needed
-
+## Row {height=1%}
 
 ```{python}
-
-seeking_reviewers = status_df[
-    status_df["active_status"] == "seeking reviewers"]
-seeking_reviewers.reset_index(drop=True, inplace=True)
-
+#| title: "Packages Seeking Reviewers"
+show(seeking_reviewer)
 ```
 
-`{python} len(seeking_reviewers)` package(s) currently needs reviewers. 
-
+## Row {height=1%}
 
 ```{python}
-show(seeking_reviewers)
+#| title: "Open Presubmission Inquiries"
+
+show(open_presubmissions)
 ```
-
-
-## Open review presubmission inquiries
-
-There are currently **`{python} len(open_presubmissions)`** open presubmission inquiries. The current EiC handles all presubmission inquiries,
-
-There are **`{python} len(open_presubmissions)` presubmission requests** currently open.
-
-```{python}
-# TODO: add days open to presubs too
-open_presubmissions.dtypes
-label_order_presub = ["Name",  "Date Opened",  "Last Comment", "Last User to Comment", "eic", "Issue"]
-
-open_presubs_clean = open_presubmissions[label_order_presub]
-```
-
-```{python}
-
-open_presubs_clean.reset_index(drop=True, inplace=True)
-show(open_presubs_clean)
-```
-
-
-## Editorial team workload overview
 
 ```{python}
 # get editor team data
 editor_path = Path.cwd().parents[0] / "_data" /  "editorial_team_domains.csv"
 editor_data = pd.read_csv(editor_path)
-editor_data.columns
 editor_data = editor_data[["gh_username","first_name","Domain_areas","Description","technical_areas"]]
 all_editors_df = editor_data[["gh_username"]].rename(columns={"gh_username": "editor"})
 
@@ -321,66 +254,86 @@ busy_editors = open_reviews.loc[open_reviews.editor != "TBD", ["editor"]].value_
 ```
 
 ```{python}
+#| echo: false
 all_editor_activity = all_editors_df.merge(busy_editors, on="editor", how="outer").fillna(0)
 
 all_editor_activity["count"]= all_editor_activity["count"].astype(int)
 all_editor_activity.sort_values(by="count", inplace=True)
 all_editor_activity = all_editor_activity.reset_index(drop=True)
-```
 
-```{python}
 # Get counts of available and unavailable editors
 available_editors = all_editor_activity[all_editor_activity["count"] == 0]
 all_busy_editors = all_editor_activity[all_editor_activity["count"] != 0]
 
 num_available_editors = len(available_editors)
 available_editors = available_editors.merge(editor_data, left_on="editor", right_on="gh_username", how="inner")
+
 available_editors = available_editors.rename(columns={"count": "review count"})
 available_editors = available_editors[["editor", "review count", "Domain_areas", "Description", "technical_areas", "first_name"]]
 ```
 
-There are currently **`{python} len(available_editors)` available editors** and **`{python} len(all_busy_editors)` editors who are assigned to atleast one software review**.
 
-### All pyOpenSci editors 
+## Row {height=1%}
+
 ```{python}
+#| content: valuebox
+#| title: "Total Editors"
+
+dict(
+  icon = "box2-heart",
+  color = "primary",
+  value = total_open
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Busy Editors"
+# fails if the value isn't an int
+dict(
+  icon = "person-hearts",
+  color = "primary",
+  value = open_presubmission_count
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Available Editors"
+# fails if the value isn't an int
+dict(
+  icon = "person-hearts",
+  color = "primary",
+  value = open_presubmission_count
+)
+```
+
+## Row {height=3%}
+```{python}
+#| title: "pyOpenSci Editorial Team" 
 show(editor_data)
 ```
 
-### Busy editors running reviews 
+## Row {height=2%}
+
 ```{python}
+#| title: "Busy editors running reviews "
 show(busy_editors)
 ```
 
-
-### Editors available for a review
-
-Below are editors that currently do not have submissions assigned to them.
-
+## Row {height=2%}
 ```{python}
-
+#| title: "Available Editors"
 show(available_editors)
 ```
 
 
-```{python}
-# TODO: calculate time that they were in review.
-#all_editor_activity
-```
-
-## Editor load
-
-Next, we look at the load of each editor over time to get a sense of their time demands. 
-
-::: {.callout-note}
-The data below represents all editors over time, not just currently active editors
-:::
 
 ```{python}
 # TODO: make this focus only on current open reviews vs all reviews over time. 
 
 # Get a list of all editors over time that have supported pyOpenSci
 ignore_editors = ["TBD"]
-
 ignore_editors += ["lwasser", "xmnlab"]
 editors = [
     editor
@@ -412,7 +365,6 @@ edits = reviews.rename(columns={"Date Opened": "Date"}).copy()
 ```
 
 
-
 ```{python}
 
 # TODO: If this uses open_reviews it's only showing current load
@@ -423,29 +375,88 @@ edits = edits[edits["editor"] != "TBD"]
 
 ```
 
-```{python}
-charts = [
-    alt.Chart(edits.loc[edits.editor == editor])
-    .mark_bar(color="purple")
-    .encode(
-        x=alt.X("yearquarter(Date):T"),
-        y=alt.Y("count(package_name)", title="Number of edits per quarter"),
-        tooltip=["yearquarter(Date)", "count(package_name)"],
-    )
-    .properties(
-        title=alt.TitleParams(
-            text=f"{editor}",
-            fontSize=18,
-            orient="right",
-            angle=0,
-            align="right",
-        ),
-        width=600,
-        height=200,
-    )
-    for editor in editors
-]
+# Editors 
 
-full_chart = alt.vconcat(*charts).resolve_scale(x="shared", y="shared")
-full_chart.show()
+## Row 
+
+```{python}
+# Cleanup 
+# Ensure datetime and a clean quarter label
+edits["Date"] = pd.to_datetime(edits["Date"])
+edits["Year"] = edits["Date"].dt.year
+edits["QuarterNum"] = edits["Date"].dt.quarter
+edits["QuarterLabel"] = edits["Year"].astype(str) + " Q" + edits["QuarterNum"].astype(str)
+
+quarter_order = sorted(edits["QuarterLabel"].unique())
+edits["QuarterLabel"] = pd.Categorical(edits["QuarterLabel"], categories=quarter_order, ordered=True)
+
+# Count edits per editor and quarter
+df = (
+    edits.groupby(["editor", "QuarterLabel"])
+    .size()
+    .reset_index(name="count")
+)
+
+all_editors = df["editor"].unique()
+all_quarters = df["QuarterLabel"].cat.categories
+
+full_index = pd.MultiIndex.from_product(
+    [all_editors, all_quarters],
+    names=["editor", "QuarterLabel"]
+)
+df_full = (
+    df.set_index(["editor", "QuarterLabel"])
+      .reindex(full_index, fill_value=0)
+      .reset_index()
+)
+```
+
+```{python}
+
+quarter_order = sorted(df["QuarterLabel"].unique())
+df["QuarterLabel"] = pd.Categorical(df["QuarterLabel"], categories=quarter_order, ordered=True)
+
+facet_wrap = 2  
+num_editors = len(df["editor"].unique())
+num_rows = (num_editors + facet_wrap - 1) // facet_wrap
+row_height = 200 
+
+fig = px.bar(
+    df,
+    x="QuarterLabel",
+    y="count",
+    facet_col="editor",
+    facet_row_spacing=0.04, 
+    facet_col_spacing=0.06, 
+    facet_col_wrap=facet_wrap,
+    color_discrete_sequence=["indigo"],
+    labels={"count": "Number of edits", "QuarterLabel": "Quarter"},
+    title="Editor activity by quarter",
+    height=row_height * num_rows,
+    width=1200,
+)
+
+fig = fig.for_each_annotation(
+    lambda a: a.update(text=a.text.split("=")[-1], font=dict(size=16))
+)
+fig = fig.update_xaxes(
+    tickangle=45,
+    tickfont=dict(size=10),
+    title_text="Quarter",
+    showticklabels=True
+)
+fig = fig.update_yaxes(
+    dtick=1,
+    tickformat=",d",
+    title_text="Number of edits",
+    range=[0, 4]
+)
+fig = fig.update_layout(
+    showlegend=False,
+    margin=dict(t=80),
+    title_font_size=24,
+)
+
+fig.show()
+
 ```

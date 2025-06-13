@@ -9,3 +9,4 @@ tqdm
 nox
 pygithub # for github API
 plotly
+panel

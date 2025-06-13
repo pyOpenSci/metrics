@@ -20,3 +20,7 @@ node_modules/*
 /.quarto/
 _site/*
 _output/*
+
+# pixi environments
+.pixi
+*.egg-info

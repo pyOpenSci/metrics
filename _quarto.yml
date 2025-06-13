@@ -22,6 +22,8 @@ website:
         href: index.qmd
       - text: "Peer Review"
         menu:
+          - text: Peer Review Status Dashboard
+            href: peer-review/peer-review-status-dashboard.qmd
           - text: Current Review Status
             href: peer-review/current-review-status.qmd
           - text: Over Time 
