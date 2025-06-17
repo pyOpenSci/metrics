@@ -234,7 +234,7 @@ edits = edits[edits["editor"] != "TBD"]
 
 ```
 
-# Editors 
+## Editor availability 
 
 ## Row {height=8%}
 
