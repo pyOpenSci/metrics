@@ -130,7 +130,7 @@ available_editors = available_editors[["editor", "review count", "Domain_areas",
 ```
 
 
-## Row {height=1%}
+## Row {height=.5%}
 
 ```{python}
 #| content: valuebox
@@ -165,7 +165,7 @@ dict(
 )
 ```
 
-## Row {height=3%}
+## Row {height=1%}
 ```{python}
 #| title: "pyOpenSci Editorial Team" 
 print("Note: the total editor count is currently incorrect-we should open an issue.")
@@ -173,14 +173,14 @@ print("Note: the total editor count is currently incorrect-we should open an iss
 show(editor_data)
 ```
 
-## Row {height=2%}
+## Row {height=1%}
 
 ```{python}
 #| title: "Busy editors running reviews "
 show(busy_editors)
 ```
 
-## Row {height=2%}
+## Row {height=.8%}
 ```{python}
 #| title: "Available Editors"
 show(available_editors)
@@ -236,7 +236,7 @@ edits = edits[edits["editor"] != "TBD"]
 
 ## Editor availability 
 
-## Row {height=8%}
+## Row {height=6%}
 
 ```{python}
 # Cleanup 
