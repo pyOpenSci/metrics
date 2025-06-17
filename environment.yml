@@ -1,8 +1,8 @@
-name: pyos-myst
+name: pyos-metrics
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
+  - python=3.13
   - jupyterlab
   - jupyterlab_code_formatter
   - jupyterlab-myst
@@ -13,6 +13,8 @@ dependencies:
   - pyarrow
   - pandas
   - altair
+  - itables
+  - plotly
   - pip:
     - pyosmeta
   #   - jupyterlab_code_formatter[isort]
