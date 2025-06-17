@@ -24,16 +24,23 @@ website:
         menu:
           - text: Peer Review Status Dashboard
             href: peer-review/peer-review-status-dashboard.qmd
+          - text: Editorial Dashboard
+            href: peer-review/editorial-dashboard.qmd
           - text: Current Review Status
             href: peer-review/current-review-status.qmd
           - text: Over Time 
             href: peer-review/reviews-over-time.qmd
           - text: Peer review trends
             href: peer-review/review-trends.qmd
+
+      - text: "pyOpenSci Package Metrics"
+        menu:
           - text: Accepted Package Metrics
             href: peer-review/accepted-packages.qmd
           - text: Package Dashboard 
             href: peer-review/pyos-package-dashboard.qmd
+
+
       - text: "Contributors"
         menu:
           - text: Contributor Data
