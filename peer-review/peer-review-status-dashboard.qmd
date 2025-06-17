@@ -7,6 +7,7 @@ execute:
   echo: false
 --- 
 
+
 ```{python}
 #| echo: false
 #| 
@@ -46,9 +47,6 @@ def get_status_df(df, status):
 DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"] 
 ORDER = ["Name", "Description", "Days Open", "Date Opened","Last Comment", "Last User to Comment", "Issue", "Categories", "eic"]
 
-
-
-# Map issue labels based on state of review package is in.
 label_map = {
     "pre-review": [
         "New Submission!", 
@@ -70,8 +68,6 @@ def get_active_status(labels):
         if any(label in labels for label in label_list):
             return status
     return "unknown"
-
-
 ```
 
 ```{python}
@@ -143,6 +139,7 @@ total_open = len(open_reviews)
 
 
 
+
 ```{python}
 #| echo: false
 
@@ -173,7 +170,8 @@ seeking_reviewer = clean_and_order(get_status_df(open_reviews, "seeking reviewer
 seeking_editor_count = len(seeking_editor)
 ```
 
-## Row 
+
+## Row {height=1%}
 
 ```{python}
 #| content: valuebox
@@ -219,7 +217,6 @@ dict(
 )
 ```
 
-
 ## Row {height=1%}
 
 ```{python}
@@ -238,225 +235,18 @@ show(seeking_reviewer)
 
 ```{python}
 #| title: "Open Presubmission Inquiries"
-
 show(open_presubmissions)
 ```
 
-```{python}
-# get editor team data
-editor_path = Path.cwd().parents[0] / "_data" /  "editorial_team_domains.csv"
-editor_data = pd.read_csv(editor_path)
-editor_data = editor_data[["gh_username","first_name","Domain_areas","Description","technical_areas"]]
-all_editors_df = editor_data[["gh_username"]].rename(columns={"gh_username": "editor"})
-
-# Get busy editors
-busy_editors = open_reviews.loc[open_reviews.editor != "TBD", ["editor"]].value_counts().reset_index()
-```
+## Row {height=4%}
 
 ```{python}
-#| echo: false
-all_editor_activity = all_editors_df.merge(busy_editors, on="editor", how="outer").fillna(0)
+#| title: "Open Reviews Sorted by Last Comment Date"
+print("Reviews that have been quiet for the longest period of time are at the top.")
 
-all_editor_activity["count"]= all_editor_activity["count"].astype(int)
-all_editor_activity.sort_values(by="count", inplace=True)
-all_editor_activity = all_editor_activity.reset_index(drop=True)
+open_reviews = open_reviews.sort_values("Last Comment", ascending=True)
 
-# Get counts of available and unavailable editors
-available_editors = all_editor_activity[all_editor_activity["count"] == 0]
-all_busy_editors = all_editor_activity[all_editor_activity["count"] != 0]
+new_order = ["Name", "editor", "Last Comment", "Last User to Comment", "eic", "Issue", "active_status", "Description", "Date Opened"]  
 
-num_available_editors = len(available_editors)
-available_editors = available_editors.merge(editor_data, left_on="editor", right_on="gh_username", how="inner")
-
-available_editors = available_editors.rename(columns={"count": "review count"})
-available_editors = available_editors[["editor", "review count", "Domain_areas", "Description", "technical_areas", "first_name"]]
-```
-
-
-## Row {height=1%}
-
-```{python}
-#| content: valuebox
-#| title: "Total Editors"
-
-dict(
-  icon = "box2-heart",
-  color = "primary",
-  value = total_open
-)
-```
-
-```{python}
-#| content: valuebox
-#| title: "Busy Editors"
-# fails if the value isn't an int
-dict(
-  icon = "person-hearts",
-  color = "primary",
-  value = open_presubmission_count
-)
-```
-
-```{python}
-#| content: valuebox
-#| title: "Available Editors"
-# fails if the value isn't an int
-dict(
-  icon = "person-hearts",
-  color = "primary",
-  value = open_presubmission_count
-)
-```
-
-## Row {height=3%}
-```{python}
-#| title: "pyOpenSci Editorial Team" 
-show(editor_data)
-```
-
-## Row {height=2%}
-
-```{python}
-#| title: "Busy editors running reviews "
-show(busy_editors)
-```
-
-## Row {height=2%}
-```{python}
-#| title: "Available Editors"
-show(available_editors)
-```
-
-
-
-```{python}
-# TODO: make this focus only on current open reviews vs all reviews over time. 
-
-# Get a list of all editors over time that have supported pyOpenSci
-ignore_editors = ["TBD"]
-ignore_editors += ["lwasser", "xmnlab"]
-editors = [
-    editor
-    for editor in pd.unique(reviews.editor)
-    if editor not in ignore_editors
-]
-n_edits = (
-    reviews.groupby([reviews["editor"], reviews["Date Opened"].dt.to_period("Q")])
-    .size()
-    .reset_index(name="n_edits")  # Ensures a DataFrame with column name
-)
-```
-
-
-
-```{python}
-
-n_edits_filtered = n_edits[~n_edits["editor"].isin(ignore_editors)]
-n_edits_filtered = n_edits_filtered.rename(columns={"Date Opened": "Date", "n_edits": "count"})
-# Date should be a standard date time
-df = n_edits_filtered.copy()
-df[["Year", "Quarter"]] = df["Date"].astype(str).str.extract(r"(\d{4})Q(\d)").astype(int)
-df["Date"] = pd.to_datetime(df["Year"].astype(str) + "-" + (3 * (df["Quarter"].astype(int) - 1) + 1).astype(str) + "-01")
-```
-
-```{python}
-# This likely should be active edits?
-edits = reviews.rename(columns={"Date Opened": "Date"}).copy()
-```
-
-
-```{python}
-
-# TODO: If this uses open_reviews it's only showing current load
-# if it uses the reviews df it's showing reviews all time 2019 to present. open_reviews has a slightly different structure
-edits = reviews[["editor", "Name", "Date Opened"]]
-edits = edits.rename(columns={"Date Opened": "Date", "Name":"package_name"})
-edits = edits[edits["editor"] != "TBD"]
-
-```
-
-# Editors 
-
-## Row 
-
-```{python}
-# Cleanup 
-# Ensure datetime and a clean quarter label
-edits["Date"] = pd.to_datetime(edits["Date"])
-edits["Year"] = edits["Date"].dt.year
-edits["QuarterNum"] = edits["Date"].dt.quarter
-edits["QuarterLabel"] = edits["Year"].astype(str) + " Q" + edits["QuarterNum"].astype(str)
-
-quarter_order = sorted(edits["QuarterLabel"].unique())
-edits["QuarterLabel"] = pd.Categorical(edits["QuarterLabel"], categories=quarter_order, ordered=True)
-
-# Count edits per editor and quarter
-df = (
-    edits.groupby(["editor", "QuarterLabel"])
-    .size()
-    .reset_index(name="count")
-)
-
-all_editors = df["editor"].unique()
-all_quarters = df["QuarterLabel"].cat.categories
-
-full_index = pd.MultiIndex.from_product(
-    [all_editors, all_quarters],
-    names=["editor", "QuarterLabel"]
-)
-df_full = (
-    df.set_index(["editor", "QuarterLabel"])
-      .reindex(full_index, fill_value=0)
-      .reset_index()
-)
-```
-
-```{python}
-
-quarter_order = sorted(df["QuarterLabel"].unique())
-df["QuarterLabel"] = pd.Categorical(df["QuarterLabel"], categories=quarter_order, ordered=True)
-
-facet_wrap = 2  
-num_editors = len(df["editor"].unique())
-num_rows = (num_editors + facet_wrap - 1) // facet_wrap
-row_height = 200 
-
-fig = px.bar(
-    df,
-    x="QuarterLabel",
-    y="count",
-    facet_col="editor",
-    facet_row_spacing=0.04, 
-    facet_col_spacing=0.06, 
-    facet_col_wrap=facet_wrap,
-    color_discrete_sequence=["indigo"],
-    labels={"count": "Number of edits", "QuarterLabel": "Quarter"},
-    title="Editor activity by quarter",
-    height=row_height * num_rows,
-    width=1200,
-)
-
-fig = fig.for_each_annotation(
-    lambda a: a.update(text=a.text.split("=")[-1], font=dict(size=16))
-)
-fig = fig.update_xaxes(
-    tickangle=45,
-    tickfont=dict(size=10),
-    title_text="Quarter",
-    showticklabels=True
-)
-fig = fig.update_yaxes(
-    dtick=1,
-    tickformat=",d",
-    title_text="Number of edits",
-    range=[0, 4]
-)
-fig = fig.update_layout(
-    showlegend=False,
-    margin=dict(t=80),
-    title_font_size=24,
-)
-
-fig.show()
-
+show(open_reviews[new_order])
 ```
