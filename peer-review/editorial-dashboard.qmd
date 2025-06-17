@@ -107,7 +107,7 @@ all_editors_df = editor_data[["gh_username"]].rename(columns={"gh_username": "ed
 
 # Get busy editors
 busy_editors = open_reviews.loc[open_reviews.editor != "TBD", ["editor"]].value_counts().reset_index()
-editor_data
+
 ```
 
 ```{python}
@@ -168,6 +168,8 @@ dict(
 ## Row {height=3%}
 ```{python}
 #| title: "pyOpenSci Editorial Team" 
+print("Note: the total editor count is currently incorrect-we should open an issue.")
+
 show(editor_data)
 ```
 
@@ -234,7 +236,7 @@ edits = edits[edits["editor"] != "TBD"]
 
 # Editors 
 
-## Row 
+## Row {height=8%}
 
 ```{python}
 # Cleanup 
@@ -269,14 +271,13 @@ df_full = (
 ```
 
 ```{python}
-
 quarter_order = sorted(df["QuarterLabel"].unique())
 df["QuarterLabel"] = pd.Categorical(df["QuarterLabel"], categories=quarter_order, ordered=True)
 
 facet_wrap = 2  
 num_editors = len(df["editor"].unique())
 num_rows = (num_editors + facet_wrap - 1) // facet_wrap
-row_height = 200 
+row_height = 400 
 
 fig = px.bar(
     df,
