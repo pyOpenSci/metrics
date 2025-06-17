@@ -24,9 +24,6 @@ _output/*
 # pixi environments
 .pixi
 *.egg-info
-<<<<<<< HEAD
 
 # Quarto
 *.quarto_ipynb
-=======
->>>>>>> 726e820 (feat: peer review dashboard part 1)
