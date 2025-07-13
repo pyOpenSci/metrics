@@ -35,8 +35,8 @@ website:
 
       - text: "pyOpenSci Packages"
         menu:
-          - text: Package Activity Dashboard
-            href: pyos-packages/package-activity.qmd
+          - text: Inactive Packages
+            href: pyos-packages/inactive-packages.qmd
           - text: Accepted Package Metrics
             href: peer-review/accepted-packages.qmd
           - text: Package Dashboard

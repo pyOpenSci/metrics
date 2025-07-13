@@ -1,5 +1,5 @@
 ---
-title: "pyOpenSci Package Activity Dashboard"
+title: "pyOpenSci Inactive Packages Dashboard"
 format: 
   dashboard:
     scrolling: true 
@@ -97,20 +97,21 @@ dict(
 
 ```{python}
 #| content: valuebox
-#| title: "Active Packages (< 6 months)"
+#| title: "Last Updated"
 
-active_packages = len(display_df) - len(inactive_df)
+from datetime import datetime
+last_updated = datetime.now().strftime("%B %d, %Y")
 
 dict(
-  icon = "activity",
-  color = "success",
-  value = active_packages
+  icon = "calendar-check",
+  color = "info",
+  value = last_updated
 )
 ```
 
 ```{python}
 #| content: valuebox
-#| title: "Inactive Packages (6+ months)"
+#| title: "⚠️ Inactive Packages"
 
 inactive_count = len(inactive_df)
 
@@ -121,15 +122,15 @@ dict(
 )
 ```
 
-## Row {height=45%}
+## Row {height=90%}
 
 ```{python}
-#| title: "All Packages Sorted by Last Commit Date"
+#| title: "⚠️ Inactive Packages (6+ Months Without Commits)"
 
 # Rename columns for better display
 display_columns = {
     'package_name': 'Package Name',
-    'package_description': 'Description', 
+    'package_description': 'Description',
     'last_commit_date': 'Last Commit',
     'days_since_last_commit': 'Days Since Last Commit',
     'stargazers_count': 'Stars',
@@ -137,17 +138,6 @@ display_columns = {
     'open_issues_count': 'Open Issues',
     'repository_link': 'Repository'
 }
-
-display_table = display_df.rename(columns=display_columns)
-
-# Show the table
-show(display_table)
-```
-
-## Row {height=45%}
-
-```{python}
-#| title: "Packages Inactive for 6+ Months"
 
 if len(inactive_df) > 0:
     inactive_table = inactive_df.rename(columns=display_columns)
