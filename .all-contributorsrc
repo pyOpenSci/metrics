@@ -106,6 +106,16 @@
         "review",
         "code"
       ]
+    },
+    {
+      "login": "rogerb121",
+      "name": "rogerb121",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109387723?v=4",
+      "profile": "https://github.com/rogerb121",
+      "contributions": [
+        "code",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
