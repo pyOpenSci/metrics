@@ -1,0 +1,147 @@
+---
+title: "pyOpenSci Inactive Packages Dashboard"
+format: 
+  dashboard:
+    scrolling: true 
+execute:
+  echo: false
+---
+
+## Row {height=0%}
+
+```{python}
+#| echo: false
+import ast
+import warnings
+from pathlib import Path
+from datetime import datetime, timedelta
+
+from itables import show
+import pandas as pd
+
+pd.options.mode.chained_assignment = None
+pd.options.future.infer_string = True
+
+warnings.filterwarnings("ignore")
+
+# Load package data
+package_data_path = Path.cwd().parents[0] / "_data" / "package_data.csv" 
+package_df = pd.read_csv(package_data_path)
+
+# Parse the "gh_meta" column back into dictionaries
+package_df['gh_meta'] = package_df['gh_meta'].apply(
+  lambda x: ast.literal_eval(x) if isinstance(x, str) else x
+)
+
+# Extract relevant fields from gh_meta
+package_df['last_commit'] = package_df['gh_meta'].apply(
+  lambda x: x.get('last_commit') if isinstance(x, dict) else None
+)
+
+package_df['stargazers_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('stargazers_count') if isinstance(x, dict) else None
+)
+
+package_df['forks_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('forks_count') if isinstance(x, dict) else None
+)
+
+package_df['open_issues_count'] = package_df['gh_meta'].apply(
+  lambda x: x.get('open_issues_count') if isinstance(x, dict) else None
+)
+
+# Convert last_commit to datetime
+package_df['last_commit_date'] = pd.to_datetime(package_df['last_commit'], errors='coerce')
+
+# Calculate days since last commit
+today = datetime.now()
+package_df['days_since_last_commit'] = (today - package_df['last_commit_date']).dt.days
+
+# Create a clean dataframe for display
+display_df = package_df[['package_name', 'package_description', 'last_commit_date', 
+                        'days_since_last_commit', 'stargazers_count', 'forks_count', 
+                        'open_issues_count', 'repository_link']].copy()
+
+# Sort by last commit date (most recent first)
+display_df = display_df.sort_values('last_commit_date', ascending=False)
+
+# Create inactive packages dataframe (6+ months = 180+ days)
+six_months_ago = today - timedelta(days=180)
+inactive_df = display_df[display_df['last_commit_date'] < six_months_ago].copy()
+
+# Format dates for display
+display_df['last_commit_date'] = display_df['last_commit_date'].dt.strftime('%Y-%m-%d')
+inactive_df['last_commit_date'] = inactive_df['last_commit_date'].dt.strftime('%Y-%m-%d')
+
+# Get current date for display
+current_date = datetime.today().date()
+today_str = current_date.strftime("%d %B %Y")
+```
+
+*Last updated: **`{python} today_str`***
+
+## Row {height=5%}
+
+```{python}
+#| content: valuebox
+#| title: "Total Packages"
+
+total_packages = len(package_df)
+
+dict(
+  icon = "box2-heart",
+  color = "primary",
+  value = total_packages
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Last Updated"
+
+from datetime import datetime
+last_updated = datetime.now().strftime("%B %d, %Y")
+
+dict(
+  icon = "calendar-check",
+  color = "info",
+  value = last_updated
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "⚠️ Inactive Packages"
+
+inactive_count = len(inactive_df)
+
+dict(
+  icon = "pause-circle",
+  color = "warning",
+  value = inactive_count
+)
+```
+
+## Row {height=90%}
+
+```{python}
+#| title: "⚠️ Inactive Packages (6+ Months Without Commits)"
+
+# Rename columns for better display
+display_columns = {
+    'package_name': 'Package Name',
+    'package_description': 'Description',
+    'last_commit_date': 'Last Commit',
+    'days_since_last_commit': 'Days Since Last Commit',
+    'stargazers_count': 'Stars',
+    'forks_count': 'Forks',
+    'open_issues_count': 'Open Issues',
+    'repository_link': 'Repository'
+}
+
+if len(inactive_df) > 0:
+    inactive_table = inactive_df.rename(columns=display_columns)
+    show(inactive_table)
+else:
+    print("🎉 Great news! All packages have been updated within the last 6 months.")
+```
