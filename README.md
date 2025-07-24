@@ -1,6 +1,6 @@
 # README: About pyOpenSci peer review metrics
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
@@ -115,6 +115,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://www.leahwasser.com"><img src="https://avatars.githubusercontent.com/u/7649194?v=4?s=100" width="100px;" alt="Leah Wasser"/><br /><sub><b>Leah Wasser</b></sub></a><br /><a href="https://github.com/pyOpenSci/metrics/commits?author=lwasser" title="Code">💻</a> <a href="https://github.com/pyOpenSci/metrics/pulls?q=is%3Apr+reviewed-by%3Alwasser" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/clatapie"><img src="https://avatars.githubusercontent.com/u/78221213?v=4?s=100" width="100px;" alt="Camille Latapie"/><br /><sub><b>Camille Latapie</b></sub></a><br /><a href="https://github.com/pyOpenSci/metrics/pulls?q=is%3Apr+reviewed-by%3Aclatapie" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/pyOpenSci/metrics/commits?author=clatapie" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/rogerb121"><img src="https://avatars.githubusercontent.com/u/109387723?v=4?s=100" width="100px;" alt="rogerb121"/><br /><sub><b>rogerb121</b></sub></a><br /><a href="https://github.com/pyOpenSci/metrics/commits?author=rogerb121" title="Code">💻</a> <a href="https://github.com/pyOpenSci/metrics/pulls?q=is%3Apr+reviewed-by%3Arogerb121" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/stevenrayhinojosa-gmail-com"><img src="https://avatars.githubusercontent.com/u/17886818?v=4?s=100" width="100px;" alt="steven"/><br /><sub><b>steven</b></sub></a><br /><a href="https://github.com/pyOpenSci/metrics/commits?author=stevenrayhinojosa-gmail-com" title="Code">💻</a> <a href="https://github.com/pyOpenSci/metrics/pulls?q=is%3Apr+reviewed-by%3Astevenrayhinojosa-gmail-com" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
 </table>
