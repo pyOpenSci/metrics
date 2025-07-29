@@ -1,22 +1,29 @@
 title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo,type
-colors for hovertext in light and dark mode,2025-07-17 01:35:45,open,,sneakers-the-rat,,contributor,python-package-guide,issues
+docs: fix links that redirect permanently,2025-07-27 01:49:15,open,,jameslamb,"Chicago, IL",contributor,python-package-guide,issues
+Fix link to code style (it was pointing to CONTRIBUTING),2025-07-26 00:30:52,open,,eriknw,"Austin, TX",contributor,python-package-guide,issues
+spanish translation documentation.po from lines 470-1180,2025-07-25 22:46:15,open,"translations, lang-ES",aplozadab,Seattle,contributor,python-package-guide,issues
+"Remove ""License :: ..."" classifiers from pyproject.toml examples",2025-07-23 16:57:42,open,,tomalrussell,Oxford / London,contributor,python-package-guide,issues
+Link to Turing way content on licensing.,2025-07-23 15:32:37,open,"help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
+[aug 8 merge] review: trusted publishing tutorial,2025-07-22 21:53:29,open,🚀 ready-for-review,lwasser,United States,staff,python-package-guide,issues
+"Suggest removing use of ""License ::"" classifiers",2025-07-22 12:07:20,open,,tomalrussell,Oxford / London,contributor,python-package-guide,issues
+colors for hovertext in light and dark mode,2025-07-17 01:35:45,closed,,sneakers-the-rat,,contributor,python-package-guide,issues
 Light mode button fix,2025-07-13 00:37:34,closed,,hfactor13,,contributor,python-package-guide,issues
-docs: clarify PyPI distribution type requirements,2025-07-13 00:32:01,open,,jameslamb,"Chicago, IL",contributor,python-package-guide,issues
+docs: clarify PyPI distribution type requirements,2025-07-13 00:32:01,closed,,jameslamb,"Chicago, IL",contributor,python-package-guide,issues
 chore: add link-checking command,2025-07-12 23:34:08,closed,,jameslamb,"Chicago, IL",contributor,python-package-guide,issues
 Bash / console prompts,2025-07-12 23:21:29,open,,lwasser,United States,staff,python-package-guide,issues
-Add quotes to bash instruction to guarantee execution,2025-07-12 23:06:25,open,,ncclementi,"Arlington, VA",contributor,python-package-guide,issues
+Add quotes to bash instruction to guarantee execution,2025-07-12 23:06:25,closed,,ncclementi,"Arlington, VA",contributor,python-package-guide,issues
 My first translation pull request,2025-07-12 21:47:55,closed,"translations, lang-ES",aplozadab,Seattle,contributor,python-package-guide,issues
-Add initial tutorial for trusted publishing.,2025-07-12 19:22:08,open,,mihaimaruseac,San Francisco,contributor,python-package-guide,issues
+Add initial tutorial for trusted publishing.,2025-07-12 19:22:08,closed,,mihaimaruseac,San Francisco,contributor,python-package-guide,issues
 fixes links and ordering on package structure intro page,2025-07-12 18:54:51,closed,,tomato-gits,,contributor,python-package-guide,issues
 Feat: add citation.cff details,2025-07-12 18:31:05,closed,,schwalbe10,,contributor,python-package-guide,issues
-Fixed hover background color issue,2025-07-12 18:30:36,open,,hfactor13,,contributor,python-package-guide,issues
+Fixed hover background color issue,2025-07-12 18:30:36,closed,,hfactor13,,contributor,python-package-guide,issues
 fix: Links and numbering in package-structure-code/intro.md,2025-07-12 18:18:58,closed,,tomato-gits,,contributor,python-package-guide,issues
 Remove stray characters at end of tutorial,2025-07-12 17:47:38,closed,,mihaimaruseac,San Francisco,contributor,python-package-guide,issues
 Update Japanese translation files,2025-07-12 10:26:48,closed,"translations, lang-JA",flpm,"New York, NY",contributor,python-package-guide,issues
 Fix issues in update-language nox session caused by translation stats,2025-07-12 10:10:56,closed,bug,flpm,"New York, NY",contributor,python-package-guide,issues
 Update Spanish translation files,2025-07-12 09:04:51,closed,"translations, lang-ES",flpm,"New York, NY",contributor,python-package-guide,issues
 Bug: Light Mode - buttons aren't accessible,2025-07-11 20:17:02,closed,"good first issue, help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
-fix: pop-up in the translation stats viz has dark text over dark background,2025-07-08 18:10:31,open,"bug, help wanted, sprintable",flpm,"New York, NY",contributor,python-package-guide,issues
+fix: pop-up in the translation stats viz has dark text over dark background,2025-07-08 18:10:31,closed,"bug, help wanted, sprintable",flpm,"New York, NY",contributor,python-package-guide,issues
 add copier template cheatsheet to lessons,2025-07-04 19:22:02,open,,lwasser,United States,staff,python-package-guide,issues
 feat: new lesson on hatch envs,2025-07-03 22:59:28,closed,,lwasser,United States,staff,python-package-guide,issues
 BROKEN!! fix: fonts,2025-07-03 21:55:08,open,,lwasser,United States,staff,python-package-guide,issues
@@ -105,7 +112,7 @@ Translated pages don't reload correctly while using `doc-live-lang`,2024-07-13 1
 remove `write-good`,2024-07-13 05:51:35,open,maintenance,sneakers-the-rat,,contributor,python-package-guide,issues
 Help translate the Python Package Guide into Spanish,2024-07-03 20:58:11,open,"help wanted, sprintable, translations, lang-ES",flpm,"New York, NY",contributor,python-package-guide,issues
 "[UX] Decision step on distributing package: Separate ""should my code be a package"" from ""should my code be on PyPI and conda-forge""",2024-05-20 19:22:21,open,"help wanted, sprintable, pyconus-24",zackw,"Pittsburgh, PA",contributor,python-package-guide,issues
-Add: page on trusted workflows (or create a tutorial section in the publishing to pypi section on trusted workflows) make sure ,2024-05-20 04:34:06,open,"help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
+Add: page on trusted workflows (or create a tutorial section in the publishing to pypi section on trusted workflows) make sure ,2024-05-20 04:34:06,closed,"help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
 Extract out all code examples and use literal includes instead,2024-05-10 17:23:47,open,"help wanted, sprintable",ucodery,,contributor,python-package-guide,issues
 Add tests for example packages in our python packaging guide,2024-05-10 17:15:24,open,"help wanted, sprintable",ucodery,,contributor,python-package-guide,issues
 Sync labels across pyos repos,2024-05-08 18:39:16,open,"help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
@@ -127,16 +134,21 @@ Add content to guide about writing interfaces + wrappers for libraries in other 
 Add: text on which python version(s) to support to the packaging guide,2022-12-21 20:08:46,open,"new-content, help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
 Add: TUTORIAL on dynamic / version control based versioning to the packaging guide,2022-11-07 20:00:50,open,"new-content, help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
 Add: tutorial on how to setup a Python testing envt using hatch to our tutorials,2019-06-03 15:29:49,open,"new-content, help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
-colors for hovertext in light and dark mode,2025-07-17 01:35:45,open,,sneakers-the-rat,,contributor,python-package-guide,pulls
+docs: fix links that redirect permanently,2025-07-27 01:49:15,open,,jameslamb,"Chicago, IL",contributor,python-package-guide,pulls
+Fix link to code style (it was pointing to CONTRIBUTING),2025-07-26 00:30:52,open,,eriknw,"Austin, TX",contributor,python-package-guide,pulls
+spanish translation documentation.po from lines 470-1180,2025-07-25 22:46:15,open,"translations, lang-ES",aplozadab,Seattle,contributor,python-package-guide,pulls
+"Remove ""License :: ..."" classifiers from pyproject.toml examples",2025-07-23 16:57:42,open,,tomalrussell,Oxford / London,contributor,python-package-guide,pulls
+[aug 8 merge] review: trusted publishing tutorial,2025-07-22 21:53:29,open,🚀 ready-for-review,lwasser,United States,staff,python-package-guide,pulls
+colors for hovertext in light and dark mode,2025-07-17 01:35:45,closed,,sneakers-the-rat,,contributor,python-package-guide,pulls
 Light mode button fix,2025-07-13 00:37:34,closed,,hfactor13,,contributor,python-package-guide,pulls
-docs: clarify PyPI distribution type requirements,2025-07-13 00:32:01,open,,jameslamb,"Chicago, IL",contributor,python-package-guide,pulls
+docs: clarify PyPI distribution type requirements,2025-07-13 00:32:01,closed,,jameslamb,"Chicago, IL",contributor,python-package-guide,pulls
 chore: add link-checking command,2025-07-12 23:34:08,closed,,jameslamb,"Chicago, IL",contributor,python-package-guide,pulls
-Add quotes to bash instruction to guarantee execution,2025-07-12 23:06:25,open,,ncclementi,"Arlington, VA",contributor,python-package-guide,pulls
+Add quotes to bash instruction to guarantee execution,2025-07-12 23:06:25,closed,,ncclementi,"Arlington, VA",contributor,python-package-guide,pulls
 My first translation pull request,2025-07-12 21:47:55,closed,"translations, lang-ES",aplozadab,Seattle,contributor,python-package-guide,pulls
-Add initial tutorial for trusted publishing.,2025-07-12 19:22:08,open,,mihaimaruseac,San Francisco,contributor,python-package-guide,pulls
+Add initial tutorial for trusted publishing.,2025-07-12 19:22:08,closed,,mihaimaruseac,San Francisco,contributor,python-package-guide,pulls
 fixes links and ordering on package structure intro page,2025-07-12 18:54:51,closed,,tomato-gits,,contributor,python-package-guide,pulls
 Feat: add citation.cff details,2025-07-12 18:31:05,closed,,schwalbe10,,contributor,python-package-guide,pulls
-Fixed hover background color issue,2025-07-12 18:30:36,open,,hfactor13,,contributor,python-package-guide,pulls
+Fixed hover background color issue,2025-07-12 18:30:36,closed,,hfactor13,,contributor,python-package-guide,pulls
 Remove stray characters at end of tutorial,2025-07-12 17:47:38,closed,,mihaimaruseac,San Francisco,contributor,python-package-guide,pulls
 Update Japanese translation files,2025-07-12 10:26:48,closed,"translations, lang-JA",flpm,"New York, NY",contributor,python-package-guide,pulls
 Fix issues in update-language nox session caused by translation stats,2025-07-12 10:10:56,closed,bug,flpm,"New York, NY",contributor,python-package-guide,pulls
@@ -410,6 +422,8 @@ CONTENT: documentation text and styles,2022-10-26 19:06:10,closed,,lwasser,Unite
 IGNORE: content check Authoring content update,2022-10-25 22:02:16,closed,,lwasser,United States,staff,python-package-guide,pulls
 "WHY DON""T YOU LIKE ME HTML PROOFER? 😭 ",2022-10-25 18:36:42,closed,,lwasser,United States,staff,python-package-guide,pulls
 add infra to build sphinx book,2022-10-25 15:49:58,closed,,lwasser,United States,staff,python-package-guide,pulls
+Update policies.md,2025-07-26 00:31:08,open,,InessaPawson,,contributor,software-peer-review,issues
+bug: Submit Software for Review link to blank template,2025-07-22 15:37:30,open,,pllim,"Baltimore, MD, USA",contributor,software-peer-review,issues
 enh: make the eic checklist more clear and add astropy label statement,2025-06-17 22:55:13,open,reviews-welcome,lwasser,United States,staff,software-peer-review,issues
 Updated editors guide ,2025-06-13 00:38:12,open,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,issues
 enh: reviewer-guide - review the reviewer checklist ,2025-06-11 22:40:27,open,,lwasser,United States,staff,software-peer-review,issues
@@ -439,6 +453,7 @@ Need system for volunteering to review and tracking reviewers in pool like JOSS,
 Add process document for managing reviews,2023-09-18 18:57:04,open,,NickleDave,Charm City,contributor,software-peer-review,issues
 Fix: add link in the letter to reviewers template to our conflict of interest statement in the peer review policies ,2023-05-23 22:26:58,open,"help wanted, content-update",lwasser,United States,staff,software-peer-review,issues
 Minor updates to reviewer guide,2023-03-10 22:08:54,open,review-process-update,NickleDave,Charm City,contributor,software-peer-review,issues
+Update policies.md,2025-07-26 00:31:08,open,,InessaPawson,,contributor,software-peer-review,pulls
 enh: make the eic checklist more clear and add astropy label statement,2025-06-17 22:55:13,open,reviews-welcome,lwasser,United States,staff,software-peer-review,pulls
 Updated editors guide ,2025-06-13 00:38:12,open,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,pulls
 docs: adjust language for peer review mentorship,2025-03-15 22:03:00,closed,,ab93,Sunnyvale,contributor,software-peer-review,pulls
@@ -600,6 +615,11 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
+✨ Release v1.7.2 ✨ ,2025-07-25 02:00:01,closed,,lwasser,United States,staff,pyosMeta,issues
+Update contributor and review data,2025-07-25 01:55:10,closed,,lwasser,United States,staff,pyosMeta,issues
+fix: contrib types aligned with repos,2025-07-25 00:40:32,closed,,lwasser,United States,staff,pyosMeta,issues
+Bug: our contributor workflow is missing/skipping some contributors so there is likely a small bug,2025-07-22 22:55:12,open,"bug, help wanted, python-code",lwasser,United States,staff,pyosMeta,issues
+Fix: update metrics repo name,2025-07-22 21:04:25,closed,,lwasser,United States,staff,pyosMeta,issues
 Fix contributor count pagination - add per_page=100 to contributors A…,2025-07-12 21:24:55,open,,stevenrayhinojosa-gmail-com,Austin,contributor,pyosMeta,issues
 [patch] support list of eic and editors,2025-06-11 15:40:24,closed,,banesullivan,United States,contributor,pyosMeta,issues
 Error in package metrics: contributors count,2025-06-05 15:45:48,open,"bug, help wanted",lwasser,United States,staff,pyosMeta,issues
@@ -656,9 +676,15 @@ Add: CI test that runs all open reviews (maybe weekly) to identify issues before
 [pyosmeta] Add DEVELOPMENT documentation for development and release for the pyosMeta package.  (supports peer review metadata),2024-07-04 18:43:17,open,"good first issue, help wanted, sprintable",lwasser,United States,staff,pyosMeta,issues
 Date/time consistency issues in our peer review data processing workflow,2024-07-04 18:31:44,closed,"help wanted, sprintable, python-code",lwasser,United States,staff,pyosMeta,issues
 [pyos meta repo] Use GitHub Artifact Attestations,2024-06-27 15:42:31,closed,,blink1073,,contributor,pyosMeta,issues
+Create:  add-help-wanted workflow to add tagged issues to project board,2024-06-07 17:41:32,closed,,lwasser,United States,staff,pyosMeta,issues
 BUG: date for (one) review - 9/1/2022 instead of 09/01/2022,2024-03-09 01:22:17,closed,bug,lwasser,United States,staff,pyosMeta,issues
+Fix grammar in devguide,2024-02-26 02:46:11,closed,,willingc,San Diego,contributor,pyosMeta,issues
 BUG: when a user adds a link to their github repo,2023-11-02 14:53:04,closed,bug,lwasser,United States,staff,pyosMeta,issues
 Enh: Order packages by oldest to newest??,2023-08-20 18:54:19,closed,enhancement,lwasser,United States,staff,pyosMeta,issues
+✨ Release v1.7.2 ✨ ,2025-07-25 02:00:01,closed,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2025-07-25 01:55:10,closed,,lwasser,United States,staff,pyosMeta,pulls
+fix: contrib types aligned with repos,2025-07-25 00:40:32,closed,,lwasser,United States,staff,pyosMeta,pulls
+Fix: update metrics repo name,2025-07-22 21:04:25,closed,,lwasser,United States,staff,pyosMeta,pulls
 Fix contributor count pagination - add per_page=100 to contributors A…,2025-07-12 21:24:55,open,,stevenrayhinojosa-gmail-com,Austin,contributor,pyosMeta,pulls
 [patch] support list of eic and editors,2025-06-11 15:40:24,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 Fix: remove sigstore step from publish build as it's duplicate,2025-05-20 14:33:52,closed,,lwasser,United States,staff,pyosMeta,pulls
@@ -806,8 +832,15 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
-Update contributor and review data,2025-07-19 21:11:28,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
-Added button to packaging-resources page to peer review info,2025-07-12 18:52:44,open,,brepowell,"Seattle, Washington",contributor,pyopensci.github.io,issues
+Update contributor and review data,2025-07-26 21:12:43,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2025-07-25 21:11:44,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2025-07-24 23:46:27,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data (#680),2025-07-24 22:40:39,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+feat(blog): add scipy blog,2025-07-24 19:58:38,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2025-07-23 21:11:40,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2025-07-22 21:12:56,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2025-07-19 21:11:28,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Added button to packaging-resources page to peer review info,2025-07-12 18:52:44,closed,,brepowell,"Seattle, Washington",contributor,pyopensci.github.io,issues
 Update contributor and review data,2025-07-11 21:11:20,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Fix: update create package url,2025-07-11 20:00:22,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Update contributor and review data,2025-07-03 21:11:20,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
@@ -953,8 +986,15 @@ Reorganize website images folder,2024-04-17 17:27:02,closed,,kierisi,"Chicago, I
 Fix navigation / potential website overhaul,2024-04-02 19:42:17,closed,"enhancement, help wanted, feature:theme",lwasser,United States,staff,pyopensci.github.io,issues
 Create archive process and then Archive nbless,2024-01-17 00:26:27,closed,feature:content,lwasser,United States,staff,pyopensci.github.io,issues
 Feature: add peer review metadata including citation and date_Accepted to website listing page  (each package has a card),2023-07-03 20:08:05,open,"enhancement, help wanted, sprintable, feature:content",lwasser,United States,staff,pyopensci.github.io,issues
-Update contributor and review data,2025-07-19 21:11:28,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Added button to packaging-resources page to peer review info,2025-07-12 18:52:44,open,,brepowell,"Seattle, Washington",contributor,pyopensci.github.io,pulls
+Update contributor and review data,2025-07-26 21:12:43,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2025-07-25 21:11:44,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2025-07-24 23:46:27,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data (#680),2025-07-24 22:40:39,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
+feat(blog): add scipy blog,2025-07-24 19:58:38,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
+Update contributor and review data,2025-07-23 21:11:40,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2025-07-22 21:12:56,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2025-07-19 21:11:28,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Added button to packaging-resources page to peer review info,2025-07-12 18:52:44,closed,,brepowell,"Seattle, Washington",contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-07-11 21:11:20,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix: update create package url,2025-07-11 20:00:22,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update contributor and review data,2025-07-03 21:11:20,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
@@ -1480,7 +1520,7 @@ Add a package listing page to the website,2019-09-17 20:19:12,closed,,lwasser,Un
 fixing formatting,2019-08-28 22:53:51,closed,,choldgraf,California,contributor,pyopensci.github.io,pulls
 adding custom types,2019-08-28 22:44:41,closed,,choldgraf,California,contributor,pyopensci.github.io,pulls
 Fix Github link site footer,2019-03-19 00:34:57,closed,,leouieda,"São Paulo, Brazil",contributor,pyopensci.github.io,pulls
-Updated references to repo from governance to handbook,2025-07-12 23:02:12,open,,endlesslupita,,contributor,handbook,issues
+Updated references to repo from governance to handbook,2025-07-12 23:02:12,closed,,endlesslupita,,contributor,handbook,issues
 fix: update onboarding,2025-06-24 16:40:40,closed,,lwasser,United States,staff,handbook,issues
 enh: add diagram to help explain our infra,2025-06-05 21:29:44,closed,,lwasser,United States,staff,handbook,issues
 fix: update language to better adhere with CI policies and process,2025-06-04 22:12:09,closed,,lwasser,United States,staff,handbook,issues
@@ -1491,7 +1531,7 @@ enh: update mission statement,2025-03-20 21:57:25,closed,,lwasser,United States,
 [approved] feat: add Executive Council page to handbook ,2024-11-18 16:03:59,closed,,lwasser,United States,staff,handbook,issues
 add link to htmlproofer in external comms,2024-09-19 22:24:50,closed,enhancement,kierisi,"Chicago, IL",staff,handbook,issues
 Add - add-to-project action to all pyOpenSci repos listed in this issue,2024-05-31 22:56:43,closed,"help wanted, good first issue, sprintable",lwasser,United States,staff,handbook,issues
-Updated references to repo from governance to handbook,2025-07-12 23:02:12,open,,endlesslupita,,contributor,handbook,pulls
+Updated references to repo from governance to handbook,2025-07-12 23:02:12,closed,,endlesslupita,,contributor,handbook,pulls
 fix: update onboarding,2025-06-24 16:40:40,closed,,lwasser,United States,staff,handbook,pulls
 enh: add diagram to help explain our infra,2025-06-05 21:29:44,closed,,lwasser,United States,staff,handbook,pulls
 fix: update language to better adhere with CI policies and process,2025-06-04 22:12:09,closed,,lwasser,United States,staff,handbook,pulls
@@ -1576,7 +1616,7 @@ Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contribut
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
 Do not imply that pyOpenSci code of conduct is is infectious,2025-07-17 15:18:48,open,,hamogu,"Cambridge, MA, USA",contributor,software-submission,issues
-astropy: A Community Python Library for Astronomy,2025-07-14 21:58:24,open,"0/pre-review-checks, New Submission!",pllim,"Baltimore, MD, USA",contributor,software-submission,issues
+astropy: A Community Python Library for Astronomy,2025-07-14 21:58:24,open,"0/pre-review-checks, New Submission!, on-hold, astropy",pllim,"Baltimore, MD, USA",contributor,software-submission,issues
 pyinterpolate,2025-07-12 14:09:45,open,"0/pre-review-checks, New Submission!",SimonMolinsky,"Helsinki, Finland",contributor,software-submission,issues
 LSAPy,2025-07-01 16:53:18,closed,presubmission,baptistehamon,Christchurch (NZ),contributor,software-submission,issues
 kernel-varying convolution presubmission inquiry,2025-06-12 15:52:28,closed,"presubmission, currently-out-of-scope",pibion,"Denver, CO",contributor,software-submission,issues
@@ -1690,7 +1730,7 @@ adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwa
 SOS: inactivedashboard-techstack etc.,2025-07-13 18:40:37,open,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,issues
 feat: add package activity dashboard for tracking package maintenance for inactive packages greater than 6 months,2025-07-13 17:54:54,open,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,issues
 Update editorial-dashboard.qmd to fix editor count mismatch,2025-07-12 21:46:58,open,,rogerb121,,contributor,peer-review-metrics,issues
-Update contributor and review data,2025-06-23 05:12:34,open,,github-actions[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2025-06-23 05:12:34,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 fix: quick layout edit,2025-06-17 23:36:01,closed,,lwasser,United States,staff,peer-review-metrics,issues
 bug: editor counts are incorrect,2025-06-17 23:31:12,open,"good first issue, help wanted, python",lwasser,United States,staff,peer-review-metrics,issues
 Peer review dashboard,2025-06-17 22:25:37,closed,,lwasser,United States,staff,peer-review-metrics,issues
@@ -1753,7 +1793,7 @@ Create: peer review dashboard using interactive plots Jupyter and mystmd -- :),2
 #131 development for Inactive Dashboard,2025-07-13 20:18:59,open,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,pulls
 feat: add package activity dashboard for tracking package maintenance for inactive packages greater than 6 months,2025-07-13 17:54:54,open,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,pulls
 Update editorial-dashboard.qmd to fix editor count mismatch,2025-07-12 21:46:58,open,,rogerb121,,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-06-23 05:12:34,open,,github-actions[bot],,contributor,peer-review-metrics,pulls
+Update contributor and review data,2025-06-23 05:12:34,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: quick layout edit,2025-06-17 23:36:01,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Peer review dashboard,2025-06-17 22:25:37,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Update contributor and review data,2025-06-16 05:12:53,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
@@ -1846,14 +1886,14 @@ Fix: nodejs and requirements.txt installation instructions,2024-07-13 18:41:36,c
 Fix: notebook code,2024-07-13 03:42:09,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix: use package name with hyphens,2024-07-11 21:56:02,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Fix: deploy should exec code,2024-07-11 21:45:51,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-docs: Add template info and packaging tutorial links to README,2025-07-12 19:41:54,open,,stevenrayhinojosa-gmail-com,Austin,contributor,pyosPackage,issues
-docs: format code snippets as blocks,2025-07-12 17:24:10,open,,jameslamb,"Chicago, IL",contributor,pyosPackage,issues
+docs: Add template info and packaging tutorial links to README,2025-07-12 19:41:54,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,pyosPackage,issues
+docs: format code snippets as blocks,2025-07-12 17:24:10,closed,,jameslamb,"Chicago, IL",contributor,pyosPackage,issues
 Update the readme for this repository and link to both the copier template and the packaging guide tutorials and overview pages,2025-07-12 00:02:13,open,"help wanted, python-packaging, sprintable",lwasser,United States,staff,pyosPackage,issues
 Enhance / update this repo to match / use the output from our packaging template,2025-07-11 23:36:43,open,"help wanted, sprintable",lwasser,United States,staff,pyosPackage,issues
 Add: linting tools to this package,2024-06-27 16:55:39,closed,,lwasser,United States,staff,pyosPackage,issues
 CI: add builds to package for ,2023-08-15 19:51:20,closed,,lwasser,United States,staff,pyosPackage,issues
-docs: Add template info and packaging tutorial links to README,2025-07-12 19:41:54,open,,stevenrayhinojosa-gmail-com,Austin,contributor,pyosPackage,pulls
-docs: format code snippets as blocks,2025-07-12 17:24:10,open,,jameslamb,"Chicago, IL",contributor,pyosPackage,pulls
+docs: Add template info and packaging tutorial links to README,2025-07-12 19:41:54,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,pyosPackage,pulls
+docs: format code snippets as blocks,2025-07-12 17:24:10,closed,,jameslamb,"Chicago, IL",contributor,pyosPackage,pulls
 Add: ruff setup and instructions on autoformatting with vscode,2024-10-23 19:52:24,closed,,lwasser,United States,staff,pyosPackage,pulls
 Closes #20. Added some dependencies,2024-07-13 23:26:32,closed,,gpcureton,"Madison, Wisconsin, USA",contributor,pyosPackage,pulls
 update badge url,2024-07-13 06:11:48,closed,,sneakers-the-rat,,contributor,pyosPackage,pulls
@@ -1879,6 +1919,7 @@ Fix: readme conflict,2024-01-30 19:07:17,closed,,lwasser,United States,staff,pyo
 Fix: add readme and pyproject.toml to package,2024-01-30 18:54:47,closed,,lwasser,United States,staff,pyosPackage,pulls
 Fix: update pyproject toml and gitignore,2024-01-08 20:27:05,closed,,lwasser,United States,staff,pyosPackage,pulls
 Add: initial code and examples to example project,2023-11-17 20:22:29,closed,,lwasser,United States,staff,pyosPackage,pulls
+sphinx site name defaults to package guide instead of pyOpenSci - it should be configurable in each book that uses this theme,2025-07-21 17:03:29,open,,lwasser,United States,staff,pyos-sphinx-theme,issues
 chore: bump sigstore/gh-action-sigstore-python from 3.0.0 to 3.0.1 in the actions group,2025-06-23 18:27:19,open,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,issues
 Bug: accessibility issue with tables in light mode of the theme,2025-01-30 23:07:37,open,"help wanted, sprintable",lwasser,United States,staff,pyos-sphinx-theme,issues
 Update the readme file to have pyos information about the theme and what repos use the theme,2024-04-05 17:06:31,closed,"help wanted, sprintable",lwasser,United States,staff,pyos-sphinx-theme,issues
