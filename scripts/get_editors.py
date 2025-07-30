@@ -1,16 +1,24 @@
-"""This script parses a largely manually created list of editors 
-grabbed from our onboarding form. It then merges this data with the editorial 
-board GitHub team grabbed using graphQL. 
+"""This script does two things
 
-This provides a table with github username and technical and scinece domain areas 
-that we can use. 
+1. It parses a partially  manually created list of editors found int he csv 
+file: `_data/editorial_team_domains`. This csv was initially created by 
+manually adding editor names to the file with domain areas from our google sheet. 
+The (private) google sheet collects what domains they can support when they 
+apply to be an editor
+2. It then hits the github api to return the list of gh usernames from the editorial team on GitHub
+When we onboard a new editor, we add them to that team so they have proper permissions in repos in our org.
+The GitHub team data are grabbed using graphQL.
 
-I then pulled domains and gh_usernames to allow us to create a table with 
-editors and associated domains
+3. Finally, this script merges the data parsed from the team with the csv file.  
+
+The output is a csv file called _data/editorial_team_domains.csv that can be 
+used to parse editor data. 
 
 TODO:
 * it would be good to find a more automated way to get the domain data from our 
-google sheet. one way to do this would be to use the airtable api if we move to airtable.
+google sheet. one way to do this would be to create a new spreadsheet that 
+pulls from our editor signup but only contains gh username and then the domain areas. 
+
 """
 
 import os
@@ -28,6 +36,10 @@ GITHUB_API_URL = "https://api.github.com/graphql"
 
 
 def get_team_members():
+    """A function that hits the GH graphQL api and pulled down members 
+    from our editorial team. This list should be the most current list of 
+    pyOpenSci editors. """
+
     query = """
     {
       organization(login: "pyOpenSci") {
@@ -66,16 +78,20 @@ def filter_members(members, exclude):
 
 
 if __name__ == "__main__":
+    
+    # Pull down the list of gh usernames from our editorial team
     members = get_team_members()
     exclude = [
         "lwasser",
         "chayadecacao",
         "xuanxu",
     ]
+    # Exclude members who are administrative but don't actually lead reviews
     editorial_team_gh = filter_members(members, exclude)
 
+    # Open the csv file that contains domain info for editors and a list of gh usernames
     data_dir = Path("_data")
-    editor_domains = pd.read_csv(data_dir / "editor-domains.csv")
+    editor_domains = pd.read_csv(data_dir / "editorial_team_domains.csv")
     editor_domains["gh_username"] = editor_domains["gh_username"].str.replace(
         "@", ""
     )
@@ -84,7 +100,8 @@ if __name__ == "__main__":
         editorial_team_df = pd.DataFrame(
             editorial_team_gh, columns=["gh_username"]
         )
-
+# Merge the graphQL data with the github team data
+# This will result in empty domain data but an accurate list of current editors.
 all_editors = pd.merge(
     editorial_team_df, editor_domains, on="gh_username", how="outer"
 )
