@@ -139,7 +139,7 @@ available_editors = available_editors[["editor", "review count", "Domain_areas",
 dict(
   icon = "box2-heart",
   color = "primary",
-  value = len(all_editor_activity)
+  value = len(all_editors_df)
 )
 ```
 
