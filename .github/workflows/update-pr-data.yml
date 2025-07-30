@@ -49,6 +49,9 @@ jobs:
         run: python scripts/get-review-contributors.py
       - name: get-package-data
         run: python scripts/get-package-data.py
+      # Commenting this out because right now it's not running in CI as it should
+      # - name: get-editors
+      #   run: python scripts/get-editors.py
       - name: Cache metrics
         uses: actions/upload-artifact@v4
         with:
