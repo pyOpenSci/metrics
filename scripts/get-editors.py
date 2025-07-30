@@ -1,4 +1,4 @@
-"""This script does two things
+"""This script updates our editorial team csv file with the most current editors.
 
 1. It parses a partially  manually created list of editors found int he csv 
 file: `_data/editorial_team_domains`. This csv was initially created by 
