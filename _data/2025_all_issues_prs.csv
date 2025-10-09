@@ -660,6 +660,17 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
+chore: bump GitHub Actions(deps): bump codecov/codecov-action from 5.4.3 to 5.5.1,2025-10-09 00:46:56,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+chore: Modify Dependabot labels in configuration,2025-10-09 00:45:43,closed,,lwasser,United States,staff,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump actions/setup-python from 5.6.0 to 6.0.0,2025-10-08 23:28:08,closed,,dependabot[bot],,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 4.3.0 to 5.0.0,2025-10-08 23:28:03,open,,dependabot[bot],,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump pypa/gh-action-pypi-publish from 1.12.4 to 1.13.0,2025-10-08 23:27:59,open,,dependabot[bot],,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump actions/checkout from 4.3.0 to 5.0.0,2025-10-08 23:27:55,closed,,dependabot[bot],,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump actions/add-to-project from 1.0.1 to 1.0.2,2025-10-08 23:27:49,closed,security,dependabot[bot],,contributor,pyosMeta,issues
+chore: harden action steps,2025-10-08 23:23:56,closed,,lwasser,United States,staff,pyosMeta,issues
+Pin GitHub Actions to commit SHAs without documentation file,2025-10-08 23:09:02,closed,,Copilot,,contributor,pyosMeta,issues
+Pin GitHub Actions to commit SHAs and enable Dependabot monitoring,2025-10-08 21:52:21,closed,,Copilot,,contributor,pyosMeta,issues
+Change reviewers field to be optional,2025-10-08 16:25:32,open,,mathematicalmichael,"Denver, CO",contributor,pyosMeta,issues
 Update contributor and review data,2025-09-15 00:25:41,open,,lwasser,United States,staff,pyosMeta,issues
 chore(ci): Change Dependabot update interval from weekly to monthly,2025-09-10 20:30:59,closed,,lwasser,United States,staff,pyosMeta,issues
 bugfix: remove newline in rss feed stubs,2025-09-10 17:38:29,closed,,banesullivan,United States,contributor,pyosMeta,issues
@@ -736,6 +747,17 @@ BUG: date for (one) review - 9/1/2022 instead of 09/01/2022,2024-03-09 01:22:17,
 Fix grammar in devguide,2024-02-26 02:46:11,closed,,willingc,San Diego,contributor,pyosMeta,issues
 BUG: when a user adds a link to their github repo,2023-11-02 14:53:04,closed,bug,lwasser,United States,staff,pyosMeta,issues
 Enh: Order packages by oldest to newest??,2023-08-20 18:54:19,closed,enhancement,lwasser,United States,staff,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump codecov/codecov-action from 5.4.3 to 5.5.1,2025-10-09 00:46:56,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+chore: Modify Dependabot labels in configuration,2025-10-09 00:45:43,closed,,lwasser,United States,staff,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump actions/setup-python from 5.6.0 to 6.0.0,2025-10-08 23:28:08,closed,,dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 4.3.0 to 5.0.0,2025-10-08 23:28:03,open,,dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump pypa/gh-action-pypi-publish from 1.12.4 to 1.13.0,2025-10-08 23:27:59,open,,dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump actions/checkout from 4.3.0 to 5.0.0,2025-10-08 23:27:55,closed,,dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump actions/add-to-project from 1.0.1 to 1.0.2,2025-10-08 23:27:49,closed,security,dependabot[bot],,contributor,pyosMeta,pulls
+chore: harden action steps,2025-10-08 23:23:56,closed,,lwasser,United States,staff,pyosMeta,pulls
+Pin GitHub Actions to commit SHAs without documentation file,2025-10-08 23:09:02,closed,,Copilot,,contributor,pyosMeta,pulls
+Pin GitHub Actions to commit SHAs and enable Dependabot monitoring,2025-10-08 21:52:21,closed,,Copilot,,contributor,pyosMeta,pulls
+Change reviewers field to be optional,2025-10-08 16:25:32,open,,mathematicalmichael,"Denver, CO",contributor,pyosMeta,pulls
 Update contributor and review data,2025-09-15 00:25:41,open,,lwasser,United States,staff,pyosMeta,pulls
 chore(ci): Change Dependabot update interval from weekly to monthly,2025-09-10 20:30:59,closed,,lwasser,United States,staff,pyosMeta,pulls
 bugfix: remove newline in rss feed stubs,2025-09-10 17:38:29,closed,,banesullivan,United States,contributor,pyosMeta,pulls
@@ -897,8 +919,8 @@ Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United 
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
 bug: fix social links throughout,2025-10-06 21:39:52,closed,,lwasser,United States,staff,pyopensci.github.io,issues
-Fix BlueSky handle,2025-10-06 08:49:43,open,,VeckoTheGecko,"Utrecht, Netherlands",contributor,pyopensci.github.io,issues
-build(deps): bump peter-evans/create-issue-from-file from 5 to 6 in /.github/workflows in the actions group,2025-10-06 06:16:26,open,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,issues
+Fix BlueSky handle,2025-10-06 08:49:43,closed,,VeckoTheGecko,"Utrecht, Netherlands",contributor,pyopensci.github.io,issues
+build(deps): bump peter-evans/create-issue-from-file from 5 to 6 in /.github/workflows in the actions group,2025-10-06 06:16:26,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,issues
 draft Why We Choose What We Choose,2025-10-02 21:32:48,open,,ucodery,,contributor,pyopensci.github.io,issues
 Add ChemInformant package and  contributor,2025-09-30 10:08:11,open,,HzaCode,,contributor,pyopensci.github.io,issues
 Add inline link to Python Packaging Guide from packaging resources page (#441),2025-09-29 12:44:10,open,,T-leke,united kingdom,contributor,pyopensci.github.io,issues
@@ -1106,8 +1128,8 @@ Fix navigation / potential website overhaul,2024-04-02 19:42:17,closed,"enhancem
 Create archive process and then Archive nbless,2024-01-17 00:26:27,closed,feature:content,lwasser,United States,staff,pyopensci.github.io,issues
 Feature: add peer review metadata including citation and date_Accepted to website listing page  (each package has a card),2023-07-03 20:08:05,open,"enhancement, help wanted, sprintable, feature:content",lwasser,United States,staff,pyopensci.github.io,issues
 bug: fix social links throughout,2025-10-06 21:39:52,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Fix BlueSky handle,2025-10-06 08:49:43,open,,VeckoTheGecko,"Utrecht, Netherlands",contributor,pyopensci.github.io,pulls
-build(deps): bump peter-evans/create-issue-from-file from 5 to 6 in /.github/workflows in the actions group,2025-10-06 06:16:26,open,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
+Fix BlueSky handle,2025-10-06 08:49:43,closed,,VeckoTheGecko,"Utrecht, Netherlands",contributor,pyopensci.github.io,pulls
+build(deps): bump peter-evans/create-issue-from-file from 5 to 6 in /.github/workflows in the actions group,2025-10-06 06:16:26,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
 draft Why We Choose What We Choose,2025-10-02 21:32:48,open,,ucodery,,contributor,pyopensci.github.io,pulls
 Add ChemInformant package and  contributor,2025-09-30 10:08:11,open,,HzaCode,,contributor,pyopensci.github.io,pulls
 Add inline link to Python Packaging Guide from packaging resources page (#441),2025-09-29 12:44:10,open,,T-leke,united kingdom,contributor,pyopensci.github.io,pulls
@@ -1839,7 +1861,7 @@ GALFITools: a library for GALFIT,2024-12-07 00:28:52,open,"5/awaiting-reviewer-r
 DQMaRC submission,2024-10-31 11:48:11,closed,"0/pre-review-checks, ⌛ pending-maintainer-response, on-hold",ALightNHS,,contributor,software-submission,issues
 GALAssify submission,2024-09-30 09:12:52,open,4/reviews-in-awaiting-changes,Malclay,,contributor,software-submission,issues
 neonutilities submission,2024-09-25 21:27:31,closed,6/pyOS-approved,cklunch,,contributor,software-submission,issues
-FElupe Submission,2024-09-14 22:37:44,open,6/pyOS-approved,adtzlr,"Graz, Austria",contributor,software-submission,issues
+FElupe Submission,2024-09-14 22:37:44,open,"6/pyOS-approved, 9/joss-approved",adtzlr,"Graz, Austria",contributor,software-submission,issues
 Solar Data Tools Submission,2024-08-17 06:30:02,closed,"6/pyOS-approved, 9/joss-approved",pluflou,"Menlo Park, CA",contributor,software-submission,issues
 THzTools submission,2024-08-01 11:54:53,closed,"6/pyOS-approved, 9/joss-approved",jsdodge,,contributor,software-submission,issues
 BlackMarblePy Submission ,2024-07-18 14:15:11,open,4/reviews-in-awaiting-changes,rhythmchanges,,contributor,software-submission,issues
@@ -1915,6 +1937,7 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+Update contributor and review data,2025-10-07 19:25:51,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-09-08 05:14:51,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-08-02 05:14:24,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 enh: update editors script enhancement,2025-07-30 23:05:49,closed,,lwasser,United States,staff,peer-review-metrics,issues
@@ -1984,6 +2007,7 @@ Create an autopreview action for this metrics repo,2024-07-31 22:46:10,open,"hel
 Add: editor plot to our dashboard,2024-07-14 16:20:23,closed,help wanted,lwasser,United States,staff,peer-review-metrics,issues
 Create: script to fetch a list of all current editors,2024-07-13 23:43:45,closed,"help wanted, sprintable",kaiyamag,,contributor,peer-review-metrics,issues
 Create: peer review dashboard using interactive plots Jupyter and mystmd -- :),2024-07-13 15:13:58,closed,"help wanted, sprintable",lwasser,United States,staff,peer-review-metrics,issues
+Update contributor and review data,2025-10-07 19:25:51,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-09-08 05:14:51,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-08-02 05:14:24,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 enh: update editors script enhancement,2025-07-30 23:05:49,closed,,lwasser,United States,staff,peer-review-metrics,pulls
