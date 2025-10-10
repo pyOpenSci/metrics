@@ -660,6 +660,7 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
+Soon to be bug: Support gitlab / codebege packages,2025-10-09 17:49:09,open,,lwasser,United States,staff,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump codecov/codecov-action from 5.4.3 to 5.5.1,2025-10-09 00:46:56,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 chore: Modify Dependabot labels in configuration,2025-10-09 00:45:43,closed,,lwasser,United States,staff,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump actions/setup-python from 5.6.0 to 6.0.0,2025-10-08 23:28:08,closed,,dependabot[bot],,contributor,pyosMeta,issues
@@ -670,7 +671,7 @@ chore: bump GitHub Actions(deps): bump actions/add-to-project from 1.0.1 to 1.0.
 chore: harden action steps,2025-10-08 23:23:56,closed,,lwasser,United States,staff,pyosMeta,issues
 Pin GitHub Actions to commit SHAs without documentation file,2025-10-08 23:09:02,closed,,Copilot,,contributor,pyosMeta,issues
 Pin GitHub Actions to commit SHAs and enable Dependabot monitoring,2025-10-08 21:52:21,closed,,Copilot,,contributor,pyosMeta,issues
-Change reviewers field to be optional,2025-10-08 16:25:32,open,,mathematicalmichael,"Denver, CO",contributor,pyosMeta,issues
+schema: reviewers can be empty now + parsing: handle bold/italics formatting,2025-10-08 16:25:32,open,,mathematicalmichael,"Denver, CO",contributor,pyosMeta,issues
 Update contributor and review data,2025-09-15 00:25:41,open,,lwasser,United States,staff,pyosMeta,issues
 chore(ci): Change Dependabot update interval from weekly to monthly,2025-09-10 20:30:59,closed,,lwasser,United States,staff,pyosMeta,issues
 bugfix: remove newline in rss feed stubs,2025-09-10 17:38:29,closed,,banesullivan,United States,contributor,pyosMeta,issues
@@ -757,7 +758,7 @@ chore: bump GitHub Actions(deps): bump actions/add-to-project from 1.0.1 to 1.0.
 chore: harden action steps,2025-10-08 23:23:56,closed,,lwasser,United States,staff,pyosMeta,pulls
 Pin GitHub Actions to commit SHAs without documentation file,2025-10-08 23:09:02,closed,,Copilot,,contributor,pyosMeta,pulls
 Pin GitHub Actions to commit SHAs and enable Dependabot monitoring,2025-10-08 21:52:21,closed,,Copilot,,contributor,pyosMeta,pulls
-Change reviewers field to be optional,2025-10-08 16:25:32,open,,mathematicalmichael,"Denver, CO",contributor,pyosMeta,pulls
+schema: reviewers can be empty now + parsing: handle bold/italics formatting,2025-10-08 16:25:32,open,,mathematicalmichael,"Denver, CO",contributor,pyosMeta,pulls
 Update contributor and review data,2025-09-15 00:25:41,open,,lwasser,United States,staff,pyosMeta,pulls
 chore(ci): Change Dependabot update interval from weekly to monthly,2025-09-10 20:30:59,closed,,lwasser,United States,staff,pyosMeta,pulls
 bugfix: remove newline in rss feed stubs,2025-09-10 17:38:29,closed,,banesullivan,United States,contributor,pyosMeta,pulls
@@ -1813,6 +1814,7 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
+HoloViz projects potential submissions,2025-10-10 08:49:51,open,Help Request,maximlt,Germany,contributor,software-submission,issues
 nsEVDx a Python Package for modeling non-stationary extreme value distributions - Submission for Review,2025-09-30 03:08:24,open,"0/pre-review-checks, New Submission!",Nischalcs50,,contributor,software-submission,issues
 Presubmission inquiry,2025-09-09 16:57:39,closed,presubmission,Nischalcs50,,contributor,software-submission,issues
 nsEVDx: A python Library for modelling non-stationary extreme value distributions,2025-09-08 21:15:11,closed,,Nischalcs50,,contributor,software-submission,issues
@@ -1937,6 +1939,11 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+enh: flesh out emeritus dashboard,2025-10-10 21:39:53,closed,,lwasser,United States,staff,peer-review-metrics,issues
+bug: typos,2025-10-10 02:08:09,closed,,lwasser,United States,staff,peer-review-metrics,issues
+fix: action bug,2025-10-10 01:56:12,closed,,lwasser,United States,staff,peer-review-metrics,issues
+enh: enhance editorial dashboard,2025-10-10 01:45:44,closed,,lwasser,United States,staff,peer-review-metrics,issues
+Update contributor and review data,2025-10-09 17:49:02,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-10-07 19:25:51,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-09-08 05:14:51,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-08-02 05:14:24,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
@@ -2007,6 +2014,11 @@ Create an autopreview action for this metrics repo,2024-07-31 22:46:10,open,"hel
 Add: editor plot to our dashboard,2024-07-14 16:20:23,closed,help wanted,lwasser,United States,staff,peer-review-metrics,issues
 Create: script to fetch a list of all current editors,2024-07-13 23:43:45,closed,"help wanted, sprintable",kaiyamag,,contributor,peer-review-metrics,issues
 Create: peer review dashboard using interactive plots Jupyter and mystmd -- :),2024-07-13 15:13:58,closed,"help wanted, sprintable",lwasser,United States,staff,peer-review-metrics,issues
+enh: flesh out emeritus dashboard,2025-10-10 21:39:53,closed,,lwasser,United States,staff,peer-review-metrics,pulls
+bug: typos,2025-10-10 02:08:09,closed,,lwasser,United States,staff,peer-review-metrics,pulls
+fix: action bug,2025-10-10 01:56:12,closed,,lwasser,United States,staff,peer-review-metrics,pulls
+enh: enhance editorial dashboard,2025-10-10 01:45:44,closed,,lwasser,United States,staff,peer-review-metrics,pulls
+Update contributor and review data,2025-10-09 17:49:02,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-10-07 19:25:51,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-09-08 05:14:51,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-08-02 05:14:24,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
