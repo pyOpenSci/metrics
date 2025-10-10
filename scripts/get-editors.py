@@ -1,23 +1,34 @@
 """This script updates our editorial team csv file with the most current editors.
 
-1. It parses a partially  manually created list of editors found int he csv 
-file: `_data/editorial_team_domains`. This csv was initially created by 
-manually adding editor names to the file with domain areas from our google sheet. 
-The (private) google sheet collects what domains they can support when they 
-apply to be an editor
-2. It then hits the github api to return the list of gh usernames from the editorial team on GitHub
-When we onboard a new editor, we add them to that team so they have proper permissions in repos in our org.
-The GitHub team data are grabbed using graphQL.
+1. It parses a manually created list of editors found in the csv 
+file: `_data/editorial_team_domains`. This csv was created by 
+manually adding editor names to the file with domain areas from our Google sheet. 
+The (private) google sheet is generated from a google form that collects editor 
+expertise and domains when they apply to be an editor with us.
+2. The script, uses the GitHub API to return the list of GitHub  usernames from 
+the editorial team on GitHub. (see)
+  * https://github.com/orgs/pyOpenSci/teams/emeritus-editors/members
+  * https://github.com/orgs/pyOpenSci/teams/editorial-board/members
+When we onboard a new editor, we add them to the editorial-board GitHub team so 
+they have proper permissions in repositories in our organization. When an editor
+wishes to step down, we move them to the emeritus-editors team. However, they 
+may still be active in reviews so we keep them on the editorial-board team until 
+they have completed all of their reviews.
 
-3. Finally, this script merges the data parsed from the team with the csv file.  
+The GitHub team data are collected using the GitHub graphQL interface.
 
-The output is a csv file called _data/editorial_team_domains.csv that can be 
-used to parse editor data. 
+3. Finally, this script merges the data parsed from the team with the .csv file.  
+
+This script creates two .csv files. The _data/editorial_team_domains.csv contains 
+all currently "activate" editors. _data/emeritus_editor_domains.csv contains 
+editors that are either fully offboarded of intend to offboard after theyr currently 
+active reviews. 
 
 TODO:
 * it would be good to find a more automated way to get the domain data from our 
-google sheet. one way to do this would be to create a new spreadsheet that 
-pulls from our editor signup but only contains gh username and then the domain areas. 
+Google Sheet. one way to do this would be to create a new spreadsheet that 
+pulls from our editor signup but only contains gh username and then the domain 
+areas. 
 
 """
 
