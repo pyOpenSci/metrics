@@ -46,14 +46,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PROJECTS_READ }}
       - name: Update editors
         run: python scripts/get-editors.py
+      - name: Get Sprint Data
         run: python scripts/get-sprint-data.py
       - name: get-review-contributors
         run: python scripts/get-review-contributors.py
       - name: get-package-data
         run: python scripts/get-package-data.py
-      # Commenting this out because right now it's not running in CI as it should
-      # - name: get-editors
-      #   run: python scripts/get-editors.py
       - name: Cache metrics
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
