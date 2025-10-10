@@ -18,9 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
-        uses: actions/checkout@v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.10"
       - name: Upgrade pip
@@ -44,6 +44,8 @@ jobs:
             github.event.pull_request.head.repo.full_name == github.repository )
         env:
           GITHUB_TOKEN: ${{ secrets.PROJECTS_READ }}
+      - name: Update editors
+        run: python scripts/get-editors.py
         run: python scripts/get-sprint-data.py
       - name: get-review-contributors
         run: python scripts/get-review-contributors.py
@@ -53,7 +55,7 @@ jobs:
       # - name: get-editors
       #   run: python scripts/get-editors.py
       - name: Cache metrics
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: metrics
           path: _data
@@ -65,14 +67,14 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Check out the code
-        uses: actions/checkout@v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
       - name: Download metrics
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           name: metrics
           path: _data
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
           add-paths: |
             _data/*.csv

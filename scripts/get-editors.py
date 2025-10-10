@@ -35,24 +35,24 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 GITHUB_API_URL = "https://api.github.com/graphql"
 
 
-def get_team_members():
-    """A function that hits the GH graphQL api and pulled down members 
+def get_team_members(team_name: str = "editorial-board"):
+    """A function that hits the GH graphQL api and pulls down members 
     from our editorial team. This list should be the most current list of 
     pyOpenSci editors. """
 
     query = """
-    {
+    query ($slug: String!){
       organization(login: "pyOpenSci") {
-        team(slug: "editorial-board") {
+        team(slug: $slug) {
           members(first: 100) {
-            nodes {
-              login
-            }
+            nodes { login }
           }
         }
       }
     }
     """
+
+    variables = {"slug": team_name}
 
     headers = {
         "Authorization": f"Bearer {GITHUB_TOKEN}",
@@ -60,7 +60,9 @@ def get_team_members():
     }
 
     response = requests.post(
-        GITHUB_API_URL, json={"query": query}, headers=headers
+        GITHUB_API_URL, 
+        json={"query": query, "variables": variables}, 
+        headers=headers
     )
 
     if response.status_code == 200:
@@ -79,32 +81,37 @@ def filter_members(members, exclude):
 
 if __name__ == "__main__":
     
-    # Pull down the list of gh usernames from our editorial team
-    members = get_team_members()
-    exclude = [
-        "lwasser",
-        "chayadecacao",
-        "xuanxu",
-    ]
-    # Exclude members who are administrative but don't actually lead reviews
-    editorial_team_gh = filter_members(members, exclude)
+    # Pull down the list of GitHub usernames from our teams
+    editors = get_team_members("editorial-board")
+    emeritus = get_team_members("emeritus-editors") 
 
-    # Open the csv file that contains domain info for editors and a list of gh usernames
+    # Cleanup usernames
+    editors = sorted({(u or "").strip().lower() for u in editors})
+    emeritus = sorted({(u or "").strip().lower() for u in emeritus})
+
+    # Open the CSV that contains domain info for editors
     data_dir = Path("_data")
     editor_domains = pd.read_csv(data_dir / "editorial_team_domains.csv")
-    editor_domains["gh_username"] = editor_domains["gh_username"].str.replace(
-        "@", ""
-    )
+    editor_domains["gh_username"] = (editor_domains["gh_username"].astype(str))
 
-    if editorial_team_gh:
-        editorial_team_df = pd.DataFrame(
-            editorial_team_gh, columns=["gh_username"]
-        )
-# Merge the graphQL data with the github team data
-# This will result in empty domain data but an accurate list of current editors.
-all_editors = pd.merge(
-    editorial_team_df, editor_domains, on="gh_username", how="outer"
-)
+    # Build DataFrames of current editors and emeritus from the live team lists
+    editors_df = pd.DataFrame(editors, columns=["gh_username"]) if editors else pd.DataFrame(columns=["gh_username"]) 
+    emeritus_df = pd.DataFrame(emeritus, columns=["gh_username"]) if emeritus else pd.DataFrame(columns=["gh_username"]) 
 
-output_file = data_dir / "editorial_team_domains.csv"
-all_editors.to_csv(output_file, index=False)
+    # Merge with domain info (left join to keep the team list as the source of truth)
+    all_editors = editors_df.merge(editor_domains, on="gh_username", how="left")
+    all_emeritus = emeritus_df.merge(editor_domains, on="gh_username", how="left")
+
+    # In the emeritus file, mark all rows as inactive
+    all_emeritus["active"] = False
+
+    # Export both CSVs with the same structure
+    editors_out = data_dir / "editorial_team_domains.csv"
+    emeritus_out = data_dir / "emeritus_editor_domains.csv"
+
+    all_editors.to_csv(editors_out, index=False)
+    all_emeritus.to_csv(emeritus_out, index=False)
+
+    # Optional console summary
+    print(f"Wrote {len(all_editors)} current editors to {editors_out}")
+    print(f"Wrote {len(all_emeritus)} emeritus editors to {emeritus_out}")
