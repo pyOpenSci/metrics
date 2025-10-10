@@ -45,8 +45,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PROJECTS_READ }}
         run: python scripts/get-sprint-data.py
-      - name: Update editors
-        run: python scripts/get-editors.py
+      #- name: Update editors
+      #  run: python scripts/get-editors.py
       - name: get-review-contributors
         run: python scripts/get-review-contributors.py
       - name: get-package-data
