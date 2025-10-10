@@ -1,5 +1,8 @@
 gh_username,active,first_name,last_name,country,state,OS,Domain_areas,Description,technical_areas
-isabelizimm,yes,Isabel,Zimmerman,USA,Florida,Mac,"Statistics, ML, AI, Computer sciences",building IDEs and MLOps Python frameworks,"Data visualization, Data extraction & retrieval, Python package structure, Documentation quality, Continuous Integration"
-lwasser,,,,,,,,,
-nimasarajpoor,,,,,,,,,
-sneakers-the-rat,yes,Jonny,Saunders,US,CA,"Mac, Linux","NLP, text analysis, Linguistics, Ecology / Biology, Bioinformatics, Bibliometrics (Library science, scientific literature access), Social Sciences","Formerly auditory neuroscience, animal models of phonetics. Realtime experimental hardware/software, low-resource computing, data modeling and schema creation. Currently peer-to-peer social/data systems.","Data visualization, Data extraction & retrieval, Data munging, Data deposition, Python package structure, Documentation quality, Unit Testing, Continuous Integration, Object oriented programming, Web API's, Web scraping, Security, Tool usability / accessibility"
+cmarmo,False,Chiara,Marmo,United States,Hawaii,Linux,"Spatial data, spatial analysis, GIS, Space sciences, Geosciences / earth science, Astronomy","Data processing in Astronomy, Planetary Sciences, Geospatial data. Standard development, interoperability.","Data extraction & retrieval, Data munging, Data deposition, Documentation quality, Continuous Integration"
+isabelizimm,False,,,,,,,,
+lwasser,False,,,,,,,,
+nickledave,False,,,,,,,,
+nimasarajpoor,False,,,,,,,,
+sneakers-the-rat,False,,,,,,,,
+xmnlab,False,,,,,,,,
