@@ -45,8 +45,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PROJECTS_READ }}
         run: python scripts/get-sprint-data.py
-      #- name: Update editors
-      #  run: python scripts/get-editors.py
+      - name: Update editors
+        if: github.event_name == 'workflow_dispatch' ||
+          github.event_name == 'schedule' ||
+          ( github.event_name == 'pull_request' &&
+            github.event.pull_request.head.repo.full_name == github.repository )
+        env:
+          GITHUB_TOKEN: ${{ secrets.PYOS_GHA_TEAMS_READ }}
+        run: python scripts/get-editors.py
       - name: get-review-contributors
         run: python scripts/get-review-contributors.py
       - name: get-package-data
