@@ -10,7 +10,9 @@ execute:
 
 ```{python}
 #| echo: false
-#| 
+
+# TODO: The next thing to add - now that we have a way to offboard is to list all editors that are running reviews and will be offboarded when the review is done. This would be people who are in the emeritus list that are also named on a review
+
 import os
 from pathlib import Path
 
@@ -62,7 +64,10 @@ label_map = {
 }
 
 def get_active_status(labels):
-    """A function that returns an active status value based on a list of label values"""
+    """A function that returns an review status value based on a list of 
+    label values available in the issue.
+    """
+    
     for status, label_list in label_map.items():
         if any(label in labels for label in label_list):
             return status
@@ -96,38 +101,44 @@ reviews = reviews.rename(
 open_reviews = reviews[reviews["Date Closed"].isna()]
 open_reviews.drop(columns=["Date Closed","Unnamed: 0"], inplace=True)
 
+editors = open_reviews["editor"].astype(str).str.split().str[0]
+editors = editors[editors != "TBD"]
+
+active_editor_counts = (
+    editors.value_counts()
+    .rename_axis("gh_username")
+    .reset_index(name="count")
+)
 ```
 
+
 ```{python}
-# get editor team data
+# Open editor team data
+# The total list is derived from the scripts/editors.py script which parses the (active) editorial team data. 
+
 editor_path = Path.cwd().parents[0] / "_data" /  "editorial_team_domains.csv"
-editor_data = pd.read_csv(editor_path)
-editor_data = editor_data[["gh_username","first_name","Domain_areas","Description","technical_areas"]]
-all_editors_df = editor_data[["gh_username"]].rename(columns={"gh_username": "editor"})
+all_editors = pd.read_csv(editor_path)
+all_editors = all_editors[["gh_username","first_name","Domain_areas","Description","technical_areas"]]
 
-# Get busy editors
-busy_editors = open_reviews.loc[open_reviews.editor != "TBD", ["editor"]].value_counts().reset_index()
+editor_activity = (
+    all_editors.merge(active_editor_counts, on="gh_username", how="left")
+               .fillna({"count": 0})
+)
+editor_activity["count"] = editor_activity["count"].astype(int)
+editor_activity = editor_activity.sort_values(by="count", ascending=False).reset_index(drop=True)
 
-```
-
-```{python}
-#| echo: false
-all_editor_activity = all_editors_df.merge(busy_editors, on="editor", how="outer").fillna(0)
-
-all_editor_activity["count"]= all_editor_activity["count"].astype(int)
-all_editor_activity.sort_values(by="count", inplace=True)
-all_editor_activity = all_editor_activity.reset_index(drop=True)
-
-# Get counts of available and unavailable editors
-available_editors = all_editor_activity[all_editor_activity["count"] == 0]
-all_busy_editors = all_editor_activity[all_editor_activity["count"] != 0]
-
+# Get counts of available and busy editors
+available_editors = editor_activity[editor_activity["count"] == 0]
+busy_editors = editor_activity[editor_activity["count"] != 0]
 num_available_editors = len(available_editors)
-available_editors = available_editors.merge(editor_data, left_on="editor", right_on="gh_username", how="inner")
 
-available_editors = available_editors.rename(columns={"count": "review count"})
-available_editors = available_editors[["editor", "review count", "Domain_areas", "Description", "technical_areas", "first_name"]]
+# Rename and cleanup
+editor_activity=editor_activity.rename(columns={"count": "active review count"})
+col = editor_activity.pop("active review count")
+editor_activity.insert(1, "active review count", col)
+
 ```
+
 
 
 ## Row {height=.5%}
@@ -137,9 +148,9 @@ available_editors = available_editors[["editor", "review count", "Domain_areas",
 #| title: "Total Editors"
 
 dict(
-  icon = "box2-heart",
+  icon = "people-fill",
   color = "primary",
-  value = len(all_editors_df)
+  value = len(all_editors)
 )
 ```
 
@@ -148,7 +159,7 @@ dict(
 #| title: "Busy Editors"
 # fails if the value isn't an int
 dict(
-  icon = "person-hearts",
+  icon = "box2-heart",
   color = "primary",
   value = len(busy_editors)
 )
@@ -167,10 +178,8 @@ dict(
 
 ## Row {height=1%}
 ```{python}
-#| title: "pyOpenSci Editorial Team" 
-print("Note: the total editor count is currently incorrect-we should open an issue.")
-
-show(editor_data)
+#| title: "pyOpenSci Active Editorial Team" 
+show(editor_activity)
 ```
 
 ## Row {height=1%}
@@ -193,7 +202,6 @@ show(available_editors)
 
 # Get a list of all editors over time that have supported pyOpenSci
 ignore_editors = ["TBD"]
-ignore_editors += ["lwasser", "xmnlab"]
 editors = [
     editor
     for editor in pd.unique(reviews.editor)
@@ -289,7 +297,7 @@ fig = px.bar(
     facet_col_wrap=facet_wrap,
     color_discrete_sequence=["indigo"],
     labels={"count": "Number of edits", "QuarterLabel": "Quarter"},
-    title="Editor activity by quarter",
+    title="Editor Activity by Quarter (Current Editor Team)",
     height=row_height * num_rows,
     width=1200,
 )
