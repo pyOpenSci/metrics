@@ -48,7 +48,6 @@ today = current_date.strftime("%d %B %Y")  # Format: YYYY-MM-DD
 
 ```
 
-
 ```{python}
 current_dir = Path.cwd()
 parent_dir = current_dir.parents[0]
