@@ -1,10 +1,11 @@
 ---
 title: pyOpenSci Software Peer Review Over Time
+format:
+  dashboard:
+    scrolling: true
 execute:
   echo: false
-jupyter: python3
 ---
-
 
 ```{python}
 import warnings
@@ -27,14 +28,7 @@ warnings.filterwarnings("ignore")
 # Load & register Poppins font and theme for the page
 load_poppins_font()
 register_and_enable_poppins_theme()
-```
 
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
-
-
-```{python}
 label_map = {
     "pre-review": ["New Submission!", "0/pre-review-checks"],
     "seeking editor": ["0/seeking-editor"],
@@ -48,16 +42,11 @@ label_map = {
     "pyos-accepted": ["6/pyos-approved"],
     "joss-accepted": ["9/joss-approved"],
 }
-```
 
-
-```{python}
 current_date = datetime.today().date()
 today = current_date.strftime("%d %B %Y")  # Format: YYYY-MM-DD
 
 ```
-
-*Last updated: **`{python} today`***
 
 
 ```{python}
@@ -67,42 +56,84 @@ data_dir = parent_dir / "_data"
 file_path = data_dir / "review_submissions.csv"
 reviews = pd.read_csv(file_path, parse_dates=["date_opened", "date_closed"])
 total_submissions = len(reviews)
-```
 
-```{python}
 # Open the contrib data and count review metrics
 contribs_path = data_dir / "review_contribs.csv"
 contribs_data = pd.read_csv(contribs_path, parse_dates=["date_added"])
 maintainers = contribs_data[contribs_data["maintainer"]]
 total_maintainers = len(maintainers)
-```
 
-```{python}
 total_contribs = len(contribs_data)
-# Calculate reviewer types 
+# Calculate reviewer types
 columns = ["packages_reviewed", "packages_editor", "packages_eic"]
 counts = {col: int((contribs_data[col] > 0).sum()) for col in columns}
 ```
 
-::: {.callout-note}
-## Total contributors to peer review
-* **`{python} counts["packages_reviewed"]`** People have served as a reviewer for pyOpenSci
-* **`{python} counts["packages_editor"]`** People have served as an editor for pyOpenSci
-* **`{python} counts["packages_eic"]`** People have served as eic for pyOpenSci
-* pyOpenSci has supported **`{python} total_maintainers`** maintainers
-* pyOpenSci has had **`{python} total_submissions` total software review submissions**
+*Last updated: **`{python} today`***
 
-:::
+## Row {height=auto}
+
+```{python}
+#| content: valuebox
+#| title: "Total Reviewers"
+
+dict(
+  icon = "people-fill",
+  color = "primary",
+  value = counts["packages_reviewed"]
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Total Editor in Chief"
+# fails if the value isn't an int
+dict(
+  icon = "box2-heart",
+  color = "primary",
+  value = counts["packages_eic"]
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Total Maintainers"
+# fails if the value isn't an int
+dict(
+  icon = "person-hearts",
+  color = "primary",
+  value = total_maintainers
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Total Submissions"
+# fails if the value isn't an int
+dict(
+  icon = "person-hearts",
+  color = "primary",
+  value = total_submissions
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Total Editors"
+# fails if the value isn't an int
+dict(
+  icon = "person-hearts",
+  color = "primary",
+  value = counts["packages_editor"]
+)
+```
 
 
 ```{python}
 file_path = data_dir / "review_presubmissions.csv"
 presubmissions = pd.read_csv(file_path)
 total_presubmissions = len(presubmissions)
-```
 
-
-```{python}
 # TODO: check presubmission counts!
 presub_count = presubmissions[
     presubmissions["date_closed"].isna()
@@ -111,9 +142,7 @@ presub_open_count = len(presub_count)
 
 ```
 
-<div style="margin-bottom: 70px;"></div>
-
-## Total scientific Python software review submissions
+## Row {height=auto}
 
 ```{python}
 review_status_ct = reviews["status"].value_counts().reset_index()
@@ -124,14 +153,12 @@ review_status_ct.rename(columns={"labels": "status"}, inplace=True)
 
 ```{python}
 # This is less accurate because it grabs on hold issues
-active_open_reviews = reviews[reviews["status"].isin(["seeking editor", 
-                                                            "under-review", 
+active_open_reviews = reviews[reviews["status"].isin(["seeking editor",
+                                                            "under-review",
                                                             "pre-review"])]
 open_reviews = active_open_reviews[active_open_reviews["date_closed"].isna()]
 open_count = len(open_reviews)
 ```
-
-The plot below shows the volume of all reviews over time. 
 
 ```{python}
 
@@ -140,7 +167,6 @@ review_status_ct["status"] = review_status_ct["status"].replace({
     "on hold": "on-hold",
     "out of scope": "out of-scope"
 })
-
 
 ```
 
@@ -176,18 +202,13 @@ chart = (
             alt.Tooltip("count:Q", title="Count"),
         ],
     )
-    .properties(title="Count of Packages by Status", width="container", height=500)
+    .properties(title="Total Reviews by Status", width="container", height=500)
 )
 
 
 # Display the chart
 chart.show()
 ```
-
-<div style="margin-bottom: 100px;"></div>
-
-
-### Accepted packages over time
 
 
 ```{python}
@@ -201,63 +222,58 @@ quarterly_accepted_counts["year_quarter"] = quarterly_accepted_counts["year_quar
 ```
 
 ```{python}
-axis_labels = """datum.label == '2019Q1' ? '2019 Q1' : 
-                datum.label == '2020Q1' ? '2020 Q1' : 
-                datum.label == '2021Q1' ? '2021 Q1' : 
-                datum.label == '2022Q1' ? '2022 Q1' :
-                datum.label == '2023Q1' ? '2023 Q1' :
-                datum.label == '2024Q1' ? '2024 Q1' :
-                '' """
-chart = (
-    alt.Chart(quarterly_accepted_counts)
-    .mark_bar(color="purple")
-    .encode(
-        x=alt.X(
-            "year_quarter:O",
-            title="Year-Quarter",
-            axis=alt.Axis(
-                labelAngle=0,
-                labelExpr=axis_labels,
-            ),
-        ),
-        y=alt.Y(
-            "count:Q",
-            title="Number of Accepted Packages per Quarter",
-            axis=alt.Axis(tickCount=4, tickMinStep=4),
-            scale=alt.Scale(domain=[0, 8]),
-        ),
-        tooltip=[
-            alt.Tooltip("year_quarter:O", title="Quarter"),
-            alt.Tooltip("count:Q", title="Number of Issues"),
-        ],
-    )
-    .properties(
-        title="Number of Submissions by Quarter per Year",
-        width="container",
-        height=400,
-    )
-)
-
-chart.show()
-```
-
-
-```{python}
 # semi-annual Values
 # TODO: why is year a .0 value?? & why is obspy there?
 accepted_reviews_clean["half_year"] = accepted_reviews_clean["date_accepted"].dt.month.map(lambda m: "H1" if m <= 6 else "H2")
 accepted_reviews_clean["year"] = accepted_reviews_clean["date_accepted"].dt.year
 accepted_reviews_clean = accepted_reviews_clean.sort_values(by="date_accepted")
 summary = accepted_reviews_clean.groupby(["year", "half_year"]).size().reset_index(name="count")
-```
 
-### Number of packages accepted by year
-
-```{python}
 total_accepted_2023_2024 = accepted_reviews_clean.groupby(["year"]).size().reset_index(name="count")
 total_accepted_2023_2024["year"] = total_accepted_2023_2024["year"].astype(int)
 
 ```
+
+
+```{python}
+# Group issues by year and get counts
+annual_issues = reviews.copy()
+
+# Create a new column 'year' by extracting the year from the 'date_opened' column
+annual_issues.loc[:, "year"] = annual_issues["date_opened"].dt.year
+
+# Add year / month
+annual_issues["year_month"] = annual_issues["date_opened"].dt.to_period("M")
+counts_month_year = annual_issues.groupby("year_month").size().reset_index(name="count")
+
+
+# Create a complete range of year_month periods
+# Note i use this below - don't have to recalculate
+all_month_years = pd.period_range(
+    start=counts_month_year["year_month"].min(),
+    end=counts_month_year["year_month"].max(),
+    freq="M",
+)
+
+issues_by_year = (
+    annual_issues.groupby("year")
+    .size()
+    .reset_index(name="count")
+    .sort_values(by="year", ascending=False)
+    .reset_index(drop=True)
+)
+
+# Get fill in months with no issues with a value of 0
+month_year_counts = (
+    counts_month_year.set_index("year_month")
+    .reindex(all_month_years, fill_value=0)
+    .rename_axis("year_month")
+    .reset_index()
+)
+```
+
+
+## Row {height=auto}
 
 ```{python}
 chart = (
@@ -276,7 +292,7 @@ chart = (
             "count:Q",
             title="Accepted Packages",
             scale=alt.Scale(domain=[0, 20]),
-            axis=alt.Axis(tickCount=5, titlePadding=10), 
+            axis=alt.Axis(tickCount=5, titlePadding=10),
         ),
         tooltip=[
             alt.Tooltip("year:O", title="Year"),
@@ -293,36 +309,46 @@ chart.show()
 ```
 
 
+```{python}
+# Create an Altair bar chart
+chart = (
+    alt.Chart(issues_by_year)
+    .mark_bar(color="purple")
+    .encode(
+        x=alt.X(
+            "year:O",
+            axis=alt.Axis(labelAngle=0, labelFontSize=14, titleFontSize=18),
+            sort=alt.EncodingSortField(field="year", order="ascending"),
+        ),
+        y=alt.Y(
+            "count:Q",
+            axis=alt.Axis(labelFontSize=14, titleFontSize=18, tickCount=5),
+        ),
+        tooltip=["year", "count"],
+    )
+    .properties(
+        title=alt.TitleParams(
+            text="Number of Submissions by Year", fontSize=24
+        ),
+        width=600,
+    )
+)
+
+chart.show()
+```
+
+
+## Row {height=auto}
 
 ```{python}
 # This calculates status on currently open reviews
 #open_reviews["status"] = open_reviews["labels"].apply(set_review_status)
 status_counts = open_reviews["status"].value_counts().reset_index()
-```
 
-
-```{python}
 # Should be 71 reviews and 56 presubmissions?
 # Total presubmissions - get the total number of pre-submission inquiries (all time)
 # Get presubmissions separately
-```
 
-# Total Presubmissions
-
-Here we removed all issues that were help-wanted or issus with our templates that were not related to a software-review submission. As of today we have had **`{python} total_presubmissions`** software review presubmission inquiries submitted to pyOpenSci.
-
-
-# pyOpenSci Peer Review over time
-
-Below is a summary of total submissions per month since pyOpenSci started it's 
-peer review process in 2019. We halted peer review in the fall 2022 given our 
-executive director had funding to spend full time effort on the organization!
-
-We reopened in the winter of 2023. That is where you see the increase in new 
-submissions begin.
-
-
-```{python}
 # Extract year and quarter from the 'date_opened' column
 reviews.loc[:, "year_quarter"] = reviews["date_opened"].dt.to_period("Q")
 quarterly_counts = reviews["year_quarter"].value_counts().sort_index().reset_index()
@@ -332,9 +358,9 @@ quarterly_counts["year_quarter"] = quarterly_counts["year_quarter"].astype(str)
 
 
 ```{python}
-axis_labels = """datum.label == '2019Q1' ? '2019 Q1' : 
-                datum.label == '2020Q1' ? '2020 Q1' : 
-                datum.label == '2021Q1' ? '2021 Q1' : 
+axis_labels = """datum.label == '2019Q1' ? '2019 Q1' :
+                datum.label == '2020Q1' ? '2020 Q1' :
+                datum.label == '2021Q1' ? '2021 Q1' :
                 datum.label == '2022Q1' ? '2022 Q1' :
                 datum.label == '2023Q1' ? '2023 Q1' :
                 datum.label == '2024Q1' ? '2024 Q1' :
@@ -372,89 +398,7 @@ chart = (
 chart.show()
 ```
 
-
-```{python}
-# Group issues by year and get counts
-annual_issues = reviews.copy()
-
-# Create a new column 'year' by extracting the year from the 'date_opened' column
-annual_issues.loc[:, "year"] = annual_issues["date_opened"].dt.year
-```
-
-
-```{python}
-# Add year / month
-annual_issues["year_month"] = annual_issues["date_opened"].dt.to_period("M")
-counts_month_year = annual_issues.groupby("year_month").size().reset_index(name="count")
-```
-
-
-```{python}
-# Create a complete range of year_month periods
-# Note i use this below - don't have to recalculate
-all_month_years = pd.period_range(
-    start=counts_month_year["year_month"].min(),
-    end=counts_month_year["year_month"].max(),
-    freq="M",
-)
-
-issues_by_year = (
-    annual_issues.groupby("year")
-    .size()
-    .reset_index(name="count")
-    .sort_values(by="year", ascending=False)
-    .reset_index(drop=True)
-)
-```
-
-Similarly you can see the growth in issues submitted to pyOpenSci thanks to 
-both Sloan and CZI funding in the chart below. As of August 2024, we have 
-almost surpassed total peer review submissions submitted in 2023. 
-
-
-```{python}
-# Create an Altair bar chart
-chart = (
-    alt.Chart(issues_by_year)
-    .mark_bar(color="purple")
-    .encode(
-        x=alt.X(
-            "year:O",
-            axis=alt.Axis(labelAngle=0, labelFontSize=14, titleFontSize=18),
-            sort=alt.EncodingSortField(field="year", order="ascending"),
-        ),
-        y=alt.Y(
-            "count:Q",
-            axis=alt.Axis(labelFontSize=14, titleFontSize=18, tickCount=5),
-        ),
-        tooltip=["year", "count"],
-    )
-    .properties(
-        title=alt.TitleParams(
-            text="pyOpenSci -- Number of Issues by Year", fontSize=24
-        ),
-        width=600,
-    )
-)
-
-chart.show()
-```
-
-
-
-```{python}
-# Get fill in months with no issues with a value of 0
-month_year_counts = (
-    counts_month_year.set_index("year_month")
-    .reindex(all_month_years, fill_value=0)
-    .rename_axis("year_month")
-    .reset_index()
-)
-```
-
-# Summary: issues by month / year
-
-Below you can see scientific Python peer review issues submitted by month since 2019. 
+## Row {height=auto}
 
 
 ```{python}
@@ -482,13 +426,8 @@ month_year_counts["month_cat"] = pd.Categorical(
 month_year_counts = month_year_counts.drop(columns=["year_month"])
 ```
 
-## Peer review cadence -- slower months 
-
-Historically since 2019 July and December  have been slower months. These could be ideal times for us to take a peer review breather, not accept new reviews, and catch up on business and documentation items. 
-
 
 ```{python}
-month_year_counts
 
 # Summarize total counts per month
 monthly_counts = (
@@ -545,13 +484,6 @@ chart = (
 
 chart.show()
 ```
-
-
-# Issues opened by month / year
-
-# Number of Issues per Month Since 2019
-
-Below is a cumulative sum representation of all of our peer review issues submitted to date. You can see that there is a significant uptick of issues submitted that began when we were able to utilize our funding and have a full time staff person (the Executive Director) onboard. 
 
 
 ```{python}

@@ -1,11 +1,11 @@
---- 
+---
 title: "pyOpenSci Editorial Dashboard"
-format: 
+format:
   dashboard:
-    scrolling: true 
+    scrolling: true
 execute:
   echo: false
---- 
+---
 
 
 ```{python}
@@ -33,11 +33,9 @@ warnings.filterwarnings("ignore")
 # Make tables nicer
 pd.set_option("display.max_colwidth", None)
 current_date = datetime.today().date()
-today = current_date.strftime("%d %B %Y") 
-```
+today = current_date.strftime("%d %B %Y")
 
 
-```{python}
 def clean_and_order(df, DROP_COLS, order):
     """Drop columns and reorder DataFrame columns."""
     return df.drop(columns=DROP_COLS, errors="ignore")[ORDER]
@@ -45,12 +43,12 @@ def clean_and_order(df, DROP_COLS, order):
 def get_status_df(df, status):
     return df[df["active_status"] == status].reset_index(drop=True)
 
-DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"] 
+DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"]
 ORDER = ["Name", "Description", "Days Open", "Date Opened","Last Comment", "Last User to Comment", "Issue", "Categories", "eic"]
 
 label_map = {
     "pre-review": [
-        "New Submission!", 
+        "New Submission!",
         "0/pre-review-checks"],
     "seeking editor": ["0/seeking-editor"],
     "seeking reviewers": ["2/seeking-reviewers"],
@@ -64,10 +62,10 @@ label_map = {
 }
 
 def get_active_status(labels):
-    """A function that returns an review status value based on a list of 
+    """A function that returns an review status value based on a list of
     label values available in the issue.
     """
-    
+
     for status, label_list in label_map.items():
         if any(label in labels for label in label_list):
             return status
@@ -76,8 +74,6 @@ def get_active_status(labels):
 
 
 ```{python}
-#| echo: false
-
 # Open submission review data
 data_path = Path.cwd().parents[0] / "_data" / "review_submissions.csv"
 reviews = pd.read_csv(data_path,
@@ -115,7 +111,7 @@ active_editor_counts = (
 
 ```{python}
 # Open editor team data
-# The total list is derived from the scripts/editors.py script which parses the (active) editorial team data. 
+# The total list is derived from the scripts/editors.py script which parses the (active) editorial team data.
 # The data opened in this section is collected using the scripts/get-editors.py workflow.
 
 editor_path = Path.cwd().parents[0] / "_data" /  "editorial_team_domains.csv"
@@ -161,7 +157,6 @@ offboard_usernames = emeritus_editors["gh_username"]
 offboarding_editor_reviews = open_reviews[open_reviews["editor"].isin(offboard_usernames)].copy()
 ```
 
-
 ## Row {height=auto}
 
 ```{python}
@@ -200,16 +195,16 @@ dict(
 ## Row {height=5%}
 
 ```{python}
-#| title: "pyOpenSci Current Active  Editorial Review Counts" 
+#| title: "pyOpenSci Current Active  Editorial Review Counts"
 show(editor_activity)
 ```
 
 ## Row {height=auto}
 
 ```{python}
-#| title: "Editors Leading Reviews That Are or Have Offboarded After" 
+#| title: "Editors Leading Reviews That Are or Have Offboarded After"
 
-# TODO: The table below is a good start but it should capture AMS lead by Nima as well. And the one that Chiara still has opened.  
+# TODO: The table below is a good start but it should capture AMS lead by Nima as well. And the one that Chiara still has opened.
 print("Below are reviews that the peer review lead and Editor in Chief should watch. We may need to assign an additional editor the ensure these reviews moves forward.")
 
 offboarding_editor_reviews = offboarding_editor_reviews.drop(columns=["date_accepted", "Categories"], errors="ignore")
@@ -279,7 +274,7 @@ edits = edits[edits["Year"] >= 2023]
 
 ```
 
-## Editor Activity by Quarter 
+## Editor Activity by Quarter
 
 ## Row {height=auto}
 
@@ -317,18 +312,18 @@ df_full = (
 quarter_order = sorted(df["QuarterLabel"].unique())
 df["QuarterLabel"] = pd.Categorical(df["QuarterLabel"], categories=quarter_order, ordered=True)
 
-facet_wrap = 2  
+facet_wrap = 2
 num_editors = len(df["editor"].unique())
 num_rows = (num_editors + facet_wrap - 1) // facet_wrap
-row_height = 300 
+row_height = 300
 
 fig = px.bar(
     df,
     x="QuarterLabel",
     y="count",
     facet_col="editor",
-    facet_row_spacing=0.04, 
-    facet_col_spacing=0.06, 
+    facet_row_spacing=0.04,
+    facet_col_spacing=0.06,
     facet_col_wrap=facet_wrap,
     color_discrete_sequence=["indigo"],
     labels={"count": "Number of edits"},
@@ -364,6 +359,6 @@ fig.show()
 
 ## Row {height=auto}
 
-## Summary 
+## Summary
 
 This is the end of the dashboard.
