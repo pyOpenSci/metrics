@@ -29,43 +29,127 @@ warnings.filterwarnings("ignore")
 load_poppins_font()
 register_and_enable_poppins_theme()
 
-label_map = {
-    "pre-review": ["New Submission!", "0/pre-review-checks"],
-    "seeking editor": ["0/seeking-editor"],
-    "under-review": [
-        "1/editor-assigned",
-        "2/seeking-reviewers",
-        "3/reviewers-assigned",
-        "4/reviews-in-awaiting-changes",
-        "5/awaiting-reviewer-response",
-    ],
-    "pyos-accepted": ["6/pyos-approved"],
-    "joss-accepted": ["9/joss-approved"],
-}
-
 current_date = datetime.today().date()
-today = current_date.strftime("%d %B %Y")  # Format: YYYY-MM-DD
+today = current_date.strftime("%d %B %Y")  # YYYY-MM-DD
 
 ```
 
 ```{python}
-current_dir = Path.cwd()
-parent_dir = current_dir.parents[0]
-data_dir = parent_dir / "_data"
-file_path = data_dir / "review_submissions.csv"
-reviews = pd.read_csv(file_path, parse_dates=["date_opened", "date_closed"])
-total_submissions = len(reviews)
 
-# Open the contrib data and count review metrics
-contribs_path = data_dir / "review_contribs.csv"
-contribs_data = pd.read_csv(contribs_path, parse_dates=["date_added"])
+# ===================================================
+# ---------- Load & clean data  --------- #
+# ===================================================
+
+current_dir = Path.cwd()
+data_dir = current_dir.parents[0] / "_data"
+
+reviews = pd.read_csv(data_dir / "review_submissions.csv", parse_dates=["date_opened", "date_closed"])
+contribs_data = pd.read_csv(data_dir / "review_contribs.csv", parse_dates=["date_added"])
+presubmissions = pd.read_csv(data_dir / "review_presubmissions.csv", parse_dates=["date_opened", "date_closed"])
+
+# -------- SUMMARY COUNTS (used in value boxes) -------- #
+
+total_review_submissions = len(reviews)
+total_presubmissions = len(presubmissions)
+
 maintainers = contribs_data[contribs_data["maintainer"]]
 total_maintainers = len(maintainers)
 
-total_contribs = len(contribs_data)
-# Calculate reviewer types
+# Count reviewer types
 columns = ["packages_reviewed", "packages_editor", "packages_eic"]
 counts = {col: int((contribs_data[col] > 0).sum()) for col in columns}
+
+# ===================================================
+#-------- Review status counts --------#
+# ===================================================
+
+# Status counts (for status bar chart)
+review_status_ct = reviews["status"].value_counts().reset_index()
+review_status_ct["status"] = review_status_ct["status"].replace({
+    "seeking editor": "seeking-editor",
+    "on hold": "on-hold",
+    "out of scope": "out of-scope"
+})
+
+# Accepted reviews by year
+accepted_reviews = reviews[reviews["date_accepted"] != "missing"].copy()
+accepted_reviews["date_accepted"] = pd.to_datetime(accepted_reviews["date_accepted"], errors="coerce")
+total_accepted = (
+    accepted_reviews
+    .groupby(accepted_reviews["date_accepted"].dt.year)
+    .size()
+    .reset_index(name="count")
+    .rename(columns={"date_accepted": "year"})
+)
+total_accepted["year"] = total_accepted["year"].astype(int)
+
+# ============================================================
+# ALL SUBMISSIONS (reviews + presubmissions combined)
+# ============================================================
+
+all_submissions = pd.concat([
+    reviews.assign(type="submission"),
+    presubmissions.assign(type="presubmission")
+])
+all_submissions["year"] = all_submissions["date_opened"].dt.year
+all_submissions["year_month"] = all_submissions["date_opened"].dt.to_period("M")
+all_submissions["year_quarter"] = all_submissions["date_opened"].dt.to_period("Q")
+all_submissions["month"] = all_submissions["date_opened"].dt.strftime("%b")
+
+# By year (for annual bar chart)
+issues_by_year = (
+    all_submissions
+    .groupby("year")
+    .size()
+    .reset_index(name="count")
+    .sort_values("year", ascending=False)
+)
+
+# By quarter (for quarterly bar chart)
+quarterly_counts = (
+    all_submissions["year_quarter"]
+    .value_counts()
+    .sort_index()
+    .reset_index()
+)
+quarterly_counts["year_quarter"] = quarterly_counts["year_quarter"].astype(str)
+
+# By month (summed across all years)
+month_order = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+monthly_counts = (
+    all_submissions
+    .groupby("month")
+    .size()
+    .reindex(month_order, fill_value=0)
+    .reset_index(name="count")
+)
+
+
+# ============================================================
+# CUMULATIVE SUBMISSIONS (reviews only, for line chart)
+# ============================================================
+monthly_reviews = (
+    reviews
+    .set_index(reviews["date_opened"].dt.to_period("M"))
+    .groupby(level=0)
+    .size()
+)
+
+all_month_years = pd.period_range(
+    start=reviews["date_opened"].min(),
+    end=reviews["date_opened"].max(),
+    freq="M"
+)
+
+final_monthly = (
+    monthly_reviews
+    .reindex(all_month_years, fill_value=0)
+    .to_frame(name="issue_count")
+)
+final_monthly["cumulative_count"] = final_monthly["issue_count"].cumsum()
+final_monthly = final_monthly.reset_index(names="date")
+final_monthly["date"] = final_monthly["date"].dt.to_timestamp()
+
 ```
 
 *Last updated: **`{python} today`***
@@ -112,7 +196,17 @@ dict(
 dict(
   icon = "person-hearts",
   color = "primary",
-  value = total_submissions
+  value = total_review_submissions
+)
+```
+```{python}
+#| content: valuebox
+#| title: "Total Presubmission Inquiries"
+# fails if the value isn't an int
+dict(
+  icon = "person-hearts",
+  color = "primary",
+  value = total_presubmissions
 )
 ```
 
@@ -127,50 +221,10 @@ dict(
 )
 ```
 
-
-```{python}
-file_path = data_dir / "review_presubmissions.csv"
-presubmissions = pd.read_csv(file_path)
-total_presubmissions = len(presubmissions)
-
-# TODO: check presubmission counts!
-presub_count = presubmissions[
-    presubmissions["date_closed"].isna()
-]
-presub_open_count = len(presub_count)
-
-```
-
 ## Row {height=auto}
 
 ```{python}
-review_status_ct = reviews["status"].value_counts().reset_index()
-review_status_ct.rename(columns={"labels": "status"}, inplace=True)
-
-```
-
-
-```{python}
-# This is less accurate because it grabs on hold issues
-active_open_reviews = reviews[reviews["status"].isin(["seeking editor",
-                                                            "under-review",
-                                                            "pre-review"])]
-open_reviews = active_open_reviews[active_open_reviews["date_closed"].isna()]
-open_count = len(open_reviews)
-```
-
-```{python}
-
-review_status_ct["status"] = review_status_ct["status"].replace({
-    "seeking editor": "seeking-editor",
-    "on hold": "on-hold",
-    "out of scope": "out of-scope"
-})
-
-```
-
-```{python}
-# TODO: fix this plot so there is enough space for the labels on the left hand side
+# Review counts by current status in our review system
 chart = (
     alt.Chart(review_status_ct)
     .mark_bar()
@@ -210,81 +264,19 @@ chart.show()
 ```
 
 
-```{python}
-accepted_reviews = reviews[reviews["date_accepted"] != "missing"]
-accepted_reviews_clean = accepted_reviews[["package_name", "date_accepted"]]
-accepted_reviews_clean["date_accepted"] = pd.to_datetime(accepted_reviews_clean["date_accepted"], errors='coerce')
-accepted_reviews_clean["year_quarter"] = accepted_reviews_clean["date_accepted"].dt.to_period("Q")
-quarterly_accepted_counts = accepted_reviews_clean.groupby("year_quarter").size().reset_index(name="count")
-quarterly_accepted_counts["year_quarter"] = quarterly_accepted_counts["year_quarter"].astype(str)
-
-```
-
-```{python}
-# semi-annual Values
-# TODO: why is year a .0 value?? & why is obspy there?
-accepted_reviews_clean["half_year"] = accepted_reviews_clean["date_accepted"].dt.month.map(lambda m: "H1" if m <= 6 else "H2")
-accepted_reviews_clean["year"] = accepted_reviews_clean["date_accepted"].dt.year
-accepted_reviews_clean = accepted_reviews_clean.sort_values(by="date_accepted")
-summary = accepted_reviews_clean.groupby(["year", "half_year"]).size().reset_index(name="count")
-
-total_accepted_2023_2024 = accepted_reviews_clean.groupby(["year"]).size().reset_index(name="count")
-total_accepted_2023_2024["year"] = total_accepted_2023_2024["year"].astype(int)
-
-```
-
-
-```{python}
-# Group issues by year and get counts
-annual_issues = reviews.copy()
-
-# Create a new column 'year' by extracting the year from the 'date_opened' column
-annual_issues.loc[:, "year"] = annual_issues["date_opened"].dt.year
-
-# Add year / month
-annual_issues["year_month"] = annual_issues["date_opened"].dt.to_period("M")
-counts_month_year = annual_issues.groupby("year_month").size().reset_index(name="count")
-
-
-# Create a complete range of year_month periods
-# Note i use this below - don't have to recalculate
-all_month_years = pd.period_range(
-    start=counts_month_year["year_month"].min(),
-    end=counts_month_year["year_month"].max(),
-    freq="M",
-)
-
-issues_by_year = (
-    annual_issues.groupby("year")
-    .size()
-    .reset_index(name="count")
-    .sort_values(by="year", ascending=False)
-    .reset_index(drop=True)
-)
-
-# Get fill in months with no issues with a value of 0
-month_year_counts = (
-    counts_month_year.set_index("year_month")
-    .reindex(all_month_years, fill_value=0)
-    .rename_axis("year_month")
-    .reset_index()
-)
-```
-
-
 ## Row {height=auto}
 
 ```{python}
 chart = (
-    alt.Chart(total_accepted_2023_2024)
+    alt.Chart(total_accepted)
     .mark_bar(color="purple", size=80)
     .encode(
         x=alt.X(
             "year:O",
             title="Year",
             axis=alt.Axis(
-                labelAngle=0,  # Ensure labels are horizontal
-                labelFontSize=16,  # Adjust font size if needed
+                labelAngle=0,  # Horizontal
+                labelFontSize=16,
             ),
         ),
         y=alt.Y(
@@ -309,7 +301,7 @@ chart.show()
 
 
 ```{python}
-# Create an Altair bar chart
+# This plot shows total submissions including presubmissions
 chart = (
     alt.Chart(issues_by_year)
     .mark_bar(color="purple")
@@ -327,7 +319,7 @@ chart = (
     )
     .properties(
         title=alt.TitleParams(
-            text="Number of Submissions by Year", fontSize=24
+            text="Total Number of Submissions by Year", fontSize=24
         ),
         width=600,
     )
@@ -338,22 +330,6 @@ chart.show()
 
 
 ## Row {height=auto}
-
-```{python}
-# This calculates status on currently open reviews
-#open_reviews["status"] = open_reviews["labels"].apply(set_review_status)
-status_counts = open_reviews["status"].value_counts().reset_index()
-
-# Should be 71 reviews and 56 presubmissions?
-# Total presubmissions - get the total number of pre-submission inquiries (all time)
-# Get presubmissions separately
-
-# Extract year and quarter from the 'date_opened' column
-reviews.loc[:, "year_quarter"] = reviews["date_opened"].dt.to_period("Q")
-quarterly_counts = reviews["year_quarter"].value_counts().sort_index().reset_index()
-
-quarterly_counts["year_quarter"] = quarterly_counts["year_quarter"].astype(str)
-```
 
 
 ```{python}
@@ -401,56 +377,6 @@ chart.show()
 
 
 ```{python}
-# Split year_month into separate year and month columns
-month_year_counts["year"] = month_year_counts["year_month"].dt.year
-month_year_counts["month"] = month_year_counts["year_month"].dt.strftime("%b")
-month_year_counts["month_cat"] = pd.Categorical(
-    month_year_counts["month"],
-    categories=[
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-    ],
-    ordered=True,
-)
-month_year_counts = month_year_counts.drop(columns=["year_month"])
-```
-
-
-```{python}
-
-# Summarize total counts per month
-monthly_counts = (
-    month_year_counts.groupby("month")["count"]
-    .sum()
-    .reindex(
-        [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
-        ],
-        fill_value=0,
-    )
-    .reset_index()
-)
 
 # Create the Altair plot
 chart = (
@@ -482,50 +408,6 @@ chart = (
 )
 
 chart.show()
-```
-
-
-```{python}
-# Set 'date_opened' column as index / add month and year cols for grouping
-monthly_issues = reviews.copy()
-monthly_issues["month"] = monthly_issues["date_opened"].dt.month
-monthly_issues["year"] = monthly_issues["date_opened"].dt.year
-# Get monthly counts
-monthly_issues_index = monthly_issues.copy()
-
-monthly_issues_index.set_index(
-    monthly_issues_index["date_opened"].dt.to_period("M").dt.strftime("%Y-%m"),
-    inplace=True,
-)
-
-# Group by the new index (month-year) and count the number of issues for each month-year
-monthly_counts = monthly_issues_index.groupby(level=0).size()
-```
-
-
-```{python}
-# Create a df for every month/year combo in our dataset - this ensures a date for every
-# month even if some months are missing
-all_month_years = pd.date_range(
-    start=monthly_issues.date_opened.min().strftime("%Y-%m"),
-    end=monthly_issues.date_opened.max().strftime("%Y-%m"),
-    freq="MS",
-).to_period("M")
-```
-
-
-```{python}
-final_monthly = monthly_counts.copy()
-# Ensure the index is of type periodIndex to support reindexing
-final_monthly.index = pd.PeriodIndex(final_monthly.index, freq="M")
-final_monthly = final_monthly.reindex(all_month_years, fill_value=0).to_frame(
-    name="issue_count"
-)
-
-# Calculate cumulative sum of issue count
-final_monthly["cumulative_count"] = final_monthly["issue_count"].cumsum()
-final_monthly.reset_index(inplace=True, names="date")
-final_monthly["date"] = final_monthly["date"].dt.to_timestamp()
 ```
 
 
@@ -603,6 +485,4 @@ final_chart = chart + label + arrow
 # Show the final chart
 final_chart.show()
 
-# Show the chart
-# chart.show()
 ```
