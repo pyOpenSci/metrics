@@ -14,23 +14,17 @@ execute:
 import ast
 import warnings
 from pathlib import Path
+from datetime import datetime, timedelta
 
 from itables import show
 import altair as alt
 import pandas as pd
 import plotly.express as px
 
-# This is a local module that stores the plot theme
-from pyosmetrics.plot_theme import load_poppins_font, register_and_enable_poppins_theme
-
 pd.options.mode.chained_assignment = None
 pd.options.future.infer_string = True
 
 warnings.filterwarnings("ignore")
-
-# Load the & register Poppins theme
-load_poppins_font()
-register_and_enable_poppins_theme()
 
 package_data_path = Path.cwd().parents[0] / "_data" / "package_data.csv" 
 package_df = pd.read_csv(package_data_path)
@@ -39,12 +33,17 @@ package_df = pd.read_csv(package_data_path)
 package_df['gh_meta'] = package_df['gh_meta'].apply(
   lambda x: ast.literal_eval(x) if isinstance(x, str) else x
 )
+package_df['last_commit_date'] = package_df['gh_meta'].apply(
+  lambda x: x.get('last_commit') if isinstance(x, dict) else None
+)
+package_df['last_commit_date'] = pd.to_datetime(package_df['last_commit_date'])
+
 # Extract "forks_count" value from the 'gh_meta' column
 package_df['forks_count'] = package_df['gh_meta'].apply(
   lambda x: x.get('forks_count'
   ) if isinstance(x, dict) else None
 )
-
+# Extract "contrib_count" value from the 'gh_meta' column
 package_df['contrib_count'] = package_df['gh_meta'].apply(
   lambda x: x.get('contrib_count') if isinstance(x, dict) else None
 )
@@ -52,6 +51,28 @@ average_contribs = int(package_df['contrib_count'].mean())
 
 average_forks = int(package_df['forks_count'].mean())
 
+```
+
+## Row {height=25%}
+
+```{python}
+#| title: "All Packages (Sortable by Last Commit Date)"
+
+sorted_df = package_df.sort_values("last_commit_date", ascending=False)[
+    ["package_name", "package_description", "last_commit_date"]
+]
+
+show(sorted_df, sortable=True, paging=True, maxBytes=0)
+```
+
+```{python}
+#| title: "Inactive Packages (No commits in last 6 months)"
+
+six_months_ago = datetime.now() - timedelta(days=180)
+
+inactive_df = sorted_df[sorted_df["last_commit_date"] < six_months_ago]
+
+show(inactive_df, sortable=True, paging=True, maxBytes=0)
 ```
 
 ## Row {height=5%}
