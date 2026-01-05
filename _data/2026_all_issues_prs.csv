@@ -1,5 +1,9 @@
 title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo,type
+Update Japanese translation files,2026-01-04 01:02:42,open,,tkoyama010,Japan,contributor,python-package-guide,issues
+Fix some punctuation and formatting,2026-01-03 08:48:45,open,,hugovk,"Helsinki, Finland",contributor,python-package-guide,issues
 chore: bump the actions group with 2 updates,2026-01-01 16:08:54,open,maintenance,dependabot[bot],,contributor,python-package-guide,issues
+Update Japanese translation files,2026-01-04 01:02:42,open,,tkoyama010,Japan,contributor,python-package-guide,pulls
+Fix some punctuation and formatting,2026-01-03 08:48:45,open,,hugovk,"Helsinki, Finland",contributor,python-package-guide,pulls
 chore: bump the actions group with 2 updates,2026-01-01 16:08:54,open,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 updates,2025-12-15 16:31:01,open,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 enh: adhere to style guide and reorg landing,2025-12-13 01:06:24,closed,,lwasser,United States,staff,python-package-guide,pulls
@@ -1428,7 +1432,9 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-12-29 05:21:22,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-12-22 05:16:44,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
