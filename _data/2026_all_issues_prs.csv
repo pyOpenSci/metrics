@@ -2,6 +2,7 @@ title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo
 Update Japanese translation files,2026-01-04 01:02:42,open,,tkoyama010,Japan,contributor,python-package-guide,issues
 Fix some punctuation and formatting,2026-01-03 08:48:45,open,,hugovk,"Helsinki, Finland",contributor,python-package-guide,issues
 chore: bump the actions group with 2 updates,2026-01-01 16:08:54,open,maintenance,dependabot[bot],,contributor,python-package-guide,issues
+chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 updates,2025-12-15 16:31:01,open,maintenance,dependabot[bot],,contributor,python-package-guide,issues
 Update Japanese translation files,2026-01-04 01:02:42,open,,tkoyama010,Japan,contributor,python-package-guide,pulls
 Fix some punctuation and formatting,2026-01-03 08:48:45,open,,hugovk,"Helsinki, Finland",contributor,python-package-guide,pulls
 chore: bump the actions group with 2 updates,2026-01-01 16:08:54,open,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
@@ -313,6 +314,8 @@ CONTENT: documentation text and styles,2022-10-26 19:06:10,closed,,lwasser,Unite
 IGNORE: content check Authoring content update,2022-10-25 22:02:16,closed,,lwasser,United States,staff,python-package-guide,pulls
 "WHY DON""T YOU LIKE ME HTML PROOFER? 😭 ",2022-10-25 18:36:42,closed,,lwasser,United States,staff,python-package-guide,pulls
 add infra to build sphinx book,2022-10-25 15:49:58,closed,,lwasser,United States,staff,python-package-guide,pulls
+Update name of infrastructure slack channel,2025-12-19 21:32:42,closed,,eigenbrot,,contributor,software-peer-review,issues
+Develop policy around LLM generated code in our packages submissions,2025-08-20 22:39:09,closed,peer-review-policy,lwasser,United States,staff,software-peer-review,issues
 Update name of infrastructure slack channel,2025-12-19 21:32:42,closed,,eigenbrot,,contributor,software-peer-review,pulls
 enh(editor-guide): Add discussion about labels,2025-12-16 05:38:15,open,,eliotwrobson,NYC,contributor,software-peer-review,pulls
 enh(author-guide): Add discussion about when a package is good enough for review,2025-12-16 05:24:27,open,,eliotwrobson,NYC,contributor,software-peer-review,pulls
@@ -492,18 +495,25 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
-chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.8 to 8.0.0,2026-01-01 13:25:45,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
-chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.1,2026-01-01 13:25:41,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
-chore: bump GitHub Actions(deps): bump codecov/codecov-action from 5.5.1 to 5.5.2,2026-01-01 13:25:31,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
-chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:25:25,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+Add cooldown to dependabot.yaml,2026-01-07 02:53:02,open,,InessaPawson,,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-07 01:43:18,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+enh: group dependebot pr's into a single pr!,2026-01-05 19:32:19,open,"help wanted, sprintable, maintenance",lwasser,United States,staff,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.8 to 8.0.0,2026-01-01 13:25:45,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.1,2026-01-01 13:25:41,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump codecov/codecov-action from 5.5.1 to 5.5.2,2026-01-01 13:25:31,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:25:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.8 to 7.0.9,2025-12-01 15:05:36,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 15:05:32,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 15:05:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
-chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.8 to 8.0.0,2026-01-01 13:25:45,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.1,2026-01-01 13:25:41,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump codecov/codecov-action from 5.5.1 to 5.5.2,2026-01-01 13:25:31,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:25:25,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+Update contributor and review data,2025-09-15 00:25:41,closed,,lwasser,United States,staff,pyosMeta,issues
+Add cooldown to dependabot.yaml,2026-01-07 02:53:02,open,,InessaPawson,,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-07 01:43:18,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.8 to 8.0.0,2026-01-01 13:25:45,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.1,2026-01-01 13:25:41,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump codecov/codecov-action from 5.5.1 to 5.5.2,2026-01-01 13:25:31,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:25:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.8 to 7.0.9,2025-12-01 15:05:36,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 15:05:32,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 15:05:32,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 15:05:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 Fix bugs with RSS feed parsing,2025-11-03 18:43:48,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 "Improve DOI validation, remove dependency",2025-11-03 18:27:27,closed,,banesullivan,United States,contributor,pyosMeta,pulls
@@ -522,7 +532,7 @@ chore: harden action steps,2025-10-08 23:23:56,closed,,lwasser,United States,sta
 Pin GitHub Actions to commit SHAs without documentation file,2025-10-08 23:09:02,closed,,Copilot,,contributor,pyosMeta,pulls
 Pin GitHub Actions to commit SHAs and enable Dependabot monitoring,2025-10-08 21:52:21,closed,,Copilot,,contributor,pyosMeta,pulls
 schema: reviewers can be empty now + parsing: handle bold/italics formatting,2025-10-08 16:25:32,closed,,mathematicalmichael,"Denver, CO",contributor,pyosMeta,pulls
-Update contributor and review data,2025-09-15 00:25:41,open,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2025-09-15 00:25:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 chore(ci): Change Dependabot update interval from weekly to monthly,2025-09-10 20:30:59,closed,,lwasser,United States,staff,pyosMeta,pulls
 bugfix: remove newline in rss feed stubs,2025-09-10 17:38:29,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 Bump version in changelog,2025-09-10 16:58:47,closed,,banesullivan,United States,contributor,pyosMeta,pulls
@@ -682,11 +692,26 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2026-01-11 21:12:14,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-01-10 21:12:13,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-01-09 21:13:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-01-08 21:13:57,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+ignore root-relative links in lychee link check,2026-01-08 04:33:33,open,,InessaPawson,,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-01-07 21:12:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Enh: revisit the site navigation for pyOpenSci,2026-01-05 22:14:23,open,,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2026-01-05 21:13:35,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2025-12-31 21:13:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Add inline link to Python Packaging Guide from packaging resources page (#441),2025-09-29 12:44:10,closed,,T-leke,united kingdom,contributor,pyopensci.github.io,issues
 Add button to PyOS Python Package Guide,2025-07-12 18:52:44,closed,,brepowell,"Seattle, Washington",contributor,pyopensci.github.io,issues
 FEATURE: opt in / out data collection,2025-06-10 17:29:00,open,"enhancement, help wanted, sprintable",lwasser,United States,staff,pyopensci.github.io,issues
-[UX] Review navigation: Can't get to packaging guide from https://www.pyopensci.org/python-packaging-science.html,2024-05-20 18:55:48,open,"help wanted, good first issue, sprintable, pyconus-24",zackw,"Pittsburgh, PA",contributor,pyopensci.github.io,issues
+[UX] Review navigation: Can't get to packaging guide from https://www.pyopensci.org/python-packaging-science.html,2024-05-20 18:55:48,closed,"help wanted, good first issue, sprintable, pyconus-24",zackw,"Pittsburgh, PA",contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-01-11 21:12:14,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-01-10 21:12:13,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-01-09 21:13:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-01-08 21:13:57,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+ignore root-relative links in lychee link check,2026-01-08 04:33:33,open,,InessaPawson,,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-01-07 21:12:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-01-05 21:13:35,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-12-31 21:13:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 bug: Fix dropdown quirk mobile and desktop,2025-12-26 01:29:15,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: fix donate button and clean up style bugs ,2025-12-20 00:42:05,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
@@ -1388,6 +1413,10 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
+astropy: A Community Python Library for Astronomy,2025-07-14 21:58:24,open,"6/pyOS-approved, astropy",pllim,"Baltimore, MD, USA",contributor,software-submission,issues
+VARGRAM submission,2025-05-09 07:56:45,open,1/editor-assigned,cjpalpallatoc,Metro Manila,contributor,software-submission,issues
+PyAutoGalaxy,2025-03-13 13:15:30,open,"4/reviews-in-awaiting-changes, astropy",Jammy2211,Newcastle,contributor,software-submission,issues
+Fluidimage submission,2024-05-30 12:53:48,open,5/awaiting-reviewer-response,paugier,,contributor,software-submission,issues
 Do not imply that pyOpenSci code of conduct is is infectious,2025-07-17 15:18:48,closed,,hamogu,"Cambridge, MA, USA",contributor,software-submission,pulls
 Add archived label to project columns,2024-12-23 19:53:35,closed,,banesullivan,United States,contributor,software-submission,pulls
 "Fix: remove ""Name"" from template",2024-11-22 18:36:47,closed,,lwasser,United States,staff,software-submission,pulls
@@ -1432,8 +1461,10 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+Update contributor and review data,2026-01-05 05:26:41,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-01-05 05:26:41,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-12-29 05:21:22,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
@@ -1551,14 +1582,17 @@ Fix: nodejs and requirements.txt installation instructions,2024-07-13 18:41:36,c
 Fix: notebook code,2024-07-13 03:42:09,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix: use package name with hyphens,2024-07-11 21:56:02,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Fix: deploy should exec code,2024-07-11 21:45:51,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-01 13:26:24,open,security,dependabot[bot],,contributor,pyosPackage,issues
-chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:26:21,open,security,dependabot[bot],,contributor,pyosPackage,issues
-chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.0 to 6.0.1,2026-01-01 13:26:15,open,security,dependabot[bot],,contributor,pyosPackage,issues
-chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-01 13:26:24,open,security,dependabot[bot],,contributor,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:26:21,open,security,dependabot[bot],,contributor,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.0 to 6.0.1,2026-01-01 13:26:15,open,security,dependabot[bot],,contributor,pyosPackage,pulls
+Update hatch config for hatch v1.16,2026-01-05 23:17:29,closed,,eigenbrot,,contributor,pyosPackage,issues
+chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-01 13:26:24,closed,security,dependabot[bot],,contributor,pyosPackage,issues
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:26:21,closed,security,dependabot[bot],,contributor,pyosPackage,issues
+chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.0 to 6.0.1,2026-01-01 13:26:15,closed,security,dependabot[bot],,contributor,pyosPackage,issues
+chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 16:07:21,closed,security,dependabot[bot],,contributor,pyosPackage,issues
+Update hatch config for hatch v1.16,2026-01-05 23:17:29,closed,,eigenbrot,,contributor,pyosPackage,pulls
+chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-01 13:26:24,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:26:21,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
+chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.0 to 6.0.1,2026-01-01 13:26:15,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
 chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 16:07:28,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 16:07:21,open,security,dependabot[bot],,contributor,pyosPackage,pulls
+chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 16:07:21,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
 fix: publish/release workflow,2025-10-31 21:51:46,closed,,lwasser,United States,staff,pyosPackage,pulls
 fix: rtd needs the static dir in config & specific location of output html + dev container,2025-10-31 21:10:34,closed,,lwasser,United States,staff,pyosPackage,pulls
 chore: bump GitHub Actions(deps): bump pypa/gh-action-pypi-publish from 1.12.4 to 1.13.0,2025-10-31 19:41:44,closed,,dependabot[bot],,contributor,pyosPackage,pulls
