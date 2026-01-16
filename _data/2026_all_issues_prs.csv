@@ -1,12 +1,17 @@
 title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo,type
+"Fix link to ""building blocks"" image and maybe alt-text",2026-01-15 21:44:06,open,,eigenbrot,,contributor,python-package-guide,issues
+bug: syntax error causing broken link,2026-01-13 03:05:56,closed,,lwasser,United States,staff,python-package-guide,issues
+Enh: align tests section better with our lessons,2026-01-13 02:29:18,open,,lwasser,United States,staff,python-package-guide,issues
 Update Japanese translation files,2026-01-04 01:02:42,open,,tkoyama010,Japan,contributor,python-package-guide,issues
 Fix some punctuation and formatting,2026-01-03 08:48:45,open,,hugovk,"Helsinki, Finland",contributor,python-package-guide,issues
-chore: bump the actions group with 2 updates,2026-01-01 16:08:54,open,maintenance,dependabot[bot],,contributor,python-package-guide,issues
-chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 updates,2025-12-15 16:31:01,open,maintenance,dependabot[bot],,contributor,python-package-guide,issues
+chore: bump the actions group with 2 updates,2026-01-01 16:08:54,closed,maintenance,dependabot[bot],,contributor,python-package-guide,issues
+chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 updates,2025-12-15 16:31:01,closed,maintenance,dependabot[bot],,contributor,python-package-guide,issues
+bug: syntax error causing broken link,2026-01-13 03:05:56,closed,,lwasser,United States,staff,python-package-guide,pulls
+Enh: align tests section better with our lessons,2026-01-13 02:29:18,open,,lwasser,United States,staff,python-package-guide,pulls
 Update Japanese translation files,2026-01-04 01:02:42,open,,tkoyama010,Japan,contributor,python-package-guide,pulls
 Fix some punctuation and formatting,2026-01-03 08:48:45,open,,hugovk,"Helsinki, Finland",contributor,python-package-guide,pulls
-chore: bump the actions group with 2 updates,2026-01-01 16:08:54,open,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
-chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 updates,2025-12-15 16:31:01,open,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
+chore: bump the actions group with 2 updates,2026-01-01 16:08:54,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
+chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 updates,2025-12-15 16:31:01,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 enh: adhere to style guide and reorg landing,2025-12-13 01:06:24,closed,,lwasser,United States,staff,python-package-guide,pulls
 enh: reorganize,2025-12-11 17:45:16,closed,,lwasser,United States,staff,python-package-guide,pulls
 enh: add task runner page to guide,2025-12-11 17:19:55,closed,,lwasser,United States,staff,python-package-guide,pulls
@@ -495,7 +500,8 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
-Add cooldown to dependabot.yaml,2026-01-07 02:53:02,open,,InessaPawson,,contributor,pyosMeta,issues
+chore: Group GitHub Action updates into a single PR,2026-01-15 22:26:20,open,,eliotwrobson,NYC,contributor,pyosMeta,issues
+Add cooldown to dependabot.yaml,2026-01-07 02:53:02,closed,,InessaPawson,,contributor,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-07 01:43:18,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 enh: group dependebot pr's into a single pr!,2026-01-05 19:32:19,open,"help wanted, sprintable, maintenance",lwasser,United States,staff,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.8 to 8.0.0,2026-01-01 13:25:45,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
@@ -506,7 +512,8 @@ chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.
 chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 15:05:32,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 15:05:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 Update contributor and review data,2025-09-15 00:25:41,closed,,lwasser,United States,staff,pyosMeta,issues
-Add cooldown to dependabot.yaml,2026-01-07 02:53:02,open,,InessaPawson,,contributor,pyosMeta,pulls
+chore: Group GitHub Action updates into a single PR,2026-01-15 22:26:20,open,,eliotwrobson,NYC,contributor,pyosMeta,pulls
+Add cooldown to dependabot.yaml,2026-01-07 02:53:02,closed,,InessaPawson,,contributor,pyosMeta,pulls
 chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-07 01:43:18,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.8 to 8.0.0,2026-01-01 13:25:45,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.1,2026-01-01 13:25:41,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
@@ -692,6 +699,12 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
+Add author name to blog post preview cards,2026-01-15 23:58:31,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,issues
+Change code font to use proper monospace fonts,2026-01-15 23:52:15,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,issues
+Add upcoming events section to home page,2026-01-15 23:37:04,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,issues
+Add documentation for updating contributor names,2026-01-15 23:22:27,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,issues
+Add cookie consent banner for Matomo analytics,2026-01-15 23:03:15,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,issues
+enh(search): move search to algolia,2026-01-15 22:52:14,open,,lwasser,United States,staff,pyopensci.github.io,issues
 Update contributor and review data,2026-01-11 21:12:14,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-01-10 21:12:13,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-01-09 21:13:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
@@ -702,9 +715,17 @@ Enh: revisit the site navigation for pyOpenSci,2026-01-05 22:14:23,open,,lwasser
 Update contributor and review data,2026-01-05 21:13:35,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2025-12-31 21:13:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Add inline link to Python Packaging Guide from packaging resources page (#441),2025-09-29 12:44:10,closed,,T-leke,united kingdom,contributor,pyopensci.github.io,issues
+CyNetDiff blog post,2025-09-15 03:46:09,closed,,eliotwrobson,NYC,contributor,pyopensci.github.io,issues
 Add button to PyOS Python Package Guide,2025-07-12 18:52:44,closed,,brepowell,"Seattle, Washington",contributor,pyopensci.github.io,issues
+BUG: New contriubtors  listing on landing page should list 3 instead of 4 people so it visually fits on the page,2025-07-03 18:23:01,closed,"bug, help wanted, sprintable",lwasser,United States,staff,pyopensci.github.io,issues
 FEATURE: opt in / out data collection,2025-06-10 17:29:00,open,"enhancement, help wanted, sprintable",lwasser,United States,staff,pyopensci.github.io,issues
 [UX] Review navigation: Can't get to packaging guide from https://www.pyopensci.org/python-packaging-science.html,2024-05-20 18:55:48,closed,"help wanted, good first issue, sprintable, pyconus-24",zackw,"Pittsburgh, PA",contributor,pyopensci.github.io,issues
+Add author name to blog post preview cards,2026-01-15 23:58:31,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
+Change code font to use proper monospace fonts,2026-01-15 23:52:15,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
+Add upcoming events section to home page,2026-01-15 23:37:04,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
+Add documentation for updating contributor names,2026-01-15 23:22:27,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
+Add cookie consent banner for Matomo analytics,2026-01-15 23:03:15,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
+enh(search): move search to algolia,2026-01-15 22:52:14,open,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update contributor and review data,2026-01-11 21:12:14,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-01-10 21:12:13,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-01-09 21:13:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
@@ -747,7 +768,7 @@ Add inline link to Python Packaging Guide from packaging resources page (#441),2
 Update contributor and review data,2025-09-28 21:11:47,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-09-23 21:11:52,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 enh(blog): Add blog post on generative AI peer review policy,2025-09-16 19:19:25,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-CyNetDiff blog post,2025-09-15 03:46:09,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
+CyNetDiff blog post,2025-09-15 03:46:09,closed,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-09-14 21:11:35,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-09-12 21:11:49,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 enh: update editorial team,2025-09-11 23:44:17,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
@@ -1415,8 +1436,11 @@ Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
 astropy: A Community Python Library for Astronomy,2025-07-14 21:58:24,open,"6/pyOS-approved, astropy",pllim,"Baltimore, MD, USA",contributor,software-submission,issues
 VARGRAM submission,2025-05-09 07:56:45,open,1/editor-assigned,cjpalpallatoc,Metro Manila,contributor,software-submission,issues
+MOCpy,2025-04-17 14:21:50,open,"0/pre-review-checks, New Submission!, astropy",ManonMarchand,"Strasbourg, France",contributor,software-submission,issues
 PyAutoGalaxy,2025-03-13 13:15:30,open,"4/reviews-in-awaiting-changes, astropy",Jammy2211,Newcastle,contributor,software-submission,issues
+C4dynamics submission,2025-03-08 19:44:02,open,"3/reviewers-assigned, 1/editor-assigned",c4dynamics,Israel,contributor,software-submission,issues
 Fluidimage submission,2024-05-30 12:53:48,open,5/awaiting-reviewer-response,paugier,,contributor,software-submission,issues
+Plenoptic,2023-11-17 20:39:40,open,"3/reviewers-assigned, ⌛ pending-maintainer-response",billbrod,"New York, NY",contributor,software-submission,issues
 Do not imply that pyOpenSci code of conduct is is infectious,2025-07-17 15:18:48,closed,,hamogu,"Cambridge, MA, USA",contributor,software-submission,pulls
 Add archived label to project columns,2024-12-23 19:53:35,closed,,banesullivan,United States,contributor,software-submission,pulls
 "Fix: remove ""Name"" from template",2024-11-22 18:36:47,closed,,lwasser,United States,staff,software-submission,pulls
@@ -1461,9 +1485,11 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+Update contributor and review data,2026-01-12 05:21:13,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-01-05 05:26:41,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-01-12 05:21:13,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-01-05 05:26:41,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
