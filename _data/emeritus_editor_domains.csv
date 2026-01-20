@@ -1,5 +1,5 @@
 gh_username,active,first_name,last_name,country,state,OS,Domain_areas,Description,technical_areas
-cmarmo,False,Chiara,Marmo,United States,Hawaii,Linux,"Spatial data, spatial analysis, GIS, Space sciences, Geosciences / earth science, Astronomy","Data processing in Astronomy, Planetary Sciences, Geospatial data. Standard development, interoperability.","Data extraction & retrieval, Data munging, Data deposition, Documentation quality, Continuous Integration"
+cmarmo,False,,,,,,,,
 isabelizimm,False,,,,,,,,
 lwasser,False,,,,,,,,
 nickledave,False,,,,,,,,
