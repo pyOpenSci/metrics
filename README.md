@@ -90,7 +90,7 @@ as you update the files use:
 
 `nox -s serve`
 
-One a mac you can use `ctrl + d` to stop a live server.
+On a mac you can use `ctrl + d` to stop a live server.
 
 ## Contributors ✨
 
