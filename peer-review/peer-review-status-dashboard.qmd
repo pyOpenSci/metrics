@@ -95,6 +95,7 @@ all_presubmissions = len(presubmissions)
 ```
 
 
+
 ```{python}
 # Process presubmission data
 open_presubmissions = presubmissions[presubmissions["Date Closed"].isna()]
@@ -106,6 +107,40 @@ open_presubmissions["Date Opened"] = open_presubmissions["Date Opened"].dt.date
 open_presubmissions["Last Comment"] = open_presubmissions["Last Comment"].dt.date
 open_presubmissions.reset_index(drop=True, inplace=True)
 open_presubmission_count = len(open_presubmissions)
+```
+
+```{python}
+# Process New Submission Data
+sub_path = data_path = Path.cwd().parents[0] / "_data" /  "review_submissions.csv"
+submissions = pd.read_csv(
+    sub_path,
+    parse_dates=["date_opened", "date_closed", "last_comment_date"],
+)
+new_submissions = submissions[submissions["labels"].apply(lambda x: 'New Submission!' in x)]
+new_submissions = new_submissions.rename(
+    columns={
+        "package_name": "Name",
+        "date_opened": "Date Opened",
+        "date_closed": "Date Closed",
+        "issue_num": "Issue",
+        "description": "Description",
+        "categories": "Categories",
+        "last_comment_date": "Last Comment",
+        "last_comment_user": "Last User to Comment",
+    }
+)
+
+all_new_submissions = len(new_submissions)
+# Process presubmission data
+today = datetime.now(timezone.utc)
+new_submissions["Days Open"] = (
+    today - new_submissions["Date Opened"]
+).dt.days
+new_submissions = new_submissions[new_submissions['Date Closed'].isna()]
+new_submissions["Date Opened"] = new_submissions["Date Opened"].dt.date
+new_submissions["Last Comment"] = new_submissions["Last Comment"].dt.date
+new_submissions.reset_index(drop=True, inplace=True)
+new_submissions = clean_and_order(new_submissions, DROP_COLS, ORDER)
 ```
 
 ```{python}
@@ -229,6 +264,13 @@ show(seeking_editor)
 ```{python}
 #| title: "Packages Seeking Reviewers"
 show(seeking_reviewer)
+```
+
+## Row {height=1%}
+
+```{python}
+#| title: "New Submissions"
+show(new_submissions)
 ```
 
 ## Row {height=1%}

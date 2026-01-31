@@ -27,3 +27,5 @@ _output/*
 
 # Quarto
 *.quarto_ipynb
+
+**/*.quarto_ipynb
