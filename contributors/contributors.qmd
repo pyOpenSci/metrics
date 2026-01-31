@@ -207,7 +207,7 @@ Here we look at new contributors over time. This plot includes all contributors 
 
 ```{python}
 # Group by month and count new contributors
-monthly_counts = contribs_data.resample("M", on="date_added").count()["name"]
+monthly_counts = contribs_data.resample("ME", on="date_added").count()["name"]
 
 # Compute cumulative sum for growth over time
 cumulative_growth = monthly_counts.cumsum().reset_index()

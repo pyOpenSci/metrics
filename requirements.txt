@@ -10,3 +10,4 @@ nox
 pygithub # for github API
 plotly
 panel
+pytz
