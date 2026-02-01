@@ -1,16 +1,16 @@
---- 
+---
 title: "pyOpenSci Current Review Status"
-format: 
+format:
   dashboard:
-    scrolling: true 
+    scrolling: true
 execute:
   echo: false
---- 
+---
 
 
 ```{python}
 #| echo: false
-#| 
+#|
 import os
 from pathlib import Path
 
@@ -31,7 +31,7 @@ warnings.filterwarnings("ignore")
 # Make tables nicer
 pd.set_option("display.max_colwidth", None)
 current_date = datetime.today().date()
-today = current_date.strftime("%d %B %Y") 
+today = current_date.strftime("%d %B %Y")
 ```
 
 *Last updated: **`{python} today`** *
@@ -44,12 +44,12 @@ def clean_and_order(df, DROP_COLS, order):
 def get_status_df(df, status):
     return df[df["active_status"] == status].reset_index(drop=True)
 
-DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"] 
+DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"]
 ORDER = ["Name", "Description", "Days Open", "Date Opened","Last Comment", "Last User to Comment", "Issue", "Categories", "eic"]
 
 label_map = {
     "pre-review": [
-        "New Submission!", 
+        "New Submission!",
         "0/pre-review-checks"],
     "seeking editor": ["0/seeking-editor"],
     "seeking reviewers": ["2/seeking-reviewers"],
@@ -194,7 +194,7 @@ open_reviews["Last Comment"] = open_reviews["Last Comment"].dt.date
 
 ```{python}
 #| echo: false
-#| 
+#|
 # Determine overall review stage each item is in
 review_status_ct = open_reviews["active_status"].value_counts().reset_index()
 review_status_ct.rename(columns={"labels": "status"}, inplace=True)
@@ -280,15 +280,18 @@ show(new_submissions)
 show(open_presubmissions)
 ```
 
-## Row {height=4%}
+## Row {height=1%}
 
 ```{python}
 #| title: "Open Reviews Sorted by Last Comment Date"
-print("Reviews that have been quiet for the longest period of time are at the top.")
+from IPython.display import Markdown, display
 
+display(Markdown(
+    "Reviews that have been quiet for the longest period of time are at the top."
+))
 open_reviews = open_reviews.sort_values("Last Comment", ascending=True)
 
-new_order = ["Name", "editor", "Last Comment", "Last User to Comment", "eic", "Issue", "active_status", "Description", "Date Opened"]  
+new_order = ["Name", "editor", "Last Comment", "Last User to Comment", "eic", "Issue", "active_status", "Description", "Date Opened"]
 
 show(open_reviews[new_order])
 ```
