@@ -206,7 +206,7 @@ seeking_editor_count = len(seeking_editor)
 ```
 
 
-## Row {height=1%}
+## Row {height=1%} {.flow}
 
 ```{python}
 #| content: valuebox
@@ -252,35 +252,35 @@ dict(
 )
 ```
 
-## Row {height=1%}
+## Row {height=1%} {.flow}
 
 ```{python}
 #| title: "Packages Seeking an Editor"
 show(seeking_editor)
 ```
 
-## Row {height=1%}
+## Row {height=1%} {.flow}
 
 ```{python}
 #| title: "Packages Seeking Reviewers"
 show(seeking_reviewer)
 ```
 
-## Row {height=1%}
+## Row {height=1%} {.flow}
 
 ```{python}
 #| title: "New Submissions"
 show(new_submissions)
 ```
 
-## Row {height=1%}
+## Row {height=1%} {.flow}
 
 ```{python}
 #| title: "Open Presubmission Inquiries"
 show(open_presubmissions)
 ```
 
-## Row {height=1%}
+## Row {height=1%} {.flow}
 
 ```{python}
 #| title: "Open Reviews Sorted by Last Comment Date"
