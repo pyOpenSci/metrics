@@ -515,8 +515,8 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
-chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-02-01 13:38:30,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
-Update contributor and review data,2026-02-01 00:38:03,open,,lwasser,United States,staff,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-02-01 13:38:30,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+Update contributor and review data,2026-02-01 00:38:03,closed,,lwasser,United States,staff,pyosMeta,issues
 Update changelog to release 1.7.7,2026-01-21 19:26:32,closed,,banesullivan,United States,contributor,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump pypa/gh-action-pypi-publish from 1.12.4 to 1.13.0 in the actions group,2026-01-20 21:25:52,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 chore(ci): Increase updates cooldown to 7 days,2026-01-17 03:26:25,closed,,InessaPawson,,contributor,pyosMeta,issues
@@ -533,8 +533,8 @@ chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.
 chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 15:05:32,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 15:05:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 Update contributor and review data,2025-09-15 00:25:41,closed,,lwasser,United States,staff,pyosMeta,issues
-chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-02-01 13:38:30,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
-Update contributor and review data,2026-02-01 00:38:03,open,,lwasser,United States,staff,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-02-01 13:38:30,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+Update contributor and review data,2026-02-01 00:38:03,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update changelog to release 1.7.7,2026-01-21 19:26:32,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 chore: bump GitHub Actions(deps): bump pypa/gh-action-pypi-publish from 1.12.4 to 1.13.0 in the actions group,2026-01-20 21:25:52,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 chore(ci): Increase updates cooldown to 7 days,2026-01-17 03:26:25,closed,,InessaPawson,,contributor,pyosMeta,pulls
@@ -726,7 +726,9 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
-Update contributor and review data,2026-01-30 21:16:03,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-02-08 21:16:02,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-02-05 21:16:07,closed,pre-commit.ci autofix,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-01-30 21:16:03,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Add publication to package cards,2026-01-28 04:04:18,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,issues
 Add a 'publications' field to package cards,2026-01-27 03:20:05,open,enhancement,eliotwrobson,NYC,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-01-25 21:11:59,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
@@ -749,12 +751,12 @@ Update contributor and review data,2026-01-11 21:12:14,closed,,github-actions[bo
 Update contributor and review data,2026-01-10 21:12:13,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-01-09 21:13:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-01-08 21:13:57,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
-ignore root-relative links in lychee link check,2026-01-08 04:33:33,open,,InessaPawson,,contributor,pyopensci.github.io,issues
+ignore root-relative links in lychee link check,2026-01-08 04:33:33,closed,,InessaPawson,,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-01-07 21:12:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Enh: revisit the site navigation for pyOpenSci,2026-01-05 22:14:23,open,,lwasser,United States,staff,pyopensci.github.io,issues
 Update contributor and review data,2026-01-05 21:13:35,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2025-12-31 21:13:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
-enh: Add looking forward to 2026 blog,2025-12-18 01:15:54,open,,lwasser,United States,staff,pyopensci.github.io,issues
+enh: Add looking forward to 2026 blog,2025-12-18 01:15:54,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Add inline link to Python Packaging Guide from packaging resources page (#441),2025-09-29 12:44:10,closed,,T-leke,united kingdom,contributor,pyopensci.github.io,issues
 CyNetDiff blog post,2025-09-15 03:46:09,closed,,eliotwrobson,NYC,contributor,pyopensci.github.io,issues
 Add button to PyOS Python Package Guide,2025-07-12 18:52:44,closed,,brepowell,"Seattle, Washington",contributor,pyopensci.github.io,issues
@@ -766,7 +768,9 @@ FEATURE: add blog post author name to the blog home page preview card,2024-08-02
 [UX] Review navigation: Can't get to packaging guide from https://www.pyopensci.org/python-packaging-science.html,2024-05-20 18:55:48,closed,"help wanted, good first issue, sprintable, pyconus-24",zackw,"Pittsburgh, PA",contributor,pyopensci.github.io,issues
 Change font in code to monospace,2024-04-19 11:13:21,closed,"help wanted, sprintable",vnmabus,"Frankfurt, Germany",contributor,pyopensci.github.io,issues
 Create banner for website to advertise events,2024-04-02 19:41:29,closed,"enhancement, help wanted, sprintable, feature:design",lwasser,United States,staff,pyopensci.github.io,issues
-Update contributor and review data,2026-01-30 21:16:02,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-02-08 21:16:02,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-02-05 21:16:07,closed,pre-commit.ci autofix,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-01-30 21:16:02,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Add publication to package cards,2026-01-28 04:04:18,open,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-01-25 21:11:59,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-01-24 21:12:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
@@ -788,7 +792,7 @@ Update contributor and review data,2026-01-11 21:12:14,closed,,github-actions[bo
 Update contributor and review data,2026-01-10 21:12:13,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-01-09 21:13:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-01-08 21:13:57,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-ignore root-relative links in lychee link check,2026-01-08 04:33:33,open,,InessaPawson,,contributor,pyopensci.github.io,pulls
+ignore root-relative links in lychee link check,2026-01-08 04:33:33,closed,,InessaPawson,,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-01-07 21:12:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-01-05 21:13:35,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-12-31 21:13:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
@@ -799,7 +803,7 @@ Rename pyos-maintainers-infrastructure channel,2025-12-19 19:25:30,closed,,banes
 enh(cleanup): Fix landing page cards and cleanup footer and styles,2025-12-19 18:35:16,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: final cleanup,2025-12-19 04:37:58,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: style cleanup,2025-12-19 00:33:13,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-enh: Add looking forward to 2026 blog,2025-12-18 01:15:54,open,,lwasser,United States,staff,pyopensci.github.io,pulls
+enh: Add looking forward to 2026 blog,2025-12-18 01:15:54,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 build(deps): bump the actions group across 1 directory with 2 updates,2025-12-15 06:09:37,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2025-12-10 21:14:31,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix Jekyll framework link in README,2025-11-29 06:22:55,closed,,jsdodge,,contributor,pyopensci.github.io,pulls
@@ -1492,11 +1496,15 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
-Please review TanML,2026-01-27 01:30:28,open,New Submission!,tradertanmay,USA,contributor,software-submission,issues
+pyhctsa: A Python package for highly-comparative time-series analysis,2026-02-08 22:51:04,open,"0/pre-review-checks, New Submission!",joshuabmoore,"School of Physics, The University of Sydney",contributor,software-submission,issues
+Presubmission Inquiry for peer reviewing of our Python Package pygulp for weighted goal linear programming,2026-02-04 12:37:21,open,"presubmission, ⌛ pending-maintainer-response",DrRoomani,,contributor,software-submission,issues
+Please review TanML,2026-01-27 01:30:28,open,"2/seeking-reviewers, 1/editor-assigned",tradertanmay,USA,contributor,software-submission,issues
 scientific-scatter-plot-generator,2026-01-18 13:44:16,closed,,qvhaelen,,contributor,software-submission,issues
-RAIIAF - A python package for storage of AI generated images with their relevent context,2026-01-17 04:14:41,open,presubmission,AnuroopVJ,India,contributor,software-submission,issues
-[Presubmission Inquiry] QWED - Deterministic Verification for LLM Outputs,2026-01-16 19:58:25,open,presubmission,rahuldass19,Pune,contributor,software-submission,issues
-[SUBMISSION] OneCite — Universal citation & academic reference toolkit,2025-10-19 05:00:09,open,"0/pre-review-checks, New Submission!",HzaCode,,contributor,software-submission,issues
+RAIIAF - A python package for storage of AI generated images with their relevent context,2026-01-17 04:14:41,closed,"presubmission, currently-out-of-scope",AnuroopVJ,India,contributor,software-submission,issues
+[Presubmission Inquiry] QWED - Deterministic Verification for LLM Outputs,2026-01-16 19:58:25,closed,"presubmission, currently-out-of-scope",rahuldass19,Pune,contributor,software-submission,issues
+[Pre-submission] `bioquik`: fast tool for counting CG-anchored DNA motifs in FASTA files.,2026-01-01 02:13:53,closed,"presubmission, Submission Requested",Rajkanwars15,India,contributor,software-submission,issues
+[Pre-submission] `rgpycrumbs`: Dispatcher-managed analytical engine for computational chemistry,2025-12-23 11:44:34,closed,"presubmission, currently-out-of-scope",HaoZeke,University of Iceland,contributor,software-submission,issues
+[SUBMISSION] OneCite — Universal citation & academic reference toolkit,2025-10-19 05:00:09,open,1/editor-assigned,HzaCode,,contributor,software-submission,issues
 nsEVDx a Python Package for modeling non-stationary extreme value distributions - Submission for Review,2025-09-30 03:08:24,open,0/pre-review-checks,Nischalcs50,,contributor,software-submission,issues
 Pyxel submission,2025-09-05 05:53:18,open,"astropy, 0/seeking-editor",flemmel,,contributor,software-submission,issues
 LSAPy Submission,2025-08-28 08:27:52,open,0/seeking-editor,baptistehamon,Christchurch (NZ),contributor,software-submission,issues
@@ -1557,17 +1565,17 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
-add open new submission to peer review status dashboard,2026-01-31 18:28:15,open,,crhea93,"Montreal, QC, CANADA",contributor,peer-review-metrics,issues
+enh: add open new submission to peer review status dashboard,2026-01-31 18:28:15,closed,,crhea93,"Montreal, QC, CANADA",contributor,peer-review-metrics,issues
 enh: add open new submission to peer review status dashboard,2026-01-30 19:08:48,open,,lwasser,United States,staff,peer-review-metrics,issues
-Update contributor and review data,2026-01-26 05:24:57,open,,github-actions[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-01-26 05:24:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-01-19 05:21:59,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-01-16 05:19:44,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-01-12 05:21:13,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-01-05 05:26:41,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
-add open new submission to peer review status dashboard,2026-01-31 18:28:15,open,,crhea93,"Montreal, QC, CANADA",contributor,peer-review-metrics,pulls
-Update contributor and review data,2026-01-26 05:24:57,open,,github-actions[bot],,contributor,peer-review-metrics,pulls
+enh: add open new submission to peer review status dashboard,2026-01-31 18:28:15,closed,,crhea93,"Montreal, QC, CANADA",contributor,peer-review-metrics,pulls
+Update contributor and review data,2026-01-26 05:24:57,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-01-19 05:21:59,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-01-16 05:19:44,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-01-12 05:21:13,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
@@ -1689,15 +1697,17 @@ Fix: nodejs and requirements.txt installation instructions,2024-07-13 18:41:36,c
 Fix: notebook code,2024-07-13 03:42:09,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix: use package name with hyphens,2024-07-11 21:56:02,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Fix: deploy should exec code,2024-07-11 21:45:51,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.1 to 6.0.2,2026-02-01 13:38:11,open,security,dependabot[bot],,contributor,pyosPackage,issues
-chore: bump GitHub Actions(deps): bump actions/setup-python from 6.1.0 to 6.2.0,2026-02-01 13:38:04,open,security,dependabot[bot],,contributor,pyosPackage,issues
+chore: bump the uv group across 1 directory with 3 updates,2026-02-02 11:09:15,open,"dependencies, python:uv",dependabot[bot],,contributor,pyosPackage,issues
+chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.1 to 6.0.2,2026-02-01 13:38:11,closed,security,dependabot[bot],,contributor,pyosPackage,issues
+chore: bump GitHub Actions(deps): bump actions/setup-python from 6.1.0 to 6.2.0,2026-02-01 13:38:04,closed,security,dependabot[bot],,contributor,pyosPackage,issues
 Update hatch config for hatch v1.16,2026-01-05 23:17:29,closed,,eigenbrot,,contributor,pyosPackage,issues
 chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-01 13:26:24,closed,security,dependabot[bot],,contributor,pyosPackage,issues
 chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:26:21,closed,security,dependabot[bot],,contributor,pyosPackage,issues
 chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.0 to 6.0.1,2026-01-01 13:26:15,closed,security,dependabot[bot],,contributor,pyosPackage,issues
 chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 16:07:21,closed,security,dependabot[bot],,contributor,pyosPackage,issues
-chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.1 to 6.0.2,2026-02-01 13:38:11,open,security,dependabot[bot],,contributor,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump actions/setup-python from 6.1.0 to 6.2.0,2026-02-01 13:38:04,open,security,dependabot[bot],,contributor,pyosPackage,pulls
+chore: bump the uv group across 1 directory with 3 updates,2026-02-02 11:09:15,open,"dependencies, python:uv",dependabot[bot],,contributor,pyosPackage,pulls
+chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.1 to 6.0.2,2026-02-01 13:38:11,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
+chore: bump GitHub Actions(deps): bump actions/setup-python from 6.1.0 to 6.2.0,2026-02-01 13:38:04,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
 Update hatch config for hatch v1.16,2026-01-05 23:17:29,closed,,eigenbrot,,contributor,pyosPackage,pulls
 chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0,2026-01-01 13:26:24,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
 chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:26:21,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
