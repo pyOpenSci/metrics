@@ -324,6 +324,7 @@ CONTENT: documentation text and styles,2022-10-26 19:06:10,closed,,lwasser,Unite
 IGNORE: content check Authoring content update,2022-10-25 22:02:16,closed,,lwasser,United States,staff,python-package-guide,pulls
 "WHY DON""T YOU LIKE ME HTML PROOFER? 😭 ",2022-10-25 18:36:42,closed,,lwasser,United States,staff,python-package-guide,pulls
 add infra to build sphinx book,2022-10-25 15:49:58,closed,,lwasser,United States,staff,python-package-guide,pulls
+Updated language about JOSS paper reviews,2026-02-17 18:00:49,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,issues
 Update some onboarding and offboarding info,2026-02-12 05:08:15,open,,eliotwrobson,NYC,contributor,software-peer-review,issues
 enh: consider development history criteria similar to what JOSS has,2026-01-20 20:07:52,open,,lwasser,United States,staff,software-peer-review,issues
 Update package examples for scope and link to categories on the package listing page,2026-01-20 20:03:39,open,,lwasser,United States,staff,software-peer-review,issues
@@ -339,6 +340,7 @@ Add suggestions about typechecking and linting to EiC checklist for new submissi
 feat(pyosbot): instructions for using the bot,2024-10-03 20:20:52,closed,,lwasser,United States,staff,software-peer-review,issues
 "enh: editor page Add wording for adding, removing labels for package issues",2024-06-28 16:27:35,closed,"help wanted, content-update",yeelauren,,contributor,software-peer-review,issues
 "Author guide - when is a package ""good enough"" for review",2021-10-19 17:39:25,closed,,lwasser,United States,staff,software-peer-review,issues
+Updated language about JOSS paper reviews,2026-02-17 18:00:49,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,pulls
 Update some onboarding and offboarding info,2026-02-12 05:08:15,open,,eliotwrobson,NYC,contributor,software-peer-review,pulls
 Update name of infrastructure slack channel,2025-12-19 21:32:42,closed,,eigenbrot,,contributor,software-peer-review,pulls
 enh(editor-guide): Add discussion about labels,2025-12-16 05:38:15,closed,,eliotwrobson,NYC,contributor,software-peer-review,pulls
@@ -519,7 +521,7 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
-Update contributor and review data,2026-02-15 00:35:25,open,,lwasser,United States,staff,pyosMeta,issues
+Update contributor and review data,2026-02-15 00:35:25,closed,,lwasser,United States,staff,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-02-01 13:38:30,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 Update contributor and review data,2026-02-01 00:38:03,closed,,lwasser,United States,staff,pyosMeta,issues
 Update changelog to release 1.7.7,2026-01-21 19:26:32,closed,,banesullivan,United States,contributor,pyosMeta,issues
@@ -538,7 +540,7 @@ chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.
 chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 15:05:32,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 15:05:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 Update contributor and review data,2025-09-15 00:25:41,closed,,lwasser,United States,staff,pyosMeta,issues
-Update contributor and review data,2026-02-15 00:35:25,open,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2026-02-15 00:35:25,closed,,lwasser,United States,staff,pyosMeta,pulls
 chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-02-01 13:38:30,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 Update contributor and review data,2026-02-01 00:38:03,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update changelog to release 1.7.7,2026-01-21 19:26:32,closed,,banesullivan,United States,contributor,pyosMeta,pulls
@@ -732,7 +734,9 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
-Update contributor and review data,2026-02-14 21:14:04,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-02-21 21:12:55,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-02-17 21:19:21,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-02-14 21:14:04,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-02-13 21:19:55,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-02-10 21:24:19,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-02-08 21:16:02,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
@@ -777,7 +781,9 @@ FEATURE: add blog post author name to the blog home page preview card,2024-08-02
 [UX] Review navigation: Can't get to packaging guide from https://www.pyopensci.org/python-packaging-science.html,2024-05-20 18:55:48,closed,"help wanted, good first issue, sprintable, pyconus-24",zackw,"Pittsburgh, PA",contributor,pyopensci.github.io,issues
 Change font in code to monospace,2024-04-19 11:13:21,closed,"help wanted, sprintable",vnmabus,"Frankfurt, Germany",contributor,pyopensci.github.io,issues
 Create banner for website to advertise events,2024-04-02 19:41:29,closed,"enhancement, help wanted, sprintable, feature:design",lwasser,United States,staff,pyopensci.github.io,issues
-Update contributor and review data,2026-02-14 21:14:04,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-02-21 21:12:55,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-02-17 21:19:21,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-02-14 21:14:04,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-02-13 21:19:55,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-02-10 21:24:19,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-02-08 21:16:02,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
@@ -1508,7 +1514,10 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
-solar-wavelength-calibration: Absolute wavelength calibration of Solar spectra,2026-02-10 18:52:02,open,"New Submission!, 1/editor-assigned",eigenbrot,,contributor,software-submission,issues
+Submit rgpycrumbs for review,2026-02-23 01:57:48,open,"0/pre-review-checks, New Submission!",HaoZeke,University of Iceland,contributor,software-submission,issues
+`phasecurvefit`,2026-02-20 15:32:56,open,"0/pre-review-checks, New Submission!",nstarman,,contributor,software-submission,issues
+weitsicht submission - Tool to work/automate workflows base on already georeferenced images.,2026-02-18 00:23:51,open,0/seeking-editor,MartinW-S2M,Vienna,contributor,software-submission,issues
+solar-wavelength-calibration: Absolute wavelength calibration of Solar spectra,2026-02-10 18:52:02,open,2/seeking-reviewers,eigenbrot,,contributor,software-submission,issues
 pyhctsa: A Python package for highly-comparative time-series analysis,2026-02-08 22:51:04,open,"0/pre-review-checks, New Submission!",joshuabmoore,"School of Physics, The University of Sydney",contributor,software-submission,issues
 Presubmission Inquiry for peer reviewing of our Python Package pygulp for weighted goal linear programming,2026-02-04 12:37:21,open,"presubmission, ⌛ pending-maintainer-response",DrRoomani,,contributor,software-submission,issues
 Please review TanML,2026-01-27 01:30:28,open,"3/reviewers-assigned, 1/editor-assigned",tradertanmay,USA,contributor,software-submission,issues
@@ -1516,9 +1525,9 @@ scientific-scatter-plot-generator,2026-01-18 13:44:16,closed,,qvhaelen,,contribu
 RAIIAF - A python package for storage of AI generated images with their relevent context,2026-01-17 04:14:41,closed,"presubmission, currently-out-of-scope",AnuroopVJ,India,contributor,software-submission,issues
 [Presubmission Inquiry] QWED - Deterministic Verification for LLM Outputs,2026-01-16 19:58:25,closed,"presubmission, currently-out-of-scope",rahuldass19,Pune,contributor,software-submission,issues
 [Pre-submission] `bioquik`: fast tool for counting CG-anchored DNA motifs in FASTA files.,2026-01-01 02:13:53,closed,"presubmission, Submission Requested",Rajkanwars15,India,contributor,software-submission,issues
-[Pre-submission] `rgpycrumbs`: Dispatcher-managed analytical engine for computational chemistry,2025-12-23 11:44:34,open,"presubmission, ⌛ pending-maintainer-response",HaoZeke,University of Iceland,contributor,software-submission,issues
+[Pre-submission] `rgpycrumbs`: Dispatcher-managed analytical engine for computational chemistry,2025-12-23 11:44:34,open,"presubmission, Submission Requested",HaoZeke,University of Iceland,contributor,software-submission,issues
 [SUBMISSION] OneCite — Universal citation & academic reference toolkit,2025-10-19 05:00:09,open,"3/reviewers-assigned, 1/editor-assigned",HzaCode,,contributor,software-submission,issues
-nsEVDx a Python Package for modeling non-stationary extreme value distributions - Submission for Review,2025-09-30 03:08:24,open,0/pre-review-checks,Nischalcs50,,contributor,software-submission,issues
+nsEVDx a Python Package for modeling non-stationary extreme value distributions - Submission for Review,2025-09-30 03:08:24,open,2/seeking-reviewers,Nischalcs50,,contributor,software-submission,issues
 Pyxel submission,2025-09-05 05:53:18,open,"3/reviewers-assigned, astropy",flemmel,,contributor,software-submission,issues
 LSAPy Submission,2025-08-28 08:27:52,open,"2/seeking-reviewers, 1/editor-assigned",baptistehamon,Christchurch (NZ),contributor,software-submission,issues
 Phileas — reproducible automation for hardware security experiments,2025-08-27 09:58:22,open,0/pre-review-checks,ldbo,,contributor,software-submission,issues
@@ -1527,7 +1536,7 @@ RSTT Submission,2025-08-23 11:26:35,open,0/pre-review-checks,Ematrion,,contribut
 pmidcite,2025-07-28 21:50:28,open,0/pre-review-checks,dvklopfenstein,"Philadelphia, PA, USA",contributor,software-submission,issues
 astropy: A Community Python Library for Astronomy,2025-07-14 21:58:24,closed,"6/pyOS-approved, astropy",pllim,"Baltimore, MD, USA",contributor,software-submission,issues
 pyinterpolate,2025-07-12 14:09:45,closed,"6/pyOS-approved, 9/joss-approved",SimonMolinsky,"Helsinki, Finland",contributor,software-submission,issues
-MILESpy,2025-06-10 11:03:05,open,"2/seeking-reviewers, astropy",isaac-aa,,contributor,software-submission,issues
+MILESpy,2025-06-10 11:03:05,open,"3/reviewers-assigned, astropy",isaac-aa,,contributor,software-submission,issues
 VARGRAM submission,2025-05-09 07:56:45,open,1/editor-assigned,cjpalpallatoc,Metro Manila,contributor,software-submission,issues
 MOCpy,2025-04-17 14:21:50,open,"2/seeking-reviewers, 1/editor-assigned, astropy",ManonMarchand,"Strasbourg, France",contributor,software-submission,issues
 PyAutoGalaxy,2025-03-13 13:15:30,open,"4/reviews-in-awaiting-changes, astropy",Jammy2211,Newcastle,contributor,software-submission,issues
@@ -1578,6 +1587,7 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+Update contributor and review data,2026-02-16 05:43:39,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-02-09 05:41:43,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 enh: add open new submission to peer review status dashboard,2026-01-31 18:28:15,closed,,crhea93,"Montreal, QC, CANADA",contributor,peer-review-metrics,issues
 enh: add open new submission to peer review status dashboard,2026-01-30 19:08:48,open,,lwasser,United States,staff,peer-review-metrics,issues
@@ -1588,6 +1598,7 @@ Update contributor and review data,2026-01-12 05:21:13,closed,,github-actions[bo
 Update contributor and review data,2026-01-05 05:26:41,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-02-16 05:43:39,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-02-09 05:41:43,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 enh: add open new submission to peer review status dashboard,2026-01-31 18:28:15,closed,,crhea93,"Montreal, QC, CANADA",contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-01-26 05:24:57,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
