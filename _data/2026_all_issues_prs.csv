@@ -1,4 +1,6 @@
 title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo,type
+Add Spanish translations for tutorials.po,2026-04-03 00:23:36,open,,Mololola,,contributor,python-package-guide,issues
+Fix/button link url syntax,2026-04-01 21:08:28,open,,bewygs,Paris,contributor,python-package-guide,issues
 chore: bump actions/download-artifact from 8.0.0 to 8.0.1 in /examples/pure-hatch/.github/workflows in the actions group,2026-03-16 16:46:27,closed,maintenance,dependabot[bot],,contributor,python-package-guide,issues
 docs: add Standard Readme resources and badge,2026-03-13 09:54:14,closed,,tkoyama010,Japan,contributor,python-package-guide,issues
 Failed to load trampoline kind from resources,2026-03-12 01:55:57,closed,,kijinosu,"Tsukuba, Japan",contributor,python-package-guide,issues
@@ -15,8 +17,11 @@ Update Japanese translation files,2026-01-04 01:02:42,open,,tkoyama010,Japan,con
 Fix some punctuation and formatting,2026-01-03 08:48:45,closed,,hugovk,"Helsinki, Finland",contributor,python-package-guide,issues
 chore: bump the actions group with 2 updates,2026-01-01 16:08:54,closed,maintenance,dependabot[bot],,contributor,python-package-guide,issues
 chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 updates,2025-12-15 16:31:01,closed,maintenance,dependabot[bot],,contributor,python-package-guide,issues
+Help translate the Python Package Guide into Spanish,2024-07-03 20:58:11,open,"help wanted, sprintable, translations, lang-ES",flpm,"New York, NY",contributor,python-package-guide,issues
 Python Package Guide: Fix breakout box / admonition that shows a user how to rename their package if the name is taken on pypi,2024-04-15 22:31:00,open,"help wanted, sprintable, pycascades",Tyler-Bonnell,"Seattle, WA",contributor,python-package-guide,issues
 feat: Add cross links between author checks in our peer review guide and guidance in the packaging guide,2023-01-10 21:44:47,open,"help wanted, sprintable, enhancement-feature, beginner-friendly",lwasser,United States,staff,python-package-guide,issues
+Add Spanish translations for tutorials.po,2026-04-03 00:23:36,open,,Mololola,,contributor,python-package-guide,pulls
+Fix/button link url syntax,2026-04-01 21:08:28,open,,bewygs,Paris,contributor,python-package-guide,pulls
 chore: bump actions/download-artifact from 8.0.0 to 8.0.1 in /examples/pure-hatch/.github/workflows in the actions group,2026-03-16 16:46:27,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 docs: add Standard Readme resources and badge,2026-03-13 09:54:14,closed,,tkoyama010,Japan,contributor,python-package-guide,pulls
 Add clarification about PyPI package name source,2026-03-12 00:27:01,open,,M-Nagamani,,contributor,python-package-guide,pulls
@@ -337,6 +342,7 @@ CONTENT: documentation text and styles,2022-10-26 19:06:10,closed,,lwasser,Unite
 IGNORE: content check Authoring content update,2022-10-25 22:02:16,closed,,lwasser,United States,staff,python-package-guide,pulls
 "WHY DON""T YOU LIKE ME HTML PROOFER? 😭 ",2022-10-25 18:36:42,closed,,lwasser,United States,staff,python-package-guide,pulls
 add infra to build sphinx book,2022-10-25 15:49:58,closed,,lwasser,United States,staff,python-package-guide,pulls
+Docs/joss review,2026-03-27 00:26:51,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,issues
 feat: add more to our gen ai policy,2026-03-12 18:55:01,open,,lwasser,United States,staff,software-peer-review,issues
 Updated language about JOSS paper reviews,2026-02-17 18:00:49,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,issues
 Update some onboarding and offboarding info,2026-02-12 05:08:15,closed,,eliotwrobson,NYC,contributor,software-peer-review,issues
@@ -354,6 +360,7 @@ Add suggestions about typechecking and linting to EiC checklist for new submissi
 feat(pyosbot): instructions for using the bot,2024-10-03 20:20:52,closed,,lwasser,United States,staff,software-peer-review,issues
 "enh: editor page Add wording for adding, removing labels for package issues",2024-06-28 16:27:35,closed,"help wanted, content-update",yeelauren,,contributor,software-peer-review,issues
 "Author guide - when is a package ""good enough"" for review",2021-10-19 17:39:25,closed,,lwasser,United States,staff,software-peer-review,issues
+Docs/joss review,2026-03-27 00:26:51,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,pulls
 feat: add more to our gen ai policy,2026-03-12 18:55:01,open,,lwasser,United States,staff,software-peer-review,pulls
 Updated language about JOSS paper reviews,2026-02-17 18:00:49,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,pulls
 Update some onboarding and offboarding info,2026-02-12 05:08:15,closed,,eliotwrobson,NYC,contributor,software-peer-review,pulls
@@ -536,6 +543,9 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
+Doc: Add initial Sphinx docs structure,2026-04-06 04:34:11,open,,Aniketsy,,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump the actions group with 2 updates,2026-04-01 17:14:54,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+Update contributor and review data,2026-04-01 00:41:13,closed,,lwasser,United States,staff,pyosMeta,issues
 Update contributor and review data,2026-03-15 00:38:00,closed,,lwasser,United States,staff,pyosMeta,issues
 feat: add support for new genai template stuff,2026-03-05 22:28:07,open,,lwasser,United States,staff,pyosMeta,issues
 Update contributor and review data,2026-03-01 00:37:02,closed,,lwasser,United States,staff,pyosMeta,issues
@@ -558,6 +568,10 @@ chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.
 chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 15:05:32,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 15:05:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 Update contributor and review data,2025-09-15 00:25:41,closed,,lwasser,United States,staff,pyosMeta,issues
+Docs: Create starter sphinx docs for pyosMeta package,2024-07-04 18:45:26,open,"documentation, help wanted, sprintable",lwasser,United States,staff,pyosMeta,issues
+Doc: Add initial Sphinx docs structure,2026-04-06 04:34:11,open,,Aniketsy,,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump the actions group with 2 updates,2026-04-01 17:14:54,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+Update contributor and review data,2026-04-01 00:41:13,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update contributor and review data,2026-03-15 00:38:00,closed,,lwasser,United States,staff,pyosMeta,pulls
 feat: add support for new genai template stuff,2026-03-05 22:28:07,open,,lwasser,United States,staff,pyosMeta,pulls
 Update contributor and review data,2026-03-01 00:37:02,closed,,lwasser,United States,staff,pyosMeta,pulls
@@ -755,6 +769,10 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2026-04-06 04:25:05,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+feat: add ways to give page,2026-04-03 01:03:18,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+build(deps): bump the actions group in /.github/workflows with 2 updates,2026-03-30 06:08:01,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-03-30 04:24:59,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 feat: update learn page with image and new lessons,2026-03-24 18:56:54,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Update contributor and review data,2026-03-23 04:14:40,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update README with new deployment badge and typo fix,2026-03-16 16:41:57,closed,,willingc,San Diego,contributor,pyopensci.github.io,issues
@@ -828,6 +846,10 @@ FEATURE: add blog post author name to the blog home page preview card,2024-08-02
 [UX] Review navigation: Can't get to packaging guide from https://www.pyopensci.org/python-packaging-science.html,2024-05-20 18:55:48,closed,"help wanted, good first issue, sprintable, pyconus-24",zackw,"Pittsburgh, PA",contributor,pyopensci.github.io,issues
 Change font in code to monospace,2024-04-19 11:13:21,closed,"help wanted, sprintable",vnmabus,"Frankfurt, Germany",contributor,pyopensci.github.io,issues
 Create banner for website to advertise events,2024-04-02 19:41:29,closed,"enhancement, help wanted, sprintable, feature:design",lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2026-04-06 04:25:05,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+feat: add ways to give page,2026-04-03 01:03:18,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
+build(deps): bump the actions group in /.github/workflows with 2 updates,2026-03-30 06:08:01,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-03-30 04:24:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 feat: update learn page with image and new lessons,2026-03-24 18:56:54,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update contributor and review data,2026-03-23 04:14:40,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update README with new deployment badge and typo fix,2026-03-16 16:41:57,closed,,willingc,San Diego,contributor,pyopensci.github.io,pulls
@@ -1586,13 +1608,16 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
+mismap-qc,2026-03-31 12:52:45,open,,foertsch,"Zurich, Switzerland",contributor,software-submission,issues
+Presubmission Inquiry for PyCFAST,2026-03-30 17:19:50,open,presubmission,bewygs,Paris,contributor,software-submission,issues
+Update language to make it specific who is responsible for the JOSS,2026-03-27 00:29:08,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-submission,issues
 "provero: A vendor-neutral, declarative data quality engine",2026-03-16 21:32:46,open,,andreahlert,United States,contributor,software-submission,issues
 dfcosmic: a Python package for cosmic ray removal,2026-03-10 13:33:54,open,0/seeking-editor,crhea93,"Montreal, QC, CANADA",contributor,software-submission,issues
 feat: add genai policy to templates,2026-03-05 20:11:20,open,,lwasser,United States,staff,software-submission,issues
 [Pre-Submission] clinops: A Python Toolkit for Clinical ML Data Pipelines,2026-02-24 21:41:53,open,0/pre-review-checks,chaitanyakasaraneni,"Chicago, IL",contributor,software-submission,issues
 Submit rgpycrumbs for review,2026-02-23 01:57:48,open,0/seeking-editor,HaoZeke,University of Iceland,contributor,software-submission,issues
 `phasecurvefit`,2026-02-20 15:32:56,open,0/seeking-editor,nstarman,,contributor,software-submission,issues
-weitsicht submission - Tool to work/automate workflows base on already georeferenced images.,2026-02-18 00:23:51,open,0/seeking-editor,MartinW-S2M,Vienna,contributor,software-submission,issues
+weitsicht submission - Tool to work/automate workflows base on already georeferenced images.,2026-02-18 00:23:51,open,1/editor-assigned,MartinW-S2M,Vienna,contributor,software-submission,issues
 solar-wavelength-calibration: Absolute wavelength calibration of Solar spectra,2026-02-10 18:52:02,open,4/reviews-in-awaiting-changes,eigenbrot,,contributor,software-submission,issues
 pyhctsa: A Python package for highly-comparative time-series analysis,2026-02-08 22:51:04,open,0/seeking-editor,joshuabmoore,"School of Physics, The University of Sydney",contributor,software-submission,issues
 Presubmission Inquiry for peer reviewing of our Python Package pygulp for weighted goal linear programming,2026-02-04 12:37:21,open,"presubmission, ⌛ pending-maintainer-response",DrRoomani,,contributor,software-submission,issues
@@ -1623,6 +1648,7 @@ C4dynamics submission,2025-03-08 19:44:02,open,4/reviews-in-awaiting-changes,c4d
 BlockingPy submission,2025-01-09 18:13:33,open,6/pyOS-approved,T-Strojny,,contributor,software-submission,issues
 Fluidimage submission,2024-05-30 12:53:48,open,5/awaiting-reviewer-response,paugier,,contributor,software-submission,issues
 Plenoptic,2023-11-17 20:39:40,open,6/pyOS-approved,billbrod,"New York, NY",contributor,software-submission,issues
+Update language to make it specific who is responsible for the JOSS,2026-03-27 00:29:08,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-submission,pulls
 feat: add genai policy to templates,2026-03-05 20:11:20,open,,lwasser,United States,staff,software-submission,pulls
 Do not imply that pyOpenSci code of conduct is is infectious,2025-07-17 15:18:48,closed,,hamogu,"Cambridge, MA, USA",contributor,software-submission,pulls
 Add archived label to project columns,2024-12-23 19:53:35,closed,,banesullivan,United States,contributor,software-submission,pulls
@@ -1668,6 +1694,8 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+Update contributor and review data,2026-03-30 05:52:50,open,,github-actions[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-03-25 21:12:59,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Bug: GitHub Token permissions expired (i think),2026-03-25 19:57:03,open,,lwasser,United States,staff,peer-review-metrics,issues
 Update contributor and review data,2026-02-23 05:40:50,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-02-16 05:43:39,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
@@ -1682,6 +1710,9 @@ Update contributor and review data,2026-01-05 05:26:41,closed,,github-actions[bo
 Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 #131 development for Inactive Dashboard,2025-07-13 20:18:59,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,issues
+feat: add package activity dashboard for tracking package maintenance for inactive packages greater than 6 months,2025-07-13 17:54:54,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-03-30 05:52:50,open,,github-actions[bot],,contributor,peer-review-metrics,pulls
+Update contributor and review data,2026-03-25 21:12:59,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-02-23 05:40:50,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-02-16 05:43:39,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-02-09 05:41:43,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
@@ -1713,7 +1744,7 @@ enh: update editors script enhancement,2025-07-30 23:05:49,closed,,lwasser,Unite
 Update contributor and review data,2025-07-29 22:26:36,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-07-28 05:18:44,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 #131 development for Inactive Dashboard,2025-07-13 20:18:59,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,pulls
-feat: add package activity dashboard for tracking package maintenance for inactive packages greater than 6 months,2025-07-13 17:54:54,open,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,pulls
+feat: add package activity dashboard for tracking package maintenance for inactive packages greater than 6 months,2025-07-13 17:54:54,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,pulls
 Update editorial-dashboard.qmd to fix editor count mismatch,2025-07-12 21:46:58,closed,,rogerb121,,contributor,peer-review-metrics,pulls
 Update contributor and review data,2025-06-23 05:12:34,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: quick layout edit,2025-06-17 23:36:01,closed,,lwasser,United States,staff,peer-review-metrics,pulls
@@ -1808,7 +1839,8 @@ Fix: nodejs and requirements.txt installation instructions,2024-07-13 18:41:36,c
 Fix: notebook code,2024-07-13 03:42:09,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix: use package name with hyphens,2024-07-11 21:56:02,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Fix: deploy should exec code,2024-07-11 21:45:51,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-chore: bump GitHub Actions(deps): bump actions/download-artifact from 7.0.0 to 8.0.0,2026-03-01 13:38:19,open,security,dependabot[bot],,contributor,pyosPackage,issues
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 7.0.0 to 8.0.1,2026-04-01 17:14:44,closed,security,dependabot[bot],,contributor,pyosPackage,issues
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 7.0.0 to 8.0.0,2026-03-01 13:38:19,closed,security,dependabot[bot],,contributor,pyosPackage,issues
 chore: bump GitHub Actions(deps): bump actions/upload-artifact from 6.0.0 to 7.0.0,2026-03-01 13:38:16,open,security,dependabot[bot],,contributor,pyosPackage,issues
 chore: bump the uv group across 1 directory with 3 updates,2026-02-02 11:09:15,open,"dependencies, python:uv",dependabot[bot],,contributor,pyosPackage,issues
 chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.1 to 6.0.2,2026-02-01 13:38:11,closed,security,dependabot[bot],,contributor,pyosPackage,issues
@@ -1818,7 +1850,8 @@ chore: bump GitHub Actions(deps): bump actions/upload-artifact from 5.0.0 to 6.0
 chore: bump GitHub Actions(deps): bump actions/download-artifact from 6.0.0 to 7.0.0,2026-01-01 13:26:21,closed,security,dependabot[bot],,contributor,pyosPackage,issues
 chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.0 to 6.0.1,2026-01-01 13:26:15,closed,security,dependabot[bot],,contributor,pyosPackage,issues
 chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 16:07:21,closed,security,dependabot[bot],,contributor,pyosPackage,issues
-chore: bump GitHub Actions(deps): bump actions/download-artifact from 7.0.0 to 8.0.0,2026-03-01 13:38:19,open,security,dependabot[bot],,contributor,pyosPackage,pulls
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 7.0.0 to 8.0.1,2026-04-01 17:14:44,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
+chore: bump GitHub Actions(deps): bump actions/download-artifact from 7.0.0 to 8.0.0,2026-03-01 13:38:19,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
 chore: bump GitHub Actions(deps): bump actions/upload-artifact from 6.0.0 to 7.0.0,2026-03-01 13:38:16,open,security,dependabot[bot],,contributor,pyosPackage,pulls
 chore: bump the uv group across 1 directory with 3 updates,2026-02-02 11:09:15,open,"dependencies, python:uv",dependabot[bot],,contributor,pyosPackage,pulls
 chore: bump GitHub Actions(deps): bump actions/checkout from 6.0.1 to 6.0.2,2026-02-01 13:38:11,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
@@ -1864,10 +1897,12 @@ Fix: readme conflict,2024-01-30 19:07:17,closed,,lwasser,United States,staff,pyo
 Fix: add readme and pyproject.toml to package,2024-01-30 18:54:47,closed,,lwasser,United States,staff,pyosPackage,pulls
 Fix: update pyproject toml and gitignore,2024-01-08 20:27:05,closed,,lwasser,United States,staff,pyosPackage,pulls
 Add: initial code and examples to example project,2023-11-17 20:22:29,closed,,lwasser,United States,staff,pyosPackage,pulls
-Fix broken external link in develop.md,2026-03-08 16:52:53,open,,InessaPawson,,contributor,pyos-sphinx-theme,issues
+chore: bump the actions group with 2 updates,2026-03-26 16:43:57,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,issues
+Fix broken external link in develop.md,2026-03-08 16:52:53,closed,,InessaPawson,,contributor,pyos-sphinx-theme,issues
 Revise https://www.pyopensci.org/pyos-sphinx-theme/,2026-03-08 14:14:17,open,,InessaPawson,,contributor,pyos-sphinx-theme,issues
 chore: bump the actions group with 2 updates,2026-02-27 16:44:16,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,issues
-Fix broken external link in develop.md,2026-03-08 16:52:53,open,,InessaPawson,,contributor,pyos-sphinx-theme,pulls
+chore: bump the actions group with 2 updates,2026-03-26 16:43:57,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
+Fix broken external link in develop.md,2026-03-08 16:52:53,closed,,InessaPawson,,contributor,pyos-sphinx-theme,pulls
 chore: bump the actions group with 2 updates,2026-02-27 16:44:16,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
 chore: bump the actions group with 2 updates,2025-12-15 16:14:17,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
 chore: bump the actions group across 1 directory with 6 updates,2025-12-12 16:12:11,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
