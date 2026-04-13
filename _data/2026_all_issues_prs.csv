@@ -1,4 +1,5 @@
 title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo,type
+docs: add Turing Way links for CITATION.cff and software citation,2026-04-07 06:03:19,open,,Pawansingh3889,United Kingdom,contributor,python-package-guide,issues
 Add Spanish translations for tutorials.po,2026-04-03 00:23:36,open,,Mololola,,contributor,python-package-guide,issues
 Fix/button link url syntax,2026-04-01 21:08:28,open,,bewygs,Paris,contributor,python-package-guide,issues
 chore: bump actions/download-artifact from 8.0.0 to 8.0.1 in /examples/pure-hatch/.github/workflows in the actions group,2026-03-16 16:46:27,closed,maintenance,dependabot[bot],,contributor,python-package-guide,issues
@@ -20,6 +21,7 @@ chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 u
 Help translate the Python Package Guide into Spanish,2024-07-03 20:58:11,open,"help wanted, sprintable, translations, lang-ES",flpm,"New York, NY",contributor,python-package-guide,issues
 Python Package Guide: Fix breakout box / admonition that shows a user how to rename their package if the name is taken on pypi,2024-04-15 22:31:00,open,"help wanted, sprintable, pycascades",Tyler-Bonnell,"Seattle, WA",contributor,python-package-guide,issues
 feat: Add cross links between author checks in our peer review guide and guidance in the packaging guide,2023-01-10 21:44:47,open,"help wanted, sprintable, enhancement-feature, beginner-friendly",lwasser,United States,staff,python-package-guide,issues
+docs: add Turing Way links for CITATION.cff and software citation,2026-04-07 06:03:19,open,,Pawansingh3889,United Kingdom,contributor,python-package-guide,pulls
 Add Spanish translations for tutorials.po,2026-04-03 00:23:36,open,,Mololola,,contributor,python-package-guide,pulls
 Fix/button link url syntax,2026-04-01 21:08:28,open,,bewygs,Paris,contributor,python-package-guide,pulls
 chore: bump actions/download-artifact from 8.0.0 to 8.0.1 in /examples/pure-hatch/.github/workflows in the actions group,2026-03-16 16:46:27,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
@@ -769,7 +771,9 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
-Update contributor and review data,2026-04-06 04:25:05,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-04-13 04:31:26,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+build(deps): bump rhysd/actionlint from 1.7.11 to 1.7.12 in /.github/workflows in the actions group,2026-04-06 06:07:37,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-04-06 04:25:05,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 feat: add ways to give page,2026-04-03 01:03:18,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 build(deps): bump the actions group in /.github/workflows with 2 updates,2026-03-30 06:08:01,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-03-30 04:24:59,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
@@ -846,7 +850,9 @@ FEATURE: add blog post author name to the blog home page preview card,2024-08-02
 [UX] Review navigation: Can't get to packaging guide from https://www.pyopensci.org/python-packaging-science.html,2024-05-20 18:55:48,closed,"help wanted, good first issue, sprintable, pyconus-24",zackw,"Pittsburgh, PA",contributor,pyopensci.github.io,issues
 Change font in code to monospace,2024-04-19 11:13:21,closed,"help wanted, sprintable",vnmabus,"Frankfurt, Germany",contributor,pyopensci.github.io,issues
 Create banner for website to advertise events,2024-04-02 19:41:29,closed,"enhancement, help wanted, sprintable, feature:design",lwasser,United States,staff,pyopensci.github.io,issues
-Update contributor and review data,2026-04-06 04:25:05,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-04-13 04:31:26,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+build(deps): bump rhysd/actionlint from 1.7.11 to 1.7.12 in /.github/workflows in the actions group,2026-04-06 06:07:37,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-04-06 04:25:05,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 feat: add ways to give page,2026-04-03 01:03:18,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 build(deps): bump the actions group in /.github/workflows with 2 updates,2026-03-30 06:08:01,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-03-30 04:24:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
@@ -1522,6 +1528,8 @@ Add a package listing page to the website,2019-09-17 20:19:12,closed,,lwasser,Un
 fixing formatting,2019-08-28 22:53:51,closed,,choldgraf,California,contributor,pyopensci.github.io,pulls
 adding custom types,2019-08-28 22:44:41,closed,,choldgraf,California,contributor,pyopensci.github.io,pulls
 Fix Github link site footer,2019-03-19 00:34:57,closed,,leouieda,"São Paulo, Brazil",contributor,pyopensci.github.io,pulls
+fix: misspellings,2026-04-11 19:50:57,open,,InessaPawson,,contributor,handbook,issues
+fix: misspellings,2026-04-11 19:50:57,open,,InessaPawson,,contributor,handbook,pulls
 enh:Add maintainers role and cleanup infra overview,2025-12-17 18:10:36,closed,,lwasser,United States,staff,handbook,pulls
 Fix: clarify peer review lead role,2025-08-20 23:35:25,closed,,lwasser,United States,staff,handbook,pulls
 Updated references to repo from governance to handbook,2025-07-12 23:02:12,closed,,endlesslupita,,contributor,handbook,pulls
@@ -1608,6 +1616,9 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
+syndatakit: A Python package for research-grade synthetic data generation,2026-04-13 03:26:18,open,"0/pre-review-checks, New Submission!",Nityahapani,,contributor,software-submission,issues
+Pre-submission inquiry: Episia - Open-source epidemiology and biostatistics for Python,2026-04-08 02:41:01,open,presubmission,ArielShadrac,,contributor,software-submission,issues
+Submit Episia: Open-source epidemiology and biostatistics for Python,2026-04-08 02:18:03,closed,"0/pre-review-checks, New Submission!",ArielShadrac,,contributor,software-submission,issues
 mismap-qc,2026-03-31 12:52:45,open,,foertsch,"Zurich, Switzerland",contributor,software-submission,issues
 Presubmission Inquiry for PyCFAST,2026-03-30 17:19:50,open,presubmission,bewygs,Paris,contributor,software-submission,issues
 Update language to make it specific who is responsible for the JOSS,2026-03-27 00:29:08,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-submission,issues
@@ -1646,6 +1657,7 @@ MOCpy,2025-04-17 14:21:50,open,"3/reviewers-assigned, 1/editor-assigned, astropy
 PyAutoGalaxy,2025-03-13 13:15:30,open,"5/awaiting-reviewer-response, astropy",Jammy2211,Newcastle,contributor,software-submission,issues
 C4dynamics submission,2025-03-08 19:44:02,open,4/reviews-in-awaiting-changes,c4dynamics,Israel,contributor,software-submission,issues
 BlockingPy submission,2025-01-09 18:13:33,open,6/pyOS-approved,T-Strojny,,contributor,software-submission,issues
+BlackMarblePy Submission ,2024-07-18 14:15:11,open,5/awaiting-reviewer-response,g4brielvs,,contributor,software-submission,issues
 Fluidimage submission,2024-05-30 12:53:48,open,5/awaiting-reviewer-response,paugier,,contributor,software-submission,issues
 Plenoptic,2023-11-17 20:39:40,open,6/pyOS-approved,billbrod,"New York, NY",contributor,software-submission,issues
 Update language to make it specific who is responsible for the JOSS,2026-03-27 00:29:08,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-submission,pulls
@@ -1694,7 +1706,7 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
-Update contributor and review data,2026-03-30 05:52:50,open,,github-actions[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-03-30 05:52:50,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-03-25 21:12:59,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Bug: GitHub Token permissions expired (i think),2026-03-25 19:57:03,open,,lwasser,United States,staff,peer-review-metrics,issues
 Update contributor and review data,2026-02-23 05:40:50,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
@@ -1711,7 +1723,7 @@ Update contributor and review data,2026-01-02 05:17:53,closed,,github-actions[bo
 Update contributor and review data,2025-12-31 23:10:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 #131 development for Inactive Dashboard,2025-07-13 20:18:59,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,issues
 feat: add package activity dashboard for tracking package maintenance for inactive packages greater than 6 months,2025-07-13 17:54:54,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,issues
-Update contributor and review data,2026-03-30 05:52:50,open,,github-actions[bot],,contributor,peer-review-metrics,pulls
+Update contributor and review data,2026-03-30 05:52:50,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-03-25 21:12:59,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-02-23 05:40:50,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-02-16 05:43:39,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
