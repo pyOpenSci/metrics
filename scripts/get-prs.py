@@ -24,11 +24,9 @@ That way we are sure to capture data for the entirety of 2024 on new years eve!!
 import logging
 import os
 import time
-import datetime
-
-import pandas as pd
 from datetime import datetime
 
+import pandas as pd
 from pyosmeta.github_api import GitHubAPI
 
 logging.basicConfig(level=logging.INFO)
@@ -79,18 +77,14 @@ def get_repo_data(
         else:
             contrib_type = "contributor"
 
-        created_at = datetime.strptime(
-            item["created_at"], "%Y-%m-%dT%H:%M:%SZ"
-        )
+        created_at = datetime.strptime(item["created_at"], "%Y-%m-%dT%H:%M:%SZ")
         labels = [label["name"] for label in item.get("labels", [])]
 
         # TODO: make this a small function
         if gh_user in user_location_cache:
             location = user_location_cache[gh_user]
         else:
-            location = github_api.get_user_info(gh_handle=gh_user).get(
-                "location", ""
-            )
+            location = github_api.get_user_info(gh_handle=gh_user).get("location", "")
             user_location_cache[gh_user] = location
         data.append(
             {
@@ -178,7 +172,6 @@ def main():
     print(f"I am working here {os.getcwd()}")
 
     if all_dates:
-
         after_date = "2018-01-01"
         current_year = "2018"
         print(f"Processing all years; start year: {current_year}")
@@ -231,9 +224,7 @@ def main():
         all_contribs_final.append(all_contribs_df)
         end_time = time.time()
 
-        print(
-            f"{repo_name}--Processing Time: {end_time - start_time:.4f} seconds"
-        )
+        print(f"{repo_name}--Processing Time: {end_time - start_time:.4f} seconds")
 
     all_contribs_final_df = pd.concat(all_contribs_final, ignore_index=True)
 

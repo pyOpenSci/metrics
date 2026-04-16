@@ -1,7 +1,7 @@
 """
-A script that parses ALL pyOpenSci reviews including presubmissions, 
-closed submissions, etc. This allows us to compile activity stats over time.  
-# TODO it would be helpful to have pyosmeta return 
+A script that parses ALL pyOpenSci reviews including presubmissions,
+closed submissions, etc. This allows us to compile activity stats over time.
+# TODO it would be helpful to have pyosmeta return
 # * unique issue/pr identifier
 # * who opened the issue (gh username of that person)
 """
@@ -127,8 +127,7 @@ def set_review_status(labels, issue_map):
     elif "currently-out-of-scope" in labels:
         return "out of scope"
     elif any(
-        label in labels
-        for label in ["⌛ pending-maintainer-response", "on-hold"]
+        label in labels for label in ["⌛ pending-maintainer-response", "on-hold"]
     ):
         return "on hold"
 
