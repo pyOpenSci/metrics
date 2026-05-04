@@ -1,7 +1,8 @@
 title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo,type
+Remove references and links to the obsolete PyOS Discourse,2026-05-02 20:20:21,open,,InessaPawson,,contributor,python-package-guide,issues
 New Crowdin updates,2026-05-01 19:17:54,open,,lwasser,United States,staff,python-package-guide,issues
-chore: bump the actions group with 2 updates,2026-05-01 19:17:17,open,"maintenance, dependencies",dependabot[bot],,contributor,python-package-guide,issues
-chore: bump pydata-sphinx-theme from 0.16.1 to 0.17.1 in the pip group,2026-05-01 19:17:05,open,"maintenance, dependencies",dependabot[bot],,contributor,python-package-guide,issues
+chore: bump the actions group with 2 updates,2026-05-01 19:17:17,closed,"maintenance, dependencies",dependabot[bot],,contributor,python-package-guide,issues
+chore: bump pydata-sphinx-theme from 0.16.1 to 0.17.1 in the pip group,2026-05-01 19:17:05,closed,"maintenance, dependencies",dependabot[bot],,contributor,python-package-guide,issues
  Replace instances of `grid-item` with `grid-item-card`,2026-04-30 11:38:46,closed,,agriyakhetarpal,"new delhi, india",contributor,python-package-guide,issues
 Fix: Update syntax to display image,2026-04-23 12:00:38,closed,,willingc,San Diego,contributor,python-package-guide,issues
 Update action to maintained source scientific-python,2026-04-23 11:48:03,closed,,willingc,San Diego,contributor,python-package-guide,issues
@@ -38,9 +39,10 @@ Link to Turing way content on licensing.,2025-07-23 15:32:37,closed,"help wanted
 Help translate the Python Package Guide into Spanish,2024-07-03 20:58:11,open,"help wanted, sprintable, translations, lang-ES",flpm,"New York, NY",contributor,python-package-guide,issues
 Python Package Guide: Fix breakout box / admonition that shows a user how to rename their package if the name is taken on pypi,2024-04-15 22:31:00,closed,"help wanted, sprintable, pycascades",Tyler-Bonnell,"Seattle, WA",contributor,python-package-guide,issues
 feat: Add cross links between author checks in our peer review guide and guidance in the packaging guide,2023-01-10 21:44:47,open,"help wanted, sprintable, enhancement-feature, beginner-friendly",lwasser,United States,staff,python-package-guide,issues
+Remove references and links to the obsolete PyOS Discourse,2026-05-02 20:20:21,open,,InessaPawson,,contributor,python-package-guide,pulls
 New Crowdin updates,2026-05-01 19:17:54,open,,lwasser,United States,staff,python-package-guide,pulls
-chore: bump the actions group with 2 updates,2026-05-01 19:17:17,open,"maintenance, dependencies",dependabot[bot],,contributor,python-package-guide,pulls
-chore: bump pydata-sphinx-theme from 0.16.1 to 0.17.1 in the pip group,2026-05-01 19:17:05,open,"maintenance, dependencies",dependabot[bot],,contributor,python-package-guide,pulls
+chore: bump the actions group with 2 updates,2026-05-01 19:17:17,closed,"maintenance, dependencies",dependabot[bot],,contributor,python-package-guide,pulls
+chore: bump pydata-sphinx-theme from 0.16.1 to 0.17.1 in the pip group,2026-05-01 19:17:05,closed,"maintenance, dependencies",dependabot[bot],,contributor,python-package-guide,pulls
  Replace instances of `grid-item` with `grid-item-card`,2026-04-30 11:38:46,closed,,agriyakhetarpal,"new delhi, india",contributor,python-package-guide,pulls
 Fix: Update syntax to display image,2026-04-23 12:00:38,closed,,willingc,San Diego,contributor,python-package-guide,pulls
 Update action to maintained source scientific-python,2026-04-23 11:48:03,closed,,willingc,San Diego,contributor,python-package-guide,pulls
@@ -382,7 +384,7 @@ maint: replace obsolete Discourse link with link to GH Discussions,2026-04-16 02
 maint: replace obsolete Discourse link with link to GH Discussions,2026-04-16 02:51:08,closed,,InessaPawson,,contributor,software-peer-review,issues
 maint: remove obsolete Discourse link,2026-04-16 02:43:10,closed,,InessaPawson,,contributor,software-peer-review,issues
 maint: remove obsolete Discourse link,2026-04-15 02:05:59,closed,,InessaPawson,,contributor,software-peer-review,issues
-Add fast-track policy for packages with an existing publication,2026-04-14 04:46:08,open,,eliotwrobson,NYC,contributor,software-peer-review,issues
+Add fast-track policy for packages with an existing publication,2026-04-14 04:46:08,closed,,eliotwrobson,NYC,contributor,software-peer-review,issues
 Docs/joss review,2026-03-27 00:26:51,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,issues
 feat: add more to our gen ai policy,2026-03-12 18:55:01,open,,lwasser,United States,staff,software-peer-review,issues
 Updated language about JOSS paper reviews,2026-02-17 18:00:49,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,issues
@@ -406,7 +408,7 @@ maint: replace obsolete Discourse link with link to GH Discussions,2026-04-16 02
 maint: replace obsolete Discourse link with link to GH Discussions,2026-04-16 02:51:08,closed,,InessaPawson,,contributor,software-peer-review,pulls
 maint: remove obsolete Discourse link,2026-04-16 02:43:10,closed,,InessaPawson,,contributor,software-peer-review,pulls
 maint: remove obsolete Discourse link,2026-04-15 02:05:59,closed,,InessaPawson,,contributor,software-peer-review,pulls
-Add fast-track policy for packages with an existing publication,2026-04-14 04:46:08,open,,eliotwrobson,NYC,contributor,software-peer-review,pulls
+Add fast-track policy for packages with an existing publication,2026-04-14 04:46:08,closed,,eliotwrobson,NYC,contributor,software-peer-review,pulls
 Docs/joss review,2026-03-27 00:26:51,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,pulls
 feat: add more to our gen ai policy,2026-03-12 18:55:01,open,,lwasser,United States,staff,software-peer-review,pulls
 Updated language about JOSS paper reviews,2026-02-17 18:00:49,closed,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,pulls
@@ -590,7 +592,7 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
-chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-05-01 16:09:56,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
+chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-05-01 16:09:56,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 Update contributor and review data,2026-05-01 00:51:35,closed,,lwasser,United States,staff,pyosMeta,issues
 Revise security policy and reporting instructions,2026-04-18 00:02:27,closed,,willingc,San Diego,contributor,pyosMeta,issues
 Update actions in our GitHub workflows,2026-04-15 17:08:38,closed,,willingc,San Diego,contributor,pyosMeta,issues
@@ -620,7 +622,7 @@ chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,
 chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 15:05:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,issues
 Update contributor and review data,2025-09-15 00:25:41,closed,,lwasser,United States,staff,pyosMeta,issues
 Docs: Create starter sphinx docs for pyosMeta package,2024-07-04 18:45:26,closed,"documentation, help wanted, sprintable",lwasser,United States,staff,pyosMeta,issues
-chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-05-01 16:09:56,open,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
+chore: bump GitHub Actions(deps): bump the actions group with 3 updates,2026-05-01 16:09:56,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 Update contributor and review data,2026-05-01 00:51:35,closed,,lwasser,United States,staff,pyosMeta,pulls
 Revise security policy and reporting instructions,2026-04-18 00:02:27,closed,,willingc,San Diego,contributor,pyosMeta,pulls
 Update actions in our GitHub workflows,2026-04-15 17:08:38,closed,,willingc,San Diego,contributor,pyosMeta,pulls
@@ -825,6 +827,8 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2026-05-04 04:40:00,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+docs: remove references and links to the obsolete PyOS Discourse,2026-05-02 21:23:35,open,,InessaPawson,,contributor,pyopensci.github.io,issues
 cleanup: small resonsive cleanup and refactor,2026-04-30 22:48:46,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 feat: homepage and course refresh ,2026-04-30 21:36:04,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Update contributor and review data,2026-04-20 04:31:30,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
@@ -908,6 +912,8 @@ FEATURE: add blog post author name to the blog home page preview card,2024-08-02
 [UX] Review navigation: Can't get to packaging guide from https://www.pyopensci.org/python-packaging-science.html,2024-05-20 18:55:48,closed,"help wanted, good first issue, sprintable, pyconus-24",zackw,"Pittsburgh, PA",contributor,pyopensci.github.io,issues
 Change font in code to monospace,2024-04-19 11:13:21,closed,"help wanted, sprintable",vnmabus,"Frankfurt, Germany",contributor,pyopensci.github.io,issues
 Create banner for website to advertise events,2024-04-02 19:41:29,closed,"enhancement, help wanted, sprintable, feature:design",lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2026-05-04 04:40:00,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+docs: remove references and links to the obsolete PyOS Discourse,2026-05-02 21:23:35,open,,InessaPawson,,contributor,pyopensci.github.io,pulls
 cleanup: small resonsive cleanup and refactor,2026-04-30 22:48:46,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat: homepage and course refresh ,2026-04-30 21:36:04,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update contributor and review data,2026-04-20 04:31:30,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
@@ -1590,12 +1596,14 @@ Add a package listing page to the website,2019-09-17 20:19:12,closed,,lwasser,Un
 fixing formatting,2019-08-28 22:53:51,closed,,choldgraf,California,contributor,pyopensci.github.io,pulls
 adding custom types,2019-08-28 22:44:41,closed,,choldgraf,California,contributor,pyopensci.github.io,pulls
 Fix Github link site footer,2019-03-19 00:34:57,closed,,leouieda,"São Paulo, Brazil",contributor,pyopensci.github.io,pulls
+docs: remove references to obsolete PyOS Discourse,2026-05-02 21:01:22,open,,InessaPawson,,contributor,handbook,issues
 fix: copy edit and cleanup org files,2026-04-17 17:57:05,closed,,lwasser,United States,staff,handbook,issues
 maint: remove references to Discourse,2026-04-17 15:42:00,closed,,InessaPawson,,contributor,handbook,issues
 fix: copy edits to the governance section,2026-04-16 20:39:18,closed,,lwasser,United States,staff,handbook,issues
 fix: cleanup typos throughout,2026-04-16 16:59:08,closed,,lwasser,United States,staff,handbook,issues
 docs: remove link to PyOS Discourse,2026-04-13 16:04:05,closed,,InessaPawson,,contributor,handbook,issues
 fix: misspellings,2026-04-11 19:50:57,closed,,InessaPawson,,contributor,handbook,issues
+docs: remove references to obsolete PyOS Discourse,2026-05-02 21:01:22,open,,InessaPawson,,contributor,handbook,pulls
 fix: copy edit and cleanup org files,2026-04-17 17:57:05,closed,,lwasser,United States,staff,handbook,pulls
 maint: remove references to Discourse,2026-04-17 15:42:00,closed,,InessaPawson,,contributor,handbook,pulls
 fix: copy edits to the governance section,2026-04-16 20:39:18,closed,,lwasser,United States,staff,handbook,pulls
@@ -1688,6 +1696,7 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
+fix: replace obsolete Discourse links with links to GH Discussions,2026-05-02 20:44:34,open,,InessaPawson,,contributor,software-submission,issues
 wikipediaGATN,2026-04-30 17:14:40,open,"0/pre-review-checks, New Submission!",cadrianas,Winnipeg,contributor,software-submission,issues
 fix: replace obsolete Discourse link in help-request.md,2026-04-15 01:49:18,closed,,InessaPawson,,contributor,software-submission,issues
 fix: replace obsolete Discourse link with GitHub Discussions link,2026-04-14 23:40:20,closed,,InessaPawson,,contributor,software-submission,issues
@@ -1736,6 +1745,7 @@ BlockingPy submission,2025-01-09 18:13:33,closed,6/pyOS-approved,T-Strojny,,cont
 BlackMarblePy Submission ,2024-07-18 14:15:11,open,"5/awaiting-reviewer-response, ⌛ pending-maintainer-response",g4brielvs,,contributor,software-submission,issues
 Fluidimage submission,2024-05-30 12:53:48,closed,6/pyOS-approved,paugier,,contributor,software-submission,issues
 Plenoptic,2023-11-17 20:39:40,open,6/pyOS-approved,billbrod,"New York, NY",contributor,software-submission,issues
+fix: replace obsolete Discourse links with links to GH Discussions,2026-05-02 20:44:34,open,,InessaPawson,,contributor,software-submission,pulls
 fix: replace obsolete Discourse link in help-request.md,2026-04-15 01:49:18,closed,,InessaPawson,,contributor,software-submission,pulls
 fix: replace obsolete Discourse link with GitHub Discussions link,2026-04-14 23:40:20,closed,,InessaPawson,,contributor,software-submission,pulls
 maint: remove config for obsolete pyOpenSci Discourse,2026-04-14 01:57:47,closed,,InessaPawson,,contributor,software-submission,pulls
@@ -1785,6 +1795,7 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+Update contributor and review data,2026-05-02 05:58:50,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-04-16 05:53:23,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update files for formatting and correct pre-commit warnings,2026-04-16 01:19:15,open,,willingc,San Diego,contributor,peer-review-metrics,issues
 "Update project configuration for actions, pre-commit, and zizmor",2026-04-16 00:47:17,open,,willingc,San Diego,contributor,peer-review-metrics,issues
@@ -1816,6 +1827,7 @@ feat(review time): calculate average reviewer time for each review,2024-09-30 20
 Feat(): duration between label editor-assigned and reviewers-assigned,2024-09-27 15:37:41,open,,lwasser,United States,staff,peer-review-metrics,issues
 Create an autopreview action for this metrics repo,2024-07-31 22:46:10,open,"help wanted, sprintable",lwasser,United States,staff,peer-review-metrics,issues
 ✨ Use devstats to collect metadata about our packages - start with calculating pony factor,2023-07-03 20:43:00,open,enhancement,lwasser,United States,staff,peer-review-metrics,issues
+Update contributor and review data,2026-05-02 05:58:50,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-04-16 05:53:23,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update files for formatting and correct pre-commit warnings,2026-04-16 01:19:15,open,,willingc,San Diego,contributor,peer-review-metrics,pulls
 "Update project configuration for actions, pre-commit, and zizmor",2026-04-16 00:47:17,open,,willingc,San Diego,contributor,peer-review-metrics,pulls
