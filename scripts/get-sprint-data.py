@@ -45,9 +45,7 @@ def get_ql_query_response(access_token, query):
     # print("Request Body:", {"query": query})
 
     # Make GraphQL query to fetch project board ID
-    response = requests.post(
-        graphql_endpoint, json={"query": query}, headers=headers
-    )
+    response = requests.post(graphql_endpoint, json={"query": query}, headers=headers)
 
     if response.status_code == 200:
         return response.json()
@@ -71,9 +69,7 @@ def get_project_id(project_number, access_token):
         }
       }
     }
-    """ % (
-        project_number,
-    )
+    """ % (project_number,)
 
     data = get_ql_query_response(query=query, access_token=access_token)
 
@@ -229,9 +225,7 @@ def get_project_items(project_id, access_token):
             f', after: "{end_cursor}"' if end_cursor else "",
         )
 
-        response = get_ql_query_response(
-            access_token=access_token, query=query
-        )
+        response = get_ql_query_response(access_token=access_token, query=query)
         data = response["data"]["node"]["items"]
         items.extend(data["nodes"])
         has_next_page = data["pageInfo"]["hasNextPage"]
@@ -332,7 +326,9 @@ if __name__ == "__main__":
     project_pk = 12
     project_id = get_project_id(project_pk, ACCESS_TOKEN)
     if project_id is None:
-        raise ValueError(f"Project board not found for {project_pk}. Likely a permissions issue.")
+        raise ValueError(
+            f"Project board not found for {project_pk}. Likely a permissions issue."
+        )
 
     project_items = get_project_items(project_id, ACCESS_TOKEN)
 

@@ -1,0 +1,65 @@
+# pre-commit (https://pre-commit.com/) is a tool that runs source code checks
+# such as linting, formatting, and code style.
+
+# CI
+# pyosMeta uses pre-commit with the precommit.ci bot to check pull requests.
+# Configuration reference doc: https://pre-commit.com/#pre-commit-configyaml---top-level
+
+# Developers
+# You may want to install pre-commit to run locally on each minimum_pre_commit_version
+# See https://pre-commit.com/#install
+# To set up pre-commit hooks: pre-commit install
+# To run on all files: pre-commit run --all-files
+
+ci:
+  autofix_prs: false
+  autofix_commit_msg: |
+    '[pre-commit.ci 🤖] Apply code format tools to PR'
+  autoupdate_schedule: monthly
+
+repos:
+  # Out of the box hooks for pre-commit https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      # Makes sure files end in a newline and only a newline.
+      - id: end-of-file-fixer
+      # Check for files with names that would conflict on a case-insensitive filesystem like MacOS HFS+ or Windows FAT.
+      - id: check-case-conflict
+      # Remove trailing whitespace on code lines
+      - id: trailing-whitespace
+
+  # Spelling hook
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.2
+    hooks:
+      - id: codespell
+        exclude_types:
+          - javascript
+          - scss
+          - yaml
+        additional_dependencies:
+          - tomli
+
+  # Linting and formatting for Python code (see pyproject.toml for config)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.15.10
+    hooks:
+      # Run the linter.
+      - id: ruff
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format
+
+  # Ensure GitHub workflows match the expected schema.
+  - repo: https://github.com/sirosen/check-jsonschema
+    rev: 0.37.1
+    hooks:
+      - id: check-github-workflows
+
+  # Find common security issues in GitHub Actions workflows
+  - repo: https://github.com/woodruffw/zizmor-pre-commit
+    rev: v1.24.1
+    hooks:
+      - id: zizmor

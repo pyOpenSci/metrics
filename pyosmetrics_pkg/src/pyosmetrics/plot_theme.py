@@ -1,5 +1,5 @@
 """
-A small module to store functions used to process data in this 
+A small module to store functions used to process data in this
 repo
 
 """
@@ -26,7 +26,6 @@ def poppins_theme():
             "title": {
                 "fontSize": 26,
                 "font": "Poppins",
-                "anchor": "start",
                 "color": "black",
                 "anchor": "middle",  # centered
                 "fontWeight": 400,
@@ -38,7 +37,6 @@ def poppins_theme():
                 "titleFontSize": 16,
                 "titleFont": "Poppins",
                 "labelFont": "Poppins",
-                "labelFontSize": 14,
             },
             "axisX": {  # Configuration specifically for the x-axis
                 "labelAngle": 0
@@ -84,9 +82,7 @@ def parse_single_issue(issue) -> dict:
     parsed_issue = {}
 
     # Extract labels
-    parsed_issue["labels"] = [
-        label["name"] for label in issue.get("labels", [])
-    ]
+    parsed_issue["labels"] = [label["name"] for label in issue.get("labels", [])]
 
     # Extract header text (title of the issue)
     parsed_issue["header_text"] = issue.get("title", "")
@@ -129,9 +125,7 @@ def count_edits_by_quarter(df):
         DataFrame containing the number of submissions edited by each editor
         by quarter.
     """
-    n_edits = df.groupby(
-        by=[df["editor"], df["created_at"].dt.to_period("Q")]
-    ).count()
+    n_edits = df.groupby(by=[df["editor"], df["created_at"].dt.to_period("Q")]).count()
     n_edits.rename(columns=dict(created_at="n_edits"), inplace=True)
     return n_edits
 

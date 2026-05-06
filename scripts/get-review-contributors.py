@@ -1,16 +1,17 @@
-"""Script that grabs, collates and stores review contributor data from our peer review  yaml files."""
-
-"""
-GOAL: Create a csv file that stores contributor data over time only for editors and reviiewers. 
+"""Script that grabs, collates and stores review contributor data from our peer review  yaml files.
 
 
-Open yaml file 
+GOAL: Create a csv file that stores contributor data over time only for editors and reviiewers.
+
+
+Open yaml file
 1. https://github.com/pyOpenSci/pyopensci.github.io/blob/main/_data/contributors.yml
 2. Scan contributor_type for editor and or reviewer and populate bool field in spreadsheet accordingly
 3. Get location if available and populate
 
 Create an output csv called review_contribs.csv
 """
+
 import os
 
 import pandas as pd
@@ -74,9 +75,7 @@ def main():
     contrib_df = process_contributors(all_contribs)
 
     print(f"Saving output to {OUTPUT_PATH}...")
-    os.makedirs(
-        os.path.dirname(OUTPUT_PATH), exist_ok=True
-    )  # Ensure directory exists
+    os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)  # Ensure directory exists
     contrib_df.to_csv(OUTPUT_PATH, index=False)
 
     print("Done! Contributor data successfully saved.")
