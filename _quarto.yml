@@ -28,7 +28,7 @@ website:
             href: peer-review/editorial-dashboard.qmd
           - text: Current Review Status
             href: peer-review/current-review-status.qmd
-          - text: Over Time 
+          - text: Over Time
             href: peer-review/reviews-over-time.qmd
           - text: Peer review trends
             href: peer-review/review-trends.qmd
@@ -37,8 +37,10 @@ website:
         menu:
           - text: Accepted Package Metrics
             href: peer-review/accepted-packages.qmd
-          - text: Package Dashboard 
+          - text: Package Dashboard
             href: peer-review/pyos-package-dashboard.qmd
+          - text: Package Activity
+            href: pyos-packages/package-activity.qmd
 
 
       - text: "Contributors"

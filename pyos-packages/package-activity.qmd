@@ -1,0 +1,94 @@
+---
+title: pyOpenSci Package Activity
+jupyter: python3
+execute:
+  echo: false
+---
+
+This dashboard tracks activity across pyOpenSci-accepted packages. Data is
+pulled from the
+[`_data/packages.yml`](https://github.com/pyOpenSci/pyopensci.github.io/blob/main/_data/packages.yml)
+file in the `pyopensci.github.io` repository, which is maintained by
+[`pyosMeta`](https://github.com/pyOpenSci/pyosMeta) and contains
+per-package GitHub metrics including the date of the last commit.
+
+```{python}
+#| echo: false
+import ast
+import warnings
+from pathlib import Path
+
+import pandas as pd
+from itables import show
+
+pd.options.mode.chained_assignment = None
+pd.options.future.infer_string = True
+
+warnings.filterwarnings("ignore")
+```
+
+```{python}
+# Load the package data CSV produced by scripts/get-package-data.py
+package_data_path = Path.cwd().parents[0] / "_data" / "package_data.csv"
+package_df = pd.read_csv(package_data_path)
+
+# Parse the "gh_meta" column back into dictionaries
+package_df['gh_meta'] = package_df['gh_meta'].apply(
+    lambda x: ast.literal_eval(x) if isinstance(x, str) else x
+)
+
+
+def _from_gh_meta(key):
+    """Pull a value out of the per-row gh_meta dict, or return None."""
+    return package_df['gh_meta'].apply(
+        lambda x: x.get(key) if isinstance(x, dict) else None
+    )
+
+
+# Build a flat DataFrame: one row per package with name, description,
+# and the GitHub metrics stored in gh_meta.
+activity_df = pd.DataFrame({
+    'package_name': package_df['package_name'],
+    'package_description': package_df['package_description'],
+    'last_commit': pd.to_datetime(_from_gh_meta('last_commit'), errors='coerce'),
+    'created_at': pd.to_datetime(_from_gh_meta('created_at'), errors='coerce'),
+    'stargazers_count': _from_gh_meta('stargazers_count'),
+    'watchers_count': _from_gh_meta('watchers_count'),
+    'forks_count': _from_gh_meta('forks_count'),
+    'open_issues_count': _from_gh_meta('open_issues_count'),
+    'contrib_count': _from_gh_meta('contrib_count'),
+})
+```
+
+## All packages — sort by last commit
+
+Click the `last_commit` column header to sort packages by most or least recent
+activity.
+
+```{python}
+show(
+    activity_df,
+    max_rows=15,
+    order=[[2, 'desc']],  # default-sort by last_commit (column index 2), newest first
+)
+```
+
+## Packages with no commits in the last 6 months
+
+The table below shows only packages whose most recent commit is older than
+six months from today. These are good candidates for maintenance check-ins
+or follow-up with maintainers.
+
+```{python}
+cutoff = pd.Timestamp.utcnow().tz_localize(None) - pd.DateOffset(months=6)
+
+stale_df = (
+    activity_df.dropna(subset=['last_commit'])
+    .loc[lambda d: d['last_commit'] < cutoff]
+    .sort_values('last_commit', ascending=True)
+)
+
+print(f"{len(stale_df)} package(s) have not had a commit since {cutoff.date()}.")
+
+show(stale_df, max_rows=15)
+```
