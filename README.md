@@ -1,6 +1,6 @@
 # README: About pyOpenSci peer review metrics
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
@@ -117,6 +117,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/rogerb121"><img src="https://avatars.githubusercontent.com/u/109387723?v=4?s=100" width="100px;" alt="rogerb121"/><br /><sub><b>rogerb121</b></sub></a><br /><a href="https://github.com/pyOpenSci/metrics/commits?author=rogerb121" title="Code">💻</a> <a href="https://github.com/pyOpenSci/metrics/pulls?q=is%3Apr+reviewed-by%3Arogerb121" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/stevenrayhinojosa-gmail-com"><img src="https://avatars.githubusercontent.com/u/17886818?v=4?s=100" width="100px;" alt="steven"/><br /><sub><b>steven</b></sub></a><br /><a href="https://github.com/pyOpenSci/metrics/commits?author=stevenrayhinojosa-gmail-com" title="Code">💻</a> <a href="https://github.com/pyOpenSci/metrics/pulls?q=is%3Apr+reviewed-by%3Astevenrayhinojosa-gmail-com" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/crhea93"><img src="https://avatars.githubusercontent.com/u/34322936?v=4?s=100" width="100px;" alt="Carter Lee Rhea"/><br /><sub><b>Carter Lee Rhea</b></sub></a><br /><a href="https://github.com/pyOpenSci/metrics/commits?author=crhea93" title="Code">💻</a> <a href="https://github.com/pyOpenSci/metrics/pulls?q=is%3Apr+reviewed-by%3Acrhea93" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/javabster"><img src="https://avatars.githubusercontent.com/u/23662430?v=4?s=100" width="100px;" alt="Abby Mitchell"/><br /><sub><b>Abby Mitchell</b></sub></a><br /><a href="https://github.com/pyOpenSci/metrics/commits?author=javabster" title="Code">💻</a> <a href="https://github.com/pyOpenSci/metrics/pulls?q=is%3Apr+reviewed-by%3Ajavabster" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
 </table>
