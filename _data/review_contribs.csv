@@ -18,18 +18,18 @@ yuvipanda,,2023-01-18,0,0,0,False,False
 cmillion,,2023-11-20,1,0,0,False,False
 arianesasso,"Berlin, Germany",2021-08-24,0,0,2,False,True
 nickledave,Charm City,2019-12-10,2,2,3,True,True
-cmarmo,,2023-01-24,1,6,5,False,False
+cmarmo,,2023-01-24,1,6,6,False,False
 jlpalomino,,2019-10-25,1,0,1,False,True
-simonmolinsky,,2022-09-16,1,2,2,True,True
+simonmolinsky,,2022-09-16,1,3,2,True,True
 anitagraser,,2020-03-26,0,0,0,False,True
-batalex,,2023-02-04,1,6,6,False,False
+batalex,,2023-02-04,1,7,6,False,False
 mbjoseph,"Denver, CO",2019-10-17,1,0,0,False,True
 luizirber,"Davis, CA",2019-10-17,0,0,1,False,True
 kierisi,,2023-11-21,0,0,0,False,False
 dynamicwebpaige,"Seattle, WA",2023-02-24,0,0,0,False,False
 carsonfarmer,"Victoria, B.C., Canada",2023-02-24,0,0,0,False,False
 jhamman,"Seattle, WA",2023-02-24,0,0,0,False,False
-kysolvik,,2023-02-24,1,0,0,False,False
+kysolvik,,2023-02-24,1,0,1,False,False
 marskar,"Rockville/Bethesda, Maryland",2023-02-24,0,0,0,False,True
 miketrizna,"Washington, DC",2023-02-24,0,0,0,False,False
 cosmicbboy,"Atlanta, GA, US",2019-12-10,0,0,0,False,True
@@ -53,7 +53,7 @@ jbusecke,"Brooklyn, New York",2022-09-08,1,0,0,False,False
 npalopoli,"Buenos Aires, Argentina",2023-03-01,0,0,0,False,False
 eriknw,"Austin, TX",2023-03-01,0,0,0,False,True
 tupui,"Graz, Austria",2023-03-01,0,0,0,False,False
-sneakers-the-rat,,2023-03-01,1,1,3,False,False
+sneakers-the-rat,,2023-03-01,2,1,3,False,False
 radoering,,2023-03-01,0,0,0,False,False
 astrojuanlu,Spain,2023-03-01,0,0,0,False,False
 henryiii,"Princeton, NJ",2023-03-01,0,0,0,False,False
@@ -113,7 +113,7 @@ chiinita,"London, UK",2023-05-26,0,0,0,False,False
 dstansby,"London, UK",2023-05-26,0,0,0,False,True
 juanis2112,"Santa Cruz, California",2023-05-26,0,0,0,False,False
 crazy4pi314,"Seattle, WA",2023-05-26,0,0,0,False,False
-sampottinger,,2023-06-01,0,0,0,False,True
+sampottinger,,2023-06-01,1,0,0,False,True
 abravalheri,"Bristol, UK",2023-06-14,0,0,0,False,False
 dpprdan,"Hamburg, Germany",2023-06-14,0,0,0,False,False
 cam-gerlach,"Huntsville, AL, United States",2023-06-14,0,0,0,False,False
@@ -124,7 +124,7 @@ szhorvat,,2023-07-15,1,0,0,False,False
 yang-ruoxi,,2023-07-15,0,0,0,False,False
 pllim,"Baltimore, MD, USA",2023-07-15,1,0,0,False,True
 namurphy,"Cambridge, Massachusetts, USA",2023-07-15,0,0,0,False,False
-hamogu,"Cambridge, MA, USA",2023-07-15,0,0,4,True,False
+hamogu,"Cambridge, MA, USA",2023-07-15,0,0,5,True,False
 g-patlewicz,,2023-07-15,0,0,0,False,False
 msarahan,"Austin, TX",2023-07-15,0,0,0,False,False
 thomasjpfan,New York City,2023-07-15,0,0,0,False,False
@@ -139,8 +139,8 @@ ayushanand18,"New Delhi, India",2023-07-27,1,0,0,False,False
 gizarp,,2023-07-27,0,0,0,False,True
 jim22k,"Austin, TX",2023-07-27,0,0,0,False,True
 sultanorazbayev,Kazakhstan,2023-07-27,0,0,0,False,True
-isabelizimm,"FLorida, USA",2023-08-14,1,7,3,False,False
-eliotwrobson,"Urbana, IL",2023-09-11,2,2,1,True,True
+isabelizimm,"FLorida, USA",2023-08-14,2,7,3,False,False
+eliotwrobson,"Urbana, IL",2023-09-11,2,3,2,True,True
 schlich,"St Louis, MO",2023-09-11,0,0,0,False,False
 khynder,,2023-09-11,1,0,0,False,False
 katoss,"Paris, France",2023-09-11,0,0,0,False,True
@@ -174,7 +174,7 @@ andrew,UK,2023-12-14,0,0,0,False,False
 zethson,Germany,2023-12-14,1,0,0,False,False
 slobentanzer,,2023-12-14,0,0,0,True,True
 mknorps,"Toruń/Gdynia, Poland",2023-12-15,0,0,0,False,False
-yeelauren,,2023-12-21,1,1,0,True,False
+yeelauren,,2023-12-21,1,2,1,True,False
 banesullivan,,2023-12-27,0,0,3,True,False
 flying-sheep,München,2023-12-27,0,0,0,False,False
 septaris,Meudon,2024-01-30,1,0,0,False,False
@@ -214,7 +214,8 @@ dncnwtts,Oslo,2024-05-07,0,0,0,False,True
 hermda02,"Oslo, Norway",2024-05-07,0,0,0,False,True
 paigem,"Canberra, Australia",2024-05-07,1,0,0,False,False
 callumrollo,"Gothenburg, Sweden",2024-05-07,1,0,0,False,False
-rcaneill,"Grenoble, France",2024-05-07,1,0,0,False,True
+ahasson,,2026-06-11,0,0,0,True,False
+rcaneill,"Grenoble, France",2024-05-07,1,0,0,True,True
 lilyanderssonlee,Sweden,2024-05-07,1,0,0,False,False
 elais,"Oakland, California",2024-05-07,1,0,0,False,False
 kenseehart,,2024-06-01,0,0,0,False,False
@@ -280,7 +281,7 @@ rmj3197,"Buffalo, New York, USA",2024-12-13,0,0,0,False,True
 giovsaraceno,,2024-12-13,0,0,0,False,True
 santisoler,"British Columbia, Canada",2025-01-01,0,0,0,False,False
 sethmlarson,"Minneapolis, MN",2025-01-01,0,0,0,False,False
-erik-whiting,"Omaha, NE",2025-01-14,1,0,0,False,False
+erik-whiting,"Omaha, NE",2025-01-14,2,0,0,False,False
 cjbassin,,2025-01-14,1,0,0,False,False
 glemaitre,Paris-Saclay / France,2025-01-14,1,0,0,False,False
 ammaraziz,,2025-02-01,1,0,0,False,False
@@ -319,7 +320,7 @@ akhilkrishnar0,Bangalore. India,2025-06-02,1,0,0,False,False
 zacwarham,Vancouver,2025-06-02,0,0,0,False,False
 sanketkumarkar,Chennai,2025-06-05,0,0,0,False,False
 chendaniely,JFK -> DCA -> ROA -> JFK -> YVR,2025-06-10,0,0,0,False,False
-crhea93,"Montreal, QC, CANADA",2025-06-16,2,0,4,True,False
+crhea93,"Montreal, QC, CANADA",2025-06-16,2,1,5,True,False
 jinningwang,"Knoxville, Tennessee, USA",2025-06-16,1,0,0,False,True
 echedey-ls,Spain,2025-06-16,1,0,0,False,False
 cdeline,"Golden, CO",2025-06-16,1,0,0,False,False
@@ -329,7 +330,7 @@ mihaimaruseac,San Francisco,2025-07-18,0,0,0,False,False
 tomato-gits,,2025-07-18,0,0,0,False,False
 aplozadab,Seattle,2025-07-18,0,0,0,False,False
 schwalbe10,,2025-07-18,0,0,0,False,False
-hfactor13,,2025-07-18,0,0,0,False,False
+hfactor13,,2025-07-18,1,0,0,False,False
 jameslamb,"Chicago, IL",2025-07-18,0,0,0,False,False
 brepowell,"Seattle, Washington",2025-07-22,0,0,0,False,False
 malvikasharan,,2025-07-24,0,0,0,False,False
@@ -347,19 +348,19 @@ evelynms1,,2025-07-25,0,0,0,False,False
 karinas0uza,Seattle,2025-07-25,0,0,0,False,False
 veronicasoelundkirsebom,,2025-07-25,0,0,0,False,False
 timothyedawson,,2025-08-07,0,0,0,False,False
-coatless,United States,2025-08-07,0,6,0,False,False
+coatless,United States,2025-08-07,0,8,0,False,False
 eigenbrot,,2025-08-07,1,0,0,False,False
 pudeiko,"Zürich, Switzerland",2025-08-07,0,0,0,False,True
 kandisanjana,Seattle,2025-08-07,2,0,0,False,False
 jonas-eschle,"Geneva, Switzerland",2025-08-07,0,0,1,True,False
 irideselby,,2025-08-07,0,0,0,False,True
-kai-striega,,2025-08-22,1,0,0,False,False
+kai-striega,,2025-08-22,2,0,0,False,False
 jeremyzhangsq,Singapore,2025-08-22,1,0,0,False,False
 abhishekumrawal,"Urbana, IL",2025-08-22,0,0,0,False,True
 alizak-mech,,2025-09-10,1,0,0,False,False
 alirezaalamgir,,2025-09-10,1,0,0,False,False
 kawians,,2025-09-10,1,0,0,False,False
-elliesch,"Stanford, CA",2025-09-27,0,0,0,False,False
+elliesch,"Stanford, CA",2025-09-27,1,0,0,False,False
 jedbrown,,2025-09-27,0,0,0,False,False
 nicoguaro,Medellín,2025-09-27,1,0,0,False,False
 adtzlr,"Graz, Austria",2025-09-27,0,0,0,False,True
@@ -372,13 +373,21 @@ syedalimohsinbukhari,"Islamabad, Pakistan",2025-10-17,0,0,0,False,True
 akritaag,"Seattle, WA",2025-10-17,1,0,0,False,False
 t-strojny,,2025-10-17,0,0,0,False,True
 mathematicalmichael,"Denver, CO",2025-10-18,0,0,0,False,False
-jammy2211,Newcastle,2025-11-08,1,0,0,False,False
+jammy2211,Newcastle,2025-11-08,1,0,0,False,True
 tepickering,"Tucson, AZ, USA",2025-11-08,1,0,0,False,False
-canorve,"Sinaloa, Mexico",2025-11-08,0,0,0,False,True
+canorve,"Sinaloa, Mexico",2025-11-08,1,0,0,False,True
 manalclay,,2025-12-09,0,0,0,False,True
 andonij,Spain,2025-12-09,0,0,0,False,True
-adityapt,Bay Area,2025-12-31,1,0,0,False,False
+adityapt,Bay Area,2025-12-31,2,0,0,False,False
 egbdfx,,2025-12-31,1,0,0,False,False
 i,,2025-12-31,0,0,0,False,True
 astropy,,2026-01-24,0,0,0,False,True
 danielapamplona,France,2026-03-16,1,0,0,False,False
+leahmendelson,"Claremont, CA",2026-05-04,1,0,0,False,False
+emmylia321,,2026-05-04,1,0,0,False,False
+paugier,,2026-05-04,0,0,0,False,True
+lucasimi,"Rome, Italy",2026-05-18,0,0,0,False,True
+bwhitt7,USA,2026-06-15,0,0,0,False,False
+javabster,New York,2026-06-15,0,0,0,False,False
+amyheather,,2026-06-15,0,0,0,False,True
+c4dynamics,Israel,2026-06-15,0,0,0,False,True
