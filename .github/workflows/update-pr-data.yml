@@ -9,8 +9,6 @@ on:
     # Runs at 11pm on December 31st every year
     - cron: "0 23 31 12 *"
 
-permissions: {}
-
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
