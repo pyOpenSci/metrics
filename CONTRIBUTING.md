@@ -20,9 +20,9 @@ for the pyOpenSci organization. This data includes:
 The `scripts/` directory contains utility scripts for data collection, parsing, and analysis:
 
 * **get-editors.py**: Updates the editorial team CSV file with current editors by merging manually curated domain data and GitHub team membership (via GraphQL API). Output: `data/editorial_team_domains.csv`.
-* **get-package-data.py**: Retrieves package data from GitHub repositories using the GitHub API. Returns a dictionary of package information.
+* **get-package-data.py**: Loads website `packages.yml` via pyosMeta (`PACKAGES_RAW_URL`) and writes `data/package_data.csv`.
 * **get-prs.py**: Parses all active pyOpenSci repositories to collect contributor activity (issues and PRs) for the current year, excluding bots. Outputs a CSV for tracking contribution growth.
-* **get-review-contributors.py**: Extracts and stores review contributor data (editors/reviewers) from peer review YAML files, including location if available. Outputs: `review_contribs.csv`.
+* **get-review-contributors.py**: Loads website `contributors.yml` via pyosMeta (`CONTRIBUTORS_RAW_URL`), validates with `PersonModel`, and writes `data/review_contribs.csv`.
 * **get-reviews.py**: Parses all pyOpenSci reviews (presubmissions, closed submissions, etc.) to compile activity stats over time. Uses pyosMeta utilities for processing.
 * **get-sprint-data.py**: Collects and processes sprint-related issues and pull requests data from out GitHub sprint project board using GraphQL and REST APIs, with support for environment variables and progress tracking.
 

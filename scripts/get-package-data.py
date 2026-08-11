@@ -1,38 +1,18 @@
-import os
+"""Fetch website packages.yml and write data/package_data.csv."""
 
-import github
-import pandas as pd
-import yaml
 from pathlib import Path
 
-ACCESS_TOKEN = os.getenv("GITHUB_TOKEN")
-gh = github.Github(ACCESS_TOKEN)
+import pandas as pd
+from pyosmeta.constants import PACKAGES_RAW_URL
+from pyosmeta.file_io import open_yml_file
 
 
-def get_package_data():
-    """
-    Get package data from GitHub repository.
-
-    Returns
-    -------
-    dict
-        Dictionary containing package data.
-    """
-
-    # Get the repository
-    repo = gh.get_repo("pyOpenSci/pyopensci.github.io")
-
-    # Get the ``data/packages.yml`` file
-    package_data = repo.get_contents("data/packages.yml")
-    package_data = package_data.decoded_content.decode("utf-8")
-
-    # Load the YAML content
-    package_data = yaml.safe_load(package_data)
-
-    # Convert the dictionary to a DataFrame
-    df = pd.DataFrame.from_dict(package_data)
-
-    return df
+def get_package_data() -> pd.DataFrame:
+    """Load packages.yml via pyosMeta raw URL and return a DataFrame."""
+    package_data = open_yml_file(PACKAGES_RAW_URL)
+    if not package_data:
+        raise ValueError(f"packages.yml at {PACKAGES_RAW_URL} is empty or missing")
+    return pd.DataFrame(package_data)
 
 
 if __name__ == "__main__":
