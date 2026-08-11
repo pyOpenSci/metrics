@@ -27,7 +27,7 @@ from pyosmeta.models import PersonModel
 # Consider turning those into functionsor some sort of helper obj so they can be reused here
 BASE_URL = "https://raw.githubusercontent.com/pyOpenSci/"
 WEB_YAML_PATH = BASE_URL + "pyopensci.github.io/main/data/contributors.yml"
-OUTPUT_PATH = os.path.join("_data", "review_contribs.csv")
+OUTPUT_PATH = os.path.join("data", "review_contribs.csv")
 
 
 def load_contributors_yaml(url: str) -> list:

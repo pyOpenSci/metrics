@@ -1,7 +1,7 @@
 """This script updates our editorial team csv file with the most current editors.
 
 1. It parses a manually created list of editors found in the csv
-file: `_data/editorial_team_domains`. This csv was created by
+file: `data/editorial_team_domains`. This csv was created by
 manually adding editor names to the file with domain areas from our Google sheet.
 The (private) google sheet is generated from a google form that collects editor
 expertise and domains when they apply to be an editor with us.
@@ -19,8 +19,8 @@ The GitHub team data are collected using the GitHub graphQL interface.
 
 3. Finally, this script merges the data parsed from the team with the .csv file.
 
-This script creates two .csv files. The _data/editorial_team_domains.csv contains
-all currently "activate" editors. _data/emeritus_editor_domains.csv contains
+This script creates two .csv files. The data/editorial_team_domains.csv contains
+all currently "activate" editors. data/emeritus_editor_domains.csv contains
 editors that are either fully offboarded or intend to offboard after they
 finish their currently active reviews.
 
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     emeritus = sorted({(u or "").strip().lower() for u in emeritus})
 
     # Open the CSV that contains domain info for editors
-    data_dir = Path("_data")
+    data_dir = Path("data")
     editor_domains = pd.read_csv(data_dir / "editorial_team_domains.csv")
     editor_domains["gh_username"] = editor_domains["gh_username"].astype(str)
 

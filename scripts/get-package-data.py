@@ -38,7 +38,7 @@ def get_package_data():
 if __name__ == "__main__":
     package_df = get_package_data()
 
-    dir_path = Path("_data")
+    dir_path = Path("data")
     file_path = dir_path / "package_data.csv"
 
     dir_path.mkdir(parents=True, exist_ok=True)

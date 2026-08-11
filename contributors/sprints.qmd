@@ -38,7 +38,7 @@ For some reason it's not calculating the total participant correctly as we manua
 
 ```{python}
 # Get the current notebook directory
-data_path = Path.cwd().parents[0] / "_data" / "sprint_data.csv" 
+data_path = Path.cwd().parents[0] / "data" / "sprint_data.csv" 
 
 sprint_df = pd.read_csv(data_path)
 # Display the first few rows of the dataframe

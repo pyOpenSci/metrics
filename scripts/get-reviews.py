@@ -271,8 +271,8 @@ def main():
         )
 
         # Save csv file
-        os.makedirs("_data", exist_ok=True)
-        csv_path = os.path.join("_data", f"review_{submission_type}s.csv")
+        os.makedirs("data", exist_ok=True)
+        csv_path = os.path.join("data", f"review_{submission_type}s.csv")
         df.to_csv(csv_path)
         print(f"{submission_type} processing done. Total: {len(df)}")
 
