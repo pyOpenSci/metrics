@@ -5,7 +5,7 @@ GOAL: Create a csv file that stores contributor data over time only for editors 
 
 
 Open yaml file
-1. https://github.com/pyOpenSci/pyopensci.github.io/blob/main/_data/contributors.yml
+1. https://github.com/pyOpenSci/pyopensci.github.io/blob/main/data/contributors.yml
 2. Scan contributor_type for editor and or reviewer and populate bool field in spreadsheet accordingly
 3. Get location if available and populate
 
@@ -23,7 +23,7 @@ from pyosmeta.models import PersonModel
 # NOTE: the code below is from here https://github.com/pyOpenSci/pyosMeta/blob/main/src/pyosmeta/cli/update_contributors.py
 # Consider turning those into functionsor some sort of helper obj so they can be reused here
 BASE_URL = "https://raw.githubusercontent.com/pyOpenSci/"
-WEB_YAML_PATH = BASE_URL + "pyopensci.github.io/main/_data/contributors.yml"
+WEB_YAML_PATH = BASE_URL + "pyopensci.github.io/main/data/contributors.yml"
 OUTPUT_PATH = os.path.join("_data", "review_contribs.csv")
 
 
