@@ -7,7 +7,7 @@ execute:
 
 This dashboard tracks activity across pyOpenSci-accepted packages. Data is
 pulled from the
-[`_data/packages.yml`](https://github.com/pyOpenSci/pyopensci.github.io/blob/main/_data/packages.yml)
+[`data/packages.yml`](https://github.com/pyOpenSci/pyopensci.github.io/blob/main/data/packages.yml)
 file in the `pyopensci.github.io` repository, which is maintained by
 [`pyosMeta`](https://github.com/pyOpenSci/pyosMeta) and contains
 per-package GitHub metrics including the date of the last commit.
