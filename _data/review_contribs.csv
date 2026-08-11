@@ -17,12 +17,12 @@ martinfleis,Prague,2020-04-09,2,0,0,False,False
 yuvipanda,,2023-01-18,0,0,0,False,False
 cmillion,,2023-11-20,1,0,0,False,False
 arianesasso,"Berlin, Germany",2021-08-24,0,0,2,False,True
-nickledave,Charm City,2019-12-10,2,2,3,True,True
-cmarmo,,2023-01-24,1,6,6,False,False
+nickledave,Charm City,2019-12-10,2,4,3,True,True
+cmarmo,,2023-01-24,1,7,6,False,False
 jlpalomino,,2019-10-25,1,0,1,False,True
 simonmolinsky,,2022-09-16,1,3,2,True,True
 anitagraser,,2020-03-26,0,0,0,False,True
-batalex,,2023-02-04,1,7,6,False,False
+batalex,,2023-02-04,1,8,6,False,False
 mbjoseph,"Denver, CO",2019-10-17,1,0,0,False,True
 luizirber,"Davis, CA",2019-10-17,0,0,1,False,True
 kierisi,,2023-11-21,0,0,0,False,False
@@ -124,7 +124,7 @@ szhorvat,,2023-07-15,1,0,0,False,False
 yang-ruoxi,,2023-07-15,0,0,0,False,False
 pllim,"Baltimore, MD, USA",2023-07-15,1,0,0,False,True
 namurphy,"Cambridge, Massachusetts, USA",2023-07-15,0,0,0,False,False
-hamogu,"Cambridge, MA, USA",2023-07-15,0,0,5,True,False
+hamogu,"Cambridge, MA, USA",2023-07-15,0,0,7,True,False
 g-patlewicz,,2023-07-15,0,0,0,False,False
 msarahan,"Austin, TX",2023-07-15,0,0,0,False,False
 thomasjpfan,New York City,2023-07-15,0,0,0,False,False
@@ -311,7 +311,7 @@ marieroald,Oslo,2025-05-19,0,0,0,False,False
 mrgah,,2025-05-19,0,0,0,False,False
 ethanwhite,"Gainesville, FL",2025-05-30,1,0,0,False,False
 benjamindonnachie,,2025-05-30,1,0,0,False,False
-julimillan,"La Plata, Argentina",2025-05-30,0,0,1,True,False
+julimillan,"La Plata, Argentina",2025-05-30,0,0,2,True,False
 cklunch,,2025-05-30,0,0,0,False,True
 bhass-neon,"Boulder, CO",2025-05-30,0,0,0,False,True
 znickerson8,,2025-05-30,0,0,0,False,True
@@ -320,7 +320,7 @@ akhilkrishnar0,Bangalore. India,2025-06-02,1,0,0,False,False
 zacwarham,Vancouver,2025-06-02,0,0,0,False,False
 sanketkumarkar,Chennai,2025-06-05,0,0,0,False,False
 chendaniely,JFK -> DCA -> ROA -> JFK -> YVR,2025-06-10,0,0,0,False,False
-crhea93,"Montreal, QC, CANADA",2025-06-16,2,1,5,True,False
+crhea93,"Montreal, QC, CANADA",2025-06-16,2,5,6,True,False
 jinningwang,"Knoxville, Tennessee, USA",2025-06-16,1,0,0,False,True
 echedey-ls,Spain,2025-06-16,1,0,0,False,False
 cdeline,"Golden, CO",2025-06-16,1,0,0,False,False
@@ -349,7 +349,7 @@ karinas0uza,Seattle,2025-07-25,0,0,0,False,False
 veronicasoelundkirsebom,,2025-07-25,0,0,0,False,False
 timothyedawson,,2025-08-07,0,0,0,False,False
 coatless,United States,2025-08-07,0,8,0,False,False
-eigenbrot,,2025-08-07,1,0,0,False,False
+eigenbrot,,2025-08-07,1,0,0,False,True
 pudeiko,"Zürich, Switzerland",2025-08-07,0,0,0,False,True
 kandisanjana,Seattle,2025-08-07,2,0,0,False,False
 jonas-eschle,"Geneva, Switzerland",2025-08-07,0,0,1,True,False
@@ -370,7 +370,7 @@ hzacode,,2025-10-17,0,0,0,False,True
 blakeaw,"Texas, USA",2025-10-17,1,0,0,False,False
 kristinagagalova,,2025-10-17,1,0,0,False,False
 syedalimohsinbukhari,"Islamabad, Pakistan",2025-10-17,0,0,0,False,True
-akritaag,"Seattle, WA",2025-10-17,1,0,0,False,False
+akritaag,"Seattle, WA",2025-10-17,2,0,0,True,False
 t-strojny,,2025-10-17,0,0,0,False,True
 mathematicalmichael,"Denver, CO",2025-10-18,0,0,0,False,False
 jammy2211,Newcastle,2025-11-08,1,0,0,False,True
@@ -378,7 +378,7 @@ tepickering,"Tucson, AZ, USA",2025-11-08,1,0,0,False,False
 canorve,"Sinaloa, Mexico",2025-11-08,1,0,0,False,True
 manalclay,,2025-12-09,0,0,0,False,True
 andonij,Spain,2025-12-09,0,0,0,False,True
-adityapt,Bay Area,2025-12-31,2,0,0,False,False
+adityapt,Bay Area,2025-12-31,3,0,0,False,False
 egbdfx,,2025-12-31,1,0,0,False,False
 i,,2025-12-31,0,0,0,False,True
 astropy,,2026-01-24,0,0,0,False,True
@@ -391,3 +391,15 @@ bwhitt7,USA,2026-06-15,0,0,0,False,False
 javabster,New York,2026-06-15,0,0,0,False,False
 amyheather,,2026-06-15,0,0,0,False,True
 c4dynamics,Israel,2026-06-15,0,0,0,False,True
+zenon18,,2026-08-05,0,0,0,False,False
+shaunagm,,2026-08-05,0,0,0,False,False
+johoelken,,2026-08-05,1,0,0,False,False
+hpparvi,"La Laguna, Tenerife, Spain",2026-08-05,1,0,0,False,False
+krislars,"Denver, CO",2026-08-05,0,0,0,False,True
+fraserwatson,,2026-08-05,0,0,0,False,True
+a-derks,,2026-08-05,1,0,0,False,True
+joshuabmoore,"School of Physics, The University of Sydney",2026-08-05,0,0,0,False,True
+benfulcher,"Sydney, Australia",2026-08-05,0,0,0,False,True
+nischalcs50,,2026-08-05,0,0,0,False,True
+rosteen,,2026-08-05,1,0,0,False,False
+isaac-aa,,2026-08-05,0,0,0,False,True

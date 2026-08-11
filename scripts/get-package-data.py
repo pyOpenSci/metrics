@@ -22,8 +22,8 @@ def get_package_data():
     # Get the repository
     repo = gh.get_repo("pyOpenSci/pyopensci.github.io")
 
-    # Get the ``_data/packages.yml`` file
-    package_data = repo.get_contents("_data/packages.yml")
+    # Get the ``data/packages.yml`` file
+    package_data = repo.get_contents("data/packages.yml")
     package_data = package_data.decoded_content.decode("utf-8")
 
     # Load the YAML content
