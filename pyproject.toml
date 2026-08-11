@@ -1,0 +1,33 @@
+[project]
+name = "pyopensci-metrics"
+version = "0.1.0"
+description = "pyOpenSci peer review and contributor metrics dashboards"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "altair",
+  "itables",
+  "jupyter",
+  "pandas",
+  "panel",
+  "plotly",
+  "pyarrow",
+  "pygithub",
+  "pyosmeta",
+  "pyosmetrics",
+  "pytz",
+  "tqdm",
+]
+
+[dependency-groups]
+build = ["quarto-cli"]
+dev = [
+  "nox",
+  { include-group = "build" },
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+pyosmetrics = { path = "pyosmetrics_pkg", editable = true }

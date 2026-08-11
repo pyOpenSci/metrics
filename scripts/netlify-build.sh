@@ -2,8 +2,8 @@
 # Build the Quarto metrics site on Netlify.
 set -euo pipefail
 
-pip install --upgrade pip
-pip install -r requirements.txt
-pip install quarto-cli
+curl -LsSf https://astral.sh/uv/install.sh | sh
+export PATH="${HOME}/.local/bin:${PATH}"
 
-quarto render
+uv sync --frozen --no-dev --group build
+uv run quarto render
