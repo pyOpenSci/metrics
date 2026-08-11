@@ -333,7 +333,7 @@ if __name__ == "__main__":
     project_items = get_project_items(project_id, ACCESS_TOKEN)
 
     df = pd.DataFrame([parse_item(item).json for item in tqdm(project_items)])
-    dir_path = Path("_data")
+    dir_path = Path("data")
     file_path = dir_path / "sprint_data.csv"
 
     dir_path.mkdir(parents=True, exist_ok=True)

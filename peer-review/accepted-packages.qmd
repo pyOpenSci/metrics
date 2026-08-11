@@ -34,7 +34,7 @@ register_and_enable_poppins_theme()
 
 ```{python}
 # Get the current notebook directory
-package_data_path = Path.cwd().parents[0] / "_data" / "package_data.csv" 
+package_data_path = Path.cwd().parents[0] / "data" / "package_data.csv" 
 
 # Read the DataFrame from the CSV file
 package_df = pd.read_csv(package_data_path)

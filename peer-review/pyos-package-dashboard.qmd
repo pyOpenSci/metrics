@@ -32,7 +32,7 @@ warnings.filterwarnings("ignore")
 load_poppins_font()
 register_and_enable_poppins_theme()
 
-package_data_path = Path.cwd().parents[0] / "_data" / "package_data.csv" 
+package_data_path = Path.cwd().parents[0] / "data" / "package_data.csv" 
 package_df = pd.read_csv(package_data_path)
 
 # Parse the "gh_meta" column back into dictionaries

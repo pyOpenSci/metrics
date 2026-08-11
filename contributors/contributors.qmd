@@ -32,7 +32,7 @@ register_and_enable_poppins_theme()
 
 ```{python}
 # Get the current notebook directory
-data_path = Path.cwd().parents[0] / "_data"  
+data_path = Path.cwd().parents[0] / "data"  
 all_files = list(data_path.glob("20*"))
 
 dfs = [pd.read_csv(file, parse_dates=["item_opened_by"]) for file in all_files]

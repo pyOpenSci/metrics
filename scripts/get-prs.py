@@ -229,7 +229,7 @@ def main():
     all_contribs_final_df = pd.concat(all_contribs_final, ignore_index=True)
 
     # Write all_contribs_final_df to a single CSV file
-    os.makedirs("_data", exist_ok=True)
+    os.makedirs("data", exist_ok=True)
     if all_dates:
         # Clean data of current year but don't use current_year var because
         # that is set to 2018 (start year) if we want to get all contribs
@@ -243,9 +243,9 @@ def main():
 
     # Export to csv
     if all_dates:
-        csv_path = os.path.join("_data", "2018_2023_all_issues_prs.csv")
+        csv_path = os.path.join("data", "2018_2023_all_issues_prs.csv")
     else:
-        csv_path = os.path.join("_data", f"{current_year}_all_issues_prs.csv")
+        csv_path = os.path.join("data", f"{current_year}_all_issues_prs.csv")
     all_contribs_final_df.to_csv(csv_path, index=False)
     print(f"Saved csv here: {csv_path}")
 
