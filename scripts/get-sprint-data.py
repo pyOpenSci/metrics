@@ -4,7 +4,6 @@ import requests
 from dotenv import load_dotenv
 import pandas as pd
 from pathlib import Path
-from functools import cached_property
 from pydantic import BaseModel, HttpUrl
 from enum import Enum
 from tqdm import tqdm
@@ -162,8 +161,12 @@ def get_project_items(project_id, access_token):
                       title
                       number
                       url
+                      state
                       createdAt
                       closedAt
+                      author {
+                        login
+                      }
                       repository {
                         nameWithOwner
                       }
@@ -182,8 +185,12 @@ def get_project_items(project_id, access_token):
                       title
                       number
                       url
+                      state
                       createdAt
                       closedAt
+                      author {
+                        login
+                      }
                       repository {
                         nameWithOwner
                       }
@@ -244,6 +251,16 @@ class TaskType(str, Enum):
     pull_request = "PullRequest"
 
 
+def normalize_state(state: str | None) -> str | None:
+    """Map GraphQL Issue/PR state enums to REST-style open/closed."""
+    if state is None:
+        return None
+    # GraphQL PR state can be MERGED; REST /pulls returns closed for merged.
+    if state.upper() == "MERGED":
+        return "closed"
+    return state.lower()
+
+
 class Task(BaseModel):
     event: str
     title: str
@@ -252,6 +269,8 @@ class Task(BaseModel):
     type: TaskType
     repository: str
     organization: str = "pyopensci"
+    author: str | None = None
+    state: str | None = None
     created: str | None = None
     closed: str | None = None
 
@@ -263,23 +282,6 @@ class Task(BaseModel):
             return f"https://api.github.com/repos/{self.organization}/{self.repository}/pulls/{self.number}"
         else:
             raise ValueError(f"Unknown task type: {self.type}")
-
-    @cached_property
-    def api(self):
-        response = requests.get(
-            self.api_url,
-            headers={"Authorization": f"token {ACCESS_TOKEN}"},
-        )
-        response.raise_for_status()
-        return response.json()
-
-    @property
-    def author(self) -> str:
-        return self.api["user"]["login"]
-
-    @property
-    def state(self) -> str:
-        return self.api["state"]
 
     @property
     def json(self):
@@ -306,17 +308,21 @@ def parse_item(item):
         if node and node["field"]["name"] == "Status":
             event = node["name"]
             break
-    org, repo = item["content"]["repository"]["nameWithOwner"].split("/")
+    content = item["content"]
+    org, repo = content["repository"]["nameWithOwner"].split("/")
+    author = (content.get("author") or {}).get("login")
     return Task(
         event=event,
-        title=item["content"]["title"],
-        url=item["content"]["url"],
-        number=item["content"]["number"],
-        type=TaskType(item["content"]["__typename"]),
+        title=content["title"],
+        url=content["url"],
+        number=content["number"],
+        type=TaskType(content["__typename"]),
         repository=repo,
         organization=org,
-        created=item["content"]["createdAt"],
-        closed=item["content"]["closedAt"],
+        author=author,
+        state=normalize_state(content.get("state")),
+        created=content["createdAt"],
+        closed=content["closedAt"],
     )
 
 
