@@ -24,7 +24,7 @@ The `scripts/` directory contains utility scripts for data collection, parsing, 
 * **get-prs.py**: Parses all active pyOpenSci repositories to collect contributor activity (issues and PRs) for the current year, excluding bots. Outputs a CSV for tracking contribution growth.
 * **get-review-contributors.py**: Loads website `contributors.yml` via pyosMeta (`CONTRIBUTORS_RAW_URL`), validates with `PersonModel`, and writes `data/review_contribs.csv`.
 * **get-reviews.py**: Parses all pyOpenSci reviews (presubmissions, closed submissions, etc.) to compile activity stats over time. Uses pyosMeta utilities for processing.
-* **get-sprint-data.py**: Collects and processes sprint-related issues and pull requests data from out GitHub sprint project board using GraphQL and REST APIs, with support for environment variables and progress tracking.
+* **get-sprint-data.py**: Collects sprint issue/PR data from the GitHub sprint project board via GraphQL (including author and state). Output: `data/sprint_data.csv`.
 
 ## How the scripts are used
 
