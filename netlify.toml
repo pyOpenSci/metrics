@@ -1,11 +1,5 @@
 # Netlify build for the pyOpenSci metrics Quarto website.
-#
-# Dashboard setup (one time):
-# 1. Create a site at https://app.netlify.com and link this GitHub repo.
-# 2. Site settings → Environment variables → add GITHUB_TOKEN (public repo read).
-# 3. Enable Deploy Previews for pull requests.
-#
-# Production is served at https://www.pyopensci.org/metrics/ (BASE_URL=/metrics).
+# Production: https://www.pyopensci.org/metrics/ (BASE_URL=/metrics).
 # Deploy previews use the preview URL root (BASE_URL=/).
 
 [build]
