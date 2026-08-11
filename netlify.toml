@@ -7,7 +7,7 @@
   publish = "_site"
 
 [build.environment]
-  PYTHON_VERSION = "3.11"
+  PYTHON_VERSION = "3.12"
   # Deploy previews and branch deploys are served from the preview URL root.
   BASE_URL = "/"
 
