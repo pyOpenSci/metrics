@@ -30,3 +30,17 @@ The `scripts/` directory contains utility scripts for data collection, parsing, 
 
 The scripts above are run via a CI cron job with the exception of the get-editors.py script which right now
 doesn't run successfully in CI. Luckily our editorial team rotates slowly so this item is ok to have to manually run locally and update for the time being.
+
+## Running scripts locally
+
+Install [uv](https://docs.astral.sh/uv/), copy `.env-default` to `.env` with a
+GitHub token (see the README), then:
+
+```bash
+uv sync
+uv run python scripts/get-review-contributors.py
+```
+
+CI uses the same pattern (`uv sync --frozen --no-dev` then
+`uv run python scripts/…`). Dependencies live in `pyproject.toml` /
+`uv.lock` — not `requirements.txt`.

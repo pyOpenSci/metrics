@@ -55,6 +55,28 @@ It should look something like this
 You are now setup to process pyOpenSci peer review and contributor metadata
 using `pyosMeta`.
 
+## Set up the Python environment with uv
+
+This repo uses [uv](https://docs.astral.sh/uv/) and `pyproject.toml` for
+dependencies (see also `uv.lock`).
+
+Install uv once, then from the repo root:
+
+```bash
+uv sync
+```
+
+That creates `.venv/` and installs project deps plus the `dev` group
+(`nox`, `quarto-cli`).
+
+### Run data scripts
+
+```bash
+uv run python scripts/get-review-contributors.py
+uv run python scripts/get-prs.py
+# …same pattern for other scripts in scripts/
+```
+
 ## Permissions
 
 Please note that the `scripts/get-sprint-data.py` requires your GitHub token to have elevated permissions, specifically with `project` access.
@@ -63,34 +85,31 @@ When running on GitHub Actions, the elevated permissions are handled by the `PRO
 
 ## Build the website using Nox
 
-You can use `nox` to build the site locally. `Nox` will create an `venv`
-environment for you with all needed dependencies to run the code and build
-the peer review metrics dashboard.
+With the uv env in place (or with `uv` on your PATH), you can use `nox` to
+build the site. Nox sessions call `uv sync` and `uv run quarto …`.
 
-To start, install [nox](https://nox.thea.codes/en/stable/):
+Install [nox](https://nox.thea.codes/en/stable/) if you want to invoke it
+directly (it is also installed via `uv sync` in the `dev` group):
 
-Using `pip`:
-
-`python -m pip install nox`
-
-or [`pipx` for global install](https://pipx.pypa.io/stable/):
-
-`pipx install nox`
+```bash
+pipx install nox
+# or:
+uv run nox -s html
+```
 
 ### Build a static html website
 
-To build the html version of the dashboard use
-
-`nox -s html`
+```bash
+uv run nox -s html
+```
 
 ### Build a live local server dashboard
 
-To build the dashboard as a local server that will update
-as you update the files use:
+```bash
+uv run nox -s serve
+```
 
-`nox -s serve`
-
-On a mac you can use `ctrl + d` to stop a live server.
+On a Mac you can use `ctrl + d` to stop a live server.
 
 ## Contributors ✨
 

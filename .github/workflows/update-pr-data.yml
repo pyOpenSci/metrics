@@ -21,24 +21,20 @@ jobs:
         with:
           persist-credentials: false
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Setup Python
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 #v7.0.0
+      - name: Install uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
         with:
-          python-version: "3.12"
-      - name: Upgrade pip
-        run: |
-          # install pip=>20.1 to use "pip cache dir"
-          python -m pip install --upgrade pip wheel
+          enable-cache: true
       - name: Install webp
         run: |
           sudo apt-get update
           sudo apt-get install -y webp
-      - name: Install pyosmeta
-        run: pip install -r requirements.txt
+      - name: Sync dependencies
+        run: uv sync --frozen --no-dev
       - name: Run get-prs
-        run: python scripts/get-prs.py
+        run: uv run python scripts/get-prs.py
       - name: Run get-reviews
-        run: python scripts/get-reviews.py
+        run: uv run python scripts/get-reviews.py
       - name: Run get-sprint-data
         if: github.event_name == 'workflow_dispatch' ||
           github.event_name == 'schedule' ||
@@ -46,7 +42,7 @@ jobs:
             github.event.pull_request.head.repo.full_name == github.repository )
         env:
           GITHUB_TOKEN: ${{ secrets.PROJECTS_READ }}
-        run: python scripts/get-sprint-data.py
+        run: uv run python scripts/get-sprint-data.py
       - name: Update editors
         if: github.event_name == 'workflow_dispatch' ||
           github.event_name == 'schedule' ||
@@ -54,11 +50,11 @@ jobs:
             github.event.pull_request.head.repo.full_name == github.repository )
         env:
           GITHUB_TOKEN: ${{ secrets.PYOS_GHA_TEAMS_READ }}
-        run: python scripts/get-editors.py
+        run: uv run python scripts/get-editors.py
       - name: get-review-contributors
-        run: python scripts/get-review-contributors.py
+        run: uv run python scripts/get-review-contributors.py
       - name: get-package-data
-        run: python scripts/get-package-data.py
+        run: uv run python scripts/get-package-data.py
       - name: Cache metrics
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
