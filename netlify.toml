@@ -1,0 +1,16 @@
+# Netlify build for the pyOpenSci metrics Quarto website.
+# Production: https://www.pyopensci.org/metrics/ (BASE_URL=/metrics).
+# Deploy previews use the preview URL root (BASE_URL=/).
+
+[build]
+  command = "bash scripts/netlify-build.sh"
+  publish = "_site"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
+  # Deploy previews and branch deploys are served from the preview URL root.
+  BASE_URL = "/"
+
+[context.production.environment]
+  # Match the /metrics path on www.pyopensci.org.
+  BASE_URL = "/metrics"
