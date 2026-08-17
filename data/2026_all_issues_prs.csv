@@ -581,8 +581,10 @@ CONTENT: documentation text and styles,2022-10-26 19:06:10,closed,,lwasser,Unite
 IGNORE: content check Authoring content update,2022-10-25 22:02:16,closed,,lwasser,United States,staff,python-package-guide,pulls
 "WHY DON""T YOU LIKE ME HTML PROOFER? 😭 ",2022-10-25 18:36:42,closed,,lwasser,United States,staff,python-package-guide,pulls
 add infra to build sphinx book,2022-10-25 15:49:58,closed,,lwasser,United States,staff,python-package-guide,pulls
-ci: update docs workflow to Python 3.11,2026-08-06 01:27:55,open,,InessaPawson,,contributor,software-peer-review,issues
-fix: update file paths to match Hugo-based pyopensci.github.io ,2026-08-06 00:27:32,open,,InessaPawson,,contributor,software-peer-review,issues
+Fix bad links in guidebook,2026-08-11 22:58:39,closed,,lwasser,United States,staff,software-peer-review,issues
+feat: move actions to the same build and publish workflow that we use in the packaging guide,2026-08-11 22:57:11,open,,lwasser,United States,staff,software-peer-review,issues
+ci: update docs workflow to Python 3.11,2026-08-06 01:27:55,closed,,InessaPawson,,contributor,software-peer-review,issues
+fix: update file paths to match Hugo-based pyopensci.github.io ,2026-08-06 00:27:32,closed,,InessaPawson,,contributor,software-peer-review,issues
 Bug: peer review project board automation has a bug with the pending maintainers response label (because of emoji + missing from json schema,2026-06-19 03:40:16,open,help wanted,lwasser,United States,staff,software-peer-review,issues
 Remove merge conflict markers,2026-06-09 17:16:24,closed,,kysolvik,,contributor,software-peer-review,issues
 Feature/first time reviewer guide,2026-06-09 00:05:18,open,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,issues
@@ -617,8 +619,8 @@ feat(pyosbot): instructions for using the bot,2024-10-03 20:20:52,closed,,lwasse
 enh: editor guide -- Add instruction on when to add partner org label to review,2024-05-23 17:19:14,closed,"help wanted, content-update",pllim,"Baltimore, MD, USA",contributor,software-peer-review,issues
 Fix: add link in the letter to reviewers template to our conflict of interest statement in the peer review policies ,2023-05-23 22:26:58,closed,"help wanted, content-update",lwasser,United States,staff,software-peer-review,issues
 "Author guide - when is a package ""good enough"" for review",2021-10-19 17:39:25,closed,,lwasser,United States,staff,software-peer-review,issues
-ci: update docs workflow to Python 3.11,2026-08-06 01:27:55,open,,InessaPawson,,contributor,software-peer-review,pulls
-fix: update file paths to match Hugo-based pyopensci.github.io ,2026-08-06 00:27:32,open,,InessaPawson,,contributor,software-peer-review,pulls
+ci: update docs workflow to Python 3.11,2026-08-06 01:27:55,closed,,InessaPawson,,contributor,software-peer-review,pulls
+fix: update file paths to match Hugo-based pyopensci.github.io ,2026-08-06 00:27:32,closed,,InessaPawson,,contributor,software-peer-review,pulls
 Remove merge conflict markers,2026-06-09 17:16:24,closed,,kysolvik,,contributor,software-peer-review,pulls
 Feature/first time reviewer guide,2026-06-09 00:05:18,open,,crhea93,"Montreal, QC, CANADA",contributor,software-peer-review,pulls
 fix: cleanup structure of editor guide ,2026-05-18 21:13:14,open,,zenon18,,contributor,software-peer-review,pulls
@@ -812,6 +814,7 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
+ci: bump zizmorcore/zizmor-action from 0.6.1 to 0.6.2 in the actions group,2026-08-12 13:33:52,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyosMeta,issues
 docs: clean up docs and add mermaid arch overview,2026-08-11 19:26:17,closed,,lwasser,United States,staff,pyosMeta,issues
 Release 1.8.0,2026-08-11 15:48:03,closed,,lwasser,United States,staff,pyosMeta,issues
 enh: fail fast when we can't find yml files,2026-08-10 22:10:11,open,,lwasser,United States,staff,pyosMeta,issues
@@ -874,6 +877,7 @@ Update contributor and review data,2025-09-15 00:25:41,closed,,lwasser,United St
 Fix contributor count pagination - add per_page=100 to contributors A…,2025-07-12 21:24:55,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,pyosMeta,issues
 Error in package metrics: contributors count,2025-06-05 15:45:48,closed,"bug, help wanted",lwasser,United States,staff,pyosMeta,issues
 Docs: Create starter sphinx docs for pyosMeta package,2024-07-04 18:45:26,closed,"documentation, help wanted, sprintable",lwasser,United States,staff,pyosMeta,issues
+ci: bump zizmorcore/zizmor-action from 0.6.1 to 0.6.2 in the actions group,2026-08-12 13:33:52,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyosMeta,pulls
 docs: clean up docs and add mermaid arch overview,2026-08-11 19:26:17,closed,,lwasser,United States,staff,pyosMeta,pulls
 Release 1.8.0,2026-08-11 15:48:03,closed,,lwasser,United States,staff,pyosMeta,pulls
 fix: handle missing and plaeholder usernames gracefully,2026-08-07 01:36:29,open,,lwasser,United States,staff,pyosMeta,pulls
@@ -1101,6 +1105,7 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2026-08-17 03:40:25,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-08-11 17:44:29,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-08-10 04:05:24,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update packages.yml,2026-08-05 23:54:47,closed,,lwasser,United States,staff,pyopensci.github.io,issues
@@ -1295,6 +1300,7 @@ Feature: add peer review metadata including citation and date_Accepted to websit
 Fix nav and search bar css issues,2023-06-19 16:51:52,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 ✨ Update: contributor list from pycon event,2023-04-24 17:14:31,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Add drop downs & redirects to pyos,2022-11-07 23:54:06,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2026-08-17 03:40:25,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-08-11 17:44:29,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-08-10 04:05:24,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update packages.yml,2026-08-05 23:54:47,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
@@ -2050,6 +2056,7 @@ Add a package listing page to the website,2019-09-17 20:19:12,closed,,lwasser,Un
 fixing formatting,2019-08-28 22:53:51,closed,,choldgraf,California,contributor,pyopensci.github.io,pulls
 adding custom types,2019-08-28 22:44:41,closed,,choldgraf,California,contributor,pyopensci.github.io,pulls
 Fix Github link site footer,2019-03-19 00:34:57,closed,,leouieda,"São Paulo, Brazil",contributor,pyopensci.github.io,pulls
+Update peer review guide URL,2026-08-12 15:06:59,closed,,tobyhodges,"Leimen, Germany",contributor,handbook,issues
 fix: update file paths to match Hugo-based pyopensci.github.io,2026-08-06 00:52:17,open,,InessaPawson,,contributor,handbook,issues
 docs: remove references to obsolete PyOS Discourse,2026-05-02 21:01:22,closed,,InessaPawson,,contributor,handbook,issues
 fix: copy edit and cleanup org files,2026-04-17 17:57:05,closed,,lwasser,United States,staff,handbook,issues
@@ -2058,6 +2065,7 @@ fix: copy edits to the governance section,2026-04-16 20:39:18,closed,,lwasser,Un
 fix: cleanup typos throughout,2026-04-16 16:59:08,closed,,lwasser,United States,staff,handbook,issues
 docs: remove link to PyOS Discourse,2026-04-13 16:04:05,closed,,InessaPawson,,contributor,handbook,issues
 fix: misspellings,2026-04-11 19:50:57,closed,,InessaPawson,,contributor,handbook,issues
+Update peer review guide URL,2026-08-12 15:06:59,closed,,tobyhodges,"Leimen, Germany",contributor,handbook,pulls
 fix: update file paths to match Hugo-based pyopensci.github.io,2026-08-06 00:52:17,open,,InessaPawson,,contributor,handbook,pulls
 docs: remove references to obsolete PyOS Discourse,2026-05-02 21:01:22,closed,,InessaPawson,,contributor,handbook,pulls
 fix: copy edit and cleanup org files,2026-04-17 17:57:05,closed,,lwasser,United States,staff,handbook,pulls
@@ -2305,6 +2313,8 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+Update contributor and review data,2026-08-16 05:13:57,open,,github-actions[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-08-11 21:47:17,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 fix: streamline sprint data script,2026-08-11 21:39:19,closed,,lwasser,United States,staff,peer-review-metrics,issues
 perf: clean up api calls to make the workflow more efficient,2026-08-11 21:29:56,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Fix: use pyosmeta functions and methods when possible rather than rewriting scripts,2026-08-11 21:10:53,closed,,lwasser,United States,staff,peer-review-metrics,issues
@@ -2357,8 +2367,10 @@ ENH: figure out a way to pull editor domain expertise from our data,2025-02-28 2
 bug: pr/issue data by year,2025-01-22 17:00:52,open,,lwasser,United States,staff,peer-review-metrics,issues
 feat(review time): calculate average reviewer time for each review,2024-09-30 20:01:12,open,,lwasser,United States,staff,peer-review-metrics,issues
 Feat(): duration between label editor-assigned and reviewers-assigned,2024-09-27 15:37:41,open,,lwasser,United States,staff,peer-review-metrics,issues
-Create an autopreview action for this metrics repo,2024-07-31 22:46:10,open,"help wanted, sprintable",lwasser,United States,staff,peer-review-metrics,issues
+Create an autopreview action for this metrics repo,2024-07-31 22:46:10,closed,"help wanted, sprintable",lwasser,United States,staff,peer-review-metrics,issues
 ✨ Use devstats to collect metadata about our packages - start with calculating pony factor,2023-07-03 20:43:00,open,enhancement,lwasser,United States,staff,peer-review-metrics,issues
+Update contributor and review data,2026-08-16 05:13:57,open,,github-actions[bot],,contributor,peer-review-metrics,pulls
+Update contributor and review data,2026-08-11 21:47:17,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: streamline sprint data script,2026-08-11 21:39:19,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 perf: clean up api calls to make the workflow more efficient,2026-08-11 21:29:56,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Fix: use pyosmeta functions and methods when possible rather than rewriting scripts,2026-08-11 21:10:53,closed,,lwasser,United States,staff,peer-review-metrics,pulls
