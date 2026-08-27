@@ -74,6 +74,7 @@ def get_active_status(labels):
     return "unknown"
 ```
 
+*Last updated: **`{python} today`** *
 
 ```{python}
 # Open submission review data
@@ -135,15 +136,28 @@ editor_activity = (
 editor_activity["count"] = editor_activity["count"].astype(int)
 editor_activity = editor_activity.sort_values(by="count", ascending=False).reset_index(drop=True)
 
-# Get counts of available and busy editors
-available_editors = editor_activity[editor_activity["count"] == 0]
-busy_editors = editor_activity[editor_activity["count"] != 0]
-num_available_editors = len(available_editors)
-
-# Rename and cleanup
+# Rename and cleanup, then split busy/available so all three tables share columns.
 editor_activity = editor_activity.rename(columns={"count": "active review count"})
 col = editor_activity.pop("active review count")
 editor_activity.insert(1, "active review count", col)
+
+available_editors = editor_activity[editor_activity["active review count"] == 0]
+busy_editors = editor_activity[editor_activity["active review count"] != 0]
+num_available_editors = len(available_editors)
+
+EDITOR_TABLE_ITABLES = dict(
+    classes="display compact",
+    style="width:100%;table-layout:fixed",
+    autoWidth=False,
+    columnDefs=[
+        {"targets": 0, "width": "6%"},   # gh_username
+        {"targets": 1, "width": "8%"},   # active review count
+        {"targets": 2, "width": "8%"},   # first_name
+        {"targets": 3, "width": "22%"},  # Domain_areas
+        {"targets": 4, "width": "21%"},  # Description
+        {"targets": 5, "width": "35%"},  # technical_areas
+    ],
+)
 
 # Next, compare editor activity to editors that want to offboard after that review
 offboard_usernames = emeritus_editors["gh_username"]
@@ -209,7 +223,7 @@ dict(
 
 ```{python}
 #| title: "pyOpenSci Current Active  Editorial Review Counts"
-show(editor_activity)
+show(editor_activity, **EDITOR_TABLE_ITABLES)
 ```
 
 ## Row {height=auto}
@@ -231,13 +245,13 @@ offboarding_editor_reviews
 
 ```{python}
 #| title: "Busy editors running reviews "
-show(busy_editors)
+show(busy_editors, **EDITOR_TABLE_ITABLES)
 ```
 
 ## Row {height=auto}
 ```{python}
 #| title: "Available Editors"
-show(available_editors)
+show(available_editors, **EDITOR_TABLE_ITABLES)
 ```
 
 ```{python}
