@@ -97,11 +97,13 @@ reviews = reviews.rename(
 open_reviews = reviews[reviews["Date Closed"].isna()]
 open_reviews.drop(columns=["Date Closed","Unnamed: 0"], inplace=True)
 
+# Issue YAML keeps GitHub's display casing; the board list is lowercase.
 editors = open_reviews["editor"].astype(str).str.split().str[0]
-editors = editors[editors != "TBD"]
+editors = editors[editors.str.lower() != "tbd"]
 
 active_editor_counts = (
-    editors.value_counts()
+    editors.str.lower()
+    .value_counts()
     .rename_axis("gh_username")
     .reset_index(name="count")
 )
@@ -117,6 +119,9 @@ active_editor_counts = (
 editor_path = Path.cwd().parents[0] / "data" /  "editorial_team_domains.csv"
 all_editors = pd.read_csv(editor_path)
 all_editors = all_editors[["gh_username","first_name","Domain_areas","Description","technical_areas"]]
+all_editors["gh_username"] = (
+    all_editors["gh_username"].astype(str).str.strip().str.lower()
+)
 
 emeritus_editor_path = Path.cwd().parents[0] / "data" /  "emeritus_editor_domains.csv"
 emeritus_editors = pd.read_csv(emeritus_editor_path)
@@ -154,7 +159,13 @@ offboard_usernames = emeritus_editors["gh_username"]
 # offboard_reviews
 
 # Active editors are ones that are currently leading reviews. But some may intend to offboard after. Generate a list of reviews lead by those
-offboarding_editor_reviews = open_reviews[open_reviews["editor"].isin(offboard_usernames)].copy()
+offboard_keys = (
+    emeritus_editors["gh_username"].dropna().astype(str).str.strip().str.lower()
+)
+editor_key = (
+    open_reviews["editor"].astype(str).str.split(r"[ ,&]", n=1).str[0].str.lower()
+)
+offboarding_editor_reviews = open_reviews[editor_key.isin(offboard_keys)].copy()
 ```
 
 ## Row {height=auto}
