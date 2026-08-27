@@ -1,5 +1,6 @@
 title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo,type
-docs: fix typos,2026-08-22 18:16:21,open,,InessaPawson,,contributor,python-package-guide,issues
+Update translation of Japanese,2026-08-24 22:48:16,open,"translations, lang-JA",tkoyama010,Japan,contributor,python-package-guide,issues
+docs: fix typos,2026-08-22 18:16:21,closed,,InessaPawson,,contributor,python-package-guide,issues
 docs: clarify recommended use of requires-python,2026-08-20 02:49:27,open,,InessaPawson,,contributor,python-package-guide,issues
 Add a GH action to update the translation issues when .po files change,2026-08-09 23:46:02,open,"translations, maintenance",flpm,"New York, NY",contributor,python-package-guide,issues
 Update star history chart link in README,2026-08-06 10:43:00,closed,,Mubelotix,"Rouen, France",contributor,python-package-guide,issues
@@ -184,7 +185,8 @@ Sync labels across pyos repos,2024-05-08 18:39:16,open,"help wanted, sprintable"
 Python Package Guide: Fix breakout box / admonition that shows a user how to rename their package if the name is taken on pypi,2024-04-15 22:31:00,closed,"help wanted, sprintable, pycascades",Tyler-Bonnell,"Seattle, WA",contributor,python-package-guide,issues
 feat: Add cross links between author checks in our peer review guide and guidance in the packaging guide,2023-01-10 21:44:47,closed,"help wanted, sprintable, enhancement-feature, beginner-friendly",lwasser,United States,staff,python-package-guide,issues
 Add: tutorial on how to setup a Python testing envt using hatch to our tutorials,2019-06-03 15:29:49,open,"new-content, help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
-docs: fix typos,2026-08-22 18:16:21,open,,InessaPawson,,contributor,python-package-guide,pulls
+Update translation of Japanese,2026-08-24 22:48:16,open,"translations, lang-JA",tkoyama010,Japan,contributor,python-package-guide,pulls
+docs: fix typos,2026-08-22 18:16:21,closed,,InessaPawson,,contributor,python-package-guide,pulls
 docs: clarify recommended use of requires-python,2026-08-20 02:49:27,open,,InessaPawson,,contributor,python-package-guide,pulls
 Add a GH action to update the translation issues when .po files change,2026-08-09 23:46:02,open,"translations, maintenance",flpm,"New York, NY",contributor,python-package-guide,pulls
 Update star history chart link in README,2026-08-06 10:43:00,closed,,Mubelotix,"Rouen, France",contributor,python-package-guide,pulls
@@ -818,11 +820,20 @@ Enabled search and added a preface/intro,2019-01-30 17:29:53,closed,,kysolvik,,c
 Added a disclaimer to the intro page,2019-01-25 23:19:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Added Initial content,2019-01-25 23:08:49,closed,,kysolvik,,contributor,software-peer-review,pulls
 Adding jupyter book,2019-01-15 16:54:50,closed,,choldgraf,California,contributor,software-peer-review,pulls
+"fix: Add russ, and remove kelly as she acepted",2026-08-26 00:07:18,closed,,lwasser,United States,staff,pyosMeta,issues
+Fix:  emeritus editors not being updated correctly,2026-08-25 23:23:36,closed,,lwasser,United States,staff,pyosMeta,issues
+Release: changelog:,2026-08-25 20:44:05,closed,,lwasser,United States,staff,pyosMeta,issues
+Update contributor and review data,2026-08-25 20:32:58,closed,,github-actions[bot],,contributor,pyosMeta,issues
+fix: token issues and bug that overwrites everything,2026-08-25 20:09:14,closed,,lwasser,United States,staff,pyosMeta,issues
+fix: precommit,2026-08-25 19:42:59,closed,,lwasser,United States,staff,pyosMeta,issues
+Update contributor and review data,2026-08-25 19:38:53,closed,,github-actions[bot],,contributor,pyosMeta,issues
+fix: secret value,2026-08-25 19:07:19,closed,,lwasser,United States,staff,pyosMeta,issues
+feat: add get team members to workflow,2026-08-25 00:40:04,closed,,lwasser,United States,staff,pyosMeta,issues
 ci: bump zizmorcore/zizmor-action from 0.6.1 to 0.6.2 in the actions group,2026-08-12 13:33:52,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyosMeta,issues
 docs: clean up docs and add mermaid arch overview,2026-08-11 19:26:17,closed,,lwasser,United States,staff,pyosMeta,issues
 Release 1.8.0,2026-08-11 15:48:03,closed,,lwasser,United States,staff,pyosMeta,issues
 enh: fail fast when we can't find yml files,2026-08-10 22:10:11,open,,lwasser,United States,staff,pyosMeta,issues
-fix: handle missing and plaeholder usernames gracefully,2026-08-07 01:36:29,open,,lwasser,United States,staff,pyosMeta,issues
+fix: handle missing and placeholder usernames gracefully,2026-08-07 01:36:29,open,,lwasser,United States,staff,pyosMeta,issues
 "bug: when we have a blank reviewer field for a issue, the workflow tries to find that user",2026-08-07 00:51:06,open,,lwasser,United States,staff,pyosMeta,issues
 fix: Remove partnerships noise from cli output and add tqdm to metrics ,2026-08-06 22:45:41,closed,,lwasser,United States,staff,pyosMeta,issues
 fix: make sure we never delete existing gh metrics + move to rest api,2026-08-06 00:18:53,closed,,lwasser,United States,staff,pyosMeta,issues
@@ -881,10 +892,19 @@ Update contributor and review data,2025-09-15 00:25:41,closed,,lwasser,United St
 Fix contributor count pagination - add per_page=100 to contributors A…,2025-07-12 21:24:55,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,pyosMeta,issues
 Error in package metrics: contributors count,2025-06-05 15:45:48,closed,"bug, help wanted",lwasser,United States,staff,pyosMeta,issues
 Docs: Create starter sphinx docs for pyosMeta package,2024-07-04 18:45:26,closed,"documentation, help wanted, sprintable",lwasser,United States,staff,pyosMeta,issues
+"fix: Add russ, and remove kelly as she acepted",2026-08-26 00:07:18,closed,,lwasser,United States,staff,pyosMeta,pulls
+Fix:  emeritus editors not being updated correctly,2026-08-25 23:23:36,closed,,lwasser,United States,staff,pyosMeta,pulls
+Release: changelog:,2026-08-25 20:44:05,closed,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2026-08-25 20:32:58,closed,,github-actions[bot],,contributor,pyosMeta,pulls
+fix: token issues and bug that overwrites everything,2026-08-25 20:09:14,closed,,lwasser,United States,staff,pyosMeta,pulls
+fix: precommit,2026-08-25 19:42:59,closed,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2026-08-25 19:38:53,closed,,github-actions[bot],,contributor,pyosMeta,pulls
+fix: secret value,2026-08-25 19:07:19,closed,,lwasser,United States,staff,pyosMeta,pulls
+feat: add get team members to workflow,2026-08-25 00:40:04,closed,,lwasser,United States,staff,pyosMeta,pulls
 ci: bump zizmorcore/zizmor-action from 0.6.1 to 0.6.2 in the actions group,2026-08-12 13:33:52,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyosMeta,pulls
 docs: clean up docs and add mermaid arch overview,2026-08-11 19:26:17,closed,,lwasser,United States,staff,pyosMeta,pulls
 Release 1.8.0,2026-08-11 15:48:03,closed,,lwasser,United States,staff,pyosMeta,pulls
-fix: handle missing and plaeholder usernames gracefully,2026-08-07 01:36:29,open,,lwasser,United States,staff,pyosMeta,pulls
+fix: handle missing and placeholder usernames gracefully,2026-08-07 01:36:29,open,,lwasser,United States,staff,pyosMeta,pulls
 fix: Remove partnerships noise from cli output and add tqdm to metrics ,2026-08-06 22:45:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 fix: make sure we never delete existing gh metrics + move to rest api,2026-08-06 00:18:53,closed,,lwasser,United States,staff,pyosMeta,pulls
 fix: use python 3.12,2026-08-05 23:04:28,closed,,lwasser,United States,staff,pyosMeta,pulls
@@ -1109,7 +1129,12 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
-Update contributor and review data,2026-08-24 03:41:41,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+fix: add a few editors manually,2026-08-26 00:09:30,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2026-08-25 21:21:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+fix: update action to run editorial updates,2026-08-25 21:11:28,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2026-08-25 21:05:55,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Fix: editorial team data should drive sorting editorial team list,2026-08-25 19:29:34,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2026-08-24 03:41:41,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Add Akrita as editor,2026-08-20 19:29:59,closed,,crhea93,"Montreal, QC, CANADA",contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-08-17 03:40:25,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 Update contributor and review data,2026-08-11 17:44:29,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
@@ -1306,7 +1331,12 @@ Feature: add peer review metadata including citation and date_Accepted to websit
 Fix nav and search bar css issues,2023-06-19 16:51:52,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 ✨ Update: contributor list from pycon event,2023-04-24 17:14:31,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Add drop downs & redirects to pyos,2022-11-07 23:54:06,closed,,lwasser,United States,staff,pyopensci.github.io,issues
-Update contributor and review data,2026-08-24 03:41:41,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+fix: add a few editors manually,2026-08-26 00:09:30,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
+Update contributor and review data,2026-08-25 21:21:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+fix: update action to run editorial updates,2026-08-25 21:11:28,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
+Update contributor and review data,2026-08-25 21:05:55,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Fix: editorial team data should drive sorting editorial team list,2026-08-25 19:29:34,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
+Update contributor and review data,2026-08-24 03:41:41,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Add Akrita as editor,2026-08-20 19:29:59,closed,,crhea93,"Montreal, QC, CANADA",contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-08-17 03:40:25,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data,2026-08-11 17:44:29,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
@@ -2326,8 +2356,9 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
-Bump astral-sh/setup-uv from 9.0.0 to 10.0.1 in the github-actions group,2026-08-21 22:45:55,open,"dependencies, github_actions",dependabot[bot],,contributor,peer-review-metrics,issues
-Update contributor and review data,2026-08-16 05:13:57,open,,github-actions[bot],,contributor,peer-review-metrics,issues
+feat: update get editors to use pyosmeta,2026-08-27 01:23:36,closed,,lwasser,United States,staff,peer-review-metrics,issues
+Bump astral-sh/setup-uv from 9.0.0 to 10.0.1 in the github-actions group,2026-08-21 22:45:55,closed,"dependencies, github_actions",dependabot[bot],,contributor,peer-review-metrics,issues
+Update contributor and review data,2026-08-16 05:13:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-08-11 21:47:17,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 fix: streamline sprint data script,2026-08-11 21:39:19,closed,,lwasser,United States,staff,peer-review-metrics,issues
 perf: clean up api calls to make the workflow more efficient,2026-08-11 21:29:56,closed,,lwasser,United States,staff,peer-review-metrics,issues
@@ -2383,8 +2414,9 @@ feat(review time): calculate average reviewer time for each review,2024-09-30 20
 Feat(): duration between label editor-assigned and reviewers-assigned,2024-09-27 15:37:41,open,,lwasser,United States,staff,peer-review-metrics,issues
 Create an autopreview action for this metrics repo,2024-07-31 22:46:10,closed,"help wanted, sprintable",lwasser,United States,staff,peer-review-metrics,issues
 ✨ Use devstats to collect metadata about our packages - start with calculating pony factor,2023-07-03 20:43:00,open,enhancement,lwasser,United States,staff,peer-review-metrics,issues
-Bump astral-sh/setup-uv from 9.0.0 to 10.0.1 in the github-actions group,2026-08-21 22:45:55,open,"dependencies, github_actions",dependabot[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2026-08-16 05:13:57,open,,github-actions[bot],,contributor,peer-review-metrics,pulls
+feat: update get editors to use pyosmeta,2026-08-27 01:23:36,closed,,lwasser,United States,staff,peer-review-metrics,pulls
+Bump astral-sh/setup-uv from 9.0.0 to 10.0.1 in the github-actions group,2026-08-21 22:45:55,closed,"dependencies, github_actions",dependabot[bot],,contributor,peer-review-metrics,pulls
+Update contributor and review data,2026-08-16 05:13:57,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-08-11 21:47:17,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: streamline sprint data script,2026-08-11 21:39:19,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 perf: clean up api calls to make the workflow more efficient,2026-08-11 21:29:56,closed,,lwasser,United States,staff,peer-review-metrics,pulls
