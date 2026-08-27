@@ -1,133 +1,64 @@
-"""This script updates our editorial team csv file with the most current editors.
+"""Update editorial team CSVs from website board YAML + local domain data.
 
-1. It parses a manually created list of editors found in the csv
-file: `data/editorial_team_domains`. This csv was created by
-manually adding editor names to the file with domain areas from our Google sheet.
-The (private) google sheet is generated from a google form that collects editor
-expertise and domains when they apply to be an editor with us.
-2. The script, uses the GitHub API to return the list of GitHub  usernames from
-the editorial team on GitHub. (see)
-  * https://github.com/orgs/pyOpenSci/teams/emeritus-editors/members
-  * https://github.com/orgs/pyOpenSci/teams/editorial-board/members
-When we onboard a new editor, we add them to the editorial-board GitHub team so
-they have proper permissions in repositories in our organization. When an editor
-wishes to step down, we move them to the emeritus-editors team. However, they
-may still be active in reviews so we keep them on the editorial-board team until
-they have completed all of their reviews.
-
-The GitHub team data are collected using the GitHub graphQL interface.
-
-3. Finally, this script merges the data parsed from the team with the .csv file.
-
-This script creates two .csv files. The data/editorial_team_domains.csv contains
-all currently "activate" editors. data/emeritus_editor_domains.csv contains
-editors that are either fully offboarded or intend to offboard after they
-finish their currently active reviews.
+1. Membership comes from pyopensci.github.io board YAML (written by
+   pyosMeta ``update-editorial-board`` from GitHub teams + manual roster):
+   * ``data/editorial-board.yml`` — active editors
+   * ``data/emeritus-editors.yml`` — emeritus editors
+2. Domain / expertise columns come from the local CSV
+   ``data/editorial_team_domains.csv`` (curated from the editor signup
+   Google Sheet).
+3. Merge usernames with domain rows and write:
+   * ``data/editorial_team_domains.csv`` — current active editors
+   * ``data/emeritus_editor_domains.csv`` — emeritus (``active`` = False)
 
 TODO:
-* it would be good to find a more automated way to get the domain data from our
-Google Sheet. one way to do this would be to create a new spreadsheet that
-pulls from our editor signup but only contains gh username and then the domain
-areas.
-
+* Automate domain data from the Google Sheet (gh username + domains only).
 """
 
-import os
-
-import requests
-from dotenv import load_dotenv
-import pandas as pd
 from pathlib import Path
 
-load_dotenv()
+import pandas as pd
+from pyosmeta.constants import WEBSITE_DATA_RAW_URL
+from pyosmeta.file_io import open_yml_file
 
-# Replace with your GitHub personal access token
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-GITHUB_API_URL = "https://api.github.com/graphql"
-
-
-def get_team_members(team_name: str = "editorial-board"):
-    """A function that hits the GH graphQL api and pulls down members
-    from our editorial team. This list should be the most current list of
-    pyOpenSci editors."""
-
-    query = """
-    query ($slug: String!){
-      organization(login: "pyOpenSci") {
-        team(slug: $slug) {
-          members(first: 100) {
-            nodes { login }
-          }
-        }
-      }
-    }
-    """
-
-    variables = {"slug": team_name}
-
-    headers = {
-        "Authorization": f"Bearer {GITHUB_TOKEN}",
-        "Accept": "application/vnd.github.v3+json",
-    }
-
-    response = requests.post(
-        GITHUB_API_URL, json={"query": query, "variables": variables}, headers=headers
-    )
-
-    if response.status_code == 200:
-        data = response.json()
-        members = data["data"]["organization"]["team"]["members"]["nodes"]
-        return [member["login"] for member in members]
-    else:
-        print(f"Failed to retrieve team members: {response.status_code}")
-        print(response.text)
-        return []
+DATA_DIR = Path("data")
+EDITORIAL_BOARD_URL = f"{WEBSITE_DATA_RAW_URL}editorial-board.yml"
+EMERITUS_EDITORS_URL = f"{WEBSITE_DATA_RAW_URL}emeritus-editors.yml"
 
 
-def filter_members(members, exclude):
-    return [member for member in members if member not in exclude]
+def usernames_from_board_yml(url: str) -> list[str]:
+    """Return sorted lowercase GitHub usernames from a board YAML mapping."""
+    data = open_yml_file(url)
+    if not data:
+        raise ValueError(f"Board YAML at {url} is empty or missing")
+    return sorted({(u or "").strip().lower() for u in data.keys() if u})
 
 
-if __name__ == "__main__":
-    # Pull down the list of GitHub usernames from our teams
-    editors = get_team_members("editorial-board")
-    emeritus = get_team_members("emeritus-editors")
+def main() -> None:
+    editors = usernames_from_board_yml(EDITORIAL_BOARD_URL)
+    emeritus = usernames_from_board_yml(EMERITUS_EDITORS_URL)
 
-    # Cleanup usernames
-    editors = sorted({(u or "").strip().lower() for u in editors})
-    emeritus = sorted({(u or "").strip().lower() for u in emeritus})
-
-    # Open the CSV that contains domain info for editors
-    data_dir = Path("data")
-    editor_domains = pd.read_csv(data_dir / "editorial_team_domains.csv")
+    editor_domains = pd.read_csv(DATA_DIR / "editorial_team_domains.csv")
     editor_domains["gh_username"] = editor_domains["gh_username"].astype(str)
 
-    # Build DataFrames of current editors and emeritus from the live team lists
-    editors_df = (
-        pd.DataFrame(editors, columns=["gh_username"])
-        if editors
-        else pd.DataFrame(columns=["gh_username"])
-    )
-    emeritus_df = (
-        pd.DataFrame(emeritus, columns=["gh_username"])
-        if emeritus
-        else pd.DataFrame(columns=["gh_username"])
-    )
+    editors_df = pd.DataFrame(editors, columns=["gh_username"])
+    emeritus_df = pd.DataFrame(emeritus, columns=["gh_username"])
 
-    # Merge with domain info (left join to keep the team list as the source of truth)
+    # Left join: website roster is the membership source of truth
     all_editors = editors_df.merge(editor_domains, on="gh_username", how="left")
-    all_emeritus = emeritus_df.merge(editor_domains, on="gh_username", how="left")
-
-    # In the emeritus file, mark all rows as inactive
+    all_emeritus = emeritus_df.merge(
+        editor_domains, on="gh_username", how="left"
+    )
     all_emeritus["active"] = False
 
-    # Export both CSVs with the same structure
-    editors_out = data_dir / "editorial_team_domains.csv"
-    emeritus_out = data_dir / "emeritus_editor_domains.csv"
-
+    editors_out = DATA_DIR / "editorial_team_domains.csv"
+    emeritus_out = DATA_DIR / "emeritus_editor_domains.csv"
     all_editors.to_csv(editors_out, index=False)
     all_emeritus.to_csv(emeritus_out, index=False)
 
-    # Optional console summary
     print(f"Wrote {len(all_editors)} current editors to {editors_out}")
     print(f"Wrote {len(all_emeritus)} emeritus editors to {emeritus_out}")
+
+
+if __name__ == "__main__":
+    main()

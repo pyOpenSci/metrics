@@ -50,7 +50,9 @@ def process_contributors(all_contribs: dict[str, PersonModel]) -> pd.DataFrame:
             "packages_reviewed": len(data.packages_reviewed),
             "packages_eic": len(data.packages_eic),
             "packages_editor": len(data.packages_editor),
-            "editor": data.editorial_board,
+            "editor": any(
+                role.lower() == "editor" for role in data.contributor_type
+            ),
             "maintainer": any(
                 role in data.contributor_type
                 for role in ["maintainer", "package-maintainer"]
