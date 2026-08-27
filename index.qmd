@@ -1,31 +1,52 @@
 ---
 title: Welcome to pyOpenSci Metrics Dashboards
 jupyter: python3
+execute:
+  echo: false
 ---
 
-## Welcome to pyOpenSci's metrics dashboard
+```{python}
+from datetime import datetime
 
-If you are looking to contribute, checkout our [README file](https://www.github.com//pyopensci/metrics/README.md).
+today = datetime.today().date().strftime("%d %B %Y")
+```
 
-::: {.grid }
+*Last updated: **`{python} today`***
 
-::: {.g-col-6 style="border: 1px solid #cccccc; padding: 10px"}
+Dashboards for pyOpenSci peer review, packages, and community activity.
+To contribute, see the [README](https://www.github.com/pyopensci/metrics/README.md).
 
-**Peer Review Status and History Data**
+::: {.grid}
 
-* [Peer Review Status Dashboard](/peer-review/current-review-status.html)
-* [Peer Review Over Time](/peer-review/reviews-over-time.html)
-* [Peer Review Trends](/peer-review/review-trends.html)
+::: {.g-col-12 .g-col-md-4 style="border: 1px solid #cccccc; padding: 10px"}
+
+**Peer review**
+
+* [Peer review status dashboard](/peer-review/peer-review-status-dashboard.html)
+* [Editorial dashboard](/peer-review/editorial-dashboard.html)
+* [Current review status](/peer-review/current-review-status.html)
+* [Reviews over time](/peer-review/reviews-over-time.html)
+* [Peer review trends](/peer-review/review-trends.html)
 
 :::
 
-::: {.g-col-6 style="border: 1px solid #cccccc; padding: 10px"}
-**Contributor Data through Sprints and adhoc**
+::: {.g-col-12 .g-col-md-4 style="border: 1px solid #cccccc; padding: 10px"}
 
-* [Contributor Data](/contributors/contributors.html)
-* [Sprint Contributor Data](/contributors/sprints.qmd)
-* [Package Data](/contributors/package.qmd)
+**Package metrics**
+
+* [Accepted package metrics](/peer-review/accepted-packages.html)
+* [Package dashboard](/peer-review/pyos-package-dashboard.html)
+* [Package activity](/pyos-packages/package-activity.html)
+
 :::
 
+::: {.g-col-12 .g-col-md-4 style="border: 1px solid #cccccc; padding: 10px"}
+
+**Contributors**
+
+* [Contributor data](/contributors/contributors.html)
+* [Sprint data](/contributors/sprints.html)
+
+:::
 
 :::

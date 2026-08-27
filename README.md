@@ -3,6 +3,63 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+## Data flow (high level)
+
+This Quarto site charts peer-review and contributor metrics. Collector
+scripts in `scripts/` write checked-in CSVs under `data/`; `.qmd` pages
+read those CSVs. [pyosMeta](https://github.com/pyOpenSci/pyosMeta) is the
+shared library for GitHub review parsing and for reading website YAML
+that pyosMeta itself publishes to
+[pyopensci.github.io](https://github.com/pyOpenSci/pyopensci.github.io)
+(`contributors.yml`, `packages.yml`, editorial board YAML).
+
+```mermaid
+flowchart LR
+  subgraph sources [Sources]
+    ghTeams[GitHub org teams]
+    ghReviews[software-submission issues]
+    ghApi[GitHub API activity]
+  end
+
+  subgraph pyosMetaPkg [pyosMeta]
+    updateBoard[update-editorial-board]
+    parseReviews[ProcessIssues and GitHubAPI]
+  end
+
+  subgraph website [pyopensci.github.io data]
+    boardYml[editorial-board.yml]
+    contribYml[contributors.yml]
+    pkgYml[packages.yml]
+  end
+
+  subgraph metricsRepo [metrics repo]
+    scripts[collector scripts]
+    csvs[data CSVs]
+    qmd[Quarto dashboards]
+  end
+
+  ghTeams --> updateBoard --> boardYml
+  updateBoard --> contribYml
+  ghReviews --> parseReviews
+  parseReviews --> contribYml
+  parseReviews --> pkgYml
+
+  boardYml --> scripts
+  contribYml --> scripts
+  pkgYml --> scripts
+  ghReviews --> scripts
+  ghApi --> scripts
+  parseReviews --> scripts
+
+  scripts --> csvs --> qmd
+```
+
+- **Editorial membership** — website board YAML (written by pyosMeta);
+  metrics merges local domain columns in `get-editors.py`.
+- **Reviews / packages / contributors** — pyosMeta helpers and/or
+  website YAML via `open_yml_file`.
+- **Sprint / PR activity** — GitHub API (and Projects for sprint data)
+  from metrics scripts, sometimes via pyosMeta `GitHubAPI`.
 
 ## How to Contribute
 
@@ -100,13 +157,13 @@ uv run nox -s html
 ### Build a static html website
 
 ```bash
-uv run nox -s html
+nox -s html
 ```
 
 ### Build a live local server dashboard
 
 ```bash
-uv run nox -s serve
+nox -s serve
 ```
 
 On a Mac you can use `ctrl + d` to stop a live server.

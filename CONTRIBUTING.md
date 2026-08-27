@@ -13,13 +13,13 @@ for the pyOpenSci organization. This data includes:
 * Contributor pull request and issue data
 * Contributor data collected and parsed using the all-contributors bot
 * Peer review data collected from our software-submission repository
-* Editorial team data collected from our github editorial team (some data such as domain data are added manually)
+* Editorial team membership from website board YAML (pyosMeta); domain data added manually
 
 ## About the scripts in this repository
 
 The `scripts/` directory contains utility scripts for data collection, parsing, and analysis:
 
-* **get-editors.py**: Updates the editorial team CSV file with current editors by merging manually curated domain data and GitHub team membership (via GraphQL API). Output: `data/editorial_team_domains.csv`.
+* **get-editors.py**: Merges website `editorial-board.yml` / `emeritus-editors.yml` (via pyosMeta `WEBSITE_DATA_RAW_URL`) with manually curated domain data. Outputs: `data/editorial_team_domains.csv`, `data/emeritus_editor_domains.csv`.
 * **get-package-data.py**: Loads website `packages.yml` via pyosMeta (`PACKAGES_RAW_URL`) and writes `data/package_data.csv`.
 * **get-prs.py**: Parses all active pyOpenSci repositories to collect contributor activity (issues and PRs) for the current year, excluding bots. Outputs a CSV for tracking contribution growth.
 * **get-review-contributors.py**: Loads website `contributors.yml` via pyosMeta (`CONTRIBUTORS_RAW_URL`), validates with `PersonModel`, and writes `data/review_contribs.csv`.
@@ -28,8 +28,7 @@ The `scripts/` directory contains utility scripts for data collection, parsing, 
 
 ## How the scripts are used
 
-The scripts above are run via a CI cron job with the exception of the get-editors.py script which right now
-doesn't run successfully in CI. Luckily our editorial team rotates slowly so this item is ok to have to manually run locally and update for the time being.
+The scripts above are run via a CI cron job.
 
 ## Running scripts locally
 
