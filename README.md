@@ -28,6 +28,8 @@ flowchart LR
 
   subgraph website [pyopensci.github.io data]
     boardYml[editorial-board.yml]
+    emeritusYml[emeritus-editors.yml]
+    manualYml[manual-editorial-roster.yml]
     contribYml[contributors.yml]
     pkgYml[packages.yml]
   end
@@ -39,12 +41,16 @@ flowchart LR
   end
 
   ghTeams --> updateBoard --> boardYml
+  updateBoard --> emeritusYml
   updateBoard --> contribYml
+  manualYml --> updateBoard
   ghReviews --> parseReviews
   parseReviews --> contribYml
   parseReviews --> pkgYml
 
   boardYml --> scripts
+  emeritusYml --> scripts
+  manualYml --> scripts
   contribYml --> scripts
   pkgYml --> scripts
   ghReviews --> scripts
@@ -54,8 +60,9 @@ flowchart LR
   scripts --> csvs --> qmd
 ```
 
-- **Editorial membership** — website board YAML (written by pyosMeta);
-  metrics merges local domain columns in `get-editors.py`.
+- **Editorial membership** — website board YAML plus
+  `manual-editorial-roster.yml`; metrics merges those usernames with
+  local domain columns in `get-editors.py`.
 - **Reviews / packages / contributors** — pyosMeta helpers and/or
   website YAML via `open_yml_file`.
 - **Sprint / PR activity** — GitHub API (and Projects for sprint data)

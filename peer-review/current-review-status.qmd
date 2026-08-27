@@ -314,10 +314,19 @@ editor_path = Path.cwd().parents[0] / "data" /  "editorial_team_domains.csv"
 editor_data = pd.read_csv(editor_path)
 editor_data.columns
 editor_data = editor_data[["gh_username","first_name","Domain_areas","Description","technical_areas"]]
+editor_data["gh_username"] = (
+    editor_data["gh_username"].astype(str).str.strip().str.lower()
+)
 all_editors_df = editor_data[["gh_username"]].rename(columns={"gh_username": "editor"})
 
-# Get busy editors
-busy_editors = open_reviews.loc[open_reviews.editor != "TBD", ["editor"]].value_counts().reset_index()
+# Issue YAML keeps GitHub's display casing; the board list is lowercase.
+editor_keys = open_reviews["editor"].astype(str).str.split().str[0].str.lower()
+busy_editors = (
+    editor_keys[editor_keys != "tbd"]
+    .value_counts()
+    .rename_axis("editor")
+    .reset_index(name="count")
+)
 ```
 
 ```{python}

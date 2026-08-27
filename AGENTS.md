@@ -72,7 +72,7 @@ Most scripts refresh via `.github/workflows/update-pr-data.yml` (cron + PR + dis
 | `get-review-contributors.py` | `data/review_contribs.csv` |
 | `get-package-data.py` | `data/package_data.csv` |
 | `get-sprint-data.py` | `data/sprint_data.csv` — needs **project** access (`PROJECTS_READ` in Actions) |
-| `get-editors.py` | `data/editorial_team_domains.csv` — needs teams read (`PYOS_GHA_TEAMS_READ`); may need manual local run if CI fails |
+| `get-editors.py` | `data/editorial_team_domains.csv` (+ emeritus CSV) from website board YAML + `manual-editorial-roster.yml` |
 
 Do not commit secrets. Never put tokens in scripts or CSVs.
 
