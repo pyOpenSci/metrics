@@ -1,5 +1,5 @@
 title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo,type
-Update translation of Japanese,2026-08-24 22:48:16,open,"translations, lang-JA",tkoyama010,Japan,contributor,python-package-guide,issues
+Update translation of Japanese,2026-08-24 22:48:16,closed,"translations, lang-JA",tkoyama010,Japan,contributor,python-package-guide,issues
 docs: fix typos,2026-08-22 18:16:21,closed,,InessaPawson,,contributor,python-package-guide,issues
 docs: clarify recommended use of requires-python,2026-08-20 02:49:27,open,,InessaPawson,,contributor,python-package-guide,issues
 Add a GH action to update the translation issues when .po files change,2026-08-09 23:46:02,open,"translations, maintenance",flpm,"New York, NY",contributor,python-package-guide,issues
@@ -175,6 +175,7 @@ feat(CI/nox): Treat warnings as errors when building in CI,2025-06-14 01:10:38,o
 Clarify recommended use of `requires-python`,2025-06-10 20:27:16,open,,ucodery,,contributor,python-package-guide,issues
 Enhance the Tests section with best practices for clarity and documentation,2025-05-20 21:04:34,open,"help wanted, sprintable",akhilkrishnar0,Bangalore. India,contributor,python-package-guide,issues
 "ENH(new tutorial): clarify the difference bewteen pip, conda and uv pip install  ",2025-05-19 22:06:20,open,"help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
+Translations: fonts that support other languages (specifically Japanese),2025-05-19 21:12:38,open,translations,lwasser,United States,staff,python-package-guide,issues
 Add Packaging Guide entry on dependency locking,2025-05-15 21:25:12,open,"new-content, help wanted",ucodery,,contributor,python-package-guide,issues
 Remove deprecated set-output,2025-02-13 22:50:16,closed,,willingc,San Diego,contributor,python-package-guide,issues
 fix: add note on keyrings and hatch,2024-12-11 20:35:27,closed,,lwasser,United States,staff,python-package-guide,issues
@@ -185,7 +186,7 @@ Sync labels across pyos repos,2024-05-08 18:39:16,open,"help wanted, sprintable"
 Python Package Guide: Fix breakout box / admonition that shows a user how to rename their package if the name is taken on pypi,2024-04-15 22:31:00,closed,"help wanted, sprintable, pycascades",Tyler-Bonnell,"Seattle, WA",contributor,python-package-guide,issues
 feat: Add cross links between author checks in our peer review guide and guidance in the packaging guide,2023-01-10 21:44:47,closed,"help wanted, sprintable, enhancement-feature, beginner-friendly",lwasser,United States,staff,python-package-guide,issues
 Add: tutorial on how to setup a Python testing envt using hatch to our tutorials,2019-06-03 15:29:49,open,"new-content, help wanted, sprintable",lwasser,United States,staff,python-package-guide,issues
-Update translation of Japanese,2026-08-24 22:48:16,open,"translations, lang-JA",tkoyama010,Japan,contributor,python-package-guide,pulls
+Update translation of Japanese,2026-08-24 22:48:16,closed,"translations, lang-JA",tkoyama010,Japan,contributor,python-package-guide,pulls
 docs: fix typos,2026-08-22 18:16:21,closed,,InessaPawson,,contributor,python-package-guide,pulls
 docs: clarify recommended use of requires-python,2026-08-20 02:49:27,open,,InessaPawson,,contributor,python-package-guide,pulls
 Add a GH action to update the translation issues when .po files change,2026-08-09 23:46:02,open,"translations, maintenance",flpm,"New York, NY",contributor,python-package-guide,pulls
@@ -1129,6 +1130,8 @@ Fixed authentication to GitHub API.,2023-04-22 19:59:34,closed,,itsausting,,cont
 Fix: code cleanup and more bug fixes,2023-04-22 19:02:44,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update: redo of issues API,2023-03-07 19:58:41,closed,,lwasser,United States,staff,pyosMeta,pulls
 Add: parse contributors script to update contribs,2023-03-01 00:06:07,closed,,lwasser,United States,staff,pyosMeta,pulls
+Update contributor and review data,2026-08-31 03:38:48,open,,github-actions[bot],,contributor,pyopensci.github.io,issues
+Update contributor and review data,2026-08-27 03:17:07,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 fix: add a few editors manually,2026-08-26 00:09:30,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Update contributor and review data,2026-08-25 21:21:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,issues
 fix: update action to run editorial updates,2026-08-25 21:11:28,closed,,lwasser,United States,staff,pyopensci.github.io,issues
@@ -1331,6 +1334,8 @@ Feature: add peer review metadata including citation and date_Accepted to websit
 Fix nav and search bar css issues,2023-06-19 16:51:52,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 ✨ Update: contributor list from pycon event,2023-04-24 17:14:31,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Add drop downs & redirects to pyos,2022-11-07 23:54:06,closed,,lwasser,United States,staff,pyopensci.github.io,issues
+Update contributor and review data,2026-08-31 03:38:48,open,,github-actions[bot],,contributor,pyopensci.github.io,pulls
+Update contributor and review data,2026-08-27 03:17:07,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 fix: add a few editors manually,2026-08-26 00:09:30,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update contributor and review data,2026-08-25 21:21:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 fix: update action to run editorial updates,2026-08-25 21:11:28,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
@@ -2202,6 +2207,8 @@ Add meeting notes from 5-9-19 meeting,2019-05-17 17:03:28,closed,,jlpalomino,,co
 Add meeting notes for 04-18-19,2019-04-29 16:10:20,closed,,jlpalomino,,contributor,handbook,pulls
 Add notes for 4-4-19 meeting,2019-04-09 16:19:51,closed,,jlpalomino,,contributor,handbook,pulls
 Add meeting notes for 3-21-19,2019-03-21 21:25:10,closed,,jlpalomino,,contributor,handbook,pulls
+MLReproMutate: Mutation Testing for Reproducibility Safeguards in Machine-Learning Research Software,2026-08-30 10:16:43,open,"0/pre-review-checks, New Submission!",ilyuka,,contributor,software-submission,issues
+comprisk: competing-risks survival analysis in Python,2026-08-27 02:38:08,open,,sunnyadn,Canada & US,contributor,software-submission,issues
 bssunfold,2026-08-20 13:13:07,open,presubmission,Radiationsafety,Russia,contributor,software-submission,issues
 [New Submission] research-timeline,2026-08-10 17:55:27,open,"0/pre-review-checks, New Submission!",Strugiss,,contributor,software-submission,issues
 Presubmission Inquiry: PhilanthroPy — scikit-learn estimators and metrics for nonprofit / academic-medical-center fundraising analytics,2026-08-02 22:46:35,open,,shivamlalakiya,,contributor,software-submission,issues
@@ -2257,7 +2264,7 @@ clinops: A Python Toolkit for Clinical ML Data Pipelines,2026-02-24 21:41:53,ope
 Submit rgpycrumbs for review,2026-02-23 01:57:48,open,0/seeking-editor,HaoZeke,University of Iceland,contributor,software-submission,issues
 `phasecurvefit`,2026-02-20 15:32:56,open,0/seeking-editor,nstarman,,contributor,software-submission,issues
 weitsicht submission - Tool to work/automate workflows base on already georeferenced images.,2026-02-18 00:23:51,open,1/editor-assigned,MartinW-S2M,Vienna,contributor,software-submission,issues
-solar-wavelength-calibration: Absolute wavelength calibration of Solar spectra,2026-02-10 18:52:02,open,"5/awaiting-reviewer-response, 6/pyOS-approved, 7/under-joss-review",eigenbrot,,contributor,software-submission,issues
+solar-wavelength-calibration: Absolute wavelength calibration of Solar spectra,2026-02-10 18:52:02,open,"6/pyOS-approved, 7/under-joss-review",eigenbrot,,contributor,software-submission,issues
 pyhctsa: A Python package for highly-comparative time-series analysis,2026-02-08 22:51:04,open,"6/pyOS-approved, 8/joss-review-complete, 1/editor-assigned",joshuabmoore,"School of Physics, The University of Sydney",contributor,software-submission,issues
 Presubmission Inquiry for peer reviewing of our Python Package pygulp for weighted goal linear programming,2026-02-04 12:37:21,open,"presubmission, ⌛ pending-maintainer-response",DrRoomani,,contributor,software-submission,issues
 TanML,2026-01-27 01:30:28,open,"5/awaiting-reviewer-response, 1/editor-assigned",tradertanmay,USA,contributor,software-submission,issues
@@ -2356,6 +2363,8 @@ add submit issue / PR as default,2019-06-20 21:08:22,closed,,lwasser,United Stat
 [WIP] Updating the issue template to be more specific about readme requirements and usability items ,2019-06-20 20:57:26,closed,,lwasser,United States,staff,software-submission,pulls
 Avoid tagging a user account.,2019-06-03 12:29:45,closed,,ocefpaf,"Florianópolis, SC",contributor,software-submission,pulls
 adding link to templates to the issue submission,2019-05-30 20:25:27,closed,,lwasser,United States,staff,software-submission,pulls
+fix: case sensitivity in editorial and use manual yml file,2026-08-27 03:09:56,closed,,lwasser,United States,staff,peer-review-metrics,issues
+Update contributor and review data,2026-08-27 01:36:24,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
 feat: update get editors to use pyosmeta,2026-08-27 01:23:36,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Bump astral-sh/setup-uv from 9.0.0 to 10.0.1 in the github-actions group,2026-08-21 22:45:55,closed,"dependencies, github_actions",dependabot[bot],,contributor,peer-review-metrics,issues
 Update contributor and review data,2026-08-16 05:13:57,closed,,github-actions[bot],,contributor,peer-review-metrics,issues
@@ -2414,6 +2423,8 @@ feat(review time): calculate average reviewer time for each review,2024-09-30 20
 Feat(): duration between label editor-assigned and reviewers-assigned,2024-09-27 15:37:41,open,,lwasser,United States,staff,peer-review-metrics,issues
 Create an autopreview action for this metrics repo,2024-07-31 22:46:10,closed,"help wanted, sprintable",lwasser,United States,staff,peer-review-metrics,issues
 ✨ Use devstats to collect metadata about our packages - start with calculating pony factor,2023-07-03 20:43:00,open,enhancement,lwasser,United States,staff,peer-review-metrics,issues
+fix: case sensitivity in editorial and use manual yml file,2026-08-27 03:09:56,closed,,lwasser,United States,staff,peer-review-metrics,pulls
+Update contributor and review data,2026-08-27 01:36:24,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 feat: update get editors to use pyosmeta,2026-08-27 01:23:36,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Bump astral-sh/setup-uv from 9.0.0 to 10.0.1 in the github-actions group,2026-08-21 22:45:55,closed,"dependencies, github_actions",dependabot[bot],,contributor,peer-review-metrics,pulls
 Update contributor and review data,2026-08-16 05:13:57,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
