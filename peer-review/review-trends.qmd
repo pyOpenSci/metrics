@@ -1,14 +1,15 @@
 ---
 title: pyOpenSci Peer Review Trends
 date: "2025-02-13"
-categories:
+categories: 
   - peer review
 jupyter: python3
+format:
+  dashboard:
+    scrolling: true
 execute:
   echo: false
----
-
-This is a workflow that collates all GitHub issues associated with our reviews.
+--- 
 
 
 ```{python}
@@ -39,26 +40,74 @@ register_and_enable_poppins_theme()
 data_path = Path.cwd().parents[0] / "data"
 file_path = data_path / "review_submissions.csv"
 reviews = pd.read_csv(file_path, parse_dates=["date_opened", "date_closed"])
-total_submissions = len(reviews)
+contribs = pd.read_csv(data_path / "review_contribs.csv")
+
+total_submissions = int(len(reviews))
+total_accepted = int(
+    reviews["date_accepted"].fillna("missing").astype(str).str.strip().str.lower().ne("missing").sum()
+)
+total_maintainers = int(contribs["maintainer"].fillna(False).sum())
+total_editors = int((contribs["packages_editor"].fillna(0) > 0).sum())
 ```
 
-
 ```{python}
+#| output: false
 # calculate total time open for each review
 closed = reviews.dropna(subset=['date_closed'])
 closed['days_open'] = (closed['date_closed'] - closed['date_opened']).dt.days
 
 closed['quarter'] = closed['date_opened'].dt.to_period('Q')
-closed.head()
 summary_by_quarter = closed.groupby('quarter').agg({'days_open': 'mean', 'package_name': 'count'})
 summary_by_quarter = summary_by_quarter.rename(columns={'package_name': 'count'})
 summary_by_quarter = summary_by_quarter.reset_index()
-```
-
-
-```{python}
 # Altair doesn't support pandas periods, convert to str
 summary_by_quarter['quarter'] = summary_by_quarter['quarter'].astype(str)
+
+# Get a list of reviews submitted to us
+# This potentially doesn't include issues that were deemed out of scope...
+open_reviews = reviews[reviews["date_closed"].isna()]
+
+today = datetime.now(timezone.utc)
+open_reviews["days_open"] = (today - open_reviews["date_opened"]).dt.days
+open_reviews.drop(columns=["date_closed"], inplace=True)
+total_open = len(open_reviews)
+```
+
+## Row {height=auto}
+
+```{python}
+#| content: valuebox
+#| title: "Total reviews submitted"
+dict(icon="inbox", color="primary", value=total_submissions)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Total reviews accepted"
+dict(icon="check-circle", color="primary", value=total_accepted)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Total maintainers"
+dict(icon="people", color="primary", value=total_maintainers)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Total editors"
+dict(icon="person-badge", color="primary", value=total_editors)
+```
+
+## Row {height=auto}
+
+::: {.card}
+This is a workflow that collates all GitHub issues associated with our reviews.
+:::
+
+## Row {height=auto}
+
+```{python}
 # Create the Altair chart using object-oriented syntax
 chart = (
     alt.Chart(summary_by_quarter)
@@ -68,32 +117,14 @@ chart = (
         y=alt.Y('days_open:Q',axis=alt.Axis(format="d", tickMinStep=1) ),  # Quantitative days_open on the y-axis
         tooltip=['days_open']
     )
-    .properties(title="Mean Review Open Duration (days)", width="container")
+    .properties(title="Mean Review Open Duration (days)", width="container", height=320)
     .interactive()
 )
 
 chart
 ```
 
-
-```{python}
-# Get a list of reviews submitted to us
-# This potentially doesn't include issues that were deemed out of scope...
-
-open_reviews = reviews[reviews["date_closed"].isna()]
-
-today = datetime.now(timezone.utc)
-open_reviews["days_open"] = (today - open_reviews["date_opened"]).dt.days
-open_reviews.drop(columns=["date_closed"], inplace=True)
-total_open = len(open_reviews)
-```
-
-
-```{python}
-# The plot below isn't super useful .
-# open_reviews.head()
-```
-
+## Row {height=auto}
 
 ```{python}
 
@@ -106,7 +137,7 @@ chart = (
         y=alt.Y('days_open:Q'),  # Quantitative days_open on the y-axis
         tooltip=['package_name', 'status', 'days_open', 'date_opened']
     )
-    .properties(title="Open Reviews - Days Open", width="container")
+    .properties(title="Open Reviews - Days Open", width="container", height=320)
     .interactive()
 )
 
