@@ -1,5 +1,5 @@
 ---
-title: pyOpenSci Contributor Metrics Over Time 
+title: pyOpenSci Contributor Metrics Over Time
 jupyter: python3
 execute:
   echo: false
@@ -8,7 +8,7 @@ execute:
 
 ```{python}
 #| echo: false
-#| 
+#|
 import warnings
 from pathlib import Path
 
@@ -32,7 +32,7 @@ register_and_enable_poppins_theme()
 
 ```{python}
 # Get the current notebook directory
-data_path = Path.cwd().parents[0] / "data"  
+data_path = Path.cwd().parents[0] / "data"
 all_files = list(data_path.glob("20*"))
 
 dfs = [pd.read_csv(file, parse_dates=["item_opened_by"]) for file in all_files]
@@ -41,7 +41,7 @@ df = pd.concat(dfs, ignore_index=True)
 ```
 
 ```{python}
-# Calculate 1) total unique contribs to github, 
+# Calculate 1) total unique contribs to github,
 # calculate 2) total unique contribs by quarter?
 
 total_gh_contribs = len(pd.unique(df["created_by"]))
@@ -58,14 +58,14 @@ contribs_data = pd.read_csv(contribs_path, parse_dates=["date_added"])
 
 ```{python}
 total_contribs = len(contribs_data)
-# Calculate reviewer types 
+# Calculate reviewer types
 columns = ["packages_reviewed", "packages_editor", "packages_eic"]
 counts = {col: int((contribs_data[col] > 0).sum()) for col in columns}
 ```
 
 
 
-::: {.callout-note} 
+::: {.callout-note}
 ## pyOpenSci Contributors
 To date, **`{python} total_contribs`** people have contributed to pyOpenSci
 
@@ -75,10 +75,10 @@ To date, **`{python} total_contribs`** people have contributed to pyOpenSci
 
 ******
 
-**`{python} total_gh_contribs`** people have contributed issues and pull requests to our GitHub repository. 
+**`{python} total_gh_contribs`** people have contributed issues and pull requests to our GitHub repository.
 :::
 
-<!-- 
+<!--
 The plot below shows the total contributions to pyOpenSci. To create this plot we:
 
 1. Removed any contributions from bots
@@ -86,11 +86,11 @@ The plot below shows the total contributions to pyOpenSci. To create this plot w
 
 ### Staff vs. volunteer pull request and issue contributions
 
-Non-staff contributions grow between May and August, covering Q3 and Q4 when we travel to meetings such as SciPy and PyCon and host events. Q4 is typically slower, given the holiday season.  
+Non-staff contributions grow between May and August, covering Q3 and Q4 when we travel to meetings such as SciPy and PyCon and host events. Q4 is typically slower, given the holiday season.
 
 ```{python}
-# Calculate unique contributors by quarter 
-# This calculates how many unique people are contribuing to PYOS vs prs and issues calculated below. 
+# Calculate unique contributors by quarter
+# This calculates how many unique people are contributing to PYOS vs prs and issues calculated below.
 df["quarter"] = df["item_opened_by"].dt.to_period("Q")
 # Group by quarter and count unique names in the created_by column by quarter
 unique_contribs_by_quarter = df.groupby("quarter")["created_by"].nunique().reset_index(name="unique_contributors")
@@ -139,7 +139,7 @@ chart
 ```
 
 ```{python}
-# Calculate contributions by quarter 
+# Calculate contributions by quarter
 # Group by quarter and contrib_type (staff vs non-staff)
 df_quarters = df.groupby(["quarter", "contrib_type"]).size().reset_index(name="count")
 df_quarters["quarter"] = df_quarters["quarter"].astype(str)
@@ -197,7 +197,7 @@ chart
 
 
 
- 
+
 Note: we are updating old reviews with eic information so this number is lower than it should be
 
 ## Contribution growth over time
