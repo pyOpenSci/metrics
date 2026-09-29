@@ -94,9 +94,7 @@ def main() -> None:
     emeritus_df = pd.DataFrame(sorted(emeritus), columns=["gh_username"])
 
     all_editors = editors_df.merge(editor_domains, on="gh_username", how="left")
-    all_emeritus = emeritus_df.merge(
-        editor_domains, on="gh_username", how="left"
-    )
+    all_emeritus = emeritus_df.merge(editor_domains, on="gh_username", how="left")
     all_emeritus["active"] = False
 
     editors_out = DATA_DIR / "editorial_team_domains.csv"

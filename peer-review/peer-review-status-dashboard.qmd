@@ -18,6 +18,7 @@ import warnings
 from datetime import datetime, timezone
 
 import altair as alt
+import itables
 from itables import show
 import pandas as pd
 import pytz
@@ -43,6 +44,30 @@ def clean_and_order(df, DROP_COLS, order):
 
 def get_status_df(df, status):
     return df[df["active_status"] == status].reset_index(drop=True)
+
+def show_submissions(df):
+    """Show a submission table with package names linked to their issues."""
+    issue_column = df.columns.get_loc("Issue")
+    name_column = df.columns.get_loc("Name")
+    link_renderer = itables.JavascriptFunction(
+        f"""
+        function(data, type, row) {{
+            if (type !== "display") return data;
+
+            const link = document.createElement("a");
+            link.href = `https://github.com/pyOpenSci/software-submission/issues/${{row[{issue_column}]}}`;
+            link.textContent = data;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            return link.outerHTML;
+        }}
+        """
+    )
+    return show(
+        df,
+        showIndex=False,
+        columnDefs=[{"targets": name_column, "render": link_renderer}],
+    )
 
 DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"]
 ORDER = ["Name", "Description", "Days Open", "Date Opened","Last Comment", "Last User to Comment", "Issue", "Categories", "eic"]
@@ -256,28 +281,28 @@ dict(
 
 ```{python}
 #| title: "Packages Seeking an Editor"
-show(seeking_editor)
+show_submissions(seeking_editor)
 ```
 
 ## Row {height=1%} {.flow}
 
 ```{python}
 #| title: "Packages Seeking Reviewers"
-show(seeking_reviewer)
+show_submissions(seeking_reviewer)
 ```
 
 ## Row {height=1%} {.flow}
 
 ```{python}
 #| title: "New Submissions"
-show(new_submissions)
+show_submissions(new_submissions)
 ```
 
 ## Row {height=1%} {.flow}
 
 ```{python}
 #| title: "Open Presubmission Inquiries"
-show(open_presubmissions)
+show_submissions(open_presubmissions)
 ```
 
 ## Row {height=1%} {.flow}
@@ -293,5 +318,5 @@ open_reviews = open_reviews.sort_values("Last Comment", ascending=True)
 
 new_order = ["Name", "editor", "Last Comment", "Last User to Comment", "eic", "Issue", "active_status", "Description", "Date Opened"]
 
-show(open_reviews[new_order])
+show_submissions(open_reviews[new_order])
 ```

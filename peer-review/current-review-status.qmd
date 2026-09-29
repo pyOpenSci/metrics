@@ -5,14 +5,14 @@ execute:
   echo: false
 ---
 
-## Current open reviews 
+## Current open reviews
 
-This page overviews the current state of pyOpenSci open peer review submissions. 
+This page overviews the current state of pyOpenSci open peer review submissions.
 
 
 ```{python}
 #| echo: false
-#| 
+#|
 import os
 from pathlib import Path
 
@@ -31,7 +31,7 @@ warnings.filterwarnings("ignore")
 # Make tables nicer
 pd.set_option("display.max_colwidth", None)
 current_date = datetime.today().date()
-today = current_date.strftime("%d %B %Y") 
+today = current_date.strftime("%d %B %Y")
 ```
 
 *Last updated: **`{python} today`** *
@@ -40,7 +40,7 @@ today = current_date.strftime("%d %B %Y")
 # Map issue labels based on state of review package is in.
 label_map = {
     "pre-review": [
-        "New Submission!", 
+        "New Submission!",
         "0/pre-review-checks"],
     "seeking editor": ["0/seeking-editor"],
     "seeking reviewers": ["2/seeking-reviewers"],
@@ -159,10 +159,10 @@ seeking_editor_count = len(seeking_editor)
 ```
 
 
-## Current review status 
+## Current review status
 
-Below is an overview of Python package reviews that are currently open in the 
-pyOpenSci peer review process. 
+Below is an overview of Python package reviews that are currently open in the
+pyOpenSci peer review process.
 
 
 ```{python}
@@ -171,7 +171,7 @@ bar_chart = (
     alt.Chart(review_status_ct)
     .mark_bar(color="purple")
     .encode(
-        x=alt.X("active_status:N", 
+        x=alt.X("active_status:N",
         title="Active Status", sort="-y",axis=alt.Axis(labelAngle=0)),
         y=alt.Y("count:Q", title="Count"),
     tooltip=["active_status", "count"]
@@ -205,7 +205,7 @@ bar_chart = (
     alt.Chart(grouped_status_ct)
     .mark_bar(color="purple")
     .encode(
-        x=alt.X("grouped_status:N", 
+        x=alt.X("grouped_status:N",
         title="Open Reviews", sort="-y",axis=alt.Axis(labelAngle=0)),
         y=alt.Y("count:Q", title="Count"),
     tooltip=["grouped_status", "count"]
@@ -227,7 +227,7 @@ bar_chart = (
     alt.Chart(only_active)
     .mark_bar(color="purple")
     .encode(
-        x=alt.X("grouped_status:N", 
+        x=alt.X("grouped_status:N",
         title="Open Reviews", sort="-y",axis=alt.Axis(labelAngle=0)),
         y=alt.Y("count:Q", title="Count"),
     tooltip=["grouped_status", "count"]
@@ -239,7 +239,7 @@ bar_chart = (
 
 bar_chart.show()
 ```
-### All open reviews 
+### All open reviews
 
 pyOpenSci currently has **`{python} total_open`** open
 reviews and **`{python} len(open_presubmissions)`** open pre-submission inquiries.
@@ -277,7 +277,7 @@ seeking_reviewers.reset_index(drop=True, inplace=True)
 
 ```
 
-`{python} len(seeking_reviewers)` package(s) currently needs reviewers. 
+`{python} len(seeking_reviewers)` package(s) currently needs reviewers.
 
 
 ```{python}
@@ -348,14 +348,14 @@ available_editors = available_editors.rename(columns={"count": "review count"})
 available_editors = available_editors[["editor", "review count", "Domain_areas", "Description", "technical_areas", "first_name"]]
 ```
 
-There are currently **`{python} len(available_editors)` available editors** and **`{python} len(all_busy_editors)` editors who are assigned to atleast one software review**.
+There are currently **`{python} len(available_editors)` available editors** and **`{python} len(all_busy_editors)` editors who are assigned to at least one software review**.
 
-### All pyOpenSci editors 
+### All pyOpenSci editors
 ```{python}
 show(editor_data)
 ```
 
-### Busy editors running reviews 
+### Busy editors running reviews
 ```{python}
 show(busy_editors)
 ```
@@ -378,14 +378,14 @@ show(available_editors)
 
 ## Editor load
 
-Next, we look at the load of each editor over time to get a sense of their time demands. 
+Next, we look at the load of each editor over time to get a sense of their time demands.
 
 ::: {.callout-note}
 The data below represents all editors over time, not just currently active editors
 :::
 
 ```{python}
-# TODO: make this focus only on current open reviews vs all reviews over time. 
+# TODO: make this focus only on current open reviews vs all reviews over time.
 
 # Get a list of all editors over time that have supported pyOpenSci
 ignore_editors = ["TBD"]
