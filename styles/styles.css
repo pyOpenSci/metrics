@@ -5,7 +5,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 
 /* Adjust specific font weights if needed */
 h1, h2, h3 {
-    font-weight: 400;
+    font-weight: 400; 
     margin-top: 3em!important;
 }
 
@@ -16,4 +16,10 @@ h1, h2, h3, h4, h5, h6 {
 
 body, p {
     font-weight: 400; /* Regular weight for body text */
+}
+
+/* Let wide package charts scroll sideways instead of clipping axis labels. */
+.quarto-dashboard .html-fill-container figure,
+.quarto-dashboard .cell-output-display {
+    overflow-x: auto;
 }

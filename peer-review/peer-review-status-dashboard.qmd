@@ -93,6 +93,31 @@ def get_active_status(labels):
         if any(label in labels for label in label_list):
             return status
     return "unknown"
+
+
+def show_submissions(df):
+    """Show a submission table with package names linked to their issues."""
+    issue_column = df.columns.get_loc("Issue")
+    name_column = df.columns.get_loc("Name")
+    link_renderer = itables.JavascriptFunction(
+        f"""
+        function(data, type, row) {{
+            if (type !== "display") return data;
+
+            const link = document.createElement("a");
+            link.href = `https://github.com/pyOpenSci/software-submission/issues/${{row[{issue_column}]}}`;
+            link.textContent = data;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            return link.outerHTML;
+        }}
+        """
+    )
+    return show(
+        df,
+        showIndex=False,
+        columnDefs=[{"targets": name_column, "render": link_renderer}],
+    )
 ```
 
 ```{python}

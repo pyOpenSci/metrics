@@ -68,6 +68,11 @@ flowchart LR
 - **Sprint / PR activity** — GitHub API (and Projects for sprint data)
   from metrics scripts, sometimes via pyosMeta `GitHubAPI`.
 
+Schedules for these workflows, and what to do when one fails, are in the
+handbook's
+[data workflows](https://www.pyopensci.org/handbook/community/infrastructure/data-process.html)
+page.
+
 ## How to Contribute
 
 ### 1. **Fork and Clone the Repo:**

@@ -1,6 +1,9 @@
 ---
 title: pyOpenSci Contributor Metrics Over Time
 jupyter: python3
+format:
+  dashboard:
+    scrolling: true
 execute:
   echo: false
 ---
@@ -8,7 +11,7 @@ execute:
 
 ```{python}
 #| echo: false
-#|
+#| 
 import warnings
 from pathlib import Path
 
@@ -32,7 +35,7 @@ register_and_enable_poppins_theme()
 
 ```{python}
 # Get the current notebook directory
-data_path = Path.cwd().parents[0] / "data"
+data_path = Path.cwd().parents[0] / "data"  
 all_files = list(data_path.glob("20*"))
 
 dfs = [pd.read_csv(file, parse_dates=["item_opened_by"]) for file in all_files]
@@ -41,7 +44,7 @@ df = pd.concat(dfs, ignore_index=True)
 ```
 
 ```{python}
-# Calculate 1) total unique contribs to github,
+# Calculate 1) total unique contribs to github, 
 # calculate 2) total unique contribs by quarter?
 
 total_gh_contribs = len(pd.unique(df["created_by"]))
@@ -57,45 +60,83 @@ contribs_data = pd.read_csv(contribs_path, parse_dates=["date_added"])
 
 
 ```{python}
-total_contribs = len(contribs_data)
+total_contribs = int(len(contribs_data))
 # Calculate reviewer types
 columns = ["packages_reviewed", "packages_editor", "packages_eic"]
 counts = {col: int((contribs_data[col] > 0).sum()) for col in columns}
+total_reviewers = counts["packages_reviewed"]
+total_editors = counts["packages_editor"]
+total_eic = counts["packages_eic"]
 ```
 
+```{python}
+#| output: false
+# Calculate unique contributors by quarter
+df["quarter"] = df["item_opened_by"].dt.to_period("Q")
+unique_contribs_by_quarter = (
+    df.groupby("quarter")["created_by"].nunique().reset_index(name="unique_contributors")
+)
+unique_contribs_by_quarter["quarter"] = unique_contribs_by_quarter["quarter"].astype(str)
 
+df_quarters = df.groupby(["quarter", "contrib_type"]).size().reset_index(name="count")
+df_quarters["quarter"] = df_quarters["quarter"].astype(str)
+df_quarters["quarter_label"] = df_quarters["quarter"].str.replace("Q", " Q", regex=False)
 
-::: {.callout-note}
-## pyOpenSci Contributors
-To date, **`{python} total_contribs`** people have contributed to pyOpenSci
+monthly_counts = contribs_data.resample("ME", on="date_added").count()["name"]
+cumulative_growth = monthly_counts.cumsum().reset_index()
+cumulative_growth.columns = ["date", "cumulative_contributors"]
+```
 
-* **`{python} counts["packages_reviewed"]`** People have served as a Reviewer for pyOpenSci
-* **`{python} counts["packages_editor"]`** People have served as an Editor for pyOpenSci
-* **`{python} counts["packages_eic"]`** People have served as Editor in Chief for pyOpenSci
+## Row {height=auto}
 
-******
+```{python}
+#| content: valuebox
+#| title: "Total contributors"
+dict(icon="people", color="primary", value=total_contribs)
+```
 
-**`{python} total_gh_contribs`** people have contributed issues and pull requests to our GitHub repository.
+```{python}
+#| content: valuebox
+#| title: "Reviewers"
+dict(icon="check-circle", color="primary", value=total_reviewers)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Editors"
+dict(icon="person-badge", color="primary", value=total_editors)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Editors in chief"
+dict(icon="star", color="primary", value=total_eic)
+```
+
+```{python}
+#| content: valuebox
+#| title: "GitHub contributors"
+dict(icon="github", color="primary", value=total_gh_contribs)
+```
+
+## Row {height=auto}
+
+::: {.card}
+To date, these people have contributed to pyOpenSci peer review. GitHub contributors are people who opened an issue or pull request.
+
+Note: we are updating old reviews with editor in chief information, so that number is lower than it should be.
 :::
 
-<!--
+<!-- 
 The plot below shows the total contributions to pyOpenSci. To create this plot we:
 
 1. Removed any contributions from bots
 2. Stratified the data to show both staff contributions vs. non-staff contributions.  -->
 
-### Staff vs. volunteer pull request and issue contributions
+## Row {height=auto}
 
+::: {.card title="Staff vs. volunteer pull request and issue contributions"}
 Non-staff contributions grow between May and August, covering Q3 and Q4 when we travel to meetings such as SciPy and PyCon and host events. Q4 is typically slower, given the holiday season.
-
-```{python}
-# Calculate unique contributors by quarter
-# This calculates how many unique people are contributing to PYOS vs prs and issues calculated below.
-df["quarter"] = df["item_opened_by"].dt.to_period("Q")
-# Group by quarter and count unique names in the created_by column by quarter
-unique_contribs_by_quarter = df.groupby("quarter")["created_by"].nunique().reset_index(name="unique_contributors")
-unique_contribs_by_quarter["quarter"] = unique_contribs_by_quarter["quarter"].astype(str)
-```
 
 ```{python}
 chart = (
@@ -111,7 +152,7 @@ chart = (
             .stack(True),
         alt.Tooltip(["quarter", "unique_contributors"])
     )
-    .properties(title="Unique Contributors by Quarter")
+    .properties(title="Unique Contributors by Quarter", width="container", height=360)
     .configure_axisX(
         labelAngle=0,
         labelPadding=5,
@@ -137,32 +178,9 @@ chart = (
 
 chart
 ```
+:::
 
-```{python}
-# Calculate contributions by quarter
-# Group by quarter and contrib_type (staff vs non-staff)
-df_quarters = df.groupby(["quarter", "contrib_type"]).size().reset_index(name="count")
-df_quarters["quarter"] = df_quarters["quarter"].astype(str)
-
-# Create a new column for filtered labels
-df_quarters["quarter_label"] = df_quarters["quarter"]
-df_quarters["year"] = df_quarters["quarter"].str[:4]
-df_quarters["qtr"] = df_quarters["quarter"].str[-2:]
-df_quarters.reset_index(inplace=True)
-
-# Function to insert newline before the "Q" character
-def insert_newline(s):
-    return s.replace('Q', ' Q')
-
-# Apply the function to the 'quarter' column
-df_quarters['quarter_label'] = df_quarters['quarter_label'].apply(insert_newline)
-
-
-```
-
-```{python}
-
-```
+## Row {height=auto}
 
 ```{python}
 chart = (
@@ -181,7 +199,7 @@ chart = (
             .scale(range=["#81c0aa", "#735fab"]),
         alt.Tooltip(["quarter_label", "contrib_type", "count"])
     )
-    .properties(title="Staff vs. Volunteer Contributor by Quarter")
+    .properties(title="Staff vs. Volunteer Contributor by Quarter", width="container", height=360)
     .configure_legend(
         orient='top',
         titleAnchor='middle',
@@ -194,27 +212,10 @@ chart = (
 chart
 ```
 
+## Row {height=auto}
 
-
-
-
-Note: we are updating old reviews with eic information so this number is lower than it should be
-
-## Contribution growth over time
-
-Here we look at new contributors over time. This plot includes all contributors both peer review contributors and contributors who have helped us with our GitHub repositories.
-
-
-```{python}
-# Group by month and count new contributors
-monthly_counts = contribs_data.resample("ME", on="date_added").count()["name"]
-
-# Compute cumulative sum for growth over time
-cumulative_growth = monthly_counts.cumsum().reset_index()
-cumulative_growth.columns = ["date", "cumulative_contributors"]
-
-```
-
+::: {.card title="Contribution growth over time"}
+Here we look at new contributors over time. This plot includes all contributors, both peer review contributors and contributors who have helped us with our GitHub repositories.
 
 ```{python}
 
@@ -225,9 +226,10 @@ chart = alt.Chart(cumulative_growth).mark_line(point=True).encode(
     tooltip=["date:T", "cumulative_contributors:Q"]
 ).properties(
     title="Growth of Contributors Over Time",
-    width=700,
+    width="container",
     height=400
 ).interactive()
 
 chart
 ```
+:::

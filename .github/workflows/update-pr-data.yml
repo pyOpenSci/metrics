@@ -3,7 +3,8 @@ name: Update issue, pr and contrib metadata file for current year
 on:
   workflow_dispatch:
   schedule:
-    # Runs on the 1 and 15 of each month at 00:00 UTC (see https://crontab.guru)
+    # Runs at 05:00 UTC on the 2nd and 16th of each month and every Monday.
+    # Cron runs when either the day of month OR the day of week matches (see https://crontab.guru)
     - cron: "0 5 2,16 * 1"
     # Runs at 11pm on December 31st every year
     - cron: "0 23 31 12 *"
