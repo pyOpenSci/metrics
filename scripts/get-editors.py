@@ -20,6 +20,7 @@ from pyosmeta.constants import WEBSITE_DATA_RAW_URL
 from pyosmeta.file_io import open_yml_file
 
 DATA_DIR = Path("data")
+EDITOR_PROFILES_PATH = DATA_DIR / "editor_profiles.csv"
 EDITORIAL_BOARD_URL = f"{WEBSITE_DATA_RAW_URL}editorial-board.yml"
 EMERITUS_EDITORS_URL = f"{WEBSITE_DATA_RAW_URL}emeritus-editors.yml"
 MANUAL_ROSTER_URL = f"{WEBSITE_DATA_RAW_URL}manual-editorial-roster.yml"
@@ -32,6 +33,18 @@ _EMERITUS_MANUAL_FLAGS = (
     "emeritus_peer_review_lead",
     "emeritus_triage",
 )
+
+PROFILE_COLUMNS = [
+    "gh_username",
+    "first_name",
+    "last_name",
+    "country",
+    "state",
+    "OS",
+    "Domain_areas",
+    "Description",
+    "technical_areas",
+]
 
 
 def usernames_from_board_yml(url: str) -> set[str]:
@@ -70,6 +83,46 @@ def apply_manual_roster(
     return editors, emeritus
 
 
+def load_editor_profiles() -> pd.DataFrame:
+    """Load and validate manually maintained editor profile metadata."""
+    profiles = pd.read_csv(EDITOR_PROFILES_PATH)
+    missing_columns = set(PROFILE_COLUMNS) - set(profiles.columns)
+    if missing_columns:
+        missing = ", ".join(sorted(missing_columns))
+        raise ValueError(f"Missing columns in {EDITOR_PROFILES_PATH}: {missing}")
+
+    profiles = profiles[PROFILE_COLUMNS]
+    if profiles["gh_username"].isna().any():
+        raise ValueError(f"Blank username in {EDITOR_PROFILES_PATH}")
+    profiles["gh_username"] = (
+        profiles["gh_username"].astype(str).str.strip().str.lower()
+    )
+    if profiles["gh_username"].eq("").any():
+        raise ValueError(f"Blank username in {EDITOR_PROFILES_PATH}")
+    duplicate_usernames = profiles.loc[
+        profiles["gh_username"].duplicated(), "gh_username"
+    ].tolist()
+    if duplicate_usernames:
+        duplicates = ", ".join(sorted(duplicate_usernames))
+        raise ValueError(f"Duplicate usernames in {EDITOR_PROFILES_PATH}: {duplicates}")
+    return profiles
+
+
+def build_editor_table(
+    usernames: set[str], profiles: pd.DataFrame, *, active: bool
+) -> pd.DataFrame:
+    """Join a roster to stable profile metadata."""
+    roster = pd.DataFrame(sorted(usernames), columns=["gh_username"])
+    table = roster.merge(profiles, on="gh_username", how="left", indicator=True)
+    missing_profiles = table.loc[table["_merge"] == "left_only", "gh_username"].tolist()
+    if missing_profiles:
+        print("Missing editor profiles:", ", ".join(missing_profiles))
+
+    table = table.drop(columns="_merge")
+    table.insert(1, "active", active)
+    return table
+
+
 def main() -> None:
     from_board = usernames_from_board_yml(EDITORIAL_BOARD_URL)
     from_emeritus = usernames_from_board_yml(EMERITUS_EDITORS_URL) - from_board
@@ -85,17 +138,9 @@ def main() -> None:
     if added_emeritus:
         print("Added from manual roster (emeritus):", ", ".join(added_emeritus))
 
-    editor_domains = pd.read_csv(DATA_DIR / "editorial_team_domains.csv")
-    editor_domains["gh_username"] = (
-        editor_domains["gh_username"].astype(str).str.strip().str.lower()
-    )
-
-    editors_df = pd.DataFrame(sorted(editors), columns=["gh_username"])
-    emeritus_df = pd.DataFrame(sorted(emeritus), columns=["gh_username"])
-
-    all_editors = editors_df.merge(editor_domains, on="gh_username", how="left")
-    all_emeritus = emeritus_df.merge(editor_domains, on="gh_username", how="left")
-    all_emeritus["active"] = False
+    editor_profiles = load_editor_profiles()
+    all_editors = build_editor_table(editors, editor_profiles, active=True)
+    all_emeritus = build_editor_table(emeritus, editor_profiles, active=False)
 
     editors_out = DATA_DIR / "editorial_team_domains.csv"
     emeritus_out = DATA_DIR / "emeritus_editor_domains.csv"
