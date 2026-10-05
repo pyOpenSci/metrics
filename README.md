@@ -61,8 +61,8 @@ flowchart LR
 ```
 
 - **Editorial membership** — website board YAML plus
-  `manual-editorial-roster.yml`; metrics merges those usernames with
-  local domain columns in `get-editors.py`.
+  `manual-editorial-roster.yml`; `get-editors.py` merges those usernames with
+  manually maintained metadata from `data/editor_profiles.csv`.
 - **Reviews / packages / contributors** — pyosMeta helpers and/or
   website YAML via `open_yml_file`.
 - **Sprint / PR activity** — GitHub API (and Projects for sprint data)

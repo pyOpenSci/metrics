@@ -40,7 +40,9 @@ repos:
           - yaml
         additional_dependencies:
           - tomli
-
+        args:
+          - "--ignore-multiline-regex=<!-- codespell:ignore-begin -->.*<!-- codespell:ignore-end -->"
+          - "--ignore-words-list=soler"
   # Linting and formatting for Python code (see pyproject.toml for config)
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
