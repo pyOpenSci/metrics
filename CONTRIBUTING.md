@@ -13,13 +13,13 @@ for the pyOpenSci organization. This data includes:
 * Contributor pull request and issue data
 * Contributor data collected and parsed using the all-contributors bot
 * Peer review data collected from our software-submission repository
-* Editorial team membership from website board YAML plus `manual-editorial-roster.yml` (pyosMeta); domain data added manually
+* Editorial team membership from website board YAML plus `manual-editorial-roster.yml` (pyosMeta); profile data maintained in `data/editor_profiles.csv`
 
 ## About the scripts in this repository
 
 The `scripts/` directory contains utility scripts for data collection, parsing, and analysis:
 
-* **get-editors.py**: Merges website `editorial-board.yml` / `emeritus-editors.yml` with `manual-editorial-roster.yml` (same rules as pyosMeta `merge_manual_roster`), then joins manually curated domain data. Outputs: `data/editorial_team_domains.csv`, `data/emeritus_editor_domains.csv`. How that YAML is produced, and when, is in the handbook's [data workflows](https://www.pyopensci.org/handbook/community/infrastructure/data-process.html) page.
+* **get-editors.py**: Merges website `editorial-board.yml` / `emeritus-editors.yml` with `manual-editorial-roster.yml` (same rules as pyosMeta `merge_manual_roster`), then joins profiles from `data/editor_profiles.csv`. Outputs: `data/editorial_team_domains.csv`, `data/emeritus_editor_domains.csv`. Add or update editor metadata in `data/editor_profiles.csv`; the output CSVs are generated files. How the roster YAML is produced, and when, is in the handbook's [data workflows](https://www.pyopensci.org/handbook/community/infrastructure/data-process.html) page.
 * **get-package-data.py**: Loads website `packages.yml` via pyosMeta (`PACKAGES_RAW_URL`) and writes `data/package_data.csv`.
 * **get-prs.py**: Parses all active pyOpenSci repositories to collect contributor activity (issues and PRs) for the current year, excluding bots. Outputs a CSV for tracking contribution growth.
 * **get-review-contributors.py**: Loads website `contributors.yml` via pyosMeta (`CONTRIBUTORS_RAW_URL`), validates with `PersonModel`, and writes `data/review_contribs.csv`.
