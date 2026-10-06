@@ -37,7 +37,12 @@ repos:
         exclude_types:
           - javascript
           - scss
-          - yaml
+- id: codespell
+  exclude: ^data/ 
+  exclude_types:
+    - javascript
+    - scss
+    - yaml
         additional_dependencies:
           - tomli
         args:
