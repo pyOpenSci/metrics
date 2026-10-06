@@ -136,7 +136,8 @@
         "code",
         "review",
         "doc",
-        "data"
+        "data",
+        "bug"
       ]
     },
     {
