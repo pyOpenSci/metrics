@@ -10,7 +10,7 @@ choldgraf,California,2019-10-10,1,0,0,False,False
 inessapawson,,2023-03-21,0,0,0,False,False
 pradyunsg,"London, UK",2023-03-01,0,0,0,False,False
 xmnlab,Earth,2019-10-15,2,0,3,True,False
-ocefpaf,"Florianópolis, SC",2019-10-17,2,0,2,True,False
+ocefpaf,"Florianópolis, SC",2019-10-17,2,1,2,True,False
 leouieda,"Liverpool, UK",2023-01-18,0,0,0,False,False
 lheagy,,2019-12-10,0,0,0,False,False
 martinfleis,Prague,2020-04-09,2,0,0,False,False
@@ -29,7 +29,7 @@ kierisi,,2023-11-21,0,0,0,False,False
 dynamicwebpaige,"Seattle, WA",2023-02-24,0,0,0,False,False
 carsonfarmer,"Victoria, B.C., Canada",2023-02-24,0,0,0,False,False
 jhamman,"Seattle, WA",2023-02-24,0,0,0,False,False
-kysolvik,,2023-02-24,1,1,2,True,False
+kysolvik,,2023-02-24,1,1,3,True,False
 marskar,"Rockville/Bethesda, Maryland",2023-02-24,0,0,0,False,True
 miketrizna,"Washington, DC",2023-02-24,0,0,0,False,False
 cosmicbboy,"Atlanta, GA, US",2019-12-10,0,0,0,False,True
@@ -320,7 +320,7 @@ akhilkrishnar0,Bangalore. India,2025-06-02,1,0,0,False,False
 zacwarham,Vancouver,2025-06-02,0,0,0,False,False
 sanketkumarkar,Chennai,2025-06-05,0,0,0,False,False
 chendaniely,JFK -> DCA -> ROA -> JFK -> YVR,2025-06-10,0,0,0,False,False
-crhea93,"Montreal, QC, CANADA",2025-06-16,2,6,8,True,False
+crhea93,"Montreal, QC, CANADA",2025-06-16,3,7,8,True,False
 jinningwang,"Knoxville, Tennessee, USA",2025-06-16,1,0,0,False,True
 echedey-ls,Spain,2025-06-16,1,0,0,False,False
 cdeline,"Golden, CO",2025-06-16,1,0,0,False,False
@@ -430,3 +430,6 @@ bmatthieu3,Strasbourg - France,2026-09-29,0,0,0,False,True
 gadomski,"Longmont, CO",2026-09-29,1,0,0,False,False
 ramarty,"Washington, DC",2026-09-29,0,0,0,False,True
 patelnikit16,,,0,0,0,True,False
+sujatasaurabh,Berkeley,2026-10-19,1,0,0,False,False
+nstarman,,2026-10-19,0,0,0,False,True
+jnibauer,,2026-10-19,0,0,0,False,True
