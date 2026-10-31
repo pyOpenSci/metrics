@@ -17,3 +17,10 @@ def serve(session):
     which allows for a live preview that updates as you work."""
     session.run("uv", "sync", "--frozen", "--group", "build", external=True)
     session.run("uv", "run", "quarto", "preview", external=True)
+
+
+@nox.session
+def tests(session):
+    """Runs the regression tests for the data collection scripts."""
+    session.run("uv", "sync", "--frozen", "--group", "dev", external=True)
+    session.run("uv", "run", "pytest", "tests", *session.posargs, external=True)
