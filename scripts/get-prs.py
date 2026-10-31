@@ -133,9 +133,7 @@ def get_repo_data(
     return pd.DataFrame(data)
 
 
-def process_repo(
-    github_api, repo_name, contrib_types, user_location_cache, start, end
-):
+def process_repo(github_api, repo_name, contrib_types, user_location_cache, start, end):
     """Process a GitHub repository.
 
     Export a repo_name.csv file for the repo when done.
@@ -297,6 +295,11 @@ def main():
         print(f"{repo_name}--Processing Time: {end_time - start_time:.4f} seconds")
 
     all_contribs_final_df = pd.concat(all_contribs_final, ignore_index=True)
+
+    if all_contribs_final_df.empty:
+        raise SystemExit(
+            "No issues or PRs collected; check GITHUB_TOKEN and the errors above."
+        )
 
     # Export to csv
     os.makedirs("data", exist_ok=True)
