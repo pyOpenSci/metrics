@@ -37,6 +37,7 @@ import pandas as pd
 from pyosmeta.github_api import GitHubAPI
 
 logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 def parse_gh_date(value: str | None) -> datetime | None:
@@ -160,39 +161,36 @@ def process_repo(github_api, repo_name, contrib_types, user_location_cache, star
     Raises
     ------
     Exception
-        If an error occurs during the processing.
+        Any error from the GitHub API is propagated so the caller can tell a
+        failed request apart from a repo with no activity in the year.
     """
 
     github_api.repo = repo_name
-    try:
-        print(f" -- Getting issues for {repo_name}")
-        issues_df = get_repo_data(
-            github_api,
-            repo_name,
-            "issues",
-            contrib_types,
-            user_location_cache,
-            start,
-            end,
-        )
-        print(f" -- Getting prs for {repo_name}")
-        prs_df = get_repo_data(
-            github_api,
-            repo_name,
-            "pulls",
-            contrib_types,
-            user_location_cache,
-            start,
-            end,
-        )
-        print(f" -- Combining issues and prs for {repo_name}")
-        all_contribs_df = pd.concat([issues_df, prs_df], ignore_index=True)
-        print(f" -- Finished with {repo_name} API calls")
+    print(f" -- Getting issues for {repo_name}")
+    issues_df = get_repo_data(
+        github_api,
+        repo_name,
+        "issues",
+        contrib_types,
+        user_location_cache,
+        start,
+        end,
+    )
+    print(f" -- Getting prs for {repo_name}")
+    prs_df = get_repo_data(
+        github_api,
+        repo_name,
+        "pulls",
+        contrib_types,
+        user_location_cache,
+        start,
+        end,
+    )
+    print(f" -- Combining issues and prs for {repo_name}")
+    all_contribs_df = pd.concat([issues_df, prs_df], ignore_index=True)
+    print(f" -- Finished with {repo_name} API calls")
 
-        return all_contribs_df
-    except Exception as e:
-        logging.error(f"An error occurred: {e}")
-        return pd.DataFrame()
+    return all_contribs_df
 
 
 # First year of pyOpenSci activity; the historical file covers 2018-2023
@@ -277,15 +275,23 @@ def main():
         "pyos-sphinx-theme",
     ]
     all_contribs_final = []
+    failed_repos = []
 
     # Object to reduce user api calls
     user_location_cache = {}
     for repo_name in repo_names:
         start_time = time.time()
         print(f"Processing repository: {repo_name}")
-        all_contribs_df = process_repo(
-            github_api, repo_name, contrib_types, user_location_cache, start, end
-        )
+        try:
+            all_contribs_df = process_repo(
+                github_api, repo_name, contrib_types, user_location_cache, start, end
+            )
+        except Exception:
+            # Keep going so one bad repo doesn't hide failures in the others,
+            # but remember it: a partial dataset must not be exported.
+            logger.exception(f"Failed to collect data for {repo_name}")
+            failed_repos.append(repo_name)
+            continue
 
         print(f"Adding data for {repo_name}")
 
@@ -293,6 +299,12 @@ def main():
         end_time = time.time()
 
         print(f"{repo_name}--Processing Time: {end_time - start_time:.4f} seconds")
+
+    if failed_repos:
+        raise SystemExit(
+            f"Not exporting incomplete data; {len(failed_repos)} repo(s) failed: "
+            + ", ".join(failed_repos)
+        )
 
     all_contribs_final_df = pd.concat(all_contribs_final, ignore_index=True)
 
