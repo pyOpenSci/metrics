@@ -4,7 +4,13 @@ activity information in the form of opened issues and pull requests.
 This script returns a `.csv` file that contains all issue and pr data for items:
 
 * not created by a bot
-* and created in the specific current year.
+* and OPENED in the requested year (default: the current year). Items opened
+  in an earlier year and updated/closed this year are excluded. Each
+  row records ``date_opened`` and ``date_closed`` (empty while still open).
+
+Re-running the script for a previous year (``--year 2024``) rebuilds that
+year's file so ``date_closed`` / ``current_status`` pick up items that were
+closed later.
 
 The one issue with this workflow is that if it doesn't run on the last day of
 the year, then it won't capture the last pr's that might happen on new years
@@ -21,6 +27,7 @@ on near years eve
 That way we are sure to capture data for the entirety of 2024 on new years eve!!xw
 """
 
+import argparse
 import logging
 import os
 import time
@@ -30,6 +37,14 @@ import pandas as pd
 from pyosmeta.github_api import GitHubAPI
 
 logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
+def parse_gh_date(value: str | None) -> datetime | None:
+    """Parse a GitHub ISO-8601 timestamp; return None if missing."""
+    if not value:
+        return None
+    return datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
 
 
 def get_repo_data(
@@ -38,6 +53,8 @@ def get_repo_data(
     endpoint_type,
     contrib_types,
     user_location_cache: dict[str:str],
+    start: datetime,
+    end: datetime,
 ):
     """
     Get repository data from GitHub API and save it as a CSV file.
@@ -52,6 +69,10 @@ def get_repo_data(
         The type of endpoint to retrieve data from. Options (pull or issue)
     contrib_types : dict
         A dictionary containing contributor types.
+    start, end : datetime
+        Only keep items with ``start <= created_at < end``. The GitHub
+        ``since`` query filters on *updated_at* (and the pulls endpoint
+        ignores it entirely), so the created-date filter must happen here.
 
     Returns
     -------
@@ -69,6 +90,14 @@ def get_repo_data(
 
     data = []
     for item in items:
+        # The issues endpoint also returns PRs; those are collected via pulls
+        if endpoint_type == "issues" and "pull_request" in item:
+            continue
+
+        created_at = parse_gh_date(item["created_at"])
+        if not (start <= created_at < end):
+            continue  # Opened outside the requested year
+
         gh_user = item["user"]["login"]
         if gh_user in contrib_types["bots"]:
             continue  # Skip items created by bots
@@ -77,7 +106,7 @@ def get_repo_data(
         else:
             contrib_type = "contributor"
 
-        created_at = datetime.strptime(item["created_at"], "%Y-%m-%dT%H:%M:%SZ")
+        closed_at = parse_gh_date(item.get("closed_at"))
         labels = [label["name"] for label in item.get("labels", [])]
 
         # TODO: make this a small function
@@ -90,6 +119,8 @@ def get_repo_data(
             {
                 "title": item["title"],
                 "item_opened_by": created_at,
+                "date_opened": created_at,
+                "date_closed": closed_at,
                 "current_status": item["state"],
                 "labels": ", ".join(labels),
                 "created_by": gh_user,
@@ -103,7 +134,7 @@ def get_repo_data(
     return pd.DataFrame(data)
 
 
-def process_repo(github_api, repo_name, contrib_types, user_location_cache):
+def process_repo(github_api, repo_name, contrib_types, user_location_cache, start, end):
     """Process a GitHub repository.
 
     Export a repo_name.csv file for the repo when done.
@@ -119,6 +150,8 @@ def process_repo(github_api, repo_name, contrib_types, user_location_cache):
         that contribute to pyos repos.
     user_location_cache : dict
         A dictionary containing the cached user locations.
+    start, end : datetime
+        Only keep items opened in ``[start, end)``.
 
     Returns
     -------
@@ -128,57 +161,90 @@ def process_repo(github_api, repo_name, contrib_types, user_location_cache):
     Raises
     ------
     Exception
-        If an error occurs during the processing.
+        Any error from the GitHub API is propagated so the caller can tell a
+        failed request apart from a repo with no activity in the year.
     """
 
     github_api.repo = repo_name
-    try:
-        print(f" -- Getting issues for {repo_name}")
-        issues_df = get_repo_data(
-            github_api, repo_name, "issues", contrib_types, user_location_cache
-        )
-        print(f" -- Getting prs for {repo_name}")
-        prs_df = get_repo_data(
-            github_api, repo_name, "pulls", contrib_types, user_location_cache
-        )
-        print(f" -- Combining issues and prs for {repo_name}")
-        all_contribs_df = pd.concat([issues_df, prs_df], ignore_index=True)
-        print(f" -- Finished with {repo_name} API calls")
+    print(f" -- Getting issues for {repo_name}")
+    issues_df = get_repo_data(
+        github_api,
+        repo_name,
+        "issues",
+        contrib_types,
+        user_location_cache,
+        start,
+        end,
+    )
+    print(f" -- Getting prs for {repo_name}")
+    prs_df = get_repo_data(
+        github_api,
+        repo_name,
+        "pulls",
+        contrib_types,
+        user_location_cache,
+        start,
+        end,
+    )
+    print(f" -- Combining issues and prs for {repo_name}")
+    all_contribs_df = pd.concat([issues_df, prs_df], ignore_index=True)
+    print(f" -- Finished with {repo_name} API calls")
 
-        return all_contribs_df
-    except Exception as e:
-        logging.error(f"An error occurred: {e}")
-        return pd.DataFrame()
+    return all_contribs_df
 
 
-# Set this to True if you want to update the 2018-2023 data
-all_dates = False
+# First year of pyOpenSci activity; the historical file covers 2018-2023
+HISTORICAL_START = 2018
+HISTORICAL_END = 2024
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description=__doc__)
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument(
+        "--year",
+        type=int,
+        default=datetime.now().year,
+        help="Collect items opened in this year (default: current year).",
+    )
+    group.add_argument(
+        "--historical",
+        action="store_true",
+        help=f"Rebuild the {HISTORICAL_START}_{HISTORICAL_END - 1} file.",
+    )
+    return parser.parse_args()
 
 
 def main():
     """This workflow
-    1. gets the current year.
-    2. processes all prs and issues collected during that year
+    1. gets the requested year (default: current year).
+    2. processes all prs and issues OPENED during that year
     3. creates a data frame with the issues:
-       * opened date,
+       * opened date and closed date (empty if still open)
        * opened by gh handle
        * whether it was opened by staff or a non staff contributor
        * what repo it was opened in
        * whether it's a pr or an issue
        Here are the df headers
-       title,item_opened_by,current_status,labels,created_by,location,contrib_type,repo,type
-    It then saves a csv file with data for the current year
+       title,item_opened_by,date_opened,date_closed,current_status,labels,created_by,location,contrib_type,repo,type
+    It then saves a csv file with data for that year
     """
     print(f"I am working here {os.getcwd()}")
 
-    if all_dates:
-        after_date = "2018-01-01"
-        current_year = "2018"
-        print(f"Processing all years; start year: {current_year}")
+    args = parse_args()
+    if args.historical:
+        start_year, end_year = HISTORICAL_START, HISTORICAL_END
+        csv_name = f"{HISTORICAL_START}_{HISTORICAL_END - 1}_all_issues_prs.csv"
     else:
-        # Get the current year
-        current_year = datetime.now().year
-        after_date = f"{current_year}-01-01"
+        start_year, end_year = args.year, args.year + 1
+        csv_name = f"{args.year}_all_issues_prs.csv"
+    start = datetime(start_year, 1, 1)
+    end = datetime(end_year, 1, 1)
+    print(f"Collecting issues and prs opened in [{start_year}, {end_year})")
+
+    # `since` filters on updated_at, so this only narrows the download;
+    # the created_at filter is applied in get_repo_data
+    after_date = start.strftime("%Y-%m-%d")
 
     github_api = GitHubAPI(
         org="pyopensci", repo="", endpoint_type="", after_date=after_date
@@ -209,15 +275,23 @@ def main():
         "pyos-sphinx-theme",
     ]
     all_contribs_final = []
+    failed_repos = []
 
     # Object to reduce user api calls
     user_location_cache = {}
     for repo_name in repo_names:
         start_time = time.time()
         print(f"Processing repository: {repo_name}")
-        all_contribs_df = process_repo(
-            github_api, repo_name, contrib_types, user_location_cache
-        )
+        try:
+            all_contribs_df = process_repo(
+                github_api, repo_name, contrib_types, user_location_cache, start, end
+            )
+        except Exception:
+            # Keep going so one bad repo doesn't hide failures in the others,
+            # but remember it: a partial dataset must not be exported.
+            logger.exception(f"Failed to collect data for {repo_name}")
+            failed_repos.append(repo_name)
+            continue
 
         print(f"Adding data for {repo_name}")
 
@@ -226,26 +300,22 @@ def main():
 
         print(f"{repo_name}--Processing Time: {end_time - start_time:.4f} seconds")
 
+    if failed_repos:
+        raise SystemExit(
+            f"Not exporting incomplete data; {len(failed_repos)} repo(s) failed: "
+            + ", ".join(failed_repos)
+        )
+
     all_contribs_final_df = pd.concat(all_contribs_final, ignore_index=True)
 
-    # Write all_contribs_final_df to a single CSV file
-    os.makedirs("data", exist_ok=True)
-    if all_dates:
-        # Clean data of current year but don't use current_year var because
-        # that is set to 2018 (start year) if we want to get all contribs
-        # back to 2018 when pyOS started
-        # TODO: this is not currently working. It doesn't remove dates
-        # in 2024
-        up_to_year = datetime(datetime.now().year, 1, 1)
-        all_contribs_final_df = all_contribs_final_df[
-            all_contribs_final_df["item_opened_by"] < up_to_year
-        ]
+    if all_contribs_final_df.empty:
+        raise SystemExit(
+            "No issues or PRs collected; check GITHUB_TOKEN and the errors above."
+        )
 
     # Export to csv
-    if all_dates:
-        csv_path = os.path.join("data", "2018_2023_all_issues_prs.csv")
-    else:
-        csv_path = os.path.join("data", f"{current_year}_all_issues_prs.csv")
+    os.makedirs("data", exist_ok=True)
+    csv_path = os.path.join("data", csv_name)
     all_contribs_final_df.to_csv(csv_path, index=False)
     print(f"Saved csv here: {csv_path}")
 
