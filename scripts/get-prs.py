@@ -47,6 +47,15 @@ def parse_gh_date(value: str | None) -> datetime | None:
     return datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
 
 
+def is_bot(user: dict, bots: list[str]) -> bool:
+    """Return True for GitHub App accounts (type "Bot") and listed bot logins.
+
+    The ``bots`` list is a fallback for machine accounts that are registered
+    as regular users, which the API reports as type "User".
+    """
+    return user.get("type") == "Bot" or user["login"] in bots
+
+
 def get_repo_data(
     github_api,
     repo_name,
@@ -99,7 +108,7 @@ def get_repo_data(
             continue  # Opened outside the requested year
 
         gh_user = item["user"]["login"]
-        if gh_user in contrib_types["bots"]:
+        if is_bot(item["user"], contrib_types["bots"]):
             continue  # Skip items created by bots
         elif gh_user in contrib_types["pyos_staff"]:
             contrib_type = "staff"
