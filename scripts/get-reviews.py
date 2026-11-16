@@ -74,6 +74,8 @@ def process_submissions(submission_type, labels):
         - issue_num (str): The issue number associated with the review.
         - description (str): The description of the package.
         - categories (list): The categories assigned to the package.
+        - editor_search_started_at (datetime): Added later from the issue timeline
+          when the seeking-editor label was most recently applied.
     """
     reviews = get_reviews("pyopensci", "software-submission", labels)
     submission_table = [
@@ -158,22 +160,19 @@ def _parse_last_comment_nodes(comments):
     return last_comment.get("createdAt"), author.get("login")
 
 
-def get_last_comments(issue_nums, batch_size=LAST_COMMENT_BATCH_SIZE):
-    """Batch-fetch last comment date/user for many issues via GraphQL aliases.
+def _parse_editor_search_started_at(events):
+    """Return the most recent date the seeking-editor label was applied."""
+    seeking_editor_events = [
+        event.get("createdAt")
+        for event in events
+        if event
+        and (event.get("label") or {}).get("name") == "0/seeking-editor"
+    ]
+    return max(seeking_editor_events, default=None)
 
-    Parameters
-    ----------
-    issue_nums : sequence
-        Issue numbers to query.
-    batch_size : int
-        Max issues per GraphQL request.
 
-    Returns
-    -------
-    dict[str, tuple]
-        Maps issue number (as str) to ``(last_comment_date, last_comment_user)``.
-        Missing or failed issues map to ``(None, None)``.
-    """
+def get_review_activity(issue_nums, batch_size=LAST_COMMENT_BATCH_SIZE):
+    """Batch-fetch last comments and editor-search dates via GraphQL."""
     gh_token = os.getenv("GITHUB_TOKEN")
     headers = {
         "Authorization": f"Bearer {gh_token}",
@@ -198,6 +197,16 @@ def get_last_comments(issue_nums, batch_size=LAST_COMMENT_BATCH_SIZE):
                       }}
                     }}
                   }}
+                  timelineItems(last: 100, itemTypes: [LABELED_EVENT]) {{
+                    nodes {{
+                      ... on LabeledEvent {{
+                        createdAt
+                        label {{
+                          name
+                        }}
+                      }}
+                    }}
+                  }}
                 }}
                 """
             )
@@ -210,17 +219,13 @@ def get_last_comments(issue_nums, batch_size=LAST_COMMENT_BATCH_SIZE):
         }}
         """
 
-        response = requests.post(
-            GRAPHQL_URL,
-            json={"query": query},
-            headers=headers,
-        )
+        response = requests.post(GRAPHQL_URL, json={"query": query}, headers=headers)
 
         if response.status_code != 200:
             print(f"Error: Received status code {response.status_code}")
             print(f"Response content: {response.content}")
             for num in batch:
-                results[num] = (None, None)
+                results[num] = (None, None, None)
             continue
 
         payload = response.json()
@@ -232,12 +237,41 @@ def get_last_comments(issue_nums, batch_size=LAST_COMMENT_BATCH_SIZE):
             issue_data = repo_data.get(f"i{num}")
             if not issue_data:
                 print(f"Missing issue data for issue {num}")
-                results[num] = (None, None)
+                results[num] = (None, None, None)
                 continue
             comments = issue_data.get("comments", {}).get("nodes", [])
-            results[num] = _parse_last_comment_nodes(comments)
+            last_comment_date, last_comment_user = _parse_last_comment_nodes(comments)
+            events = issue_data.get("timelineItems", {}).get("nodes", [])
+            results[num] = (
+                last_comment_date,
+                last_comment_user,
+                _parse_editor_search_started_at(events),
+            )
 
     return results
+
+
+def get_last_comments(issue_nums, batch_size=LAST_COMMENT_BATCH_SIZE):
+    """Batch-fetch last comment date/user for many issues via GraphQL aliases.
+
+    Parameters
+    ----------
+    issue_nums : sequence
+        Issue numbers to query.
+    batch_size : int
+        Max issues per GraphQL request.
+
+    Returns
+    -------
+    dict[str, tuple]
+        Maps issue number (as str) to ``(last_comment_date, last_comment_user)``.
+        Missing or failed issues map to ``(None, None)``.
+    """
+    activity_by_issue = get_review_activity(issue_nums, batch_size)
+    return {
+        issue_num: (activity[0], activity[1])
+        for issue_num, activity in activity_by_issue.items()
+    }
 
 
 def attach_last_comments(df):
@@ -248,6 +282,21 @@ def attach_last_comments(df):
     )
     df["last_comment_user"] = df["issue_num"].map(
         lambda n: comments_by_issue.get(str(n), (None, None))[1]
+    )
+    return df
+
+
+def attach_review_activity(df):
+    """Join last-comment and editor-search fields onto a submissions DataFrame."""
+    activity_by_issue = get_review_activity(df["issue_num"].tolist())
+    df["last_comment_date"] = df["issue_num"].map(
+        lambda n: activity_by_issue.get(str(n), (None, None, None))[0]
+    )
+    df["last_comment_user"] = df["issue_num"].map(
+        lambda n: activity_by_issue.get(str(n), (None, None, None))[1]
+    )
+    df["editor_search_started_at"] = df["issue_num"].map(
+        lambda n: activity_by_issue.get(str(n), (None, None, None))[2]
     )
     return df
 
@@ -286,7 +335,7 @@ def main():
     for submission_type, labels in submission_types.items():
         df = process_submissions(submission_type, labels)
         df["status"] = df["labels"].apply(set_review_status, args=(issue_map,))
-        df = attach_last_comments(df)
+        df = attach_review_activity(df)
 
         # Save csv file
         os.makedirs("data", exist_ok=True)
