@@ -18,7 +18,9 @@ START_2025 = datetime(2025, 1, 1)
 CONTRIB_TYPES = {"pyos_staff": ["staff-user"], "bots": ["some-bot[bot]"]}
 
 
-def make_item(created_at, closed_at=None, is_pr=False, user="contrib-user"):
+def make_item(
+    created_at, closed_at=None, is_pr=False, user="contrib-user", user_type="User"
+):
     """Build a minimal GitHub issues/pulls API item."""
     item = {
         "title": f"item opened {created_at}",
@@ -26,7 +28,7 @@ def make_item(created_at, closed_at=None, is_pr=False, user="contrib-user"):
         "closed_at": closed_at,
         "state": "closed" if closed_at else "open",
         "labels": [],
-        "user": {"login": user},
+        "user": {"login": user, "type": user_type},
     }
     if is_pr:
         item["pull_request"] = {"url": "https://api.github.com/..."}
@@ -112,6 +114,18 @@ def test_bots_are_skipped_and_staff_flagged():
     )
     df = get_issues(api)
     assert list(df["contrib_type"]) == ["staff", "contributor"]
+
+
+def test_bot_type_accounts_are_skipped_without_being_listed():
+    """Regression test for gh-230."""
+    api = FakeGitHubAPI(
+        issues=[
+            make_item("2024-06-01T00:00:00Z", user="dependabot[bot]", user_type="Bot"),
+            make_item("2024-06-01T00:00:00Z", user="contrib-user"),
+        ]
+    )
+    df = get_issues(api)
+    assert list(df["created_by"]) == ["contrib-user"]
 
 
 def test_process_repo_propagates_api_errors():
