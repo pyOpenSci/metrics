@@ -40,7 +40,7 @@ today = current_date.strftime("%d %B %Y")
 ```{python}
 def clean_and_order(df, DROP_COLS, order):
     """Drop columns and reorder DataFrame columns."""
-    return df.drop(columns=DROP_COLS, errors="ignore")[ORDER]
+    return df.drop(columns=DROP_COLS, errors="ignore")[order]
 
 def get_status_df(df, status):
     return df[df["active_status"] == status].reset_index(drop=True)
@@ -71,6 +71,18 @@ def show_submissions(df):
 
 DROP_COLS = ["date_accepted", "labels", "editor", "status", "active_status"]
 ORDER = ["Name", "Description", "Days Open", "Date Opened","Last Comment", "Last User to Comment", "Issue", "Categories", "eic"]
+SEEKING_EDITOR_ORDER = [
+    "Name",
+    "Description",
+    "Days Seeking Editor",
+    "Days Open",
+    "Date Opened",
+    "Last Comment",
+    "Last User to Comment",
+    "Issue",
+    "Categories",
+    "eic",
+]
 
 label_map = {
     "pre-review": [
@@ -238,6 +250,17 @@ open_reviews["active_status"] = open_reviews["labels"].apply(get_active_status)
 
 # Add days open to table
 open_reviews["Days Open"] = (today - open_reviews["Date Opened"]).dt.days
+if "editor_search_started_at" in open_reviews:
+    editor_search_started_at = pd.to_datetime(
+        open_reviews["editor_search_started_at"], utc=True
+    )
+    open_reviews["Days Seeking Editor"] = (
+        today - editor_search_started_at
+    ).dt.days.astype("Int64")
+else:
+    open_reviews["Days Seeking Editor"] = pd.Series(
+        pd.NA, index=open_reviews.index, dtype="Int64"
+    )
 open_reviews["Date Opened"] = open_reviews["Date Opened"].dt.date
 open_reviews["Last Comment"] = open_reviews["Last Comment"].dt.date
 ```
@@ -249,7 +272,9 @@ open_reviews["Last Comment"] = open_reviews["Last Comment"].dt.date
 review_status_ct = open_reviews["active_status"].value_counts().reset_index()
 review_status_ct.rename(columns={"labels": "status"}, inplace=True)
 
-seeking_editor = clean_and_order(get_status_df(open_reviews, "seeking editor"),DROP_COLS, ORDER)
+seeking_editor = clean_and_order(
+    get_status_df(open_reviews, "seeking editor"), DROP_COLS, SEEKING_EDITOR_ORDER
+)
 seeking_reviewer = clean_and_order(get_status_df(open_reviews, "seeking reviewers"),DROP_COLS, ORDER)
 
 seeking_editor_count = len(seeking_editor)
