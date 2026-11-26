@@ -116,15 +116,18 @@ def test_bots_are_skipped_and_staff_flagged():
     assert list(df["contrib_type"]) == ["staff", "contributor"]
 
 
-def test_bot_type_accounts_are_skipped_without_being_listed():
-    """Regression test for gh-230."""
-    api = FakeGitHubAPI(
-        issues=[
-            make_item("2024-06-01T00:00:00Z", user="dependabot[bot]", user_type="Bot"),
-            make_item("2024-06-01T00:00:00Z", user="contrib-user"),
-        ]
+@pytest.mark.parametrize("endpoint", ["issues", "pulls"])
+def test_bot_type_accounts_are_skipped_without_being_listed(endpoint):
+    """Exclude unlisted Bot-type accounts regardless of login suffix."""
+    items = [
+        make_item("2024-06-01T00:00:00Z", user="dependabot[bot]", user_type="Bot"),
+        make_item("2024-06-01T00:00:00Z", user="Copilot", user_type="Bot"),
+        make_item("2024-06-01T00:00:00Z", user="contrib-user"),
+    ]
+    api = FakeGitHubAPI(**{endpoint: items})
+    df = get_prs.get_repo_data(
+        api, "repo", endpoint, CONTRIB_TYPES, {}, START_2024, START_2025
     )
-    df = get_issues(api)
     assert list(df["created_by"]) == ["contrib-user"]
 
 
