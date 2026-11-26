@@ -4,6 +4,7 @@ closed submissions, etc. This allows us to compile activity stats over time.
 """
 
 import os
+import re
 
 import pandas as pd
 import requests
@@ -17,6 +18,47 @@ REPO_OWNER = "pyOpenSci"
 REPO_NAME = "software-submission"
 # Keep batches modest vs GraphQL complexity / payload size.
 LAST_COMMENT_BATCH_SIZE = 50
+
+# Authoritative definition of label names and which status the package is at
+ISSUE_MAP = {
+    "New Submission!": "pre-review",
+    "0/pre-review-checks": "pre-review",
+    "0/seeking-editor": "seeking editor",
+    "1/editor-assigned": "under-review",
+    "2/seeking-reviewers": "under-review",
+    "3/reviewers-assigned": "under-review",
+    "4/reviews-in-awaiting-changes": "under-review",
+    "5/awaiting-reviewer-response": "under-review",
+    "6/pyOS-approved": "pyos-accepted",
+    "7/under-joss-review": "under-joss-review",
+    "8/joss-review-complete": "under-joss-review",
+    "9/joss-approved": "joss-accepted",
+}
+
+# These labels indicate a package is accepted by PyOS
+PYOS_ACCEPTED_LABELS = {
+    "6/pyOS-approved",
+    "7/under-joss-review",
+    "8/joss-review-complete",
+    "9/joss-approved",
+}
+
+# These labels indicate a package is accepted by JOSS
+JOSS_ACCEPTED_LABELS = {"9/joss-approved"}
+
+# These labels indicate a package has been submitted to JOSS
+JOSS_SUBMITTED_LABELS = {
+    "7/under-joss-review",
+    "8/joss-review-complete",
+    "joss-submission-pending",
+}
+
+SUBMISSION_TYPES = {
+    "submission": list(ISSUE_MAP),
+    "presubmission": ["presubmission"],
+}
+
+RE_LABEL_FORMAT = re.compile(r"(\d+)/[\w-]+")
 
 
 def get_reviews(org, repo, labels):
@@ -45,7 +87,7 @@ def get_reviews(org, repo, labels):
     )
     process_review = ProcessIssues(github_api)
     issues = process_review.get_issues()
-    reviews, errors = process_review.parse_issues(issues)
+    reviews, _ = process_review.parse_issues(issues)
     return reviews
 
 
@@ -101,7 +143,6 @@ def process_submissions(submission_type, labels):
 def set_review_status(labels, issue_map):
     """Determines the review status of an issue based on the given label values.
 
-
     Parameters
     ----------
     labels : list
@@ -126,7 +167,6 @@ def set_review_status(labels, issue_map):
     """
 
     highest_label = None
-    highest_value = -1
 
     if "presubmission" in labels:
         return "presubmission"
@@ -137,16 +177,66 @@ def set_review_status(labels, issue_map):
     ):
         return "on hold"
 
-    for i, label in enumerate(labels):
-        if "/" not in label:
-            continue
-
-        value = int(label.split("/")[0])
-
-        if value > highest_value:
-            highest_label = labels[i]
+    status_labels = [
+        label for label in labels if label in ISSUE_MAP and RE_LABEL_FORMAT.match(label)
+    ]
+    if status_labels:
+        highest_label = max(
+            status_labels,
+            key=lambda x: int(x.split("/", 1)[0]),
+        )
 
     return issue_map.get(highest_label)
+
+
+def set_pyos_status(labels, status):
+    """Return the pyOpenSci review status, collapsing all accepted stages.
+
+    Parameters
+    ----------
+    labels : list
+        A list of labels associated with the issue.
+    status : str
+        The review status returned by ``set_review_status``.
+
+    Returns
+    -------
+    str
+        "accepted" if the issue has any stage label from 6 to 9, otherwise
+        ``status`` unchanged.
+
+    Notes
+    -----
+    Acceptance takes precedence over "on hold" and "out of scope", so an
+    accepted package that later gets one of those labels still counts as
+    accepted.
+    """
+    if any(label in PYOS_ACCEPTED_LABELS for label in labels):
+        return "accepted"
+    return status
+
+
+def set_joss_status(labels):
+    """Return the JOSS status of a pyOpenSci-accepted package.
+
+    Parameters
+    ----------
+    labels : list
+        A list of labels associated with the issue.
+
+    Returns
+    -------
+    str or None
+        None if the package is not accepted by pyOpenSci, otherwise
+        "accepted", "submitted" or "none".
+    """
+    if not any(label in PYOS_ACCEPTED_LABELS for label in labels):
+        return None
+    if any(label in JOSS_ACCEPTED_LABELS for label in labels):
+        return "accepted"
+    if any(label in JOSS_SUBMITTED_LABELS for label in labels):
+        return "submitted"
+    return "none"
 
 
 def _parse_last_comment_nodes(comments):
@@ -253,39 +343,14 @@ def attach_last_comments(df):
 
 
 def main():
-    submission_types = {
-        "submission": [
-            "0/seeking-editor",
-            "0/pre-review-checks",
-            "1/editor-assigned",
-            "2/seeking-reviewers",
-            "3/reviewers-assigned",
-            "4/reviews-in-awaiting-changes",
-            "5/awaiting-reviewer-response",
-            "6/pyOS-approved",
-            "7/under-joss-review",
-            "8/joss-review-complete",
-            "9/joss-approved",
-            "New Submission!",
-        ],
-        "presubmission": ["presubmission"],
-    }
-    issue_map = {
-        "New Submission!": "pre-review",
-        "0/pre-review-checks": "pre-review",
-        "0/seeking-editor": "seeking editor",
-        "1/editor-assigned": "under-review",
-        "2/seeking-reviewers": "under-review",
-        "3/reviewers-assigned": "under-review",
-        "4/reviews-in-awaiting-changes": "under-review",
-        "5/awaiting-reviewer-response": "under-review",
-        "6/pyOS-approved": "pyos-accepted",
-        "9/joss-approved": "joss-accepted",
-    }
-
-    for submission_type, labels in submission_types.items():
+    for submission_type, labels in SUBMISSION_TYPES.items():
         df = process_submissions(submission_type, labels)
-        df["status"] = df["labels"].apply(set_review_status, args=(issue_map,))
+        df["status"] = df["labels"].apply(set_review_status, args=(ISSUE_MAP,))
+        df["pyos_status"] = [
+            set_pyos_status(labels, status)
+            for labels, status in zip(df["labels"], df["status"])
+        ]
+        df["joss_status"] = df["labels"].apply(set_joss_status)
         df = attach_last_comments(df)
 
         # Save csv file
