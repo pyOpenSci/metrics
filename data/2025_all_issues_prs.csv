@@ -177,8 +177,6 @@ Fix bugs with RSS feed parsing,2025-11-03 18:43:48,2025-11-07 01:49:40,closed,,b
 Increase HTTP request timeout to 30 seconds,2025-10-22 17:15:04,2025-10-22 18:19:42,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 chore: Modify Dependabot labels in configuration,2025-10-09 00:45:43,2025-10-09 00:46:12,closed,,lwasser,United States,staff,pyosMeta,pulls
 chore: harden action steps,2025-10-08 23:23:56,2025-10-08 23:27:05,closed,,lwasser,United States,staff,pyosMeta,pulls
-Pin GitHub Actions to commit SHAs without documentation file,2025-10-08 23:09:02,2025-10-08 23:21:18,closed,,Copilot,,contributor,pyosMeta,pulls
-Pin GitHub Actions to commit SHAs and enable Dependabot monitoring,2025-10-08 21:52:21,2025-10-08 23:21:34,closed,,Copilot,,contributor,pyosMeta,pulls
 schema: reviewers can be empty now + parsing: handle bold/italics formatting,2025-10-08 16:25:32,2025-10-13 17:03:50,closed,,mathematicalmichael,"Denver, CO",contributor,pyosMeta,pulls
 Update contributor and review data,2025-09-15 00:25:41,2026-01-07 00:10:59,closed,,lwasser,United States,staff,pyosMeta,pulls
 chore(ci): Change Dependabot update interval from weekly to monthly,2025-09-10 20:30:59,2025-09-10 20:54:36,closed,,lwasser,United States,staff,pyosMeta,pulls
