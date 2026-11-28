@@ -34,25 +34,16 @@ I wrote tech blog of @AKARI-Inc 🎉,2025-05-01 11:59:19,,open,,tkoyama010,Japan
 PyOpenSci Discord server is expired,2025-04-19 01:31:21,2025-04-19 18:04:58,closed,,tkoyama010,Japan,contributor,python-package-guide,issues
 Link checker,2025-02-13 19:38:03,2025-05-19 16:05:12,closed,"good first issue, help wanted",lwasser,United States,staff,python-package-guide,issues
 Contributing guide page needs more context,2025-01-15 17:33:37,2025-05-12 21:38:39,closed,,lwasser,United States,staff,python-package-guide,issues
-chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 updates,2025-12-15 16:31:01,2026-01-15 21:22:32,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 enh: adhere to style guide and reorg landing,2025-12-13 01:06:24,2025-12-13 01:20:59,closed,,lwasser,United States,staff,python-package-guide,pulls
 enh: reorganize,2025-12-11 17:45:16,2025-12-11 17:47:24,closed,,lwasser,United States,staff,python-package-guide,pulls
 enh: add task runner page to guide,2025-12-11 17:19:55,2025-12-11 17:40:08,closed,,lwasser,United States,staff,python-package-guide,pulls
-chore: bump the actions group across 1 directory with 2 updates,2025-12-01 23:28:27,2025-12-11 16:08:33,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
-chore: bump actions/checkout from 5 to 6 in the actions group,2025-12-01 18:21:01,2025-12-01 18:54:21,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
-chore: bump actions/checkout from 5.0.0 to 6.0.0 in /examples/pure-hatch/.github/workflows in the actions group,2025-11-24 18:15:53,2025-12-01 23:28:25,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 feat: add package manager page,2025-11-11 18:38:45,2025-12-11 17:37:24,closed,,lwasser,United States,staff,python-package-guide,pulls
 enh: new packaging dependency page,2025-11-11 16:17:00,2025-12-11 17:31:10,closed,,lwasser,United States,staff,python-package-guide,pulls
 enh: Revise Pixi subsection in package dependency section,2025-11-08 00:17:40,2025-11-11 16:00:41,closed,,matthewfeickert,"Lafayette, Colorado",contributor,python-package-guide,pulls
 enh: update dependency page to support pep 735 and uv,2025-11-04 19:40:30,2025-11-06 15:22:09,closed,,lwasser,United States,staff,python-package-guide,pulls
-chore: bump actions/upload-artifact from 4 to 5 in the actions group,2025-11-01 16:08:22,2025-11-11 16:01:06,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
-chore: bump the actions group in /examples/pure-hatch/.github/workflows with 2 updates,2025-10-27 17:59:10,2025-11-05 21:41:40,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 enh(data): add page on data to the tests section,2025-09-19 01:17:45,2026-10-05 16:12:01,closed,enhancement-feature,lwasser,United States,staff,python-package-guide,pulls
-chore: bump the actions group in /examples/pure-hatch/.github/workflows with 3 updates,2025-09-16 22:04:41,2025-09-16 22:12:33,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 chore(ci): add dependebot config and also an example release workflow,2025-09-16 21:55:37,2025-09-16 22:01:17,closed,,lwasser,United States,staff,python-package-guide,pulls
 chore(deps): Update dependabot configuration for GitHub Actions,2025-09-16 21:40:49,2025-09-16 22:03:57,closed,,lwasser,United States,staff,python-package-guide,pulls
-chore: bump actions/setup-python from 5 to 6 in the actions group,2025-09-04 16:13:02,2025-09-15 19:53:16,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
-chore: bump actions/checkout from 4 to 5 in the actions group,2025-08-12 00:09:10,2025-08-21 22:55:06,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 Update Japanese translations,2025-08-03 13:12:05,2025-08-03 13:33:38,closed,,tkoyama010,Japan,contributor,python-package-guide,pulls
 docs: fix links that redirect permanently,2025-07-27 01:49:15,2025-07-30 22:12:20,closed,,jameslamb,"Chicago, IL",contributor,python-package-guide,pulls
 Fix link to code style (it was pointing to CONTRIBUTING),2025-07-26 00:30:52,2025-07-30 21:50:26,closed,,eriknw,"Austin, TX",contributor,python-package-guide,pulls
@@ -180,25 +171,12 @@ Prep Release of 1.6,2025-02-17 18:19:32,2025-02-19 23:45:58,closed,,willingc,San
 In the packages.yml file - 3 authors names are Name.,2025-01-30 18:27:18,2025-02-01 17:52:37,closed,,lwasser,United States,staff,pyosMeta,issues
 Consistent formats for JOSS dois,2025-01-14 18:34:54,2025-04-29 22:54:05,closed,,lwasser,United States,staff,pyosMeta,issues
 feat: Validate JOSS and Zenodo dois in a separate workflow ,2025-01-14 18:32:31,,open,,lwasser,United States,staff,pyosMeta,issues
-chore: bump GitHub Actions(deps): bump peter-evans/create-pull-request from 7.0.8 to 7.0.9,2025-12-01 15:05:36,2026-01-01 13:25:47,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 15:05:32,2026-01-07 00:23:37,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 15:05:25,2026-01-01 13:25:43,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 Fix bugs with RSS feed parsing,2025-11-03 18:43:48,2025-11-07 01:49:40,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 "Improve DOI validation, remove dependency",2025-11-03 18:27:27,2025-11-07 01:48:26,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 "Support non GitHub repo hosts, ignore metrics",2025-11-03 18:03:54,2025-11-07 01:48:44,closed,,banesullivan,United States,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/upload-artifact from 4.6.2 to 5.0.0,2025-11-01 13:20:55,2025-11-12 22:01:25,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/download-artifact from 4.3.0 to 6.0.0,2025-11-01 13:20:52,2025-11-12 22:02:28,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 Increase HTTP request timeout to 30 seconds,2025-10-22 17:15:04,2025-10-22 18:19:42,closed,,banesullivan,United States,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump codecov/codecov-action from 5.4.3 to 5.5.1,2025-10-09 00:46:56,2025-10-09 00:47:15,closed,"security, dependency-update",dependabot[bot],,contributor,pyosMeta,pulls
 chore: Modify Dependabot labels in configuration,2025-10-09 00:45:43,2025-10-09 00:46:12,closed,,lwasser,United States,staff,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/setup-python from 5.6.0 to 6.0.0,2025-10-08 23:28:08,2025-10-09 00:47:02,closed,,dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/download-artifact from 4.3.0 to 5.0.0,2025-10-08 23:28:03,2025-11-01 13:20:54,closed,,dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump pypa/gh-action-pypi-publish from 1.12.4 to 1.13.0,2025-10-08 23:27:59,2025-11-12 22:03:06,closed,,dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/checkout from 4.3.0 to 5.0.0,2025-10-08 23:27:55,2025-10-09 00:46:31,closed,,dependabot[bot],,contributor,pyosMeta,pulls
-chore: bump GitHub Actions(deps): bump actions/add-to-project from 1.0.1 to 1.0.2,2025-10-08 23:27:49,2025-10-09 00:46:48,closed,security,dependabot[bot],,contributor,pyosMeta,pulls
 chore: harden action steps,2025-10-08 23:23:56,2025-10-08 23:27:05,closed,,lwasser,United States,staff,pyosMeta,pulls
-Pin GitHub Actions to commit SHAs without documentation file,2025-10-08 23:09:02,2025-10-08 23:21:18,closed,,Copilot,,contributor,pyosMeta,pulls
-Pin GitHub Actions to commit SHAs and enable Dependabot monitoring,2025-10-08 21:52:21,2025-10-08 23:21:34,closed,,Copilot,,contributor,pyosMeta,pulls
 schema: reviewers can be empty now + parsing: handle bold/italics formatting,2025-10-08 16:25:32,2025-10-13 17:03:50,closed,,mathematicalmichael,"Denver, CO",contributor,pyosMeta,pulls
 Update contributor and review data,2025-09-15 00:25:41,2026-01-07 00:10:59,closed,,lwasser,United States,staff,pyosMeta,pulls
 chore(ci): Change Dependabot update interval from weekly to monthly,2025-09-10 20:30:59,2025-09-10 20:54:36,closed,,lwasser,United States,staff,pyosMeta,pulls
@@ -219,9 +197,7 @@ Fix: remove sigstore step from publish build as it's duplicate,2025-05-20 14:33:
 ✨ pyosMeta Release 1.7 ✨ ,2025-05-19 21:34:16,2025-05-19 21:40:33,closed,,lwasser,United States,staff,pyosMeta,pulls
 ci: Add zizmor to `pre-commit-config.yaml`,2025-05-19 18:51:37,2025-05-19 20:58:34,closed,,klmcadams,,contributor,pyosMeta,pulls
 Docstrings to docs,2025-05-19 16:09:15,2025-05-19 21:00:05,closed,,mrgah,,contributor,pyosMeta,pulls
-Update contributor and review data,2025-04-15 00:24:13,2025-05-19 21:14:28,closed,,github-actions[bot],,contributor,pyosMeta,pulls
 enh(docs): update pyosmeta release workflow docs,2025-04-02 22:39:20,2025-04-10 19:03:26,closed,,lwasser,United States,staff,pyosMeta,pulls
-Update contributor and review data,2025-04-02 21:41:22,2025-04-11 20:08:02,closed,,github-actions[bot],,contributor,pyosMeta,pulls
 do not merge,2025-04-02 21:40:13,2025-04-02 21:41:27,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 Only use pre-commit ci autofix on automated PRs,2025-04-01 06:26:05,2025-04-02 21:37:49,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 [Proposal] Autofix PRs with pre-commit CI,2025-03-29 23:34:20,2025-03-30 22:07:57,closed,,banesullivan,United States,contributor,pyosMeta,pulls
@@ -230,18 +206,13 @@ Consistent logging,2025-03-12 06:44:47,2025-04-16 21:45:30,closed,,banesullivan,
 "Remove duplicate ""Add help-wanted issues to help wanted board"" job",2025-03-12 03:25:55,2025-03-14 14:59:49,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 Test missing community partnerships section,2025-03-12 03:08:38,2025-03-14 15:01:12,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 enh: use graphql to consolidate api calls,2025-03-05 23:59:36,2025-03-18 15:57:26,closed,,lwasser,United States,staff,pyosMeta,pulls
-Update contributor and review data,2025-03-01 00:24:22,2025-04-02 21:38:50,closed,Don't Merge,github-actions[bot],,contributor,pyosMeta,pulls
 Fix: update deprecated sigstore action,2025-02-19 23:49:26,2025-02-19 23:53:53,closed,,lwasser,United States,staff,pyosMeta,pulls
 Update CHANGELOG.md with 1.6 detail,2025-02-18 22:36:28,2025-02-19 22:26:31,closed,,willingc,San Diego,contributor,pyosMeta,pulls
-Update contributor and review data,2025-02-18 14:57:13,2025-02-18 20:50:09,closed,,github-actions[bot],,contributor,pyosMeta,pulls
 [usability] ProcessIssues.parse_issues(issues) should have a print /…count indicator so we know it's doing something #191,2025-02-17 21:57:08,2025-04-29 22:46:57,closed,,hariprakash619,,contributor,pyosMeta,pulls
 Update CHANGELOG.md for 1.6,2025-02-17 18:21:11,2025-02-18 14:54:25,closed,maintenance,willingc,San Diego,contributor,pyosMeta,pulls
 Reorder badges and add more CI badges in README,2025-02-15 18:21:52,2025-02-15 20:18:25,closed,,willingc,San Diego,contributor,pyosMeta,pulls
 [hotfix] handle packages that lack a description on GitHub,2025-02-15 03:44:17,2025-02-15 18:15:42,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 "In CONTRIBUTING.md, add more specifics on configuring API token #194",2025-02-07 22:39:42,2025-02-13 19:32:56,closed,,hariprakash619,,contributor,pyosMeta,pulls
-Update contributor and review data,2025-02-01 00:24:34,2025-02-06 18:01:42,closed,,github-actions[bot],,contributor,pyosMeta,pulls
-Update contributor and review data,2025-01-15 00:22:44,2025-01-15 00:25:24,closed,,github-actions[bot],,contributor,pyosMeta,pulls
-Update contributor and review data,2025-01-14 18:54:44,2025-01-14 19:09:16,closed,,github-actions[bot],,contributor,pyosMeta,pulls
 :sparkles: release 1.5,2025-01-14 18:50:56,2025-01-14 19:09:39,closed,,lwasser,United States,staff,pyosMeta,pulls
 "Hello, I just joined pyOpenSci!",2025-11-09 05:10:29,2025-11-10 19:05:04,closed,,marina554,,contributor,pyopensci.github.io,issues
 BUG: New contriubtors  listing on landing page should list 3 instead of 4 people so it visually fits on the page,2025-07-03 18:23:01,2026-01-15 22:47:49,closed,"bug, help wanted, sprintable",lwasser,United States,staff,pyopensci.github.io,issues
@@ -252,7 +223,6 @@ Astropy page: let's use labels as a  source of truth for astropy-affiliated pack
 BUG: broken link,2025-02-25 02:17:22,2025-02-25 11:15:00,closed,bug,jsdodge,,contributor,pyopensci.github.io,issues
 FEATURE: _data/packages.yml should be alphabetically ordered,2025-02-19 23:52:10,2025-02-20 18:23:15,closed,enhancement,pllim,"Baltimore, MD, USA",contributor,pyopensci.github.io,issues
 BUG: our contributor build is currently broken (this is likely a pyosmeta bug),2025-02-12 16:41:44,2025-03-17 23:14:29,closed,bug,lwasser,United States,staff,pyopensci.github.io,issues
-Update contributor and review data,2025-12-31 21:13:08,2026-01-01 22:06:37,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 bug: Fix dropdown quirk mobile and desktop,2025-12-26 01:29:15,2025-12-26 01:30:08,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: fix donate button and clean up style bugs ,2025-12-20 00:42:05,2025-12-20 00:55:44,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: fix styles across all cards,2025-12-19 20:26:02,2025-12-19 20:32:33,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
@@ -261,206 +231,73 @@ enh(cleanup): Fix landing page cards and cleanup footer and styles,2025-12-19 18
 enh: final cleanup,2025-12-19 04:37:58,2025-12-19 04:38:27,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: style cleanup,2025-12-19 00:33:13,2025-12-19 01:46:50,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: Add looking forward to 2026 blog,2025-12-18 01:15:54,2026-02-04 16:18:15,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-build(deps): bump the actions group across 1 directory with 2 updates,2025-12-15 06:09:37,2025-12-18 04:57:32,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-12-10 21:14:31,2025-12-18 02:08:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix Jekyll framework link in README,2025-11-29 06:22:55,2025-11-29 22:04:37,closed,,jsdodge,,contributor,pyopensci.github.io,pulls
-build(deps): bump actions/checkout from 5 to 6 in /.github/workflows in the actions group,2025-11-24 06:16:18,2025-12-15 06:09:35,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
 enh: add contact footer as include to every blog post,2025-11-18 19:28:19,2025-11-18 19:29:22,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-11-12 21:13:06,2025-12-10 03:18:02,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-11-09 21:13:11,2025-11-11 22:48:05,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-build(deps): bump lycheeverse/lychee-action from 2.6.1 to 2.7.0 in /.github/workflows in the actions group,2025-11-03 06:14:25,2025-11-12 18:11:26,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
 enh: update workshop pricing,2025-10-30 16:16:52,2025-10-30 16:19:30,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-10-29 21:12:44,2025-11-09 01:17:34,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-10-27 21:12:40,2025-10-28 23:19:49,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-10-26 21:13:17,2025-10-27 04:51:32,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-10-24 21:12:31,2025-10-25 22:18:28,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-10-23 21:12:45,2025-10-23 23:22:39,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-10-22 21:12:22,2025-10-23 00:05:03,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-10-19 21:11:56,2025-10-22 18:56:37,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-10-18 21:11:50,2025-10-18 23:40:10,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 bug: fix social links throughout,2025-10-06 21:39:52,2025-10-06 21:43:37,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix BlueSky handle,2025-10-06 08:49:43,2025-10-08 12:43:19,closed,,VeckoTheGecko,"Utrecht, Netherlands",contributor,pyopensci.github.io,pulls
-build(deps): bump peter-evans/create-issue-from-file from 5 to 6 in /.github/workflows in the actions group,2025-10-06 06:16:26,2025-10-07 19:26:15,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
 [oct 24 merge] draft Why We Choose What We Choose,2025-10-02 21:32:48,2025-10-27 20:45:16,closed,,ucodery,,contributor,pyopensci.github.io,pulls
 Add ChemInformant package and  contributor,2025-09-30 10:08:11,2025-11-12 22:24:45,closed,,HzaCode,,contributor,pyopensci.github.io,pulls
 Add inline link to Python Packaging Guide from packaging resources page (#441),2025-09-29 12:44:10,2026-01-02 00:06:03,closed,,T-leke,united kingdom,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-09-28 21:11:47,2025-10-18 00:03:56,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-09-23 21:11:52,2025-09-28 00:59:22,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 enh(blog): Add blog post on generative AI peer review policy,2025-09-16 19:19:25,2025-12-16 21:34:35,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 CyNetDiff blog post,2025-09-15 03:46:09,2026-01-12 19:08:18,closed,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-09-14 21:11:35,2025-09-23 01:03:21,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-09-12 21:11:49,2025-09-13 22:14:10,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 enh: update editorial team,2025-09-11 23:44:17,2025-09-11 23:45:36,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 bug: events only show on events page,2025-09-11 21:54:09,2025-09-11 21:55:18,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh(blog): sept 2025 blog,2025-09-11 21:19:48,2025-09-11 21:29:08,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-09-11 21:13:17,2025-09-11 21:30:05,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fetch tutorials from RSS feed,2025-09-10 17:47:06,,open,"enhancement, feature:automation",banesullivan,United States,contributor,pyopensci.github.io,pulls
 Delete .github/workflows/update-all-review-data.yml,2025-09-10 17:15:03,2025-09-11 20:15:07,closed,,banesullivan,United States,contributor,pyopensci.github.io,pulls
 feat(blog): from surviving to thriving,2025-09-09 21:03:35,2025-09-11 20:47:28,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: add eventbrite to packaging workshop page,2025-09-09 17:43:14,2025-09-09 17:43:23,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 event(workshop): add new workshops to website,2025-09-08 18:22:27,2025-09-09 17:28:55,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-build(deps): bump the actions group in /.github/workflows with 2 updates,2025-09-08 06:13:11,2025-09-09 17:43:56,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-09-07 21:12:54,2025-09-11 20:48:09,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-09-06 21:11:31,2025-09-07 01:20:44,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-09-05 21:13:03,2025-09-06 14:30:53,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 enh(typo): fix typo in link,2025-09-02 16:52:11,2025-09-02 16:52:31,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 event: add Stanford workshop to website,2025-09-02 16:39:27,2025-09-02 16:45:48,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-30 21:12:22,2025-09-04 23:36:43,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-build(deps): bump the actions group in /.github/workflows with 2 updates,2025-08-25 10:20:24,2025-09-02 17:25:42,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-23 21:11:50,2025-08-29 22:44:24,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-build(deps): bump actions/checkout from 4 to 5 in /.github/workflows in the actions group,2025-08-18 09:14:34,2025-08-20 18:54:52,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-15 21:12:08,2025-08-22 23:39:26,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-14 21:12:55,2025-08-14 23:43:59,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 bug: blog missing a header,2025-08-14 19:36:15,2025-08-14 19:36:23,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh(blog): post on EC rotation and update contribs,2025-08-14 19:01:00,2025-08-14 19:07:45,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-13 21:11:15,2025-08-14 19:08:33,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 feat(blog): mandy moore intro,2025-08-13 16:47:34,2025-08-13 20:15:33,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-build(deps): bump lycheeverse/lychee-action from 2.4.1 to 2.5.0 in /.github/workflows in the actions group,2025-08-11 09:50:07,2025-08-13 20:15:46,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-10 21:11:20,2025-08-13 20:15:58,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-09 21:11:23,2025-08-09 22:47:34,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-07 23:13:04,2025-08-07 23:18:28,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 bug: i promise to never update the contrib file manually again,2025-08-07 22:56:15,2025-08-07 23:09:23,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 I broke things,2025-08-07 22:38:00,2025-08-07 22:51:21,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: update editorial team,2025-08-07 22:11:57,2025-08-07 22:18:52,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-07 21:12:33,2025-08-07 22:32:32,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-07 20:11:57,2025-08-07 20:13:42,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 fix: update how to page,2025-08-05 22:50:24,2025-08-13 16:48:53,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 fix: spacing on figures in blog post,2025-08-05 21:38:11,2025-08-05 21:38:27,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh(blog): add scipy bof blog,2025-08-05 21:19:17,2025-08-05 21:32:05,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: webp added to figure examples,2025-08-04 17:02:53,2025-08-04 17:05:31,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 enh: add mandy as an author,2025-08-04 16:26:01,2025-08-05 15:12:15,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-08-03 21:11:31,2025-08-05 14:45:00,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Small typo fix in how-to-submit-package.md,2025-08-01 20:19:06,2025-08-05 14:44:45,closed,,TimothyEDawson,,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-30 21:12:03,2025-08-03 02:03:04,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-28 21:11:48,2025-07-30 00:10:01,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-26 21:12:43,2025-07-28 20:06:22,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-25 21:11:44,2025-07-26 01:37:48,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-24 23:46:27,2025-07-25 02:53:43,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update contributor and review data (#680),2025-07-24 22:40:39,2025-07-24 23:07:20,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat(blog): add scipy blog,2025-07-24 19:58:38,2025-07-24 22:17:40,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-23 21:11:40,2025-07-24 22:21:46,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-22 21:12:56,2025-07-22 22:50:28,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-19 21:11:28,2025-07-22 20:56:10,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Add button to PyOS Python Package Guide,2025-07-12 18:52:44,2025-07-22 20:59:55,closed,,brepowell,"Seattle, Washington",contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-11 21:11:20,2025-07-19 00:11:06,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix: update create package url,2025-07-11 20:00:22,2025-07-11 20:03:23,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-07-03 21:11:20,2025-07-11 20:05:19,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 enh(events): add stanford ospo and scipy events to website,2025-07-03 17:58:11,2025-07-03 18:00:10,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 fix: broken link,2025-07-01 22:11:35,2025-07-01 22:13:12,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 blog: pyopensci at scipy 2025,2025-07-01 21:54:20,2025-07-01 21:57:25,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-29 21:10:54,2025-07-02 22:14:41,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-26 21:11:41,2025-06-28 23:12:22,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 script to make markdown files,2025-06-25 21:59:10,2026-06-18 00:57:34,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat(event): event page for scipy workshop with setup,2025-06-25 01:12:43,2025-06-28 03:57:38,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-19 21:12:13,2025-06-26 19:58:55,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-18 21:11:16,2025-06-18 22:32:17,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-17 21:11:35,2025-06-17 23:11:14,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-11 21:11:26,2025-06-16 21:29:25,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-08 21:11:13,2025-06-10 22:09:22,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-07 21:11:10,2025-06-08 00:29:55,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-06 21:11:05,2025-06-06 21:20:24,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-05 21:11:03,2025-06-05 23:53:22,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-03 21:12:51,2025-06-04 22:14:19,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-06-02 21:12:40,2025-06-02 23:59:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-31 21:10:47,2025-06-01 23:11:32,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-30 21:11:33,2025-05-31 00:30:37,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-29 21:11:44,2025-05-29 21:14:50,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-28 21:11:06,2025-05-28 23:10:11,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-25 21:10:44,2025-05-28 00:00:22,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-24 21:10:53,2025-05-25 02:22:29,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-23 21:11:44,2025-05-24 01:49:57,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-21 21:11:39,2025-05-22 23:49:48,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-20 21:12:07,2025-05-20 23:55:38,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-20 15:17:48,2025-05-20 15:20:24,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix contributor name,2025-05-20 14:26:53,2025-05-20 15:13:48,closed,,flpm,"New York, NY",contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-19 21:11:34,2025-05-20 13:45:19,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-18 21:11:47,2025-05-18 23:04:51,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-17 21:10:53,2025-05-18 12:04:13,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-16 21:11:03,2025-05-16 23:44:32,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-15 21:11:22,2025-05-16 00:07:01,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Close the comms position,2025-05-14 22:00:48,2025-05-14 22:04:51,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-14 21:12:22,2025-05-14 21:35:00,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-13 21:12:31,2025-05-13 23:05:51,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-build(deps): bump lycheeverse/lychee-action from 2.4.0 to 2.4.1 in /.github/workflows in the actions group,2025-05-12 07:03:38,2025-05-14 21:59:03,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-11 21:10:54,2025-05-12 22:24:45,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-08 21:11:21,2025-05-11 08:23:51,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-07 21:11:46,2025-05-07 23:11:38,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-06 21:11:43,2025-05-06 21:16:03,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 feat: blog post about pycon us,2025-05-06 19:09:06,2025-05-06 19:40:08,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-05 21:11:07,2025-05-06 12:44:47,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-04 21:11:03,2025-05-04 23:25:06,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-03 21:12:11,2025-05-04 12:56:00,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-05-02 21:11:20,2025-05-02 23:27:05,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-30 21:13:31,2025-05-01 23:05:47,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-26 21:11:51,2025-04-29 23:29:05,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-25 21:12:15,2025-04-26 02:25:40,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix: i can't spell anything right,2025-04-23 21:42:49,2025-04-23 21:43:00,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat: contribute talk and update socials,2025-04-22 23:51:49,2025-04-23 21:14:27,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-22 21:12:19,2025-04-24 23:06:29,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-18 21:11:43,2025-04-21 21:37:51,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Above the fold edits,2025-04-17 22:58:39,2025-04-17 23:08:03,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-16 21:11:29,2025-04-17 23:08:32,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-14 21:12:34,2025-04-15 22:11:15,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-12 21:11:55,2025-04-14 12:12:04,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-11 21:12:00,2025-04-12 07:02:32,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-10 21:11:13,2025-04-10 22:24:52,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-09 21:12:03,2025-04-10 03:46:27,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-09 20:24:53,2025-04-09 20:29:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-build(deps): bump lycheeverse/lychee-action from 2.3.0 to 2.4.0 in /.github/workflows in the actions group,2025-04-07 07:19:24,2025-04-11 20:08:54,closed,"dependencies, github_actions",dependabot[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-04-01 21:12:19,2025-04-07 22:28:28,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Only use pre-commit ci autofix on automated PRs,2025-04-01 06:23:56,2025-04-11 20:09:53,closed,,banesullivan,United States,contributor,pyopensci.github.io,pulls
 [Proposal] Autofix PRs with pre-commit CI,2025-03-29 23:33:00,2025-03-30 22:05:33,closed,,banesullivan,United States,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-28 21:11:04,2025-04-01 06:11:51,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-27 21:11:36,2025-03-27 21:39:52,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-26 21:11:15,2025-03-27 01:15:46,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-25 21:12:17,2025-03-26 05:36:00,closed,DO-NOT-MERGE,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-23 21:11:58,2025-03-25 00:11:53,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix: style cleanup,2025-03-21 21:39:39,2025-03-21 21:40:25,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-21 21:11:12,2025-03-23 04:12:17,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 feat(blog): mission post ,2025-03-21 17:21:13,2025-03-25 22:10:21,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-20 21:12:38,2025-03-20 22:08:25,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-19 21:13:24,2025-03-20 18:47:04,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-18 21:11:19,2025-03-18 22:36:59,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 fix: headers should use webp and remove the overlay (for accessibility and load),2025-03-18 00:38:27,2025-03-19 21:00:34,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 [doc] note how Slack notification is used to monitor automated tasks,2025-03-17 23:05:53,2025-03-19 18:05:42,closed,,banesullivan,United States,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-17 21:11:35,2025-03-17 22:49:40,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 enh: remove google font url and load locally,2025-03-15 20:15:21,2025-03-18 15:06:06,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 fix: typo in blog and fonts,2025-03-15 02:00:31,2025-03-15 02:13:40,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-14 21:10:52,2025-03-16 23:33:12,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-12 21:11:26,2025-03-14 14:42:17,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Add Slack Notification for automated jobs,2025-03-12 02:44:19,2025-03-14 14:41:41,closed,,banesullivan,United States,contributor,pyopensci.github.io,pulls
 feat(blog): add bssw blog to site,2025-03-12 00:35:42,2025-03-18 19:01:04,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-09 21:10:28,2025-03-11 23:34:16,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-08 21:10:37,2025-03-09 04:30:01,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-06 21:11:06,2025-03-08 00:08:37,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update update field,2025-03-05 23:10:40,2025-03-05 23:11:32,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-05 21:12:46,2025-03-05 23:05:46,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-04 21:12:58,2025-03-04 23:22:15,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix: astropy landing should use labels vs partners,2025-03-03 23:59:15,2025-03-04 17:01:54,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-03 23:43:58,2025-03-03 23:46:07,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-03 21:11:16,2025-03-03 22:10:11,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-02 21:10:59,2025-03-02 23:15:04,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-03-01 21:10:47,2025-03-02 09:38:00,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-02-27 21:11:15,2025-02-28 21:49:56,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-02-26 21:11:19,2025-02-26 22:38:27,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-02-25 21:13:04,2025-02-25 21:17:05,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-02-24 21:12:24,2025-02-24 22:14:45,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-02-22 21:11:30,2025-02-24 02:09:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-02-20 21:11:27,2025-02-22 00:27:08,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-02-19 23:03:00,2025-02-19 23:06:22,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-build(deps): bump lycheeverse/lychee-action from 2.2.0 to 2.3.0 in /.github/workflows in the actions group,2025-02-10 07:00:00,2025-02-13 19:50:07,closed,dependencies,dependabot[bot],,contributor,pyopensci.github.io,pulls
 Fix: add commiment to DEIa,2025-02-07 19:29:20,2025-02-07 19:30:48,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix images 20242,2025-02-07 19:11:02,2025-02-07 19:11:19,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 2024 fix image,2025-02-07 19:01:54,2025-02-07 19:02:20,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 run update-contribs-reviews daily,2025-02-06 21:51:48,2025-02-07 16:58:34,closed,,hamogu,"Cambridge, MA, USA",contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-01-30 18:22:20,2025-02-01 18:41:01,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Blog Post for QuadratiK ,2025-01-17 11:23:22,2025-02-06 18:23:12,closed,,rmj3197,"Buffalo, New York, USA",contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-01-15 00:31:06,2025-01-15 00:33:44,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-01-14 20:20:50,2025-01-14 20:32:43,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 fix: make ci happy,2025-01-07 20:47:20,2025-01-07 20:49:30,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat(blog): 2024 recap blog,2025-01-07 17:12:44,2025-02-07 18:41:30,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix some link issues,2025-01-06 08:31:42,2025-01-07 20:19:22,closed,,erik-whiting,"Houston, TX",contributor,pyopensci.github.io,pulls
-Update contributor and review data,2025-01-01 00:34:25,2025-01-07 17:59:57,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Add pyOpenSci citation to GitHub profile description,2025-04-22 21:04:05,,open,,akhilkrishnar0,Bangalore. India,contributor,handbook,issues
 enh:Add maintainers role and cleanup infra overview,2025-12-17 18:10:36,2025-12-17 22:24:15,closed,,lwasser,United States,staff,handbook,pulls
 Fix: clarify peer review lead role,2025-08-20 23:35:25,2025-08-20 23:38:18,closed,,lwasser,United States,staff,handbook,pulls
@@ -524,57 +361,31 @@ ENH: figure out a way to pull editor domain expertise from our data,2025-02-28 2
 "Bug: in our peer review data, the date of the last comment is not accurate.",2025-02-21 20:41:07,2025-03-04 23:56:31,closed,,lwasser,United States,staff,peer-review-metrics,issues
 Bug: ci build is fixed but we should still clean it up as suggested in this issue 👀 ,2025-02-21 19:50:17,2025-03-17 23:12:02,closed,,lwasser,United States,staff,peer-review-metrics,issues
 bug: pr/issue data by year,2025-01-22 17:00:52,,open,,lwasser,United States,staff,peer-review-metrics,issues
-Update contributor and review data,2025-12-31 23:10:57,2026-01-01 17:54:40,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-12-29 05:21:22,2025-12-29 17:25:54,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-12-22 05:16:44,2025-12-22 16:03:29,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-11-24 05:15:06,2025-12-18 01:33:45,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 enh: Refactor reviews over time page,2025-11-21 23:50:23,2025-11-21 23:54:00,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 enh: turn timeseries page into dashboard ,2025-11-20 23:09:44,2025-11-20 23:17:44,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2025-11-16 05:15:15,2025-11-20 22:29:23,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-10-13 05:15:56,2025-11-12 17:38:14,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-10-10 22:19:46,2025-10-10 22:23:21,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 enh: flesh out emeritus dashboard,2025-10-10 21:39:53,2025-10-10 22:13:34,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 bug: typos,2025-10-10 02:08:09,2025-10-10 02:08:41,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix: action bug,2025-10-10 01:56:12,2025-10-10 01:59:01,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 enh: enhance editorial dashboard,2025-10-10 01:45:44,2025-10-10 01:48:06,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2025-10-09 17:49:02,2025-10-09 17:50:12,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-10-07 19:25:51,2025-10-07 19:53:24,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-09-08 05:14:51,2025-10-07 17:52:33,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-08-02 05:14:24,2025-09-03 00:09:12,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 enh: update editors script enhancement,2025-07-30 23:05:49,2025-07-30 23:39:20,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2025-07-29 22:26:36,2025-07-29 22:38:46,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-07-28 05:18:44,2025-07-29 22:19:13,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 #131 development for Inactive Dashboard,2025-07-13 20:18:59,2026-03-25 21:07:34,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,pulls
 feat: add package activity dashboard for tracking package maintenance for inactive packages greater than 6 months,2025-07-13 17:54:54,2026-03-25 21:16:16,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,peer-review-metrics,pulls
 Update editorial-dashboard.qmd to fix editor count mismatch,2025-07-12 21:46:58,2025-07-31 00:00:25,closed,,rogerb121,,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-06-23 05:12:34,2025-07-22 14:28:24,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: quick layout edit,2025-06-17 23:36:01,2025-06-17 23:36:10,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Peer review dashboard,2025-06-17 22:25:37,2025-06-17 22:52:19,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2025-06-16 05:12:53,2025-06-17 20:25:09,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 feat: Peer review dashboard,2025-06-13 00:42:38,2025-06-17 20:25:18,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2025-06-11 18:28:41,2025-06-11 18:31:36,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 [patch] fix usage of GitHubAPI in get-prs.py,2025-06-11 15:11:50,2025-06-11 18:22:59,closed,,banesullivan,United States,contributor,peer-review-metrics,pulls
 enh: create package metric dashboard,2025-06-06 00:48:49,2025-06-12 21:29:18,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 add: package metrics to peer review dropdown,2025-06-04 20:51:20,2025-06-05 01:23:29,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 feat: package metrics,2025-05-20 14:53:55,2025-06-04 20:40:38,closed,,clatapie,France,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-05-19 05:12:17,2025-05-29 21:14:47,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-03-31 05:12:16,2025-05-19 01:39:23,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-03-28 16:31:58,2025-03-28 18:20:29,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-03-16 05:09:31,2025-03-28 16:25:32,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-03-13 16:12:44,2025-03-13 16:20:27,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update: add lauren & isabel's domains for our editor dashboard,2025-03-12 21:35:05,2025-03-12 21:49:37,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix: get counts and fix favicon,2025-03-12 20:43:02,2025-03-12 20:48:13,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Add documentation about elevated permissions,2025-03-12 06:10:17,2025-03-12 20:44:08,closed,,banesullivan,United States,contributor,peer-review-metrics,pulls
 [debug] do not merge,2025-03-12 05:56:12,2025-03-12 06:02:24,closed,,banesullivan,United States,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-03-10 05:09:27,2025-03-12 20:44:33,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: use graphql to get last comment and date,2025-03-04 23:50:06,2025-03-04 23:56:30,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2025-03-04 02:56:26,2025-03-04 02:57:47,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: don't install quarto twice in CI,2025-03-04 02:43:32,2025-03-04 03:06:14,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2025-03-04 01:09:52,2025-03-04 01:13:44,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: new nicer plots for reporting,2025-03-04 01:05:00,2025-03-04 01:07:25,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2025-03-02 05:09:33,2025-03-04 01:05:30,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Add editor domains to dashboard,2025-02-28 23:24:56,2025-03-01 00:38:20,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2025-02-28 19:24:21,2025-02-28 19:30:31,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Test: will this allow things to update?  ,2025-02-28 19:11:17,2025-02-28 19:17:06,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Small update to contrib - metrics at top and fix an inline var,2025-02-25 20:21:07,2025-02-25 20:56:09,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Move metrics to review page,2025-02-25 17:50:57,2025-02-25 17:52:42,closed,,lwasser,United States,staff,peer-review-metrics,pulls
@@ -590,7 +401,6 @@ feat: migrate to quarto,2025-02-14 02:28:28,2025-02-14 02:41:34,closed,,lwasser,
 add: review contributor data over time,2025-02-08 00:37:22,2025-02-08 00:38:49,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix: grab better data and cleanup available editor list,2025-02-07 01:57:19,2025-02-07 03:21:41,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Collect data from sprint board,2025-01-20 20:29:30,2025-01-31 20:04:55,closed,,banesullivan,United States,contributor,peer-review-metrics,pulls
-Update contributor and review data,2025-01-06 19:27:40,2025-01-31 20:07:33,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Enh: add zenodo file that attributes not just me but also everyone who contributed here and in the pyos-package-template repos,2025-10-31 22:09:20,,open,,lwasser,United States,staff,pyosPackage,issues
 Add: instructions on approving a release,2025-10-31 22:02:18,,open,,lwasser,United States,staff,pyosPackage,issues
 test: release to pypi -,2025-10-31 21:59:37,2025-10-31 22:06:45,closed,,lwasser,United States,staff,pyosPackage,issues
@@ -599,27 +409,10 @@ Fix : readthedocs is also failing: can't find _static,2025-10-31 19:40:06,2025-1
 Fix tests,2025-10-31 19:39:15,2025-10-31 21:55:01,closed,,lwasser,United States,staff,pyosPackage,issues
 Update the readme for this repository and link to both the copier template and the packaging guide tutorials and overview pages,2025-07-12 00:02:13,2025-10-31 21:55:41,closed,"help wanted, python-packaging, sprintable",lwasser,United States,staff,pyosPackage,issues
 Enhance / update this repo to match / use the output from our packaging template,2025-07-11 23:36:43,2025-10-31 21:58:27,closed,"help wanted, sprintable",lwasser,United States,staff,pyosPackage,issues
-chore: bump GitHub Actions(deps): bump actions/checkout from 5.0.0 to 6.0.0,2025-12-01 16:07:28,2025-12-01 18:56:18,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump actions/setup-python from 6.0.0 to 6.1.0,2025-12-01 16:07:21,2026-01-05 22:54:05,closed,security,dependabot[bot],,contributor,pyosPackage,pulls
 fix: publish/release workflow,2025-10-31 21:51:46,2025-10-31 21:53:56,closed,,lwasser,United States,staff,pyosPackage,pulls
 fix: rtd needs the static dir in config & specific location of output html + dev container,2025-10-31 21:10:34,2025-10-31 21:33:22,closed,,lwasser,United States,staff,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump pypa/gh-action-pypi-publish from 1.12.4 to 1.13.0,2025-10-31 19:41:44,2025-10-31 20:35:55,closed,,dependabot[bot],,contributor,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump actions/download-artifact from 4.3.0 to 6.0.0,2025-10-31 19:41:41,2025-10-31 20:36:05,closed,,dependabot[bot],,contributor,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump actions/checkout from 4 to 5,2025-10-31 19:41:37,2025-10-31 21:33:09,closed,,dependabot[bot],,contributor,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump actions/setup-python from 5 to 6,2025-10-31 19:41:29,2025-10-31 21:31:30,closed,,dependabot[bot],,contributor,pyosPackage,pulls
-chore: bump GitHub Actions(deps): bump actions/upload-artifact from 4.6.2 to 5.0.0,2025-10-31 19:41:23,2025-10-31 21:30:33,closed,,dependabot[bot],,contributor,pyosPackage,pulls
 enh: file updates for workshop,2025-10-31 17:45:16,2025-10-31 19:40:34,closed,,lwasser,United States,staff,pyosPackage,pulls
 docs: Add template info and packaging tutorial links to README,2025-07-12 19:41:54,2025-07-22 21:13:47,closed,,stevenrayhinojosa-gmail-com,Austin,contributor,pyosPackage,pulls
 docs: format code snippets as blocks,2025-07-12 17:24:10,2025-07-22 21:02:47,closed,,jameslamb,"Chicago, IL",contributor,pyosPackage,pulls
 sphinx site name defaults to package guide instead of pyOpenSci - it should be configurable in each book that uses this theme,2025-07-21 17:03:29,2026-10-22 20:07:15,closed,,lwasser,United States,staff,pyos-sphinx-theme,issues
 Bug: accessibility issue with tables in light mode of the theme,2025-01-30 23:07:37,,open,"help wanted, sprintable",lwasser,United States,staff,pyos-sphinx-theme,issues
-chore: bump the actions group with 2 updates,2025-12-15 16:14:17,2025-12-18 16:48:03,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump the actions group across 1 directory with 6 updates,2025-12-12 16:12:11,2025-12-12 21:41:18,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump the actions group across 1 directory with 5 updates,2025-11-21 16:32:47,2025-12-12 16:12:04,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump the actions group across 1 directory with 4 updates,2025-10-27 16:27:43,2025-11-21 16:32:40,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump the actions group across 1 directory with 2 updates,2025-10-21 16:26:58,2025-10-27 16:14:32,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump actions/setup-python from 5 to 6 in the actions group,2025-09-04 16:13:21,2025-10-21 16:26:54,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump the actions group across 1 directory with 4 updates,2025-08-22 16:28:55,2025-08-22 20:37:05,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump the actions group across 1 directory with 3 updates,2025-08-12 20:18:50,2025-08-22 16:28:51,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump the actions group across 1 directory with 2 updates,2025-08-06 16:23:38,2025-08-12 16:48:58,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump sigstore/gh-action-sigstore-python from 3.0.0 to 3.0.1 in the actions group,2025-06-23 18:27:19,2025-08-06 16:23:35,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls

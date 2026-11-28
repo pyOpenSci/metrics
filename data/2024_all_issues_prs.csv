@@ -59,7 +59,6 @@ Request discussion of distributing with conda  if you have optional pip dependen
 Add: advanced CI elements to the packaging guide,2024-01-10 00:09:52,,open,enhancement-feature,lwasser,United States,staff,python-package-guide,issues
 Create footnotes to external references,2024-01-08 20:45:41,2025-05-12 17:03:55,closed,"documentation, sprintable",lwasser,United States,staff,python-package-guide,issues
 PRIORITY! SPHINX book: Create rss feed of pyOS tutorials,2024-01-08 19:24:48,2025-05-18 23:18:53,closed,"help wanted, sprintable, enhancement-feature",lwasser,United States,staff,python-package-guide,issues
-chore: bump pydata-sphinx-theme from 0.16.0 to 0.16.1 in the pip group,2024-12-17 16:26:18,2024-12-17 19:05:24,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 docs: Fix small typo from LIcense to License,2024-12-07 06:51:22,2024-12-11 20:56:19,closed,,tkoyama010,Japan,contributor,python-package-guide,pulls
 [dec 12 merge] fix: add cross links to the packaging guide,2024-12-05 17:52:35,2024-12-12 16:50:19,closed,,lwasser,United States,staff,python-package-guide,pulls
 docs: add `Tetsuo Koyama` to zenodo file,2024-11-11 03:03:32,2024-11-14 20:09:56,closed,documentation,tkoyama010,Japan,contributor,python-package-guide,pulls
@@ -68,11 +67,8 @@ docs: translate to Japanese documentation.md,2024-11-08 20:19:49,2025-01-17 14:2
 fix: Roberto should be an author,2024-11-08 02:04:04,2024-11-08 02:24:45,closed,,lwasser,United States,staff,python-package-guide,pulls
 feat: adding @RobPasMue to contributors list,2024-11-07 19:01:34,2024-11-07 21:48:48,closed,,RobPasMue,"Leganés, Madrid",contributor,python-package-guide,pulls
 feat: Update contributors to the packaging giudebook,2024-11-06 17:10:35,2024-11-07 14:14:58,closed,,lwasser,United States,staff,python-package-guide,pulls
-chore: bump pydata-sphinx-theme from 0.15.4 to 0.16.0 in the pip group,2024-10-22 16:44:35,2024-10-22 18:09:46,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 Remove option to reuse virtual-env for nox sessions,2024-10-15 15:48:19,2024-10-15 16:25:11,closed,,flpm,"New York, NY",contributor,python-package-guide,pulls
 Update links in publish-python-package-pypi-conda.md,2024-10-07 18:29:56,2024-10-07 23:17:38,closed,maintenance,willingc,San Diego,contributor,python-package-guide,pulls
-chore: bump pydata-sphinx-theme from 0.15.2 to 0.15.4 in the pip group,2024-10-03 00:14:19,2024-10-03 00:49:25,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
-chore: bump the actions group with 2 updates,2024-10-03 00:14:10,2024-10-03 00:52:26,closed,maintenance,dependabot[bot],,contributor,python-package-guide,pulls
 docs: fix mistakes on mentions to how dependencies are defined in pyproject.toml,2024-09-21 17:51:01,2024-09-24 13:46:17,closed,,flpm,"New York, NY",contributor,python-package-guide,pulls
 docs: fix typo in documentation from Github to GitHub,2024-09-20 23:42:21,2024-09-21 00:00:40,closed,documentation,tkoyama010,Japan,contributor,python-package-guide,pulls
 docs: Small clarification to avoid confusion,2024-09-14 19:24:22,2024-09-14 23:46:43,closed,,flpm,"New York, NY",contributor,python-package-guide,pulls
@@ -311,9 +307,7 @@ Setup test suite runs with pytest and hatch scripts,2024-02-21 23:29:10,2024-02-
 Move project to dynamic versioning,2024-02-21 23:27:54,2024-02-21 23:58:16,closed,,lwasser,United States,staff,pyosMeta,issues
 fix: parse and clean archive badges and markdown links to URL,2024-12-15 06:02:44,2025-01-14 18:49:04,closed,,banesullivan,United States,contributor,pyosMeta,pulls
 feat: add archive label and active status to ReviewModel,2024-12-15 04:27:26,2025-01-14 19:02:16,closed,,banesullivan,United States,contributor,pyosMeta,pulls
-Update contributor and review data,2024-12-15 00:25:12,2025-01-07 23:34:47,closed,,github-actions[bot],,contributor,pyosMeta,pulls
 Release 0.4 :sparkles:,2024-11-23 00:51:46,2024-11-23 00:51:59,closed,,lwasser,United States,staff,pyosMeta,pulls
-Update contributor and review data,2024-11-22 18:29:17,2024-12-13 17:01:27,closed,,github-actions[bot],,contributor,pyosMeta,pulls
 add: data files to repo,2024-11-22 18:27:27,2024-11-22 18:27:37,closed,,lwasser,United States,staff,pyosMeta,pulls
 Create test-update-contribs.yml,2024-11-22 18:06:37,2024-11-22 18:19:20,closed,,lwasser,United States,staff,pyosMeta,pulls
 fix: make sure eic roles are populated correctly,2024-11-22 01:47:13,2024-11-22 03:02:51,closed,,lwasser,United States,staff,pyosMeta,pulls
@@ -412,7 +406,6 @@ FIX: codespell in pre-comit hook not recognizing ignored words list,2024-05-16 0
 Change font in code to monospace,2024-04-19 11:13:21,2026-01-27 13:59:34,closed,"help wanted, sprintable",vnmabus,"Frankfurt, Germany",contributor,pyopensci.github.io,issues
 Reorganize website images folder,2024-04-17 17:27:02,2025-05-18 22:39:23,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,issues
 Look into HTML5 validation and theme updates,2024-04-03 21:59:35,2026-06-24 03:54:25,closed,"enhancement, help wanted, feature:theme",willingc,San Diego,contributor,pyopensci.github.io,issues
-Link Checker Report,2024-04-03 20:14:41,2024-04-03 22:06:35,closed,"report, automated issue",github-actions[bot],,contributor,pyopensci.github.io,issues
 Fix navigation / potential website overhaul,2024-04-02 19:42:17,2025-05-18 22:39:03,closed,"enhancement, help wanted, feature:theme",lwasser,United States,staff,pyopensci.github.io,issues
 Create banner for website to advertise events,2024-04-02 19:41:29,2026-01-28 16:08:25,closed,"enhancement, help wanted, sprintable, feature:design",lwasser,United States,staff,pyopensci.github.io,issues
 Lychee for link checking -- good but a few quirks too?,2024-04-02 18:36:44,2024-04-03 22:13:31,closed,"help wanted, feature:automation",lwasser,United States,staff,pyopensci.github.io,issues
@@ -422,9 +415,7 @@ Create archive process and then Archive nbless,2024-01-17 00:26:27,2025-01-22 16
 Website: Add packaging section,2024-01-05 19:13:28,2024-01-30 16:57:38,closed,,lwasser,United States,staff,pyopensci.github.io,issues
 Feed.xml file - seo continues,2024-01-05 16:29:07,,open,"enhancement, feature:automation",lwasser,United States,staff,pyopensci.github.io,issues
 "Website: ensure packaging guide, questions, and review content is carried over",2024-01-04 12:26:42,2024-04-04 13:12:00,closed,feature:content,kierisi,"Chicago, IL",staff,pyopensci.github.io,issues
-build(deps): bump lycheeverse/lychee-action from 2.1.0 to 2.2.0 in /.github/workflows in the actions group,2024-12-23 06:16:11,2025-01-07 20:37:59,closed,dependencies,dependabot[bot],,contributor,pyopensci.github.io,pulls
 feat: Add active status and indicate archived for packages,2024-12-15 04:57:06,2025-01-14 20:17:54,closed,,banesullivan,United States,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-12-15 00:36:48,2024-12-18 16:00:55,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 feat(blog): blog post--lessons learned on publish security,2024-12-14 01:56:10,2025-03-14 14:28:27,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat: new blog post - we're hiring,2024-12-13 22:16:11,2024-12-13 22:31:20,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 fix(photo): update Inessa's photo,2024-12-05 01:53:27,2024-12-05 01:56:45,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
@@ -434,7 +425,6 @@ fix: remove title and broken email,2024-11-22 21:04:53,2024-11-22 21:05:02,close
 feat(blog): new blog post from erics FF keynote,2024-11-22 21:03:30,2024-12-02 21:12:56,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update contributors.yml,2024-11-22 13:46:17,2024-11-22 18:04:35,closed,,pllim,"Baltimore, MD, USA",contributor,pyopensci.github.io,pulls
 Fix: this is a workflow test,2024-11-21 19:19:19,2024-11-21 19:19:27,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-11-21 01:23:41,2024-12-13 22:30:23,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 fix: force create joss cross ref badge,2024-11-21 00:02:28,2025-01-08 01:24:05,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Use actual DOI if available,2024-11-20 16:02:58,2025-01-08 01:21:33,closed,,pllim,"Baltimore, MD, USA",contributor,pyopensci.github.io,pulls
 Fix: another broken link,2024-11-19 22:34:43,2024-11-19 22:41:17,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
@@ -442,46 +432,33 @@ Astropy partner page: Hide categories,2024-11-19 18:35:10,2024-11-19 22:33:01,cl
 Astropy partner page: Fix broken links,2024-11-19 18:25:33,2024-11-19 22:31:42,closed,,pllim,"Baltimore, MD, USA",contributor,pyopensci.github.io,pulls
 Add a linter for GitHub actions,2024-11-15 23:51:14,2024-11-18 16:10:57,closed,,willingc,San Diego,contributor,pyopensci.github.io,pulls
 Update linkcheck.yml build,2024-11-15 23:44:09,2024-11-18 16:15:54,closed,,willingc,San Diego,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-11-15 00:33:07,2024-11-15 04:42:46,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-build(deps): bump lycheeverse/lychee-action from 2.0.2 to 2.1.0 in /.github/workflows in the actions group,2024-11-11 07:06:35,2024-11-11 11:02:58,closed,dependencies,dependabot[bot],,contributor,pyopensci.github.io,pulls
 Remove TBD as contributor,2024-11-03 20:36:43,2024-11-04 16:24:33,closed,,cmarmo,France,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-11-01 00:34:15,2024-11-04 16:26:23,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 fix: update contributor's name,2024-10-27 13:04:45,2024-10-27 16:14:42,closed,,flpm,"New York, NY",contributor,pyopensci.github.io,pulls
-build(deps): bump lycheeverse/lychee-action from 2.0.1 to 2.0.2 in /.github/workflows in the actions group,2024-10-21 06:10:06,2024-10-22 15:02:10,closed,dependencies,dependabot[bot],,contributor,pyopensci.github.io,pulls
 add: how to submit a package for review,2024-10-15 21:40:45,2025-03-19 18:02:06,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: edits,2024-10-15 21:35:55,2024-10-15 21:37:06,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-10-15 00:30:29,2024-10-15 16:46:37,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-build(deps): bump lycheeverse/lychee-action from 1.10.0 to 2.0.1 in /.github/workflows in the actions group,2024-10-14 06:24:53,2024-10-14 11:03:32,closed,dependencies,dependabot[bot],,contributor,pyopensci.github.io,pulls
 feat(blog): add blog post on sustainability. ,2024-10-10 16:11:02,2024-10-15 19:00:38,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat(blog): inessa numfocus award,2024-10-10 16:01:33,2024-11-04 16:27:03,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat(sponsor): add sponsor page to top nav,2024-10-08 21:14:18,2024-10-08 21:15:33,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 updated scholarship info,2024-10-04 21:19:46,2024-10-07 23:19:57,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 fix(scholarship): remove the date to see if we get any students after a small push,2024-10-03 18:51:23,2024-10-03 18:51:43,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-10-01 00:34:12,2024-10-01 22:28:39,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 typo fixes,2024-09-30 22:13:17,2024-10-01 22:29:20,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 fix(event): update text and scholarship dates,2024-09-26 22:59:33,2024-09-27 15:55:03,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fall Festival speaker updates,2024-09-23 16:27:44,2024-09-24 21:20:03,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 DO NOT MERGE intentional breaks,2024-09-19 21:53:33,2024-09-19 21:58:42,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 Add github image ID for new editors,2024-09-19 06:27:06,2024-09-19 15:33:37,closed,,cmarmo,France,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-09-17 20:57:08,2024-09-18 17:03:52,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Add new editors for third 2024 trimester,2024-09-16 19:09:45,2024-09-16 19:14:19,closed,,cmarmo,France,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-09-15 00:32:30,2024-09-16 19:24:46,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 UPDATES: synced information on FF event page with information on Eventbrite,2024-09-11 22:24:28,2024-09-12 20:42:19,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
-build(deps): bump peter-evans/create-pull-request from 6 to 7 in /.github/workflows in the actions group,2024-09-09 06:27:49,2024-09-09 15:24:35,closed,dependencies,dependabot[bot],,contributor,pyopensci.github.io,pulls
 feat(css): upgrade responsive styles throughout,2024-09-09 00:19:47,2024-09-09 15:23:39,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 bug: add div around blockquote,2024-09-06 20:44:25,2024-09-10 23:06:25,closed,DO-NOT-MERGE,willingc,San Diego,contributor,pyopensci.github.io,pulls
 UPDATE to Fall Festival event page,2024-09-04 18:28:17,2024-09-10 23:37:49,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-09-01 00:34:29,2024-09-10 23:15:20,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 add: new blog post on packaging and peer review,2024-08-26 23:45:48,2024-08-30 17:05:06,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 2 years packaging,2024-08-26 23:09:41,2024-09-10 23:27:49,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 "add: contributing info for updating dates, style upgrades and fun blockquote styles",2024-08-26 23:08:38,2024-08-29 16:46:25,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 changed scholarship application dates,2024-08-23 16:10:59,2024-08-26 16:10:44,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 updated pricing range,2024-08-23 16:07:38,2024-08-26 23:30:05,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 Blogs aug24,2024-08-23 03:04:28,2024-08-26 23:51:17,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-08-15 23:00:34,2024-08-15 23:02:00,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 UPDATE: corrected fall festival prices,2024-08-15 20:02:00,2024-08-15 20:21:41,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 Update 2024-08-02-pyopensci-at-scipy-2024.md,2024-08-15 17:51:39,2024-08-15 20:37:59,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-08-15 00:26:29,2024-08-15 20:38:55,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Small fix in the August 2024 newsletter post,2024-08-12 18:24:11,2024-08-12 19:01:02,closed,,flpm,"New York, NY",contributor,pyopensci.github.io,pulls
 UPDATE: updated old fall festival page,2024-08-12 14:23:59,2024-08-12 15:30:35,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 FIX 2024-08-02-community-news-august-2024.md,2024-08-08 19:09:52,2024-08-15 20:39:42,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
@@ -489,22 +466,17 @@ FIX 2024-08-02-community-news-august-2024.md,2024-08-08 19:09:52,2024-08-15 20:3
 fix(fall festival excerpt): 2024-08-09-pyopensci-fall-festival,2024-08-02 21:26:23,2024-08-06 20:34:33,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 POST: community news aug 2024,2024-08-02 21:05:47,2024-08-07 18:06:24,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 Freshen up tha header a little,2024-08-02 02:46:50,2024-08-02 23:41:51,closed,,sneakers-the-rat,,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-08-01 23:34:57,2024-08-02 03:06:56,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 fix: separate blog posts from events,2024-08-01 16:02:10,2024-08-01 16:05:49,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 ensmallen buttons on mobile,2024-08-01 06:37:39,2024-08-01 15:38:38,closed,,sneakers-the-rat,,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-08-01 00:30:18,2024-08-01 23:33:41,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix: update deployment workflow,2024-07-29 17:10:43,2024-07-29 17:14:44,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 fix(css): css for search toggle - shouldn't be sticky and ol on mobile,2024-07-25 22:27:12,2024-07-25 22:30:09,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 feat(blog): scipy24 recap blogpost with pictures,2024-07-25 22:15:28,2024-08-06 19:54:58,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: deploy from main branch on push,2024-07-24 14:53:19,2024-07-24 17:06:53,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update to gh actions page build,2024-07-22 21:47:33,2024-07-23 16:36:33,closed,,sneakers-the-rat,,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-07-15 00:27:45,2024-07-30 00:03:38,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Update footer.html to include CoC,2024-07-13 18:08:06,2024-07-23 16:42:27,closed,,ayhanxian,,contributor,pyopensci.github.io,pulls
 Add: events section to website & scipy workshop 2024,2024-07-11 02:40:42,2024-07-31 22:02:29,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: spelling issues,2024-07-04 21:33:00,2024-07-07 23:44:16,closed,,SeanAverS,Canada,contributor,pyopensci.github.io,pulls
-Bump the actions group in /.github/workflows with 6 updates,2024-07-04 20:24:23,2024-07-04 20:28:17,closed,dependencies,dependabot[bot],,contributor,pyopensci.github.io,pulls
 Fix: update advisory council,2024-07-04 19:59:57,2024-07-04 20:17:53,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-07-02 18:10:33,2024-07-04 18:37:11,closed,DO-NOT-MERGE,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Blog post automata,2024-07-02 02:45:23,2024-07-11 17:10:03,closed,,eliotwrobson,NYC,contributor,pyopensci.github.io,pulls
 Use main branch of pyosMeta,2024-07-01 17:49:31,2024-07-04 18:46:58,closed,,pllim,"Baltimore, MD, USA",contributor,pyopensci.github.io,pulls
 MNT: Use dependabot to auto update workflow dependencies,2024-07-01 17:46:11,2024-07-04 20:23:24,closed,,pllim,"Baltimore, MD, USA",contributor,pyopensci.github.io,pulls
@@ -524,7 +496,6 @@ Fix: ensure workflows only run on pyos org,2024-06-07 22:18:03,2024-06-07 22:19:
 Fix: contributor bot should ONLY run on the pyopensci org repo,2024-06-07 22:16:29,2024-06-07 22:18:10,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Update Gemfile,2024-06-05 16:45:19,2024-06-05 16:47:51,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Add blog post for `SLEPLET`,2024-06-03 16:27:49,2024-06-05 17:02:33,closed,,paddyroddy,"Leeds, UK",contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-06-01 00:27:21,2024-06-03 16:02:13,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 UPDATE: header image file path,2024-05-31 02:18:23,2024-05-31 02:20:36,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 UPDATE: added blog header,2024-05-31 01:53:52,2024-05-31 02:15:46,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 UPDATE: added header image,2024-05-30 16:31:13,2024-05-30 16:33:01,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
@@ -541,9 +512,6 @@ Add GitHub Issue templates,2024-05-20 21:04:16,2024-05-23 23:54:33,closed,pyconu
 FIX: date typo,2024-05-16 12:55:42,2024-05-16 13:02:04,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 codespell ignore files,2024-05-15 19:31:48,2024-05-20 18:48:11,closed,"help wanted, pyconus-24",kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 blog post: pyOpenSci at PyCon,2024-05-15 03:14:33,2024-05-15 19:26:16,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-05-15 00:24:34,2024-05-20 18:51:25,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-05-08 23:25:18,2024-05-08 23:27:40,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-05-07 21:29:36,2024-05-07 21:30:46,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 2024 may newsletter,2024-04-29 17:47:49,2024-05-01 18:57:27,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 Fix: new eic and fix editor roles,2024-04-19 23:04:03,2024-04-19 23:07:13,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: see if images render,2024-04-17 22:50:45,2024-04-17 23:17:39,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
@@ -572,34 +540,23 @@ pin htmlproofer version,2024-04-01 19:35:28,2024-04-01 20:06:15,closed,,willingc
 Try proofer-html action,2024-04-01 16:56:01,2024-04-01 19:59:00,closed,,willingc,San Diego,contributor,pyopensci.github.io,pulls
 pyOS march 2024 newsletter,2024-04-01 14:49:41,2024-04-01 22:56:03,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 April 2024 newsletter,2024-04-01 14:24:07,2024-04-02 00:41:13,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-04-01 00:26:51,2024-04-01 20:07:41,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix: update htmlproofer,2024-03-30 18:21:53,2024-04-02 00:04:07,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-03-26 19:32:36,2024-03-26 19:47:36,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix: build fails without image id,2024-03-12 20:44:40,2024-03-12 20:44:57,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-03-12 20:36:50,2024-03-20 23:47:47,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-03-12 20:29:09,2024-03-12 20:31:24,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 "Fix: data munging category incorrect, luiz editor",2024-03-12 19:39:50,2024-03-12 20:03:21,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: update editorial board with astropy,2024-03-12 16:57:30,2024-03-12 17:04:43,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Add: learn page and new tutorials,2024-03-08 22:30:51,2024-04-02 19:50:12,closed,reviews-welcome,lwasser,United States,staff,pyopensci.github.io,pulls
 Add: collection tutorials to website,2024-03-08 22:29:52,2024-03-08 22:32:04,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-03-01 00:26:57,2024-03-09 02:51:13,closed,DO-NOT-MERGE,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-02-25 02:08:07,2024-02-28 17:56:03,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Fix: Remove async loading w isotope,2024-02-20 22:16:12,2024-02-20 22:22:01,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-02-15 00:23:24,2024-02-15 00:26:17,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 FIX: small typos,2024-02-05 21:23:49,2024-02-05 22:13:08,closed,,kierisi,"Chicago, IL",staff,pyopensci.github.io,pulls
 Fix: jquery is not loading with defer,2024-02-02 23:35:30,2024-02-02 23:36:26,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: dropped itim by mistake,2024-02-02 23:27:50,2024-02-02 23:28:10,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: finesse load times,2024-02-02 02:12:34,2024-02-02 02:16:55,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 FIX:SMALL TYPO not on all caps :),2024-02-01 17:02:35,2024-02-01 18:25:11,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix: images are too big,2024-02-01 02:25:05,2024-02-01 02:34:01,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-02-01 00:25:25,2024-02-02 02:17:42,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-01-30 00:01:11,2024-01-30 00:12:05,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
-Update contributor and review data,2024-01-15 00:26:42,2024-01-16 17:46:59,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Enh: Add infrastructure to support a new packaging page,2024-01-05 20:57:47,2024-01-30 16:57:37,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 Fix narrow overlay for close button,2024-01-05 17:01:01,2024-01-16 17:48:01,closed,,cmarmo,France,contributor,pyopensci.github.io,pulls
 Fix: home page blog posts were not updating,2024-01-05 00:47:36,2024-01-05 00:49:04,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
 "Fix: remove twitter, update social and remove ga",2024-01-05 00:26:13,2024-01-05 00:29:20,closed,,lwasser,United States,staff,pyopensci.github.io,pulls
-Update contributor and review data,2024-01-01 01:34:07,2024-01-03 17:48:21,closed,,github-actions[bot],,contributor,pyopensci.github.io,pulls
 Create new process for someone who wants to add a new language translation ,2024-12-17 18:49:52,,open,,lwasser,United States,staff,handbook,issues
 Update zenodo landing page to be a how to cite pyopensci,2024-11-15 16:14:30,,open,,lwasser,United States,staff,handbook,issues
 Move Diversity text in handbook,2024-11-08 01:56:21,,open,enhancement,lwasser,United States,staff,handbook,issues
@@ -750,29 +707,18 @@ Add more information in the README.md about configuring GitHub token for using p
 Nodejs install documentation is not compatible with Windows,2024-07-13 18:14:50,2024-07-14 16:02:28,closed,,kaiyamag,,contributor,peer-review-metrics,issues
 Create: peer review dashboard using interactive plots Jupyter and mystmd -- :),2024-07-13 15:13:58,2025-05-19 01:19:42,closed,"help wanted, sprintable",lwasser,United States,staff,peer-review-metrics,issues
 Add: Current review dashboard,2024-06-06 16:41:54,2024-07-04 18:36:24,closed,,lwasser,United States,staff,peer-review-metrics,issues
-Update contributor and review data,2024-12-23 05:08:53,2025-01-06 19:24:33,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 Update nox instructions and install pyosmetrics in html session,2024-12-19 19:47:01,2024-12-21 00:50:44,closed,,santisoler,"British Columbia, Canada",contributor,peer-review-metrics,pulls
-Update contributor and review data,2024-11-16 05:07:16,2024-12-21 00:51:07,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2024-10-16 05:08:07,2024-11-15 00:42:49,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2024-10-14 05:08:16,2024-10-14 19:27:26,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2024-10-02 05:08:49,2024-10-08 22:09:56,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
-Update contributor and review data,2024-09-30 05:09:09,2024-09-30 21:51:09,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 feat(data): update .py script to return review last comment date,2024-09-27 01:41:18,2024-09-27 02:06:23,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 feat(plot): add average time open plot,2024-09-26 00:35:52,2024-09-26 00:43:32,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix(logo): logo and a few plot issues,2024-09-24 20:48:04,2024-09-24 20:48:13,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2024-09-23 05:07:29,2024-09-24 20:46:55,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: image url update,2024-09-16 19:42:31,2024-09-16 19:42:40,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix(urls): update header and favicon url,2024-09-16 19:36:59,2024-09-16 19:38:46,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2024-09-02 05:07:07,2024-09-16 19:39:20,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: cleanup bar plot,2024-08-30 01:02:56,2024-08-30 01:10:44,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2024-08-29 22:02:00,2024-08-30 01:10:29,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 fix: use data files vs hitting the api in the notebook,2024-08-29 20:13:13,2024-08-29 20:16:22,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 add: re-add side bar given top bar is still broken,2024-08-28 22:33:28,2024-08-28 22:33:34,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix: bsd license abbrv and import fix,2024-08-28 22:16:45,2024-08-28 22:23:47,closed,,lwasser,United States,staff,peer-review-metrics,pulls
-Update contributor and review data,2024-08-28 22:11:12,2024-08-28 22:16:28,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 feat: Update stats for contributor issue and prs,2024-08-27 19:22:45,2024-08-28 21:22:42,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 Improve the editor's load plots,2024-08-27 14:16:06,2024-12-20 23:03:20,closed,,santisoler,"British Columbia, Canada",contributor,peer-review-metrics,pulls
-"add: updated pr, issue & contrib metadata for pyOS",2024-08-19 00:50:33,2024-08-19 00:52:21,closed,,github-actions[bot],,contributor,peer-review-metrics,pulls
 add: ci build to parse all issues and prs and contribs,2024-08-19 00:36:07,2024-08-19 00:39:17,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 add: package that handles plot themes,2024-08-19 00:21:18,2024-08-19 00:33:04,closed,,lwasser,United States,staff,peer-review-metrics,pulls
 fix: peer review numbers are more accurate,2024-08-13 02:35:20,2024-08-13 02:35:31,closed,,lwasser,United States,staff,peer-review-metrics,pulls
@@ -841,12 +787,8 @@ pyos-sphinx-theme - Create docs build infrastructure,2024-08-01 18:52:36,,open,"
 Update the readme file to have pyos information about the theme and what repos use the theme,2024-04-05 17:06:31,2025-07-11 23:27:02,closed,"help wanted, sprintable",lwasser,United States,staff,pyos-sphinx-theme,issues
 Let's use MIT as the preferred license,2024-04-05 17:05:08,2024-08-01 18:49:24,closed,"help wanted, sprintable",lwasser,United States,staff,pyos-sphinx-theme,issues
 Work on: pyos sphinx-theme: Build out pyos-sphinx-theme repo,2024-04-05 17:02:08,2025-07-11 23:26:18,closed,"help wanted, sprintable",lwasser,United States,staff,pyos-sphinx-theme,issues
-chore: bump pydata-sphinx-theme from 0.16.0 to 0.16.1 in the pip group,2024-12-17 16:19:27,2024-12-17 19:06:38,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
 feat(docs): update docs,2024-11-07 01:27:55,2024-11-07 23:03:26,closed,,lwasser,United States,staff,pyos-sphinx-theme,pulls
 fix: Remove second release workflow,2024-11-07 01:04:13,2024-11-07 01:04:27,closed,,lwasser,United States,staff,pyos-sphinx-theme,pulls
-chore: bump pydata-sphinx-theme from 0.15.4 to 0.16.0 in the pip group,2024-10-22 16:33:07,2024-10-22 18:24:39,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump sigstore/gh-action-sigstore-python from 2.1.1 to 3.0.0 in the actions group,2024-09-26 16:30:49,2024-09-26 16:32:06,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
-chore: bump pydata-sphinx-theme from 0.15.2 to 0.15.4 in the pip group,2024-09-26 16:30:44,2024-09-26 16:32:20,closed,"dependencies, maintenance",dependabot[bot],,contributor,pyos-sphinx-theme,pulls
 docs: add link to CODE_OF_CONDUCT.md,2024-08-31 02:44:01,2024-09-26 16:29:17,closed,,tkoyama010,Japan,contributor,pyos-sphinx-theme,pulls
 chore: create `dependabot.yml` to enable `Dependabot`,2024-08-31 02:42:28,2024-09-26 16:29:51,closed,,tkoyama010,Japan,contributor,pyos-sphinx-theme,pulls
 docs: add changelog and contributing files,2024-08-30 22:20:07,2024-08-30 22:20:38,closed,,lwasser,United States,staff,pyos-sphinx-theme,pulls
